@@ -1,0 +1,16 @@
+{
+  "name": "COSTA VIVA",
+  "short_name": "COSTA VIVA",
+  "description": "Cuaderno comunitario bilingüe de observación costera",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#162e51",
+  "orientation": "any",
+  "icons": [
+    {"src":"./assets/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"./assets/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}

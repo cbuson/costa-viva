@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#162e51">
+  <meta name="description" content="COSTA VIVA, cuaderno comunitario bilingüe de observación costera">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="./assets/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <title>COSTA VIVA</title>
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <img src="./assets/icon-192.png" alt="" class="brand-icon">
+        <div>
+          <h1>COSTA VIVA</h1>
+          <p id="subtitle">Cuaderno comunitario de observación costera</p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <div class="lang-switch" aria-label="Idioma">
+          <button id="lang-es" type="button" class="lang-btn active">ES</button>
+          <button id="lang-pt" type="button" class="lang-btn">PT</button>
+        </div>
+        <button id="project-info-btn" type="button" class="info-btn" aria-label="Información del proyecto" title="Información del proyecto">i</button>
+        <button id="install-btn" type="button" class="install-btn" hidden>Instalar</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="screen-map" class="screen active" data-screen="map">
+        <div class="section-head">
+          <div>
+            <h2 data-i18n="mapTitle">Mapa</h2>
+            <p data-i18n="mapIntro">Tus observaciones aparecen aquí cuando tienen posición registrada.</p>
+          </div>
+          <button id="locate-me" class="secondary-btn" type="button">📍 <span data-i18n="myPosition">Mi posición</span></button>
+        </div>
+
+        <div id="map-wrap" class="map-wrap">
+          <div id="map" aria-label="Mapa de observaciones"></div>
+          <div id="offline-map" class="offline-map" hidden>
+            <canvas id="offline-canvas" width="900" height="520" aria-label="Vista local de puntos sin mapa base"></canvas>
+            <p data-i18n="offlineMapNote">Sin mapa base. Los puntos se muestran usando sus coordenadas guardadas.</p>
+          </div>
+        </div>
+
+        <div class="map-legend" aria-label="Leyenda">
+          <span><span class="dot normal"></span><span data-i18n="singleObservation">Observación</span></span>
+          <span><span class="diamond"></span><span data-i18n="permanentPoint">Punto permanente</span></span>
+        </div>
+
+        <div id="map-list" class="record-list"></div>
+      </section>
+
+      <section id="screen-register" class="screen" data-screen="register">
+        <div class="section-head">
+          <div>
+            <h2 data-i18n="newObservation">Nueva observación</h2>
+            <p data-i18n="registerIntro">Registra lo que ves. No necesitas explicar la causa.</p>
+          </div>
+          <div class="record-code"><span data-i18n="code">Código</span> <strong id="draft-code">CV-000001</strong></div>
+        </div>
+
+        <div class="status-grid" id="sensor-status-grid">
+          <div class="status-card"><span>📍</span><div><strong data-i18n="location">Ubicación</strong><small id="status-location" data-i18n="notActivated">No activada</small></div></div>
+          <div class="status-card"><span>🎯</span><div><strong data-i18n="accuracy">Precisión</strong><small id="status-accuracy" data-i18n="notAvailable">No disponible</small></div></div>
+          <div class="status-card"><span>⬆️</span><div><strong data-i18n="altitude">Altitud</strong><small id="status-altitude" data-i18n="notAvailable">No disponible</small></div></div>
+          <div class="status-card"><span>🧭</span><div><strong data-i18n="direction">Dirección</strong><small id="status-heading" data-i18n="notAvailable">No disponible</small></div></div>
+          <div class="status-card"><span>📷</span><div><strong data-i18n="camera">Cámara</strong><small id="status-camera" data-i18n="notActivated">No activada</small></div></div>
+          <div class="status-card"><span>🎙️</span><div><strong data-i18n="microphone">Micrófono</strong><small id="status-microphone" data-i18n="notActivated">No activada</small></div></div>
+        </div>
+
+        <button id="activate-mode" type="button" class="primary-btn full">📡 <span data-i18n="activateObservation">ACTIVAR MODO DE OBSERVACIÓN</span></button>
+        <p class="helper" data-i18n="sensorHelper">Se solicitarán solamente los permisos necesarios. Si un sensor no está disponible, el registro puede continuar.</p>
+
+        <form id="record-form" novalidate>
+          <fieldset class="card">
+            <legend data-i18n="whatObserve">¿Qué estás observando?</legend>
+            <p class="helper choice-helper" data-i18n="multipleObserveHelp">Puedes marcar una o varias opciones.</p>
+            <div class="choice-grid" id="category-choices">
+              <label class="choice"><input type="checkbox" name="category" value="beach_loss"><span>🏖️</span><b data-i18n="beachLoss">Pérdida aparente de playa</b></label>
+              <label class="choice"><input type="checkbox" name="category" value="sand_gain"><span>🏝️</span><b data-i18n="sandGain">Acumulación aparente de arena</b></label>
+              <label class="choice"><input type="checkbox" name="category" value="water_reach"><span>🌊</span><b data-i18n="waterReach">El mar llegó más lejos</b></label>
+              <label class="choice"><input type="checkbox" name="category" value="flood"><span>💧</span><b data-i18n="flood">Inundación</b></label>
+              <label class="choice"><input type="checkbox" name="category" value="home"><span>🏠</span><b data-i18n="homeAffected">Vivienda afectada</b></label>
+              <label class="choice"><input type="checkbox" name="category" value="road"><span>🛣️</span><b data-i18n="roadAffected">Camino afectado</b></label>
+              <label class="choice"><input type="checkbox" name="category" value="vegetation"><span>🌿</span><b data-i18n="vegetationAffected">Vegetación afectada</b></label>
+              <label class="choice"><input type="checkbox" name="category" value="no_change"><span>✓</span><b data-i18n="noChange">Sin cambio aparente</b></label>
+              <label class="choice"><input type="checkbox" name="category" value="other"><span>➕</span><b data-i18n="other">Otro</b></label>
+            </div>
+          </fieldset>
+
+          <section class="card">
+            <label for="community-note" class="field-label" data-i18n="communityNote">Nota de la comunidad</label>
+            <textarea id="community-note" rows="4" data-i18n-placeholder="notePlaceholder" placeholder="Escribe con tus propias palabras"></textarea>
+          </section>
+
+          <section class="card">
+            <h3 data-i18n="measurement">Medición opcional</h3>
+            <div class="two-cols">
+              <label><span data-i18n="distance">Distancia</span><input id="distance" type="number" inputmode="decimal" min="0" step="0.01"></label>
+              <label><span data-i18n="unit">Unidad</span><select id="distance-unit"><option value="m">m</option><option value="cm">cm</option></select></label>
+              <label><span data-i18n="method">Método</span><select id="measure-method"><option value="" data-i18n="select">Seleccionar</option><option value="tape" data-i18n="tape">Cinta métrica</option><option value="steps" data-i18n="steps">Pasos</option><option value="estimate" data-i18n="estimate">Estimación</option><option value="other" data-i18n="other">Otro</option></select></label>
+              <label><span data-i18n="measureTarget">Línea medida</span><select id="measure-target"><option value="" data-i18n="select">Seleccionar</option><option value="erosion_edge" data-i18n="erosionEdge">Borde de erosión</option><option value="vegetation_line" data-i18n="vegetationLine">Línea de vegetación estable</option><option value="waterline" data-i18n="waterline">Borde del agua</option><option value="high_water_mark" data-i18n="highWaterMark">Marca visible de agua alta</option><option value="other" data-i18n="other">Otro</option></select></label>
+              <label><span data-i18n="reference">Referencia fija</span><input id="measure-reference" type="text" data-i18n-placeholder="referencePlaceholder" placeholder="Estaca A, poste, vivienda, marca"></label>
+            </div>
+          </section>
+
+          <section class="card">
+            <h3 data-i18n="seaState">Estado observado del mar</h3>
+            <div class="two-cols">
+              <label><span data-i18n="waterLevel">Nivel observado</span><select id="sea-level"><option value="unknown" data-i18n="dontKnow">No sé</option><option value="low" data-i18n="low">Bajo</option><option value="normal" data-i18n="normal">Normal</option><option value="high" data-i18n="high">Alto</option><option value="very_high" data-i18n="veryHigh">Muy alto</option></select></label>
+              <label><span data-i18n="waveState">Oleaje</span><select id="wave-state"><option value="unknown" data-i18n="dontKnow">No sé</option><option value="low" data-i18n="low">Bajo</option><option value="medium" data-i18n="medium">Medio</option><option value="strong" data-i18n="strong">Fuerte</option></select></label>
+            </div>
+          </section>
+
+          <section class="card">
+            <h3 data-i18n="followup">Seguimiento del punto</h3>
+            <label><span data-i18n="pointType">Tipo de registro</span><select id="permanent-select"><option value="independent" data-i18n="independent">Observación independiente</option><option value="new" data-i18n="newPermanent">Crear nuevo punto permanente</option></select></label>
+            <p class="helper" data-i18n="permanentHelp">Los puntos permanentes permiten regresar al mismo lugar y construir una historia de observaciones.</p>
+          </section>
+
+          <section class="card">
+            <h3 data-i18n="evidence">Evidencias</h3>
+            <div class="media-actions">
+              <label class="media-btn">📷 <span data-i18n="photos">Fotos</span><input id="photo-input" type="file" accept="image/*" capture="environment" multiple></label>
+              <label class="media-btn">🎥 <span data-i18n="videos">Vídeos</span><input id="video-input" type="file" accept="video/*" capture="environment" multiple></label>
+              <button id="audio-record" class="media-btn" type="button">🎙️ <span data-i18n="recordAudio">Grabar audio</span></button>
+            </div>
+            <div id="audio-panel" class="audio-panel" hidden>
+              <div id="audio-state" data-i18n="audioReady">Listo para grabar</div>
+              <button id="audio-stop" type="button" class="secondary-btn" hidden data-i18n="stop">Detener</button>
+              <audio id="audio-preview" controls hidden></audio>
+              <button id="audio-remove" type="button" class="danger-link" hidden data-i18n="removeAudio">Eliminar audio</button>
+            </div>
+            <div id="media-preview" class="media-preview"></div>
+            <p class="helper" data-i18n="photoOverlayHelp">Las fotografías guardadas generan una copia documentada con fecha, código, posición, precisión, altitud y dirección cuando esos datos están disponibles.</p>
+          </section>
+
+          <div class="sticky-save">
+            <button id="save-record" type="submit" class="primary-btn full">💾 <span data-i18n="saveObservation">GUARDAR OBSERVACIÓN</span></button>
+            <div id="save-message" class="save-message" role="status" aria-live="polite"></div>
+          </div>
+        </form>
+      </section>
+
+      <section id="screen-notebook" class="screen" data-screen="notebook">
+        <div class="section-head">
+          <div>
+            <h2 data-i18n="notebook">Cuaderno</h2>
+            <p data-i18n="notebookIntro">Consulta las observaciones guardadas en este dispositivo.</p>
+          </div>
+          <span class="count-pill"><strong id="record-count">0</strong> <span data-i18n="records">registros</span></span>
+        </div>
+
+        <div class="filters card">
+          <label><span data-i18n="search">Buscar</span><input id="search" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="Código o nota"></label>
+          <label><span data-i18n="filterCategory">Tipo</span><select id="filter-category"><option value="all" data-i18n="all">Todos</option></select></label>
+          <label class="check-label"><input id="filter-media" type="checkbox"><span data-i18n="withMedia">Con multimedia</span></label>
+          <label class="check-label"><input id="filter-permanent" type="checkbox"><span data-i18n="onlyPermanent">Puntos permanentes</span></label>
+        </div>
+        <div id="notebook-list" class="record-list"></div>
+      </section>
+
+      <section id="screen-export" class="screen" data-screen="export">
+        <div class="section-head">
+          <div>
+            <h2 data-i18n="export">Exportar</h2>
+            <p data-i18n="exportIntro">Prepara una copia de los registros para conservarlos o compartirlos.</p>
+          </div>
+        </div>
+        <div class="export-grid">
+          <button id="export-json" type="button" class="export-btn"><strong>JSON</strong><span data-i18n="fullData">Datos completos</span></button>
+          <button id="export-csv" type="button" class="export-btn"><strong>CSV</strong><span data-i18n="tableData">Tabla de registros</span></button>
+          <button id="export-geojson" type="button" class="export-btn"><strong>GeoJSON</strong><span data-i18n="mapData">Puntos para SIG</span></button>
+          <button id="export-zip" type="button" class="export-btn"><strong>ZIP</strong><span data-i18n="evidencePackage">Datos y evidencias</span></button>
+        </div>
+        <button id="share-export" type="button" class="primary-btn full">📤 <span data-i18n="sharePackage">Compartir paquete</span></button>
+        <p id="share-help" class="helper" data-i18n="shareHelp">En dispositivos compatibles se abrirá el menú para compartir. Si no está disponible, se descargará el paquete para que puedas adjuntarlo al correo.</p>
+        <div class="privacy-note">🔒 <span data-i18n="privacyPrinciple">Los registros permanecen bajo control de la comunidad y solo salen del dispositivo cuando decides exportarlos o compartirlos.</span></div>
+      </section>
+
+      <section id="screen-help" class="screen" data-screen="help">
+        <div class="section-head">
+          <div>
+            <h2 data-i18n="help">Ayuda</h2>
+            <p data-i18n="helpIntro">Guía breve para usar COSTA VIVA en campo.</p>
+          </div>
+        </div>
+        <div class="help-steps">
+          <article class="card"><span class="step">1</span><div><h3 data-i18n="helpActivateTitle">Activa el modo de observación</h3><p data-i18n="helpActivateText">Permite que el teléfono compruebe ubicación, orientación, cámara y micrófono. Puedes continuar aunque alguna función no esté disponible.</p></div></article>
+          <article class="card"><span class="step">2</span><div><h3 data-i18n="helpObserveTitle">Registra lo que observas</h3><p data-i18n="helpObserveText">Describe lo que está ocurriendo sin necesidad de explicar la causa.</p></div></article>
+          <article class="card"><span class="step">3</span><div><h3 data-i18n="helpPhotoTitle">Toma evidencias</h3><p data-i18n="helpPhotoText">Añade fotografías, vídeo, audio o una medición sencilla. Las fotografías documentadas conservan los datos disponibles del dispositivo.</p></div></article>
+          <article class="card"><span class="step">4</span><div><h3 data-i18n="helpReturnTitle">Vuelve al mismo punto</h3><p data-i18n="helpReturnText">Los puntos permanentes permiten comparar observaciones realizadas en distintos momentos.</p></div></article>
+
+          <section class="field-protocol card">
+            <div class="protocol-heading">
+              <span class="protocol-icon">📏</span>
+              <div>
+                <h3 data-i18n="fieldMethodsTitle">Cómo medir con medios sencillos</h3>
+                <p data-i18n="fieldMethodsIntro">COSTA VIVA es una herramienta de ciencia popular. Una cinta, dos puntos de referencia y una forma constante de medir pueden producir una serie útil si siempre se repite el mismo procedimiento.</p>
+              </div>
+            </div>
+
+            <div class="protocol-rule">
+              <strong data-i18n="goldenRuleTitle">Regla principal</strong>
+              <p data-i18n="goldenRuleText">No importa medir muchas cosas. Importa medir siempre la misma cosa, desde la misma referencia, por la misma línea y dejando registrado cómo se hizo.</p>
+            </div>
+
+            <details class="protocol-detail">
+              <summary><span>📍</span><strong data-i18n="stakeMethodTitle">Método 1. Línea fija con cinta</strong></summary>
+              <div class="protocol-body">
+                <ol>
+                  <li data-i18n="stakeStep1">Elige un lugar seguro y estable detrás de la zona que puede erosionarse.</li>
+                  <li data-i18n="stakeStep2">Marca dos referencias A y B alineadas hacia la costa. Pueden ser estacas resistentes o elementos permanentes que no se muevan.</li>
+                  <li data-i18n="stakeStep3">Crea ese lugar en COSTA VIVA como punto permanente y fotografía las referencias A y B.</li>
+                  <li data-i18n="stakeStep4">Elige una sola línea que vas a seguir en el tiempo, por ejemplo el borde del escarpe de erosión o la línea de vegetación estable.</li>
+                  <li data-i18n="stakeStep5">Extiende la cinta desde A siguiendo exactamente la alineación A B hasta la línea elegida. Registra la distancia y el método Cinta métrica.</li>
+                  <li data-i18n="stakeStep6">Haz una segunda lectura para comprobar que no hubo un error de lectura. Si no coinciden, repite y explica la diferencia en la nota.</li>
+                  <li data-i18n="stakeStep7">Toma una fotografía desde el mismo punto y, cuando sea posible, en la misma dirección.</li>
+                  <li data-i18n="stakeStep8">En la siguiente visita vuelve al mismo punto permanente y repite exactamente la operación.</li>
+                </ol>
+                <div class="protocol-note" data-i18n="stakeWarning">Nunca coloques una referencia en un borde inestable ni entres en la zona de rompiente para obtener una medida. Si una estaca desaparece o se mueve, regístralo. No la sustituyas como si fuera la misma referencia.</div>
+              </div>
+            </details>
+
+            <details class="protocol-detail">
+              <summary><span>📷</span><strong data-i18n="photoMethodTitle">Método 2. Fotografía desde un punto fijo</strong></summary>
+              <div class="protocol-body">
+                <ol>
+                  <li data-i18n="photoStep1">Escoge una referencia estable desde la que puedas volver a fotografiar.</li>
+                  <li data-i18n="photoStep2">Guarda el lugar como punto permanente.</li>
+                  <li data-i18n="photoStep3">Anota la dirección de la fotografía y una referencia visible que ayude a repetir el encuadre.</li>
+                  <li data-i18n="photoStep4">En cada visita intenta usar el mismo lugar, altura aproximada y dirección.</li>
+                  <li data-i18n="photoStep5">Haz la fotografía antes de acercarte a la zona erosionada y añade una nota sobre los cambios observados.</li>
+                </ol>
+                <div class="protocol-note" data-i18n="photoWarning">Las fotografías repetidas permiten documentar cambios. Por sí solas no deben convertirse automáticamente en metros de erosión.</div>
+              </div>
+            </details>
+
+            <details class="protocol-detail">
+              <summary><span>🌊</span><strong data-i18n="waterlineMethodTitle">Si mides hasta el borde del agua</strong></summary>
+              <div class="protocol-body">
+                <p data-i18n="waterlineMethodText">El borde del agua se mueve con la marea y el oleaje. Registra siempre la hora y el estado observado del mar. Para comparar dos medidas procura realizar las visitas en condiciones de marea semejantes. Una diferencia medida en horas o estados de marea distintos no debe interpretarse directamente como erosión.</p>
+              </div>
+            </details>
+
+            <div class="minimum-record">
+              <strong data-i18n="minimumRecordTitle">Qué debe quedar registrado</strong>
+              <ul>
+                <li data-i18n="minimum1">Código del punto permanente</li>
+                <li data-i18n="minimum2">Fecha y hora</li>
+                <li data-i18n="minimum3">Referencia fija utilizada</li>
+                <li data-i18n="minimum4">Línea medida</li>
+                <li data-i18n="minimum5">Distancia y método</li>
+                <li data-i18n="minimum6">Fotografía y nota cuando sea posible</li>
+                <li data-i18n="minimum7">Estado observado del mar</li>
+                <li data-i18n="minimum8">Posición y precisión del celular cuando estén disponibles</li>
+              </ul>
+            </div>
+          </section>
+
+          <article class="card warning"><h3 data-i18n="gpsTitle">Sobre el GPS del celular</h3><p data-i18n="gpsHelp">El GPS ayuda a localizar la observación. No tiene la precisión de un equipo profesional. COSTA VIVA conserva la precisión informada por el dispositivo para evitar aparentar una exactitud que no existe.</p></article>
+          <article class="card"><h3 data-i18n="installTitle">Instalar COSTA VIVA</h3><p data-i18n="installHelp">En un navegador compatible utiliza Instalar o Añadir a pantalla de inicio. Después podrás abrir COSTA VIVA como una aplicación.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Navegación principal">
+      <button type="button" data-target="map" class="nav-item active"><span>🗺️</span><b data-i18n="mapTitle">Mapa</b></button>
+      <button type="button" data-target="register" class="nav-item register"><span>📍</span><b data-i18n="register">Registrar</b></button>
+      <button type="button" data-target="notebook" class="nav-item"><span>📖</span><b data-i18n="notebook">Cuaderno</b></button>
+      <button type="button" data-target="export" class="nav-item"><span>📤</span><b data-i18n="export">Exportar</b></button>
+      <button type="button" data-target="help" class="nav-item"><span>❓</span><b data-i18n="help">Ayuda</b></button>
+    </nav>
+
+    <div id="first-run" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="first-run-title">
+      <div class="modal-card">
+        <div class="modal-brand">
+          <img src="./assets/icon-192.png" alt="">
+          <div><strong>COSTA VIVA</strong><small id="first-run-subtitle">Cuaderno comunitario de observación costera</small></div>
+        </div>
+        <h2 id="first-run-title" data-i18n="beforeStart">Antes de comenzar</h2>
+        <p data-i18n="firstRunText">Para documentar una observación necesitamos comprobar algunas funciones del celular. Los registros se guardan primero en este dispositivo.</p>
+        <ul class="permission-list">
+          <li>📍 <span data-i18n="location">Ubicación</span></li>
+          <li>🧭 <span data-i18n="direction">Dirección</span></li>
+          <li>📷 <span data-i18n="camera">Cámara</span></li>
+          <li>🎙️ <span data-i18n="microphone">Micrófono</span></li>
+          <li>💾 <span data-i18n="localStorage">Almacenamiento local</span></li>
+        </ul>
+        <button id="first-run-activate" type="button" class="primary-btn full"><span data-i18n="activateAndStart">ACTIVAR Y COMENZAR</span></button>
+        <button id="first-run-later" type="button" class="text-btn" data-i18n="continueWithout">Continuar sin activar ahora</button>
+      </div>
+    </div>
+
+    <div id="project-info-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="project-info-title">
+      <div class="modal-card project-info-card">
+        <button id="project-info-close" class="modal-close" type="button" aria-label="Cerrar">✕</button>
+
+        <div class="project-info-head">
+          <div class="project-info-symbol" aria-hidden="true">i</div>
+          <div>
+            <span class="project-info-kicker" data-i18n="projectInfoKicker">INFORMACIÓN DEL PROYECTO</span>
+            <h2 id="project-info-title">COSTA VIVA</h2>
+            <p data-i18n="projectInfoSubtitle">Herramienta abierta de ciencia popular para observación comunitaria de la costa</p>
+          </div>
+        </div>
+
+        <section class="project-info-section">
+          <h3 data-i18n="projectPurposeTitle">Para qué existe</h3>
+          <p data-i18n="projectPurposeText">COSTA VIVA nace para que comunidades con medios limitados puedan documentar cambios de su costa de forma ordenada, repetible y verificable usando celulares comunes y métodos sencillos de campo. La herramienta ayuda a conservar qué se observó, dónde, cuándo, cómo se midió y qué evidencia quedó registrada.</p>
+          <div class="project-principle">
+            <strong data-i18n="popularScienceTitle">Ciencia popular</strong>
+            <p data-i18n="popularScienceText">La sofisticación está en el método y no en exigir equipos costosos. Un registro comunitario gana valor cuando conserva el procedimiento, la incertidumbre, la fecha, la posición disponible, las fotografías, las notas y las mediciones repetidas. COSTA VIVA busca hacer posible ese trabajo sin convertir un celular en un instrumento profesional que no es.</p>
+          </div>
+        </section>
+
+        <section class="project-info-section project-origin-section">
+          <h3 data-i18n="originTitle">Por qué nació COSTA VIVA</h3>
+          <p data-i18n="originText1">COSTA VIVA surge a partir del trabajo realizado junto a comunidades Wayuu de Arroyo Guerrero, en La Guajira colombiana, donde la erosión costera y otros cambios ambientales hacían necesario documentar de forma continuada lo que estaba ocurriendo en el territorio.</p>
+          <p data-i18n="originText2">Con la colaboración de Clarena Fonseca y el trabajo desarrollado con las comunidades se impulsó el uso de fotografías, vídeos, recorridos, localización mediante GPS y observaciones repetidas usando principalmente los teléfonos celulares disponibles.</p>
+          <p data-i18n="originText3">De esa experiencia nace la idea de una herramienta de ciencia popular capaz de ayudar a crear puntos de observación, repetir mediciones, conservar evidencias y construir una memoria territorial verificable sin exigir instrumentación costosa.</p>
+          <div class="project-principle">
+            <strong data-i18n="originPrincipleTitle">Una idea sencilla</strong>
+            <p data-i18n="originPrincipleText">La falta de equipos profesionales no debe impedir que una comunidad pueda observar, medir, documentar y conservar de forma ordenada los cambios de su propio territorio.</p>
+          </div>
+        </section>
+
+        <section class="project-info-section displacement-section">
+          <h3 data-i18n="displacementTitle">Cambio climático y desplazamiento</h3>
+          <p data-i18n="displacementText1">La erosión costera, las inundaciones y la pérdida progresiva de terreno pueden afectar viviendas, caminos, espacios culturales, actividades económicas y otras condiciones necesarias para permanecer en un territorio.</p>
+          <p data-i18n="displacementText2">Cuando estos procesos contribuyen a que las personas tengan que abandonar temporal o permanentemente un lugar pueden formar parte de dinámicas de desplazamiento asociadas a factores climáticos y ambientales.</p>
+          <p class="project-scope-note" data-i18n="displacementCaution">COSTA VIVA no determina por sí misma que exista desplazamiento climático ni asigna una condición jurídica a las personas. Su función es documentar cambios, impactos y series temporales que puedan ayudar a comprender lo ocurrido.</p>
+        </section>
+
+        <section class="project-info-section ods-section">
+          <h3 data-i18n="odsTitle">COSTA VIVA y los Objetivos de Desarrollo Sostenible</h3>
+          <p data-i18n="odsIntro">La iniciativa se alinea principalmente con los siguientes ODS sin implicar reconocimiento o certificación oficial por parte de Naciones Unidas.</p>
+          <div class="ods-grid">
+            <div class="ods-card"><strong>ODS 13</strong><span data-i18n="ods13Title">Acción por el clima</span><p data-i18n="ods13Text">Apoya la observación local de impactos ambientales y la construcción de memoria útil para procesos de adaptación.</p></div>
+            <div class="ods-card"><strong>ODS 11</strong><span data-i18n="ods11Title">Ciudades y comunidades sostenibles</span><p data-i18n="ods11Text">Ayuda a documentar amenazas sobre viviendas, caminos, espacios comunitarios y patrimonio territorial.</p></div>
+            <div class="ods-card"><strong>ODS 10</strong><span data-i18n="ods10Title">Reducción de las desigualdades</span><p data-i18n="ods10Text">Busca reducir la brecha entre quienes disponen de instrumentación especializada y comunidades que necesitan registrar su territorio con medios limitados.</p></div>
+            <div class="ods-card"><strong>ODS 14</strong><span data-i18n="ods14Title">Vida submarina</span><p data-i18n="ods14Text">Favorece la observación de transformaciones en la franja costera y en los espacios de interacción entre el mar y las comunidades.</p></div>
+            <div class="ods-card"><strong>ODS 16</strong><span data-i18n="ods16Title">Paz, justicia e instituciones sólidas</span><p data-i18n="ods16Text">Facilita conservar evidencias comunitarias ordenadas que pueden apoyar una participación informada ante instituciones.</p></div>
+            <div class="ods-card"><strong>ODS 17</strong><span data-i18n="ods17Title">Alianzas para lograr los objetivos</span><p data-i18n="ods17Text">Puede facilitar colaboración entre comunidades, universidades, organizaciones sociales, investigadores y administraciones públicas.</p></div>
+          </div>
+        </section>
+
+        <section class="project-info-section">
+          <h3 data-i18n="authorTitle">Autor y desarrollo</h3>
+          <div class="author-box">
+            <div class="author-avatar" aria-hidden="true">CB</div>
+            <div>
+              <strong>Carlos Busón Buesa</strong>
+              <p data-i18n="authorRole">Concepción del proyecto, arquitectura científica y digital, diseño metodológico y desarrollo de la herramienta.</p>
+            </div>
+          </div>
+          <div class="project-meta-grid">
+            <div><span data-i18n="academicLinkLabel">Vínculo académico del autor</span><strong data-i18n="academicLinkValue">Investigador de posdoctorado voluntario en la Universidade Federal de Mato Grosso do Sul</strong></div>
+            <div><span data-i18n="programLabel">Programa</span><strong>PPGTA · FAENG · UFMS</strong></div>
+            <div><span>ORCID</span><strong>0000-0002-1446-2252</strong></div>
+            <div><span data-i18n="contactLabel">Contacto académico</span><strong>carlos.buson@ufms.br</strong></div>
+          </div>
+          <p class="project-scope-note" data-i18n="institutionNote">La afiliación identifica el marco académico de trabajo del autor. No implica por sí sola certificación institucional, financiación, aval oficial ni sustitución de los protocolos técnicos de las autoridades competentes.</p>
+        </section>
+
+        <section class="project-info-section">
+          <h3 data-i18n="methodCommitmentTitle">Compromiso metodológico</h3>
+          <ul class="project-values">
+            <li data-i18n="methodCommitment1">No inventar valores que el teléfono o la persona no hayan registrado.</li>
+            <li data-i18n="methodCommitment2">Conservar la precisión informada por el dispositivo y distinguir medición, estimación y observación.</li>
+            <li data-i18n="methodCommitment3">Favorecer puntos de control y procedimientos que puedan repetirse de la misma forma.</li>
+            <li data-i18n="methodCommitment4">Mantener los registros bajo control de la comunidad hasta que decida exportarlos o compartirlos.</li>
+            <li data-i18n="methodCommitment5">No incluir publicidad, rastreadores ni transmisión automática de los datos de campo.</li>
+          </ul>
+        </section>
+
+        <section class="project-info-section license-section">
+          <h3 data-i18n="licenseTitle">Licencias abiertas</h3>
+          <div class="license-grid">
+            <div class="license-card">
+              <strong>MIT</strong>
+              <span data-i18n="softwareLicenseLabel">Código fuente</span>
+              <p data-i18n="softwareLicenseText">El software de COSTA VIVA se publica bajo la licencia MIT, que permite usar, estudiar, modificar y redistribuir el código conservando el aviso de copyright y la licencia.</p>
+              <a href="./LICENSE" target="_blank" rel="noopener" data-i18n="readMIT">Leer licencia MIT</a>
+            </div>
+            <div class="license-card">
+              <strong>CC BY 4.0</strong>
+              <span data-i18n="contentLicenseLabel">Documentación y contenidos metodológicos</span>
+              <p data-i18n="contentLicenseText">Los textos de ayuda y materiales metodológicos propios se ofrecen bajo CC BY 4.0, una licencia más apropiada para contenidos, siempre que se reconozca la autoría.</p>
+              <a href="./CONTENT-LICENSE.md" target="_blank" rel="noopener" data-i18n="readContentLicense">Ver condiciones de los contenidos</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="project-info-section project-caution">
+          <h3 data-i18n="limitsTitle">Alcance y límites</h3>
+          <p data-i18n="limitsText">COSTA VIVA ayuda a documentar observaciones y series comunitarias. No sustituye levantamientos topográficos, GNSS profesional, estudios oceanográficos, peritajes, sistemas oficiales de alerta ni decisiones de protección civil. Los registros deben interpretarse teniendo en cuenta el método utilizado y su incertidumbre.</p>
+        </section>
+
+        <div class="project-info-footer">
+          <span>© 2026 Carlos Busón Buesa</span>
+          <span>COSTA VIVA · v0.5.0</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="detail-modal" class="modal-backdrop" hidden>
+      <div class="modal-card detail-card">
+        <button id="detail-close" class="modal-close" type="button" aria-label="Cerrar">✕</button>
+        <div id="detail-content"></div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" hidden role="status" aria-live="polite"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>
