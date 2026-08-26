@@ -208,3 +208,8 @@ La caché de la PWA usa ahora una estrategia online first para los recursos prop
 La versión 0.5.4 incorpora una política visible de gobernanza comunitaria de los datos en el panel de información y una ayuda práctica para las personas usuarias. Se explicita que registrar no significa ceder, que no existe transferencia automática de los registros comunitarios y que compartir requiere una decisión consciente.
 
 Se añaden como referencias los principios CARE para la gobernanza de datos indígenas y OCAP® en su contexto específico de las First Nations de Canadá, sin reclamar certificación ni adopción formal de esos marcos.
+
+
+## Versión 0.5.5
+
+La versión 0.5.5 retira el botón de instalación de la cabecera para simplificar la interfaz móvil. La instalación permanece disponible en Ayuda mediante el botón específico. También corrige la maquetación de los bloques de ayuda, gobernanza de datos y aviso GPS para que el contenido textual se presente en una sola columna y sea legible en pantallas estrechas.

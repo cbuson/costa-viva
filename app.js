@@ -130,7 +130,6 @@
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'es'
     $('#subtitle').textContent = tr('subtitle')
     $('#first-run-subtitle').textContent = tr('subtitle')
-    $('#install-btn').textContent = tr('install')
     updateInstallGuide()
     $('#project-info-btn').setAttribute('aria-label', tr('projectInfoAria'))
     $('#project-info-btn').title = tr('projectInfoAria')
@@ -1315,7 +1314,7 @@
   function closeInstallModal() {
     $('#install-modal').hidden = true
     document.body.style.overflow = ''
-    $('#install-btn').focus()
+    $('#help-install-btn')?.focus()
   }
 
   async function requestNativeInstall() {
@@ -1328,7 +1327,6 @@
     promptEvent.prompt()
     const choice = await promptEvent.userChoice
     if (choice?.outcome === 'accepted') {
-      $('#install-btn').hidden = true
       $('#help-install-btn').hidden = true
       closeInstallModal()
     } else {
@@ -1338,28 +1336,21 @@
 
   function setupInstall() {
     const installed = isStandalone()
-    $('#install-btn').hidden = installed
     $('#help-install-btn').hidden = installed
 
     window.addEventListener('beforeinstallprompt', event => {
       event.preventDefault()
       state.installPrompt = event
-      $('#install-btn').hidden = false
       $('#help-install-btn').hidden = false
       updateInstallGuide()
     })
 
     window.addEventListener('appinstalled', () => {
       state.installPrompt = null
-      $('#install-btn').hidden = true
       $('#help-install-btn').hidden = true
       if (!$('#install-modal').hidden) closeInstallModal()
     })
 
-    $('#install-btn').addEventListener('click', () => {
-      if (state.installPrompt) requestNativeInstall()
-      else openInstallModal()
-    })
     $('#help-install-btn').addEventListener('click', () => {
       if (state.installPrompt) requestNativeInstall()
       else openInstallModal()

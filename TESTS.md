@@ -203,3 +203,13 @@ Comprobar que el panel mantiene lectura correcta a 320, 360, 375, 390, 412, 430 
 - Verificar que los enlaces CARE y OCAP® abren en una pestaña externa.
 - Verificar legibilidad a 320, 360, 375, 390, 412, 430 y 768 px.
 - Verificar que ningún texto afirma transferencia automática, propiedad del investigador o certificación OCAP®.
+
+
+## Pruebas v0.5.5
+
+- [ ] Cabecera a 320 px sin botón Instalar y sin desbordamiento.
+- [ ] Cabecera a 360, 390, 412 y 430 px con ES, PT e información accesibles.
+- [ ] Ayuda muestra Gobernanza en una sola columna.
+- [ ] Aviso GPS se lee en una sola columna.
+- [ ] Botón INSTALAR EN ESTE CELULAR permanece disponible en Ayuda.
+- [ ] El modal de instalación funciona desde Ayuda.

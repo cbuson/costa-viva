@@ -129,3 +129,12 @@ Se cambia la estrategia del Service Worker de cache first a network first para r
 - Se verificó que no se afirme cumplimiento ni certificación OCAP®.
 - Se explicita que CARE y OCAP® son referencias y que los acuerdos propios de cada comunidad prevalecen.
 - Se mantiene la arquitectura local first y no se añade transmisión automática de registros.
+
+
+## Auditoría v0.5.5
+
+- Retirado el botón Instalar de la cabecera.
+- Conservado el flujo de instalación desde Ayuda.
+- Corregida la regla flex que comprimía contenidos complejos de Ayuda.
+- Gobernanza, GPS, protocolo de campo e instalación se fuerzan a una columna en móvil.
+- Cabecera móvil compactada para mantener COSTA VIVA, ES, PT e información sin una segunda fila innecesaria.
