@@ -252,3 +252,14 @@ Comprobar que el panel mantiene lectura correcta a 320, 360, 375, 390, 412, 430 
 - [ ] ES y PT continúan funcionando sin regresiones.
 - [ ] La cabecera con ES PT W e i funciona a 320 px sin desbordamiento horizontal.
 - [ ] La versión Wayuunaiki será revisada por hablantes Wayuu antes de considerarse validada.
+
+
+## Wayuunaiki 0.5.10
+
+- [x] Las 388 claves de español tienen una cadena provisional WY.
+- [x] WY ya no utiliza el objeto español como fallback por diseño.
+- [x] El selector muestra WY.
+- [x] Existe aviso visible de traducción provisional.
+- [x] Se genera `WAYUUNAIKI_REVIEW.csv` para revisión local.
+- [ ] Revisión lingüística por hablantes Wayuu.
+- [ ] Revisión de variantes locales y adecuación cultural.

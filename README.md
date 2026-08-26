@@ -250,3 +250,8 @@ Desde la versión 0.5.8 COSTA VIVA incluye una tercera opción lingüística `W`
 La capa Wayuunaiki es deliberadamente provisional. Solo se traducen términos cuya equivalencia ha podido documentarse en recursos lingüísticos existentes. El resto permanece temporalmente en castellano para evitar inventar vocabulario. La interfaz completa deberá revisarse con hablantes Wayuu antes de declararse validada.
 
 Entre las referencias utilizadas para esta primera arquitectura se encuentran el *Diccionario de computación en wayuunaiki* y materiales de Wayuu Digital. Los términos documentados incorporados incluyen `Karalouta` para cuaderno, `Anaajawaa` para guardar, `Ee’irataa eemüin` para exportar, `Akaalijia` para ayuda, `Ayaawajaa` para medir y `Ajütaa` para enviar.
+
+
+## Wayuunaiki 0.5.10
+
+La opción WY contiene ahora un borrador completo de las 388 cadenas de interfaz. Es una traducción provisional no validada y puede contener errores. Debe revisarse con hablantes Wayuu y expertos locales. El archivo `WAYUUNAIKI_REVIEW.csv` facilita la revisión cadena por cadena.

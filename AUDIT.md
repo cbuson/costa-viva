@@ -160,3 +160,8 @@ Se incorpora intercambio comunitario descentralizado con selección de registros
 ## Auditoría lingüística 0.5.8
 
 Se añadió soporte experimental para Wayuunaiki mediante el código `guc`. No se declara traducción completa. La implementación usa el catálogo español como respaldo y sustituye únicamente términos documentados en fuentes lingüísticas consultadas. Esta decisión evita presentar traducciones automáticas no verificadas como vocabulario validado por la comunidad.
+
+
+## 0.5.10 Wayuunaiki
+
+Se sustituyó la capa parcial anterior por un borrador completo para las 388 cadenas de interfaz. La cobertura técnica es completa, pero la validación lingüística sigue pendiente. La aplicación lo declara expresamente y entrega una matriz CSV para revisión con hablantes Wayuu y expertos locales.
