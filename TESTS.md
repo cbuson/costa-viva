@@ -213,3 +213,32 @@ Comprobar que el panel mantiene lectura correcta a 320, 360, 375, 390, 412, 430 
 - [ ] Aviso GPS se lee en una sola columna.
 - [ ] Botón INSTALAR EN ESTE CELULAR permanece disponible en Ayuda.
 - [ ] El modal de instalación funciona desde Ayuda.
+
+
+## Pruebas de mapa v0.5.7
+
+- Verificar que Capas abre y cierra el selector sin bloquear el mapa
+- Verificar que Mapa solicita únicamente las teselas visibles de OpenStreetMap
+- Verificar que Satélite solicita únicamente las teselas visibles de Esri World Imagery
+- Verificar que Sin mapa no realiza solicitudes de teselas y mantiene visibles los marcadores
+- Verificar que la opción elegida permanece después de recargar la aplicación
+- Verificar atribución visible para OpenStreetMap y Esri
+- Verificar que Mi posición centra el mapa en las tres bases
+- Verificar zoom y desplazamiento en 320, 360, 375, 390, 412, 430 y 768 px
+- Verificar que la falta de Internet no elimina puntos ni registros
+- Verificar ES y PT en Capas, Mapa, Satélite y Sin mapa
+
+
+## Intercambio comunitario v0.5.7
+
+- [ ] Seleccionar uno, varios y todos los registros para compartir
+- [ ] Excluir coordenadas y comprobar que no aparecen en JSON, CSV ni GeoJSON
+- [ ] Excluir notas, mediciones y tipos de multimedia de forma independiente
+- [ ] Compartir mediante Web Share cuando el dispositivo lo permita
+- [ ] Comprobar fallback por descarga `.cvpack` cuando Web Share no admita archivos
+- [ ] Importar `.cvpack` en otro dispositivo COSTA VIVA
+- [ ] Confirmar que los registros importados aparecen como Recibidos
+- [ ] Confirmar que una segunda importación del mismo paquete no duplica UUID existentes
+- [ ] Comprobar preservación de fotografías, vídeos y audios seleccionados
+- [ ] Comprobar que códigos iguales de diferentes cuadernos no se confunden en el dispositivo receptor
+- [ ] Revisar advertencia de metadatos de multimedia cuando se ocultan coordenadas

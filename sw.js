@@ -1,4 +1,4 @@
-const CACHE = 'costa-viva-v11'
+const CACHE = 'costa-viva-v13'
 const APP_SHELL = [
   './',
   './index.html',
@@ -35,7 +35,7 @@ self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return
   const url = new URL(event.request.url)
 
-  if (url.hostname === 'tile.openstreetmap.org') {
+  if (url.hostname === 'tile.openstreetmap.org' || url.hostname === 'server.arcgisonline.com') {
     event.respondWith(fetch(event.request).catch(() => new Response('', { status: 503 })))
     return
   }

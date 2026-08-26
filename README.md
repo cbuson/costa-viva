@@ -23,8 +23,9 @@ La aplicación está pensada para uso mobile first con celulares comunes. El tel
 - Ayuda de campo para crear líneas fijas de control con referencias A y B y cinta métrica
 - Protocolo de fotografía repetida y cautelas para mediciones hasta el borde del agua
 - Almacenamiento local mediante IndexedDB
-- Mapa ligero propio con teselas de OpenStreetMap cuando hay conectividad
-- Los puntos permanecen visibles sobre una base local neutra cuando las teselas no están disponibles
+- Mapa ligero propio con selector de base Mapa, Satélite o Sin mapa
+- Base cartográfica OpenStreetMap y referencia visual Esri World Imagery cuando hay conectividad
+- Los puntos permanecen visibles sobre una base local neutra cuando se selecciona Sin mapa o las teselas no están disponibles
 - Exportación JSON, CSV y GeoJSON
 - Paquete ZIP con datos y evidencias
 - Compartir mediante Web Share API cuando el dispositivo lo permite
@@ -71,13 +72,19 @@ Borrar los datos del sitio desde el navegador puede eliminar los registros local
 
 ## Mapa
 
-Cuando existe conexión, la aplicación solicita las teselas visibles de OpenStreetMap.
+COSTA VIVA permite escoger tres bases desde el botón Capas.
 
-COSTA VIVA no realiza descarga masiva ni precarga de mapas para uso offline.
+- Mapa con OpenStreetMap
+- Satélite con Esri World Imagery
+- Sin mapa con una base local neutra
 
-El Service Worker conserva la aplicación, pero no convierte OpenStreetMap en un mapa base offline.
+Las bases externas se consultan solamente cuando existe conectividad. COSTA VIVA no realiza descarga masiva ni precarga de teselas para uso offline.
 
-Los puntos registrados siguen conservándose y pueden verse sobre una base neutra, consultarse y exportarse aunque las teselas cartográficas no estén disponibles.
+El Service Worker conserva la aplicación y los registros locales, pero no convierte OpenStreetMap ni Esri World Imagery en mapas base offline.
+
+Los puntos registrados siguen conservándose, pueden verse sobre la base neutra, consultarse y exportarse aunque las imágenes cartográficas no estén disponibles.
+
+La imagen satelital es una referencia visual. Puede corresponder a una fecha diferente de la observación de campo y no debe utilizarse por sí sola para cuantificar retroceso de costa.
 
 ## Sensores
 
@@ -140,7 +147,7 @@ No exige nombres personales.
 
 La versión 0.3 evita frameworks y bibliotecas JavaScript externas para las funciones principales.
 
-El mapa utiliza teselas públicas de OpenStreetMap cuando existe conexión.
+El mapa utiliza OpenStreetMap y Esri World Imagery cuando existe conexión. La opción Sin mapa no requiere una base externa.
 
 ## Ciencia popular y autoría
 
@@ -213,3 +220,25 @@ Se añaden como referencias los principios CARE para la gobernanza de datos ind�
 ## Versión 0.5.5
 
 La versión 0.5.5 retira el botón de instalación de la cabecera para simplificar la interfaz móvil. La instalación permanece disponible en Ayuda mediante el botón específico. También corrige la maquetación de los bloques de ayuda, gobernanza de datos y aviso GPS para que el contenido textual se presente en una sola columna y sea legible en pantallas estrechas.
+
+
+## Versión 0.5.7
+
+La versión 0.5.7 incorpora un selector de bases cartográficas con tres opciones visibles y bilingües
+
+- Mapa
+- Satélite
+- Sin mapa
+
+También corrige la estructura interna del visor para que las teselas, marcadores, controles de zoom y atribución sean visibles en el mapa. La preferencia de base elegida se conserva localmente en el navegador.
+
+La ayuda aclara que las imágenes satelitales sirven como referencia territorial y no deben convertirse por sí solas en una medición del retroceso costero.
+
+
+## Intercambio comunitario descentralizado
+
+COSTA VIVA permite seleccionar registros concretos y decidir qué contenidos se comparten. La persona puede incluir o excluir coordenadas y sensores, notas, mediciones, fotografías, vídeos y audios antes de preparar el archivo. El paquete se genera localmente con extensión `.cvpack` y se entrega al menú de compartir del dispositivo, que puede ofrecer WhatsApp, correo electrónico, Quick Share, Bluetooth u otras aplicaciones instaladas. COSTA VIVA no envía una copia a un servidor propio.
+
+Los paquetes `.cvpack` pueden importarse en otro COSTA VIVA. Los registros importados quedan identificados como recibidos, conservan la procedencia del cuaderno de origen y no se presentan como observaciones creadas por el teléfono receptor. Los identificadores internos originales se conservan para detectar duplicados, mientras que el código visible recibido incorpora una referencia al cuaderno de origen para evitar confusiones entre códigos iguales creados en dispositivos diferentes.
+
+El diseño aplica dos principios explícitos. **Registrar no significa ceder** y **compartir no significa entregar todo**.

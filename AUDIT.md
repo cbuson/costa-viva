@@ -138,3 +138,21 @@ Se cambia la estrategia del Service Worker de cache first a network first para r
 - Corregida la regla flex que comprimía contenidos complejos de Ayuda.
 - Gobernanza, GPS, protocolo de campo e instalación se fuerzan a una columna en móvil.
 - Cabecera móvil compactada para mantener COSTA VIVA, ES, PT e información sin una segunda fila innecesaria.
+
+
+## Auditoría v0.5.7
+
+Se incorporó un selector cartográfico limitado a tres estados para no aumentar la carga cognitiva de la interfaz comunitaria.
+
+La base Mapa utiliza OpenStreetMap.
+
+La base Satélite utiliza Esri World Imagery como referencia visual.
+
+La base Sin mapa conserva una superficie neutra y los puntos locales sin requerir una base externa.
+
+Se añade advertencia metodológica sobre la fecha potencialmente diferente de las imágenes satelitales y la prohibición de interpretar automáticamente una diferencia visual como metros de erosión.
+
+
+## Cambio v0.5.7
+
+Se incorpora intercambio comunitario descentralizado con selección de registros y contenido, uso del menú nativo de compartir, paquete `.cvpack`, importación entre instalaciones COSTA VIVA, identificación de registros recibidos y prevención de duplicados por UUID. No se introduce servidor central ni cuenta obligatoria. La selección del destinatario se guarda solamente como contexto declarado dentro del paquete.

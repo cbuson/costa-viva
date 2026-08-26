@@ -178,3 +178,47 @@ textarea{resize:vertical;min-height:110px}
 .help-steps>.warning,.help-steps>.data-control-help,.help-steps>.install-help-card,.help-steps>.field-protocol{display:block;width:100%;min-width:0}
 .data-control-help>.protocol-heading,.data-control-help>.protocol-detail,.data-control-help>.protocol-rule{width:100%;min-width:0}
 @media(max-width:620px){.data-control-help{display:block!important}.data-control-help>*{width:100%;min-width:0}.data-control-help .protocol-heading{display:flex}.data-control-help .protocol-detail{display:block}.data-control-help .protocol-detail summary{width:100%;white-space:normal;overflow-wrap:anywhere}.warning{display:block!important}.warning h3,.warning p{width:100%}.install-help-card{display:block!important}}
+
+.map-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 8px}
+.map-layer-toggle{min-height:44px;padding:8px 12px}
+.map-layer-current{font-weight:800;color:var(--primary-darker)}
+.map-layer-panel{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 10px}
+.map-layer-choice{min-height:54px;border:2px solid var(--border);background:#fff;color:var(--ink);border-radius:11px;padding:8px;display:flex;align-items:center;justify-content:center;gap:7px}
+.map-layer-choice span{font-size:1.15rem}.map-layer-choice strong{font-size:.9rem}
+.map-layer-choice.active{border-color:var(--primary);background:#e7f2f8;color:var(--primary-darker)}
+.map-no-base{background:repeating-linear-gradient(0deg,#f7f7f7,#f7f7f7 79px,#e1e5e8 80px),repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(86,92,101,.12) 80px)}
+.map-attribution a{color:#1a4480;text-decoration:none;font-weight:700}
+.map-help-card{border-left:5px solid var(--primary-dark);background:#f7fbff}
+@media(max-width:420px){.map-layer-panel{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.map-layer-choice{padding:7px 4px;min-width:0}.map-layer-choice strong{font-size:.78rem}.map-layer-choice span{font-size:1rem}}
+
+/* Intercambio comunitario descentralizado · v0.5.7 */
+.community-exchange{border-left:5px solid var(--primary-dark);background:#f7fbff}
+.exchange-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+.share-modal-card{width:min(720px,100%);padding-top:58px}
+.share-step{border:1px solid var(--border);border-radius:13px;padding:13px;margin:12px 0;background:#fff}
+.share-step-head{display:flex;align-items:center;gap:9px;margin-bottom:10px}
+.share-step-head>span{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--primary);color:#fff;font-weight:900;flex:0 0 auto}
+.share-step-head h3{margin:0;color:var(--primary-darker);font-size:1.04rem}
+.share-inline-actions{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.share-record-list{display:grid;gap:7px;max-height:220px;overflow:auto;padding-right:2px}
+.share-record-option{display:flex;align-items:flex-start;gap:9px;padding:10px;border:1px solid var(--border);border-radius:10px;background:var(--base);cursor:pointer;min-width:0}
+.share-record-option input{width:20px;height:20px;flex:0 0 auto;margin-top:2px}
+.share-record-option span{display:block;min-width:0;margin:0}
+.share-record-option strong,.share-record-option small{display:block;overflow-wrap:anywhere}
+.share-record-option small{color:var(--muted);margin-top:2px}
+.share-content-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.share-content-grid .check-label,.share-required{border:1px solid var(--border);border-radius:9px;padding:8px 10px;background:var(--base);min-height:46px}
+.share-required{opacity:.8}
+.recipient-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.recipient-grid .choice{min-height:64px;padding:10px}
+.share-purpose-label{display:block;margin-top:12px}
+.share-purpose-label span{display:block;margin-bottom:5px}
+.import-summary{display:grid;gap:8px;margin:12px 0}
+.record-badges{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.received-pill{background:#e7f4e4;border:1px solid #7fb77d}
+.share-help-card{border-left:5px solid var(--success);background:#fbfdf9}
+@media(max-width:620px){
+  .exchange-actions,.share-content-grid,.recipient-grid{grid-template-columns:1fr}
+  .share-modal-card{padding:58px 12px 14px}
+  .share-record-list{max-height:260px}
+}

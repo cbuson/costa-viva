@@ -93,3 +93,19 @@ Documentación, ayudas y materiales metodológicos propios
 Creative Commons Attribution 4.0 International, CC BY 4.0
 
 © 2026 Carlos Busón Buesa
+
+
+## Cartografía de referencia en v0.5.7
+
+El visor permite alternar entre OpenStreetMap, Esri World Imagery y una base neutra sin mapa externo.
+
+Las bases cartográficas externas son referencias de contexto. No forman parte de la evidencia primaria de una observación comunitaria y no deben utilizarse por sí solas para atribuir fecha, causa o magnitud a un cambio costero.
+
+La base Sin mapa preserva el acceso a los puntos almacenados cuando no se desea depender de una cartografía externa.
+
+
+## Intercambio entre comunidades
+
+La arquitectura de COSTA VIVA no presupone que el destinatario natural de los datos sea un investigador. Los registros pueden compartirse con personas de la misma comunidad, otras comunidades, organizaciones, instituciones públicas o equipos de investigación. La persona usuaria selecciona los registros, el contenido y una finalidad opcional antes de generar el paquete.
+
+El paquete de intercambio se prepara localmente. El sistema operativo decide qué canales están disponibles, por ejemplo WhatsApp, correo, Quick Share o Bluetooth. La aplicación no mantiene una copia central del paquete. Otro dispositivo con COSTA VIVA puede importar el archivo y mantener los registros recibidos diferenciados de los propios.

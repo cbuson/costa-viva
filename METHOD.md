@@ -164,3 +164,10 @@ COSTA VIVA separa técnicamente registrar de compartir. La creación de un regis
 Antes de compartir conjuntos de registros para investigación o uso institucional se recomienda acordar al menos la finalidad, las personas o entidades con acceso, el tratamiento de localizaciones sensibles, la forma de reconocimiento, la devolución de resultados y las condiciones para usos posteriores.
 
 Esta orientación toma como referencia los principios CARE para la gobernanza de datos indígenas. OCAP® se reconoce como una referencia específica de las First Nations de Canadá y no como una certificación aplicable automáticamente a COSTA VIVA.
+
+
+## Protocolo de intercambio de registros
+
+Antes de compartir, la persona selecciona los registros y los componentes incluidos. Los datos básicos de identificación del registro se conservan para mantener trazabilidad. Coordenadas y sensores, notas, mediciones y archivos multimedia son seleccionables. Si las coordenadas se excluyen, COSTA VIVA elimina esos campos estructurados y, para fotografías originales disponibles, genera una copia JPEG nueva sin metadatos EXIF del archivo fuente. Los vídeos y otros archivos originales pueden conservar metadatos propios del dispositivo, por lo que la interfaz advierte de este límite.
+
+El paquete `.cvpack` contiene un manifiesto, registros estructurados y únicamente las evidencias seleccionadas. Al importarlo en otro dispositivo, los registros quedan marcados como recibidos y se registra la procedencia del paquete. La importación no cambia la autoría ni implica cesión de derechos sobre los datos.

@@ -9,7 +9,6 @@
   <link rel="icon" href="./assets/icon-192.png" sizes="192x192">
   <link rel="apple-touch-icon" href="./assets/icon-192.png">
   <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
   <title>COSTA VIVA</title>
 </head>
 <body>
@@ -41,11 +40,30 @@
           <button id="locate-me" class="secondary-btn" type="button">📍 <span data-i18n="myPosition">Mi posición</span></button>
         </div>
 
+        <div class="map-toolbar" aria-label="Selector de mapa base">
+          <button id="map-layer-toggle" class="secondary-btn map-layer-toggle" type="button" aria-expanded="false" aria-controls="map-layer-panel">◫ <span data-i18n="layers">Capas</span></button>
+          <span id="map-layer-current" class="map-layer-current">Mapa</span>
+        </div>
+        <div id="map-layer-panel" class="map-layer-panel" hidden>
+          <button type="button" class="map-layer-choice active" data-map-layer="osm" aria-pressed="true"><span>🗺️</span><strong data-i18n="streetMap">Mapa</strong></button>
+          <button type="button" class="map-layer-choice" data-map-layer="satellite" aria-pressed="false"><span>🛰️</span><strong data-i18n="satellite">Satélite</strong></button>
+          <button type="button" class="map-layer-choice" data-map-layer="none" aria-pressed="false"><span>⬛</span><strong data-i18n="noBaseMap">Sin mapa</strong></button>
+        </div>
+
         <div id="map-wrap" class="map-wrap">
-          <div id="map" aria-label="Mapa de observaciones"></div>
-          <div id="offline-map" class="offline-map" hidden>
-            <canvas id="offline-canvas" width="900" height="520" aria-label="Vista local de puntos sin mapa base"></canvas>
-            <p data-i18n="offlineMapNote">Sin mapa base. Los puntos se muestran usando sus coordenadas guardadas.</p>
+          <div id="map" class="simple-map" aria-label="Mapa de observaciones">
+            <div id="map-tiles" class="map-tiles" aria-hidden="true"></div>
+            <div id="map-markers" class="map-markers"></div>
+            <div id="map-empty" class="map-empty">
+              <span>📍</span>
+              <strong data-i18n="noMapPoints">Aún no hay puntos para mostrar</strong>
+              <small data-i18n="mapStartsWithPosition">El mapa se centrará cuando registres una posición o actives Mi posición</small>
+            </div>
+            <div class="map-controls" aria-label="Controles de zoom">
+              <button id="map-zoom-in" type="button" aria-label="Acercar">+</button>
+              <button id="map-zoom-out" type="button" aria-label="Alejar">−</button>
+            </div>
+            <div id="map-attribution" class="map-attribution"></div>
           </div>
         </div>
 
@@ -163,6 +181,7 @@
           <label><span data-i18n="filterCategory">Tipo</span><select id="filter-category"><option value="all" data-i18n="all">Todos</option></select></label>
           <label class="check-label"><input id="filter-media" type="checkbox"><span data-i18n="withMedia">Con multimedia</span></label>
           <label class="check-label"><input id="filter-permanent" type="checkbox"><span data-i18n="onlyPermanent">Puntos permanentes</span></label>
+          <label class="check-label"><input id="filter-received" type="checkbox"><span data-i18n="onlyReceived">Registros recibidos</span></label>
         </div>
         <div id="notebook-list" class="record-list"></div>
       </section>
@@ -180,8 +199,21 @@
           <button id="export-geojson" type="button" class="export-btn"><strong>GeoJSON</strong><span data-i18n="mapData">Puntos para SIG</span></button>
           <button id="export-zip" type="button" class="export-btn"><strong>ZIP</strong><span data-i18n="evidencePackage">Datos y evidencias</span></button>
         </div>
-        <button id="share-export" type="button" class="primary-btn full">📤 <span data-i18n="sharePackage">Compartir paquete</span></button>
-        <p id="share-help" class="helper" data-i18n="shareHelp">En dispositivos compatibles se abrirá el menú para compartir. Si no está disponible, se descargará el paquete para que puedas adjuntarlo al correo.</p>
+        <section class="community-exchange card">
+          <div class="protocol-heading">
+            <span class="protocol-icon">🤝</span>
+            <div>
+              <h3 data-i18n="communityExchangeTitle">Compartir entre personas y comunidades</h3>
+              <p data-i18n="communityExchangeIntro">Elige qué registros y qué contenidos quieres compartir. COSTA VIVA prepara el paquete y el celular te permite escoger WhatsApp, correo, Quick Share, Bluetooth u otra aplicación disponible.</p>
+            </div>
+          </div>
+          <div class="exchange-actions">
+            <button id="share-export" type="button" class="primary-btn full">📤 <span data-i18n="shareRecords">Compartir registros</span></button>
+            <button id="import-package-btn" type="button" class="secondary-btn full">📥 <span data-i18n="importPackage">Importar paquete COSTA VIVA</span></button>
+            <input id="import-package-input" type="file" accept=".cvpack,.zip,application/zip" hidden>
+          </div>
+          <p id="share-help" class="helper" data-i18n="shareHelpCommunity">COSTA VIVA no envía los registros a un servidor propio. El medio de envío depende de las aplicaciones instaladas en el dispositivo.</p>
+        </section>
         <div class="privacy-note">🔒 <span data-i18n="privacyPrinciple">Los registros permanecen bajo control de la comunidad y solo salen del dispositivo cuando decides exportarlos o compartirlos.</span></div>
       </section>
 
@@ -266,6 +298,21 @@
           </section>
 
           <article class="card warning"><h3 data-i18n="gpsTitle">Sobre el GPS del celular</h3><p data-i18n="gpsHelp">El GPS ayuda a localizar la observación. No tiene la precisión de un equipo profesional. COSTA VIVA conserva la precisión informada por el dispositivo para evitar aparentar una exactitud que no existe.</p></article>
+
+          <article class="card map-help-card">
+            <h3 data-i18n="mapBasesTitle">Mapas de referencia</h3>
+            <p data-i18n="mapBasesHelp">Puedes elegir Mapa, Satélite o Sin mapa. El mapa satelital ayuda a reconocer la costa, pero la imagen puede corresponder a otra fecha y no debe usarse por sí sola para medir cuánto retrocedió la línea de costa.</p>
+          </article>
+
+          <article class="card share-help-card">
+            <h3 data-i18n="sharingHelpTitle">Compartir sin perder el control</h3>
+            <p data-i18n="sharingHelpText">Puedes compartir con tu comunidad, otra comunidad, un investigador, una institución u otra persona. Antes de enviar, eliges los registros y también si incluyes coordenadas, notas, mediciones, fotografías, vídeos o audios.</p>
+            <div class="project-principle">
+              <strong data-i18n="shareNotAllTitle">Compartir no significa entregar todo</strong>
+              <p data-i18n="shareNotAllText">El paquete se prepara en el celular. Después Android, iOS o el navegador muestran las aplicaciones disponibles para enviarlo. COSTA VIVA no decide el destinatario ni recibe una copia.</p>
+            </div>
+            <p class="project-scope-note" data-i18n="mediaMetadataCaution">Atención. Algunos archivos originales de cámara o vídeo pueden contener metadatos creados por el propio dispositivo. Si una localización es sensible, revisa también los archivos multimedia antes de compartirlos.</p>
+          </article>
 
           <section class="data-control-help card">
             <div class="protocol-heading">
@@ -495,8 +542,74 @@
 
         <div class="project-info-footer">
           <span>© 2026 Carlos Busón Buesa</span>
-          <span>COSTA VIVA · v0.5.4</span>
+          <span>COSTA VIVA · v0.5.7</span>
         </div>
+      </div>
+    </div>
+
+    <div id="share-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="share-modal-title">
+      <div class="modal-card share-modal-card">
+        <button id="share-modal-close" class="modal-close" type="button" aria-label="Cerrar">✕</button>
+        <h2 id="share-modal-title" data-i18n="shareModalTitle">Compartir registros</h2>
+        <p data-i18n="shareModalIntro">Tú decides qué sale de este dispositivo, con quién y con qué contenido.</p>
+
+        <section class="share-step">
+          <div class="share-step-head"><span>1</span><h3 data-i18n="chooseRecordsTitle">Elige los registros</h3></div>
+          <div class="share-inline-actions">
+            <button id="share-select-all-records" type="button" class="small-btn" data-i18n="selectAll">Seleccionar todos</button>
+            <button id="share-select-none-records" type="button" class="small-btn" data-i18n="selectNone">Ninguno</button>
+          </div>
+          <div id="share-record-list" class="share-record-list"></div>
+        </section>
+
+        <section class="share-step">
+          <div class="share-step-head"><span>2</span><h3 data-i18n="chooseContentTitle">Elige qué compartir</h3></div>
+          <label class="check-label share-required"><input type="checkbox" checked disabled><span data-i18n="basicRecordData">Datos básicos del registro</span></label>
+          <div class="share-content-grid">
+            <label class="check-label"><input id="share-measurements" type="checkbox" checked><span data-i18n="shareMeasurements">Mediciones</span></label>
+            <label class="check-label"><input id="share-notes" type="checkbox" checked><span data-i18n="shareNotes">Notas</span></label>
+            <label class="check-label"><input id="share-coordinates" type="checkbox" checked><span data-i18n="shareCoordinates">Coordenadas y sensores</span></label>
+            <label class="check-label"><input id="share-photos" type="checkbox" checked><span data-i18n="sharePhotos">Fotografías</span></label>
+            <label class="check-label"><input id="share-videos" type="checkbox" checked><span data-i18n="shareVideos">Vídeos</span></label>
+            <label class="check-label"><input id="share-audios" type="checkbox" checked><span data-i18n="shareAudios">Audios</span></label>
+          </div>
+          <div class="share-inline-actions">
+            <button id="share-select-all-content" type="button" class="small-btn" data-i18n="selectAllContent">Incluir todo</button>
+            <button id="share-clear-optional" type="button" class="small-btn" data-i18n="clearOptionalContent">Quitar opcionales</button>
+          </div>
+          <div id="share-sensitive-warning" class="protocol-note" data-i18n="shareSensitiveWarning">Las coordenadas pueden revelar lugares sensibles. Compártelas solo cuando sea necesario y exista una decisión consciente.</div>
+        </section>
+
+        <section class="share-step">
+          <div class="share-step-head"><span>3</span><h3 data-i18n="recipientTitle">¿Con quién vas a compartir?</h3></div>
+          <div class="recipient-grid">
+            <label class="choice"><input type="radio" name="share-recipient" value="my_community" checked><span>👥</span><b data-i18n="recipientMyCommunity">Mi comunidad</b></label>
+            <label class="choice"><input type="radio" name="share-recipient" value="other_community"><span>🌎</span><b data-i18n="recipientOtherCommunity">Otra comunidad</b></label>
+            <label class="choice"><input type="radio" name="share-recipient" value="research"><span>🎓</span><b data-i18n="recipientResearch">Investigador o universidad</b></label>
+            <label class="choice"><input type="radio" name="share-recipient" value="public"><span>🏛️</span><b data-i18n="recipientPublic">Institución pública</b></label>
+            <label class="choice"><input type="radio" name="share-recipient" value="organization"><span>🤝</span><b data-i18n="recipientOrganization">Organización social</b></label>
+            <label class="choice"><input type="radio" name="share-recipient" value="other"><span>👤</span><b data-i18n="recipientOther">Otra persona</b></label>
+          </div>
+          <label class="field-label share-purpose-label"><span data-i18n="purposeOptional">Finalidad opcional</span><input id="share-purpose" type="text" data-i18n-placeholder="purposePlaceholder" placeholder="Ejemplo seguimiento comunitario o investigación acordada"></label>
+        </section>
+
+        <div class="privacy-note">🔒 <span data-i18n="shareControlReminder">COSTA VIVA prepara el archivo. No lo sube a un servidor propio y no recibe una copia.</span></div>
+        <button id="prepare-share" type="button" class="primary-btn full">📤 <span data-i18n="prepareAndShare">PREPARAR Y COMPARTIR</span></button>
+        <p id="share-modal-status" class="helper" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div id="import-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="import-modal-title">
+      <div class="modal-card share-modal-card">
+        <button id="import-modal-close" class="modal-close" type="button" aria-label="Cerrar">✕</button>
+        <h2 id="import-modal-title" data-i18n="importTitle">Importar registros recibidos</h2>
+        <div id="import-summary" class="import-summary"></div>
+        <p class="project-scope-note" data-i18n="importSeparationHelp">Los registros recibidos se identifican como tales y conservan información de procedencia. No se presentan como observaciones creadas por este teléfono.</p>
+        <div class="share-inline-actions">
+          <button id="confirm-import" type="button" class="primary-btn" data-i18n="confirmImport">IMPORTAR</button>
+          <button id="cancel-import" type="button" class="secondary-btn" data-i18n="cancel">Cancelar</button>
+        </div>
+        <p id="import-status" class="helper" role="status" aria-live="polite"></p>
       </div>
     </div>
 
@@ -510,8 +623,6 @@
     <div id="toast" class="toast" hidden role="status" aria-live="polite"></div>
   </div>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
   <script src="./app.js" defer></script>
 </body>
 </html>

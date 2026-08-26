@@ -2,14 +2,16 @@
   'use strict'
 
   const DB_NAME = 'costa-viva-db'
-  const DB_VERSION = 1
+  const DB_VERSION = 2
   const RECORD_STORE = 'records'
   const META_STORE = 'meta'
 
   const i18n = {
     es: {
       subtitle: 'Cuaderno comunitario de observación costera',
+      languageAria: 'Idioma', baseMapSelectorAria: 'Selector de mapa base', mapObservationsAria: 'Mapa de observaciones', zoomControlsAria: 'Controles de zoom', zoomIn: 'Acercar', zoomOut: 'Alejar', legendAria: 'Leyenda', mainNavigationAria: 'Navegación principal',
       install: 'Instalar', mapTitle: 'Mapa', mapIntro: 'Tus observaciones aparecen aquí cuando tienen posición registrada.', myPosition: 'Mi posición',
+      layers: 'Capas', streetMap: 'Mapa', satellite: 'Satélite', noBaseMap: 'Sin mapa', mapBasesTitle: 'Mapas de referencia', mapBasesHelp: 'Puedes elegir Mapa, Satélite o Sin mapa. El mapa satelital ayuda a reconocer la costa, pero la imagen puede corresponder a otra fecha y no debe usarse por sí sola para medir cuánto retrocedió la línea de costa.',
       offlineMapNote: 'Sin mapa base. Los puntos se muestran usando sus coordenadas guardadas.', noMapPoints: 'Aún no hay puntos para mostrar', mapStartsWithPosition: 'El mapa se centrará cuando registres una posición o actives Mi posición', singleObservation: 'Observación', permanentPoint: 'Punto permanente',
       newObservation: 'Nueva observación', registerIntro: 'Registra lo que ves. No necesitas explicar la causa.', code: 'Código', location: 'Ubicación', accuracy: 'Precisión', altitude: 'Altitud', direction: 'Dirección',
       notActivated: 'No activada', notAvailable: 'No disponible', activateObservation: 'ACTIVAR MODO DE OBSERVACIÓN', sensorHelper: 'Se solicitarán solamente los permisos necesarios. Si un sensor no está disponible, el registro puede continuar.',
@@ -20,6 +22,10 @@
       evidence: 'Evidencias', photos: 'Fotos', videos: 'Vídeos', recordAudio: 'Grabar audio', audioReady: 'Listo para grabar', stop: 'Detener', removeAudio: 'Eliminar audio', photoOverlayHelp: 'Las fotografías guardadas generan una copia documentada con fecha, código, posición, precisión, altitud y dirección cuando esos datos están disponibles.', saveObservation: 'GUARDAR OBSERVACIÓN',
       notebook: 'Cuaderno', notebookIntro: 'Consulta las observaciones guardadas en este dispositivo.', records: 'registros', search: 'Buscar', searchPlaceholder: 'Código o nota', filterCategory: 'Tipo', all: 'Todos', withMedia: 'Con multimedia', onlyPermanent: 'Puntos permanentes',
       export: 'Exportar', exportIntro: 'Prepara una copia de los registros para conservarlos o compartirlos.', fullData: 'Datos completos', tableData: 'Tabla de registros', mapData: 'Puntos para SIG', evidencePackage: 'Datos y evidencias', sharePackage: 'Compartir paquete', shareHelp: 'En dispositivos compatibles se abrirá el menú para compartir. Si no está disponible, se descargará el paquete para que puedas adjuntarlo al correo.', privacyPrinciple: 'Los registros permanecen bajo control de la comunidad y solo salen del dispositivo cuando decides exportarlos o compartirlos.',
+      communityExchangeTitle: 'Compartir entre personas y comunidades', communityExchangeIntro: 'Elige qué registros y qué contenidos quieres compartir. COSTA VIVA prepara el paquete y el celular te permite escoger WhatsApp, correo, Quick Share, Bluetooth u otra aplicación disponible.', shareRecords: 'Compartir registros', importPackage: 'Importar paquete COSTA VIVA', shareHelpCommunity: 'COSTA VIVA no envía los registros a un servidor propio. El medio de envío depende de las aplicaciones instaladas en el dispositivo.', onlyReceived: 'Registros recibidos', received: 'Recibido', receivedFromNotebook: 'Recibido · cuaderno {value}',
+      shareModalTitle: 'Compartir registros', shareModalIntro: 'Tú decides qué sale de este dispositivo, con quién y con qué contenido.', chooseRecordsTitle: 'Elige los registros', selectAll: 'Seleccionar todos', selectNone: 'Ninguno', chooseContentTitle: 'Elige qué compartir', basicRecordData: 'Datos básicos del registro', shareMeasurements: 'Mediciones', shareNotes: 'Notas', shareCoordinates: 'Coordenadas y sensores', sharePhotos: 'Fotografías', shareVideos: 'Vídeos', shareAudios: 'Audios', selectAllContent: 'Incluir todo', clearOptionalContent: 'Quitar opcionales', shareSensitiveWarning: 'Las coordenadas pueden revelar lugares sensibles. Compártelas solo cuando sea necesario y exista una decisión consciente.', recipientTitle: '¿Con quién vas a compartir?', recipientMyCommunity: 'Mi comunidad', recipientOtherCommunity: 'Otra comunidad', recipientResearch: 'Investigador o universidad', recipientPublic: 'Institución pública', recipientOrganization: 'Organización social', recipientOther: 'Otra persona', purposeOptional: 'Finalidad opcional', purposePlaceholder: 'Ejemplo seguimiento comunitario o investigación acordada', shareControlReminder: 'COSTA VIVA prepara el archivo. No lo sube a un servidor propio y no recibe una copia.', prepareAndShare: 'PREPARAR Y COMPARTIR', noShareRecordsSelected: 'Selecciona al menos un registro.', preparingShare: 'Preparando paquete', sharedPackageReady: 'Paquete preparado para compartir.',
+      importTitle: 'Importar registros recibidos', importSeparationHelp: 'Los registros recibidos se identifican como tales y conservan información de procedencia. No se presentan como observaciones creadas por este teléfono.', confirmImport: 'IMPORTAR', cancel: 'Cancelar', importInvalid: 'Este archivo no es un paquete COSTA VIVA compatible.', importReading: 'Leyendo paquete', importSummaryText: '{count} registros · creado {date}', importRecipientText: 'Finalidad declarada al compartir: {value}', importNoPurpose: 'Sin finalidad declarada', importComplete: 'Importación terminada. {added} añadidos y {skipped} ya existentes.', importFailed: 'No se pudo importar el paquete.', sourceNotebook: 'Cuaderno de origen',
+      sharingHelpTitle: 'Compartir sin perder el control', sharingHelpText: 'Puedes compartir con tu comunidad, otra comunidad, un investigador, una institución u otra persona. Antes de enviar, eliges los registros y también si incluyes coordenadas, notas, mediciones, fotografías, vídeos o audios.', shareNotAllTitle: 'Compartir no significa entregar todo', shareNotAllText: 'El paquete se prepara en el celular. Después Android, iOS o el navegador muestran las aplicaciones disponibles para enviarlo. COSTA VIVA no decide el destinatario ni recibe una copia.', mediaMetadataCaution: 'Atención. Algunos archivos originales de cámara o vídeo pueden contener metadatos creados por el propio dispositivo. Si una localización es sensible, revisa también los archivos multimedia antes de compartirlos.',
       help: 'Ayuda', helpIntro: 'Guía breve para usar COSTA VIVA en campo.', helpActivateTitle: 'Activa el modo de observación', helpActivateText: 'Permite que el teléfono compruebe ubicación, orientación, cámara y micrófono. Puedes continuar aunque alguna función no esté disponible.', helpObserveTitle: 'Registra lo que observas', helpObserveText: 'Describe lo que está ocurriendo sin necesidad de explicar la causa.', helpPhotoTitle: 'Toma evidencias', helpPhotoText: 'Añade fotografías, vídeo, audio o una medición sencilla. Las fotografías documentadas conservan los datos disponibles del dispositivo.', helpReturnTitle: 'Vuelve al mismo punto', helpReturnText: 'Los puntos permanentes permiten comparar observaciones realizadas en distintos momentos.',
       dataControlHelpTitle: 'Tus datos y tu decisión', dataControlHelpIntro: 'Registrar información no significa entregarla. COSTA VIVA guarda los registros primero en este dispositivo y no los envía automáticamente a investigadores, universidades o instituciones.', whoSeesTitle: '¿Quién puede ver mis registros?', whoSeesText: 'Mientras no los exportes o compartas, permanecen en el almacenamiento local de este dispositivo. Recuerda que una persona con acceso al teléfono o al perfil del navegador podría acceder a ellos.', researcherAccessTitle: '¿COSTA VIVA los envía al investigador?', researcherAccessText: 'No. El autor de la herramienta, una universidad o cualquier otra organización no recibe automáticamente tus coordenadas, fotografías, vídeos, audios, notas o mediciones.', mustShareTitle: '¿Tengo que compartirlos?', mustShareText: 'No. La comunidad decide si conserva, exporta o comparte los registros. Si alguien solicita utilizarlos, es razonable preguntar para qué se usarán, quién tendrá acceso y qué beneficio o devolución recibirá la comunidad.', registerNotCedeTitle: 'Registrar no significa ceder', registerNotCedeText: 'COSTA VIVA ayuda a producir y organizar registros. No convierte al desarrollador, al investigador ni a una institución en propietario automático de los datos de la comunidad.',
       fieldMethodsTitle: 'Cómo medir con medios sencillos', fieldMethodsIntro: 'COSTA VIVA es una herramienta de ciencia popular. Una cinta, dos puntos de referencia y una forma constante de medir pueden producir una serie útil si siempre se repite el mismo procedimiento.', goldenRuleTitle: 'Regla principal', goldenRuleText: 'No importa medir muchas cosas. Importa medir siempre la misma cosa, desde la misma referencia, por la misma línea y dejando registrado cómo se hizo.',
@@ -49,7 +55,9 @@
     },
     pt: {
       subtitle: 'Caderno comunitário de observação costeira',
+      languageAria: 'Idioma', baseMapSelectorAria: 'Seletor de mapa base', mapObservationsAria: 'Mapa de observações', zoomControlsAria: 'Controles de zoom', zoomIn: 'Aproximar', zoomOut: 'Afastar', legendAria: 'Legenda', mainNavigationAria: 'Navegação principal',
       install: 'Instalar', mapTitle: 'Mapa', mapIntro: 'Suas observações aparecem aqui quando possuem posição registrada.', myPosition: 'Minha posição',
+      layers: 'Camadas', streetMap: 'Mapa', satellite: 'Satélite', noBaseMap: 'Sem mapa', mapBasesTitle: 'Mapas de referência', mapBasesHelp: 'Você pode escolher Mapa, Satélite ou Sem mapa. A imagem de satélite ajuda a reconhecer a costa, mas pode corresponder a outra data e não deve ser usada sozinha para medir quanto a linha de costa recuou.',
       offlineMapNote: 'Sem mapa base. Os pontos são mostrados usando as coordenadas salvas.', noMapPoints: 'Ainda não há pontos para mostrar', mapStartsWithPosition: 'O mapa será centralizado quando você registrar uma posição ou ativar Minha posição', singleObservation: 'Observação', permanentPoint: 'Ponto permanente',
       newObservation: 'Nova observação', registerIntro: 'Registre o que você vê. Não é necessário explicar a causa.', code: 'Código', location: 'Localização', accuracy: 'Precisão', altitude: 'Altitude', direction: 'Direção',
       notActivated: 'Não ativada', notAvailable: 'Não disponível', activateObservation: 'ATIVAR MODO DE OBSERVAÇÃO', sensorHelper: 'Serão solicitadas somente as permissões necessárias. Se um sensor não estiver disponível, o registro pode continuar.',
@@ -60,6 +68,10 @@
       evidence: 'Evidências', photos: 'Fotos', videos: 'Vídeos', recordAudio: 'Gravar áudio', audioReady: 'Pronto para gravar', stop: 'Parar', removeAudio: 'Excluir áudio', photoOverlayHelp: 'As fotografias salvas geram uma cópia documentada com data, código, posição, precisão, altitude e direção quando esses dados estão disponíveis.', saveObservation: 'SALVAR OBSERVAÇÃO',
       notebook: 'Caderno', notebookIntro: 'Consulte as observações salvas neste dispositivo.', records: 'registros', search: 'Buscar', searchPlaceholder: 'Código ou nota', filterCategory: 'Tipo', all: 'Todos', withMedia: 'Com multimídia', onlyPermanent: 'Pontos permanentes',
       export: 'Exportar', exportIntro: 'Prepare uma cópia dos registros para conservar ou compartilhar.', fullData: 'Dados completos', tableData: 'Tabela de registros', mapData: 'Pontos para SIG', evidencePackage: 'Dados e evidências', sharePackage: 'Compartilhar pacote', shareHelp: 'Em dispositivos compatíveis será aberto o menu de compartilhamento. Se não estiver disponível, o pacote será baixado para que possa ser anexado ao e-mail.', privacyPrinciple: 'Os registros permanecem sob controle da comunidade e só saem do dispositivo quando você decide exportar ou compartilhar.',
+      communityExchangeTitle: 'Compartilhar entre pessoas e comunidades', communityExchangeIntro: 'Escolha quais registros e quais conteúdos deseja compartilhar. COSTA VIVA prepara o pacote e o celular permite escolher WhatsApp, e-mail, Quick Share, Bluetooth ou outro aplicativo disponível.', shareRecords: 'Compartilhar registros', importPackage: 'Importar pacote COSTA VIVA', shareHelpCommunity: 'COSTA VIVA não envia os registros para um servidor próprio. O meio de envio depende dos aplicativos instalados no dispositivo.', onlyReceived: 'Registros recebidos', received: 'Recebido', receivedFromNotebook: 'Recebido · caderno {value}',
+      shareModalTitle: 'Compartilhar registros', shareModalIntro: 'Você decide o que sai deste dispositivo, com quem e com qual conteúdo.', chooseRecordsTitle: 'Escolha os registros', selectAll: 'Selecionar todos', selectNone: 'Nenhum', chooseContentTitle: 'Escolha o que compartilhar', basicRecordData: 'Dados básicos do registro', shareMeasurements: 'Medições', shareNotes: 'Notas', shareCoordinates: 'Coordenadas e sensores', sharePhotos: 'Fotografias', shareVideos: 'Vídeos', shareAudios: 'Áudios', selectAllContent: 'Incluir tudo', clearOptionalContent: 'Remover opcionais', shareSensitiveWarning: 'As coordenadas podem revelar lugares sensíveis. Compartilhe somente quando for necessário e houver uma decisão consciente.', recipientTitle: 'Com quem você vai compartilhar?', recipientMyCommunity: 'Minha comunidade', recipientOtherCommunity: 'Outra comunidade', recipientResearch: 'Pesquisador ou universidade', recipientPublic: 'Instituição pública', recipientOrganization: 'Organização social', recipientOther: 'Outra pessoa', purposeOptional: 'Finalidade opcional', purposePlaceholder: 'Exemplo acompanhamento comunitário ou pesquisa acordada', shareControlReminder: 'COSTA VIVA prepara o arquivo. Não o envia para um servidor próprio e não recebe uma cópia.', prepareAndShare: 'PREPARAR E COMPARTILHAR', noShareRecordsSelected: 'Selecione pelo menos um registro.', preparingShare: 'Preparando pacote', sharedPackageReady: 'Pacote preparado para compartilhar.',
+      importTitle: 'Importar registros recebidos', importSeparationHelp: 'Os registros recebidos são identificados como tal e conservam informações de procedência. Não são apresentados como observações criadas por este celular.', confirmImport: 'IMPORTAR', cancel: 'Cancelar', importInvalid: 'Este arquivo não é um pacote COSTA VIVA compatível.', importReading: 'Lendo pacote', importSummaryText: '{count} registros · criado em {date}', importRecipientText: 'Finalidade declarada ao compartilhar: {value}', importNoPurpose: 'Sem finalidade declarada', importComplete: 'Importação concluída. {added} adicionados e {skipped} já existentes.', importFailed: 'Não foi possível importar o pacote.', sourceNotebook: 'Caderno de origem',
+      sharingHelpTitle: 'Compartilhar sem perder o controle', sharingHelpText: 'Você pode compartilhar com sua comunidade, outra comunidade, um pesquisador, uma instituição ou outra pessoa. Antes de enviar, escolhe os registros e também se inclui coordenadas, notas, medições, fotografias, vídeos ou áudios.', shareNotAllTitle: 'Compartilhar não significa entregar tudo', shareNotAllText: 'O pacote é preparado no celular. Depois Android, iOS ou o navegador mostram os aplicativos disponíveis para enviá-lo. COSTA VIVA não decide o destinatário e não recebe uma cópia.', mediaMetadataCaution: 'Atenção. Alguns arquivos originais de câmera ou vídeo podem conter metadados criados pelo próprio dispositivo. Se uma localização for sensível, revise também os arquivos multimídia antes de compartilhá-los.',
       help: 'Ajuda', helpIntro: 'Guia breve para usar COSTA VIVA em campo.', helpActivateTitle: 'Ative o modo de observação', helpActivateText: 'Permite que o celular verifique localização, orientação, câmera e microfone. Você pode continuar mesmo que alguma função não esteja disponível.', helpObserveTitle: 'Registre o que você observa', helpObserveText: 'Descreva o que está acontecendo sem precisar explicar a causa.', helpPhotoTitle: 'Registre evidências', helpPhotoText: 'Adicione fotografias, vídeo, áudio ou uma medição simples. As fotografias documentadas conservam os dados disponíveis do dispositivo.', helpReturnTitle: 'Volte ao mesmo ponto', helpReturnText: 'Os pontos permanentes permitem comparar observações realizadas em diferentes momentos.',
       dataControlHelpTitle: 'Seus dados e sua decisão', dataControlHelpIntro: 'Registrar informação não significa entregá-la. COSTA VIVA salva os registros primeiro neste dispositivo e não os envia automaticamente a pesquisadores, universidades ou instituições.', whoSeesTitle: 'Quem pode ver meus registros?', whoSeesText: 'Enquanto você não os exportar ou compartilhar, eles permanecem no armazenamento local deste dispositivo. Lembre que uma pessoa com acesso ao celular ou ao perfil do navegador poderá acessá-los.', researcherAccessTitle: 'COSTA VIVA envia os dados ao pesquisador?', researcherAccessText: 'Não. O autor da ferramenta, uma universidade ou qualquer outra organização não recebe automaticamente suas coordenadas, fotografias, vídeos, áudios, notas ou medições.', mustShareTitle: 'Tenho que compartilhá-los?', mustShareText: 'Não. A comunidade decide se conserva, exporta ou compartilha os registros. Se alguém solicitar seu uso, é razoável perguntar para que serão usados, quem terá acesso e qual benefício ou devolutiva a comunidade receberá.', registerNotCedeTitle: 'Registrar não significa ceder', registerNotCedeText: 'COSTA VIVA ajuda a produzir e organizar registros. Não transforma o desenvolvedor, o pesquisador nem uma instituição em proprietário automático dos dados da comunidade.',
       fieldMethodsTitle: 'Como medir com meios simples', fieldMethodsIntro: 'COSTA VIVA é uma ferramenta de ciência popular. Uma fita, dois pontos de referência e uma forma constante de medir podem produzir uma série útil quando o mesmo procedimento é repetido.', goldenRuleTitle: 'Regra principal', goldenRuleText: 'Não importa medir muitas coisas. Importa medir sempre a mesma coisa, a partir da mesma referência, pela mesma linha e deixando registrado como a medição foi feita.',
@@ -112,8 +124,10 @@
     audioChunks: [],
     map: null,
     mapLayer: null,
+    baseLayer: ['osm', 'satellite', 'none'].includes(localStorage.getItem('costa-viva-map-layer')) ? localStorage.getItem('costa-viva-map-layer') : 'osm',
     userMarker: null,
-    installPrompt: null
+    installPrompt: null,
+    pendingImport: null
   }
 
   const $ = selector => document.querySelector(selector)
@@ -133,6 +147,15 @@
     updateInstallGuide()
     $('#project-info-btn').setAttribute('aria-label', tr('projectInfoAria'))
     $('#project-info-btn').title = tr('projectInfoAria')
+    $('.lang-switch')?.setAttribute('aria-label', tr('languageAria'))
+    $('.map-toolbar')?.setAttribute('aria-label', tr('baseMapSelectorAria'))
+    $('#map')?.setAttribute('aria-label', tr('mapObservationsAria'))
+    $('.map-controls')?.setAttribute('aria-label', tr('zoomControlsAria'))
+    $('#map-zoom-in')?.setAttribute('aria-label', tr('zoomIn'))
+    $('#map-zoom-out')?.setAttribute('aria-label', tr('zoomOut'))
+    $('.map-legend')?.setAttribute('aria-label', tr('legendAria'))
+    $('.bottom-nav')?.setAttribute('aria-label', tr('mainNavigationAria'))
+    ;['#project-info-close','#detail-close','#share-modal-close','#import-modal-close','#install-modal-close'].forEach(selector => $(selector)?.setAttribute('aria-label', tr('close')))
     $$('#lang-es, #lang-pt').forEach(btn => btn.classList.toggle('active', btn.id === `lang-${lang}`))
     $$('[data-i18n]').forEach(el => {
       const key = el.dataset.i18n
@@ -144,6 +167,7 @@
     populateCategoryFilter()
     populatePermanentSelect()
     updateSensorUI()
+    updateMapLayerUI()
     renderAll()
   }
 
@@ -154,8 +178,13 @@
         const db = req.result
         if (!db.objectStoreNames.contains(RECORD_STORE)) {
           const store = db.createObjectStore(RECORD_STORE, { keyPath: 'uuid' })
-          store.createIndex('code', 'code', { unique: true })
+          store.createIndex('code', 'code', { unique: false })
           store.createIndex('createdAt', 'createdAt')
+        } else {
+          const store = req.transaction.objectStore(RECORD_STORE)
+          if (store.indexNames.contains('code')) store.deleteIndex('code')
+          store.createIndex('code', 'code', { unique: false })
+          if (!store.indexNames.contains('createdAt')) store.createIndex('createdAt', 'createdAt')
         }
         if (!db.objectStoreNames.contains(META_STORE)) db.createObjectStore(META_STORE, { keyPath: 'key' })
       }
@@ -665,7 +694,10 @@
     const article = document.createElement('article')
     article.className = 'record-card'
     const header = document.createElement('header')
-    header.innerHTML = `<div><h3>${record.code}</h3><div class="record-meta">${new Date(record.createdAt).toLocaleString(state.lang === 'pt' ? 'pt-BR' : 'es-ES')}</div></div>${record.permanentPointId ? `<span class="count-pill">◆ ${tr('permanent')}</span>` : ''}`
+    const badges = []
+    if (record.permanentPointId) badges.push(`<span class="count-pill">◆ ${escapeHtml(tr('permanent'))}</span>`)
+    if (record.exchange?.received) badges.push(`<span class="count-pill received-pill">📥 ${escapeHtml(tr('received'))}</span>`)
+    header.innerHTML = `<div><h3>${escapeHtml(record.code)}</h3><div class="record-meta">${escapeHtml(new Date(record.createdAt).toLocaleString(state.lang === 'pt' ? 'pt-BR' : 'es-ES'))}</div></div><div class="record-badges">${badges.join('')}</div>`
     article.appendChild(header)
     const category = document.createElement('p')
     category.innerHTML = `<strong>${escapeHtml(categoryText(record))}</strong>`
@@ -714,12 +746,14 @@
     const category = $('#filter-category').value
     const mediaOnly = $('#filter-media').checked
     const permanentOnly = $('#filter-permanent').checked
+    const receivedOnly = $('#filter-received').checked
     const filtered = state.records.filter(record => {
       const searchable = `${record.code} ${record.observationText || ''}`.toLowerCase()
       if (query && !searchable.includes(query)) return false
       if (category !== 'all' && !recordCategories(record).includes(category)) return false
       if (mediaOnly && !(record.media?.length > 0)) return false
       if (permanentOnly && !record.permanentPointId) return false
+      if (receivedOnly && !record.exchange?.received) return false
       return true
     })
     $('#record-count').textContent = state.records.length
@@ -774,6 +808,56 @@
     return points
   }
 
+  function mapLayerLabel(layer = state.baseLayer) {
+    if (layer === 'satellite') return tr('satellite')
+    if (layer === 'none') return tr('noBaseMap')
+    return tr('streetMap')
+  }
+
+  function updateMapAttribution() {
+    const host = $('#map-attribution')
+    if (!host) return
+    if (state.baseLayer === 'osm') {
+      host.innerHTML = '<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>'
+    } else if (state.baseLayer === 'satellite') {
+      host.innerHTML = '<a href="https://www.esri.com/" target="_blank" rel="noopener">Imagery © Esri</a>'
+    } else {
+      host.textContent = mapLayerLabel('none')
+    }
+  }
+
+  function updateMapLayerUI() {
+    const current = $('#map-layer-current')
+    if (current) current.textContent = mapLayerLabel()
+    $$('[data-map-layer]').forEach(btn => {
+      const active = btn.dataset.mapLayer === state.baseLayer
+      btn.classList.toggle('active', active)
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false')
+    })
+    updateMapAttribution()
+  }
+
+  function setMapLayer(layer) {
+    if (!['osm', 'satellite', 'none'].includes(layer)) return
+    state.baseLayer = layer
+    localStorage.setItem('costa-viva-map-layer', layer)
+    updateMapLayerUI()
+    renderSimpleMap()
+    const panel = $('#map-layer-panel')
+    const toggle = $('#map-layer-toggle')
+    if (panel && toggle) {
+      panel.hidden = true
+      toggle.setAttribute('aria-expanded', 'false')
+    }
+  }
+
+  function tileUrl(layer, z, x, y) {
+    if (layer === 'satellite') {
+      return `https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/${z}/${y}/${x}`
+    }
+    return `https://tile.openstreetmap.org/${z}/${x}/${y}.png`
+  }
+
   function initMap() {
     const el = $('#map')
     state.map = {
@@ -785,6 +869,24 @@
       startY: 0,
       startCenterPx: null
     }
+
+    const layerToggle = $('#map-layer-toggle')
+    const layerPanel = $('#map-layer-panel')
+    if (layerToggle && layerPanel) {
+      layerToggle.addEventListener('click', () => {
+        const willOpen = layerPanel.hidden
+        layerPanel.hidden = !willOpen
+        layerToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false')
+      })
+      $$('[data-map-layer]').forEach(btn => btn.addEventListener('click', () => setMapLayer(btn.dataset.mapLayer)))
+      document.addEventListener('click', event => {
+        if (layerPanel.hidden) return
+        if (event.target.closest('#map-layer-panel') || event.target.closest('#map-layer-toggle')) return
+        layerPanel.hidden = true
+        layerToggle.setAttribute('aria-expanded', 'false')
+      })
+    }
+    updateMapLayerUI()
 
     el.addEventListener('pointerdown', event => {
       if (event.target.closest('button')) return
@@ -890,24 +992,29 @@
     const startY = Math.floor(topLeft.y / tileSize)
     const endY = Math.floor((topLeft.y + height) / tileSize)
 
-    for (let tx = startX; tx <= endX; tx += 1) {
-      for (let ty = startY; ty <= endY; ty += 1) {
-        if (ty < 0 || ty >= n) continue
-        const wrappedX = ((tx % n) + n) % n
-        const img = document.createElement('img')
-        img.alt = ''
-        img.draggable = false
-        img.loading = 'lazy'
-        img.src = `https://tile.openstreetmap.org/${z}/${wrappedX}/${ty}.png`
-        img.style.left = `${tx * tileSize - topLeft.x}px`
-        img.style.top = `${ty * tileSize - topLeft.y}px`
-        img.addEventListener('error', () => {
-          img.removeAttribute('src')
-          img.classList.add('map-tile-failed')
-        }, { once: true })
-        tilePane.appendChild(img)
+    el.classList.toggle('map-no-base', state.baseLayer === 'none')
+    if (state.baseLayer !== 'none') {
+      for (let tx = startX; tx <= endX; tx += 1) {
+        for (let ty = startY; ty <= endY; ty += 1) {
+          if (ty < 0 || ty >= n) continue
+          const wrappedX = ((tx % n) + n) % n
+          const img = document.createElement('img')
+          img.alt = ''
+          img.draggable = false
+          img.loading = 'lazy'
+          img.referrerPolicy = 'no-referrer'
+          img.src = tileUrl(state.baseLayer, z, wrappedX, ty)
+          img.style.left = `${tx * tileSize - topLeft.x}px`
+          img.style.top = `${ty * tileSize - topLeft.y}px`
+          img.addEventListener('error', () => {
+            img.removeAttribute('src')
+            img.classList.add('map-tile-failed')
+          }, { once: true })
+          tilePane.appendChild(img)
+        }
       }
     }
+    updateMapAttribution()
 
     state.records.forEach(record => {
       const lat = record.location?.latitude
@@ -997,6 +1104,10 @@
       [tr('direction'), record.location?.heading == null ? tr('notAvailable') : `${Math.round(record.location.heading)}° ${cardinal(record.location.heading)}`],
       [tr('pointLabel'), record.permanentPointId || tr('independentLabel')]
     ]
+    if (record.exchange?.received) {
+      rows.push([tr('received'), tr('receivedFromNotebook', { value: record.exchange.sourceNotebookShort || shortNotebookId(record.exchange.sourceNotebookId) })])
+      if (record.sourceCode) rows.push([tr('code'), record.sourceCode])
+    }
     rows.forEach(([label, value]) => {
       const row = document.createElement('div')
       row.className = 'detail-row'
@@ -1085,6 +1196,8 @@
       permanentPointId: record.permanentPointId,
       isPermanentRoot: record.isPermanentRoot,
       provenance: record.provenance,
+      sourceCode: record.sourceCode || null,
+      exchange: record.exchange || null,
       media: (record.media || []).map(item => ({ id: item.id, kind: item.kind, name: item.name, mime: item.mime, metadata: item.metadata }))
     }
   }
@@ -1251,20 +1364,461 @@
     }
   }
 
-  async function sharePackage() {
-    const pkg = await exportZip(false)
-    if (!pkg) return
-    const file = new File([pkg.blob], pkg.filename, { type: 'application/zip' })
-    if (navigator.share && navigator.canShare?.({ files: [file] })) {
-      try {
-        await navigator.share({ title: 'COSTA VIVA', text: tr('exportIntro'), files: [file] })
-        return
-      } catch (error) {
-        if (error?.name === 'AbortError') return
+  function getNotebookId() {
+    let value = localStorage.getItem('costa-viva-notebook-id')
+    if (!value) {
+      value = `cvn-${crypto.randomUUID()}`
+      localStorage.setItem('costa-viva-notebook-id', value)
+    }
+    return value
+  }
+
+  function shortNotebookId(value = getNotebookId()) {
+    return String(value).replace(/[^a-zA-Z0-9]/g, '').slice(-6).toUpperCase() || 'LOCAL'
+  }
+
+  function recipientLabel(value) {
+    const keys = {
+      my_community: 'recipientMyCommunity',
+      other_community: 'recipientOtherCommunity',
+      research: 'recipientResearch',
+      public: 'recipientPublic',
+      organization: 'recipientOrganization',
+      other: 'recipientOther'
+    }
+    return tr(keys[value] || 'recipientOther')
+  }
+
+  function openShareModal() {
+    if (!requireRecords()) return
+    renderShareRecordList()
+    $('#share-purpose').value = ''
+    $('#share-modal-status').textContent = ''
+    $('#share-modal').hidden = false
+    document.body.style.overflow = 'hidden'
+  }
+
+  function closeShareModal() {
+    $('#share-modal').hidden = true
+    document.body.style.overflow = ''
+    $('#share-export').focus()
+  }
+
+  function renderShareRecordList() {
+    const host = $('#share-record-list')
+    host.innerHTML = ''
+    state.records.forEach(record => {
+      const label = document.createElement('label')
+      label.className = 'share-record-option'
+      const received = record.exchange?.received ? ` · ${tr('received')}` : ''
+      label.innerHTML = `<input type="checkbox" class="share-record-check" value="${escapeHtml(record.uuid)}" checked><span><strong>${escapeHtml(record.code)}</strong><small>${escapeHtml(new Date(record.createdAt).toLocaleString(state.lang === 'pt' ? 'pt-BR' : 'es-ES'))}${escapeHtml(received)}</small></span>`
+      host.appendChild(label)
+    })
+  }
+
+  function shareOptions() {
+    return {
+      measurements: $('#share-measurements').checked,
+      notes: $('#share-notes').checked,
+      coordinates: $('#share-coordinates').checked,
+      photos: $('#share-photos').checked,
+      videos: $('#share-videos').checked,
+      audios: $('#share-audios').checked
+    }
+  }
+
+  function sanitizeSensorMetadata(metadata, includeCoordinates) {
+    const source = metadata && typeof metadata === 'object' ? { ...metadata } : {}
+    if (includeCoordinates) return source
+    ;['latitude','longitude','accuracy','altitude','altitudeAccuracy','heading','headingSource','speed'].forEach(key => delete source[key])
+    source.locationWithheldByUser = true
+    return source
+  }
+
+  async function privacySafePhotoBlob(blob) {
+    if (!(blob instanceof Blob)) return null
+    try {
+      const bitmap = await createImageBitmap(blob)
+      const maxWidth = 2200
+      const scale = bitmap.width > maxWidth ? maxWidth / bitmap.width : 1
+      const canvas = document.createElement('canvas')
+      canvas.width = Math.max(1, Math.round(bitmap.width * scale))
+      canvas.height = Math.max(1, Math.round(bitmap.height * scale))
+      const ctx = canvas.getContext('2d')
+      ctx.drawImage(bitmap, 0, 0, canvas.width, canvas.height)
+      bitmap.close?.()
+      return await new Promise(resolve => canvas.toBlob(resolve, 'image/jpeg', 0.9))
+    } catch (error) {
+      console.warn('Could not sanitize photo', error)
+      return null
+    }
+  }
+
+  function sharedLocation(record, includeCoordinates) {
+    if (includeCoordinates) return record.location || null
+    const capturedAt = record.location?.capturedAt || record.createdAt
+    return {
+      capturedAt,
+      latitude: null,
+      longitude: null,
+      accuracy: null,
+      altitude: null,
+      altitudeAccuracy: null,
+      heading: null,
+      headingSource: null,
+      speed: null,
+      source: 'withheld-by-user'
+    }
+  }
+
+  function sharedRecordBase(record, options) {
+    return {
+      schemaVersion: record.schemaVersion || 3,
+      uuid: record.uuid,
+      code: record.code,
+      sourceCode: record.sourceCode || null,
+      createdAt: record.createdAt,
+      modifiedAt: record.modifiedAt,
+      interfaceLanguage: record.interfaceLanguage,
+      categories: recordCategories(record),
+      category: recordCategories(record)[0] || null,
+      observationText: options.notes ? (record.observationText || '') : null,
+      location: sharedLocation(record, options.coordinates),
+      measurement: options.measurements ? (record.measurement || null) : null,
+      sea: record.sea || null,
+      permanentPointId: record.permanentPointId || null,
+      isPermanentRoot: Boolean(record.isPermanentRoot),
+      provenance: {
+        ...(record.provenance || {}),
+        sharingCoordinates: options.coordinates ? 'included' : 'withheld-by-user'
+      },
+      exchange: record.exchange || null,
+      media: []
+    }
+  }
+
+  async function addSharedMedia(record, shared, options, entries) {
+    for (let idx = 0; idx < (record.media || []).length; idx += 1) {
+      const item = record.media[idx]
+      const allowed = (item.kind === 'photo' && options.photos) || (item.kind === 'video' && options.videos) || (item.kind === 'audio' && options.audios)
+      if (!allowed) continue
+      const descriptor = {
+        id: item.id || crypto.randomUUID(),
+        kind: item.kind,
+        name: item.name || `${item.kind}-${idx + 1}`,
+        mime: item.mime || 'application/octet-stream',
+        metadata: sanitizeSensorMetadata(item.metadata, options.coordinates),
+        files: {}
+      }
+      const base = `evidencias/${record.uuid}/${descriptor.id}/`
+      const safe = safeFilename(descriptor.name)
+      if (item.kind === 'photo') {
+        if (options.coordinates) {
+          if (item.originalBlob) {
+            const path = `${base}original-${safe}`
+            descriptor.files.original = path
+            entries.push({ name: path, data: item.originalBlob })
+          }
+          if (item.documentedBlob) {
+            const path = `${base}documentada.jpg`
+            descriptor.files.documented = path
+            entries.push({ name: path, data: item.documentedBlob })
+          }
+          if (!item.originalBlob && !item.documentedBlob && item.blob) {
+            const path = `${base}foto-${safe}`
+            descriptor.files.original = path
+            entries.push({ name: path, data: item.blob })
+          }
+        } else {
+          const source = item.originalBlob || item.blob || null
+          const sanitized = await privacySafePhotoBlob(source)
+          if (!sanitized) continue
+          const path = `${base}foto-sin-metadatos.jpg`
+          descriptor.files.sanitized = path
+          descriptor.mime = 'image/jpeg'
+          descriptor.privacySanitized = true
+          entries.push({ name: path, data: sanitized })
+        }
+      } else if (item.blob) {
+        const path = `${base}${item.kind}-${safe}`
+        descriptor.files.blob = path
+        entries.push({ name: path, data: item.blob })
+      } else {
+        continue
+      }
+      shared.media.push(descriptor)
+    }
+  }
+
+  function sharedCSVText(records) {
+    const headers = ['uuid','code','created_at','categories','note','latitude','longitude','accuracy_m','measurement_value','measurement_unit','measurement_method','measurement_target','measurement_reference','permanent_point_id','media_count']
+    const rows = records.map(r => [r.uuid,r.code,r.createdAt,(r.categories || []).join('|'),r.observationText,r.location?.latitude,r.location?.longitude,r.location?.accuracy,r.measurement?.value,r.measurement?.unit,r.measurement?.method,r.measurement?.target,r.measurement?.reference,r.permanentPointId,r.media?.length || 0])
+    return [headers, ...rows].map(row => row.map(csvEscape).join(',')).join('\n')
+  }
+
+  function sharedGeoJSONText(records) {
+    const features = records.filter(r => Number.isFinite(r.location?.latitude) && Number.isFinite(r.location?.longitude)).map(r => ({
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [r.location.longitude, r.location.latitude] },
+      properties: { code: r.code, uuid: r.uuid, createdAt: r.createdAt, categories: r.categories || [], observationText: r.observationText, accuracy_m: r.location.accuracy, permanentPointId: r.permanentPointId }
+    }))
+    return JSON.stringify({ type: 'FeatureCollection', name: 'COSTA VIVA · intercambio comunitario', features }, null, 2)
+  }
+
+  async function buildCommunityPackage(records, options, recipientType, purpose) {
+    const packageId = crypto.randomUUID()
+    const createdAt = new Date().toISOString()
+    const sourceNotebookId = getNotebookId()
+    const entries = []
+    const sharedRecords = []
+    for (const record of records) {
+      const shared = sharedRecordBase(record, options)
+      await addSharedMedia(record, shared, options, entries)
+      sharedRecords.push(shared)
+    }
+    const manifest = {
+      format: 'costa-viva-cvpack',
+      formatVersion: 1,
+      app: 'COSTA VIVA',
+      appVersion: '0.5.7',
+      packageId,
+      createdAt,
+      sourceNotebookId,
+      sourceNotebookShort: shortNotebookId(sourceNotebookId),
+      interfaceLanguage: state.lang,
+      intendedRecipient: recipientType,
+      purpose: purpose || null,
+      contentSelection: options,
+      recordCount: sharedRecords.length,
+      governance: {
+        statement: 'Registrar no significa ceder. El paquete fue creado por decisión de la persona usuaria.',
+        automaticUpload: false
       }
     }
-    showToast(tr('shareUnavailable'))
-    downloadBlob(pkg.blob, pkg.filename)
+    const payload = { app: 'COSTA VIVA', schemaVersion: 3, exchangeFormat: 1, exportedAt: createdAt, records: sharedRecords }
+    const readme = `COSTA VIVA\n\nES\nEste paquete fue preparado localmente para compartir registros seleccionados. Registrar no significa ceder. La recepción del archivo no transfiere automáticamente propiedad ni derechos sobre la información.\n\nPT\nEste pacote foi preparado localmente para compartilhar registros selecionados. Registrar não significa ceder. O recebimento do arquivo não transfere automaticamente propriedade nem direitos sobre a informação.\n\nPackage ID ${packageId}\nSource notebook ${sourceNotebookId}\n`
+    entries.unshift(
+      { name: 'manifest.json', data: JSON.stringify(manifest, null, 2) },
+      { name: 'registros.json', data: JSON.stringify(payload, null, 2) },
+      { name: 'registros.csv', data: sharedCSVText(sharedRecords) },
+      { name: 'LEEME-README.txt', data: readme }
+    )
+    if (options.coordinates) entries.splice(3, 0, { name: 'puntos.geojson', data: sharedGeoJSONText(sharedRecords) })
+    const blob = await makeZip(entries)
+    const filename = `costa-viva-${createdAt.slice(0,10)}-${packageId.slice(0,8)}.cvpack`
+    return { blob, filename, manifest }
+  }
+
+  async function prepareCommunityShare() {
+    const selectedIds = $$('.share-record-check:checked').map(input => input.value)
+    if (!selectedIds.length) {
+      $('#share-modal-status').textContent = tr('noShareRecordsSelected')
+      return
+    }
+    const records = state.records.filter(record => selectedIds.includes(record.uuid))
+    const options = shareOptions()
+    const recipientType = $('input[name="share-recipient"]:checked')?.value || 'other'
+    const purpose = $('#share-purpose').value.trim()
+    $('#share-modal-status').textContent = tr('preparingShare')
+    try {
+      const pkg = await buildCommunityPackage(records, options, recipientType, purpose)
+      const file = new File([pkg.blob], pkg.filename, { type: 'application/zip' })
+      $('#share-modal-status').textContent = tr('sharedPackageReady')
+      if (navigator.share && navigator.canShare?.({ files: [file] })) {
+        try {
+          await navigator.share({
+            title: 'COSTA VIVA',
+            text: `${recipientLabel(recipientType)}${purpose ? ` · ${purpose}` : ''}`,
+            files: [file]
+          })
+          return
+        } catch (error) {
+          if (error?.name === 'AbortError') return
+        }
+      }
+      showToast(tr('shareUnavailable'))
+      downloadBlob(pkg.blob, pkg.filename)
+    } catch (error) {
+      console.error(error)
+      $('#share-modal-status').textContent = tr('zipUnavailable')
+    }
+  }
+
+  function zipUint32(bytes, offset) {
+    return (bytes[offset] | (bytes[offset + 1] << 8) | (bytes[offset + 2] << 16) | (bytes[offset + 3] << 24)) >>> 0
+  }
+
+  function zipUint16(bytes, offset) {
+    return bytes[offset] | (bytes[offset + 1] << 8)
+  }
+
+  async function parseStoredZip(blob) {
+    const bytes = new Uint8Array(await blob.arrayBuffer())
+    const entries = new Map()
+    let offset = 0
+    while (offset + 4 <= bytes.length) {
+      const sig = zipUint32(bytes, offset)
+      if (sig === 0x02014b50 || sig === 0x06054b50) break
+      if (sig !== 0x04034b50) throw new Error('Invalid ZIP local header')
+      if (offset + 30 > bytes.length) throw new Error('Truncated ZIP')
+      const flags = zipUint16(bytes, offset + 6)
+      const method = zipUint16(bytes, offset + 8)
+      const compressedSize = zipUint32(bytes, offset + 18)
+      const nameLength = zipUint16(bytes, offset + 26)
+      const extraLength = zipUint16(bytes, offset + 28)
+      if (flags & 0x0008) throw new Error('ZIP data descriptors are not supported')
+      if (method !== 0) throw new Error('Compressed ZIP entries are not supported')
+      const nameStart = offset + 30
+      const dataStart = nameStart + nameLength + extraLength
+      const dataEnd = dataStart + compressedSize
+      if (dataEnd > bytes.length) throw new Error('Truncated ZIP entry')
+      const name = new TextDecoder('utf-8').decode(bytes.slice(nameStart, nameStart + nameLength))
+      entries.set(name, bytes.slice(dataStart, dataEnd))
+      offset = dataEnd
+    }
+    return entries
+  }
+
+  function entryText(entries, name) {
+    const bytes = entries.get(name)
+    if (!bytes) return null
+    return new TextDecoder('utf-8').decode(bytes)
+  }
+
+  function closeImportModal() {
+    $('#import-modal').hidden = true
+    document.body.style.overflow = ''
+    state.pendingImport = null
+    $('#import-package-input').value = ''
+  }
+
+  async function readImportPackage(file) {
+    if (!file) return
+    showToast(tr('importReading'))
+    try {
+      const entries = await parseStoredZip(file)
+      const manifestText = entryText(entries, 'manifest.json')
+      const recordsText = entryText(entries, 'registros.json')
+      if (!manifestText || !recordsText) throw new Error('Missing package files')
+      const manifest = JSON.parse(manifestText)
+      const payload = JSON.parse(recordsText)
+      if (manifest.format !== 'costa-viva-cvpack' || manifest.formatVersion !== 1 || !Array.isArray(payload.records)) throw new Error('Unsupported package')
+      state.pendingImport = { manifest, payload, entries, filename: file.name }
+      const summary = $('#import-summary')
+      const date = new Date(manifest.createdAt).toLocaleString(state.lang === 'pt' ? 'pt-BR' : 'es-ES')
+      const purpose = manifest.purpose || tr('importNoPurpose')
+      summary.innerHTML = `<div class="detail-row"><strong>${escapeHtml(tr('sourceNotebook'))}</strong><br>${escapeHtml(manifest.sourceNotebookShort || shortNotebookId(manifest.sourceNotebookId))}</div><div class="detail-row">${escapeHtml(tr('importSummaryText', { count: payload.records.length, date }))}</div><div class="detail-row">${escapeHtml(tr('importRecipientText', { value: purpose }))}</div>`
+      $('#import-status').textContent = ''
+      $('#import-modal').hidden = false
+      document.body.style.overflow = 'hidden'
+    } catch (error) {
+      console.error(error)
+      showToast(tr('importInvalid'))
+      $('#import-package-input').value = ''
+    }
+  }
+
+  function blobFromEntry(entries, path, mime) {
+    if (!path) return null
+    const bytes = entries.get(path)
+    if (!bytes) return null
+    return new Blob([bytes], { type: mime || 'application/octet-stream' })
+  }
+
+  function rebuildImportedMedia(rawRecord, entries) {
+    return (rawRecord.media || []).map(item => {
+      const media = {
+        id: item.id || crypto.randomUUID(),
+        kind: item.kind,
+        name: item.name || item.kind,
+        mime: item.mime || 'application/octet-stream',
+        metadata: item.metadata || {}
+      }
+      const files = item.files || {}
+      if (item.kind === 'photo') {
+        media.originalBlob = blobFromEntry(entries, files.original || files.sanitized, item.mime || 'image/jpeg')
+        media.documentedBlob = blobFromEntry(entries, files.documented, 'image/jpeg')
+      } else {
+        media.blob = blobFromEntry(entries, files.blob, item.mime)
+      }
+      return media
+    }).filter(item => item.kind === 'photo' ? (item.originalBlob || item.documentedBlob) : item.blob)
+  }
+
+  function importedCode(originalCode, sourceShort) {
+    const clean = String(originalCode || 'REGISTRO').replace(/[^a-zA-Z0-9_-]/g, '').slice(0, 30)
+    return `R-${sourceShort}-${clean}`
+  }
+
+  async function confirmImportPackage() {
+    const pending = state.pendingImport
+    if (!pending) return
+    const { manifest, payload, entries } = pending
+    const sourceShort = String(manifest.sourceNotebookShort || shortNotebookId(manifest.sourceNotebookId)).replace(/[^A-Z0-9]/gi, '').slice(0, 8) || 'ORIGEN'
+    const existing = new Set(state.records.map(record => record.uuid))
+    const codeMap = new Map(payload.records.map(raw => [raw.code, importedCode(raw.code, sourceShort)]))
+    let added = 0
+    let skipped = 0
+    $('#import-status').textContent = tr('importReading')
+    try {
+      for (const raw of payload.records) {
+        if (!raw?.uuid || existing.has(raw.uuid)) {
+          skipped += 1
+          continue
+        }
+        const receivedAt = new Date().toISOString()
+        const record = {
+          schemaVersion: raw.schemaVersion || 3,
+          uuid: raw.uuid,
+          code: codeMap.get(raw.code) || importedCode(raw.code, sourceShort),
+          sourceCode: raw.code || null,
+          createdAt: raw.createdAt || receivedAt,
+          modifiedAt: raw.modifiedAt || raw.createdAt || receivedAt,
+          interfaceLanguage: raw.interfaceLanguage || manifest.interfaceLanguage || 'es',
+          categories: Array.isArray(raw.categories) ? raw.categories : raw.category ? [raw.category] : ['other'],
+          category: Array.isArray(raw.categories) && raw.categories.length ? raw.categories[0] : raw.category || 'other',
+          observationText: raw.observationText || '',
+          location: raw.location || null,
+          measurement: raw.measurement || null,
+          sea: raw.sea || null,
+          permanentPointId: raw.permanentPointId ? (codeMap.get(raw.permanentPointId) || importedCode(raw.permanentPointId, sourceShort)) : null,
+          isPermanentRoot: Boolean(raw.isPermanentRoot),
+          media: rebuildImportedMedia(raw, entries),
+          provenance: {
+            ...(raw.provenance || {}),
+            receivedVia: 'costa-viva-cvpack'
+          },
+          exchange: {
+            received: true,
+            receivedAt,
+            packageId: manifest.packageId,
+            sourceNotebookId: manifest.sourceNotebookId || null,
+            sourceNotebookShort: sourceShort,
+            sourceCode: raw.code || null,
+            intendedRecipient: manifest.intendedRecipient || null,
+            purpose: manifest.purpose || null,
+            contentSelection: manifest.contentSelection || null
+          }
+        }
+        await idbPutRecord(record)
+        existing.add(record.uuid)
+        added += 1
+      }
+      state.records = await idbGetAllRecords()
+      populatePermanentSelect()
+      renderAll()
+      const message = tr('importComplete', { added, skipped })
+      $('#import-status').textContent = message
+      showToast(message)
+      setTimeout(closeImportModal, 900)
+    } catch (error) {
+      console.error(error)
+      $('#import-status').textContent = tr('importFailed')
+    }
+  }
+
+  async function sharePackage() {
+    openShareModal()
   }
 
   function safeFilename(name) {
@@ -1396,6 +1950,8 @@
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape' && !$('#project-info-modal').hidden) closeProjectInfo()
       if (event.key === 'Escape' && !$('#install-modal').hidden) closeInstallModal()
+      if (event.key === 'Escape' && !$('#share-modal').hidden) closeShareModal()
+      if (event.key === 'Escape' && !$('#import-modal').hidden) closeImportModal()
     })
     $$('.nav-item').forEach(btn => btn.addEventListener('click', () => showScreen(btn.dataset.target)))
     $('#activate-mode').addEventListener('click', activateObservationMode)
@@ -1426,6 +1982,7 @@
     $('#filter-category').addEventListener('change', renderNotebook)
     $('#filter-media').addEventListener('change', renderNotebook)
     $('#filter-permanent').addEventListener('change', renderNotebook)
+    $('#filter-received').addEventListener('change', renderNotebook)
     $('#detail-close').addEventListener('click', closeDetail)
     $('#detail-modal').addEventListener('click', event => { if (event.target === $('#detail-modal')) closeDetail() })
     $('#export-json').addEventListener('click', () => exportSimple('json'))
@@ -1433,6 +1990,19 @@
     $('#export-geojson').addEventListener('click', () => exportSimple('geojson'))
     $('#export-zip').addEventListener('click', () => exportZip(true))
     $('#share-export').addEventListener('click', sharePackage)
+    $('#share-modal-close').addEventListener('click', closeShareModal)
+    $('#share-modal').addEventListener('click', event => { if (event.target === $('#share-modal')) closeShareModal() })
+    $('#share-select-all-records').addEventListener('click', () => $$('.share-record-check').forEach(input => { input.checked = true }))
+    $('#share-select-none-records').addEventListener('click', () => $$('.share-record-check').forEach(input => { input.checked = false }))
+    $('#share-select-all-content').addEventListener('click', () => ['share-measurements','share-notes','share-coordinates','share-photos','share-videos','share-audios'].forEach(id => { $(`#${id}`).checked = true }))
+    $('#share-clear-optional').addEventListener('click', () => ['share-measurements','share-notes','share-coordinates','share-photos','share-videos','share-audios'].forEach(id => { $(`#${id}`).checked = false }))
+    $('#prepare-share').addEventListener('click', prepareCommunityShare)
+    $('#import-package-btn').addEventListener('click', () => $('#import-package-input').click())
+    $('#import-package-input').addEventListener('change', event => readImportPackage(event.target.files?.[0]))
+    $('#import-modal-close').addEventListener('click', closeImportModal)
+    $('#cancel-import').addEventListener('click', closeImportModal)
+    $('#confirm-import').addEventListener('click', confirmImportPackage)
+    $('#import-modal').addEventListener('click', event => { if (event.target === $('#import-modal')) closeImportModal() })
     window.addEventListener('online', () => { if (state.map) renderSimpleMap() })
   }
 
