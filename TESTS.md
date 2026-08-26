@@ -164,3 +164,13 @@ Comprobar que se muestran ODS 10, 11, 13, 14, 16 y 17.
 Comprobar que la relación con los ODS no se presenta como reconocimiento oficial de Naciones Unidas.
 
 Comprobar que el panel mantiene lectura correcta a 320, 360, 375, 390, 412, 430 y 768 px.
+
+## Citación en información · v0.5.1
+
+- Abrir el botón i y desplazarse hasta el final.
+- Confirmar la presencia de Cómo citar COSTA VIVA en ES.
+- Cambiar a PT y confirmar Como citar COSTA VIVA.
+- Confirmar la referencia Busón Buesa, C. (2026) y Version v0.5.0.
+- Confirmar el DOI 10.5281/zenodo.22113035.
+- Confirmar que el enlace DOI abre en una nueva pestaña.
+- Confirmar que el pie muestra COSTA VIVA v0.5.1.

@@ -168,3 +168,13 @@ La versión 0.5.0 incorpora al panel de información el origen comunitario de CO
 ## Versión 0.4.0
 
 La ficha de observación permite marcar varias categorías en un mismo registro. Los datos se guardan en `categories` y se mantiene `category` como campo de compatibilidad con registros anteriores.
+
+## Versión 0.5.1
+
+La versión 0.5.1 incorpora al final del panel de información una sección de citación de la primera versión pública archivada de COSTA VIVA en Zenodo.
+
+Referencia archivada
+
+Busón Buesa, C. (2026). *COSTA VIVA* (Version v0.5.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22113035
+
+La versión v0.5.0 permanece como registro archivado e inmutable. Esta actualización no modifica ese depósito.

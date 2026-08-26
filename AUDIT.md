@@ -98,3 +98,11 @@ Se añade al panel de información una sección bilingüe sobre el origen de COS
 Se incorpora una explicación prudente sobre desplazamiento asociado a factores climáticos y ambientales. La aplicación no clasifica jurídicamente a personas ni determina causalidad por sí sola.
 
 Se incorpora la relación con ODS 10, 11, 13, 14, 16 y 17 dejando claro que no existe certificación o reconocimiento oficial de Naciones Unidas.
+
+## V0.5.1 · Citación visible
+
+- Añadida al final del panel de información la referencia archivada de COSTA VIVA v0.5.0 en Zenodo.
+- DOI visible y enlazado.
+- Texto bilingüe ES y PT para el encabezado y la nota de versión.
+- La referencia bibliográfica se mantiene sin traducir para preservar su forma de citación.
+- La release v0.5.0 archivada en Zenodo no se modifica.
