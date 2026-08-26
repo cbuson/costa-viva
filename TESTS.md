@@ -284,3 +284,15 @@ Comprobar que el panel mantiene lectura correcta a 320, 360, 375, 390, 412, 430 
 - [ ] Probar sin Internet después de instalar la PWA.
 - [ ] Probar una isla pequeña que no figure en la máscara simplificada y comprobar que no se excluye automáticamente.
 - [ ] Comprobar ES, PT y WY.
+
+## Compartir desde celular · 0.5.14
+
+1. Seleccionar uno o más registros.
+2. Elegir contenido y destinatario.
+3. Pulsar Preparar y compartir.
+4. Confirmar que aparecen los botones Compartir ahora y Guardar paquete completo.
+5. Pulsar Compartir ahora desde Android Chrome.
+6. Confirmar que se abre el menú nativo y que aparecen aplicaciones compatibles instaladas.
+7. Cancelar y repetir con fotografías, vídeo y audio seleccionados.
+8. Verificar que si un conjunto de archivos no es aceptado, la aplicación reduce el conjunto a CSV y texto antes de recurrir a compartir solo texto.
+9. Confirmar que Guardar paquete completo descarga el `.cvpack` sin enviar nada a un servidor.

@@ -1,4 +1,4 @@
-const CACHE = 'costa-viva-v18'
+const CACHE = 'costa-viva-v19'
 const APP_SHELL = [
   './',
   './index.html',

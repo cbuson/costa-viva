@@ -260,3 +260,8 @@ textarea{resize:vertical;min-height:110px}
   .tide-actions{display:grid;grid-template-columns:1fr}
   .tide-actions .primary-btn,.tide-actions .secondary-btn{width:100%}
 }
+
+/* Compartir en dos pasos · v0.5.14 */
+.prepared-share-actions{display:grid;gap:10px;margin-top:10px}
+.prepared-share-actions[hidden]{display:none!important}
+.prepared-share-actions .full{width:100%}

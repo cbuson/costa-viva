@@ -284,3 +284,7 @@ La distancia es solo un filtro aproximado de coherencia. No se utiliza como medi
 ### Filtro de coherencia costera
 
 El módulo de marea comprueba primero la proximidad aproximada a la línea de costa. Una ubicación claramente interior no recibe una referencia mareal. La comprobación usa Natural Earth 1:50m y funciona como control de coherencia, no como delimitación oficial de zona costera.
+
+## Versión 0.5.14
+
+La función de intercambio comunitario utiliza ahora un flujo en dos pasos. Primero prepara localmente el paquete. Después una segunda acción explícita abre el menú nativo del dispositivo para compartir con aplicaciones compatibles como WhatsApp o correo. Esto evita perder la activación temporal exigida por la Web Share API durante la creación del paquete. Cuando el formato `.cvpack` no puede compartirse directamente, COSTA VIVA intenta compartir un CSV, un archivo de texto y las evidencias multimedia compatibles. El paquete completo sigue disponible para guardarlo localmente.

@@ -184,3 +184,7 @@ La comprobación utiliza una máscara terrestre Natural Earth 1:110m incluida en
 El umbral de 100 km se utiliza únicamente para identificar situaciones claramente interiores. La aplicación no presenta la distancia calculada como una medición precisa de la costa.
 
 Las posiciones que la máscara de baja resolución no puede clasificar como tierra continental no se bloquean automáticamente. Esto protege frente a errores en pequeñas islas y geografías costeras omitidas por la escala.
+
+## Auditoría de compartir · 0.5.14
+
+Se detectó que la creación asíncrona del paquete podía consumir la activación temporal requerida por Web Share y que los archivos ZIP o `.cvpack` no figuran entre los tipos de archivo normalmente compartibles documentados por MDN. Se separó preparación y apertura del menú nativo. La aplicación prueba archivos compatibles y conserva la descarga del paquete completo como alternativa.
