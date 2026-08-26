@@ -28,7 +28,7 @@
           <button id="lang-pt" type="button" class="lang-btn">PT</button>
         </div>
         <button id="project-info-btn" type="button" class="info-btn" aria-label="Información del proyecto" title="Información del proyecto">i</button>
-        <button id="install-btn" type="button" class="install-btn" hidden>Instalar</button>
+        <button id="install-btn" type="button" class="install-btn">Instalar</button>
       </div>
     </header>
 
@@ -267,7 +267,7 @@
           </section>
 
           <article class="card warning"><h3 data-i18n="gpsTitle">Sobre el GPS del celular</h3><p data-i18n="gpsHelp">El GPS ayuda a localizar la observación. No tiene la precisión de un equipo profesional. COSTA VIVA conserva la precisión informada por el dispositivo para evitar aparentar una exactitud que no existe.</p></article>
-          <article class="card"><h3 data-i18n="installTitle">Instalar COSTA VIVA</h3><p data-i18n="installHelp">En un navegador compatible utiliza Instalar o Añadir a pantalla de inicio. Después podrás abrir COSTA VIVA como una aplicación.</p></article>
+          <article class="card install-help-card"><h3 data-i18n="installTitle">Instalar COSTA VIVA</h3><p data-i18n="installHelp">En un navegador compatible utiliza Instalar o Añadir a pantalla de inicio. Después podrás abrir COSTA VIVA como una aplicación.</p><button id="help-install-btn" type="button" class="primary-btn install-help-action" data-i18n="installOnDevice">INSTALAR EN ESTE CELULAR</button></article>
         </div>
       </section>
     </main>
@@ -297,6 +297,27 @@
         </ul>
         <button id="first-run-activate" type="button" class="primary-btn full"><span data-i18n="activateAndStart">ACTIVAR Y COMENZAR</span></button>
         <button id="first-run-later" type="button" class="text-btn" data-i18n="continueWithout">Continuar sin activar ahora</button>
+      </div>
+    </div>
+
+    <div id="install-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="install-modal-title">
+      <div class="modal-card install-modal-card">
+        <button id="install-modal-close" class="modal-close" type="button" aria-label="Cerrar">✕</button>
+        <div class="modal-brand">
+          <img src="./assets/icon-192.png" alt="">
+          <div><strong>COSTA VIVA</strong><small data-i18n="installModalKicker">Instalar en el dispositivo</small></div>
+        </div>
+        <h2 id="install-modal-title" data-i18n="installModalTitle">Instalar COSTA VIVA</h2>
+        <p id="install-modal-intro" data-i18n="installModalIntro">La instalación permite abrir COSTA VIVA desde la pantalla principal y facilita el uso en campo.</p>
+        <div id="install-native-ready" class="install-ready" hidden>
+          <p data-i18n="installNativeReady">Tu navegador permite instalar COSTA VIVA directamente.</p>
+          <button id="install-native-btn" type="button" class="primary-btn" data-i18n="installNow">INSTALAR AHORA</button>
+        </div>
+        <div id="install-manual" class="install-manual">
+          <h3 data-i18n="installManualTitle">Cómo instalar</h3>
+          <ol id="install-steps" class="install-steps"></ol>
+          <p class="project-scope-note" data-i18n="installWordingNote">El nombre exacto de la opción puede variar según el navegador y el teléfono.</p>
+        </div>
       </div>
     </div>
 
@@ -417,7 +438,7 @@
 
         <div class="project-info-footer">
           <span>© 2026 Carlos Busón Buesa</span>
-          <span>COSTA VIVA · v0.5.1</span>
+          <span>COSTA VIVA · v0.5.2</span>
         </div>
       </div>
     </div>

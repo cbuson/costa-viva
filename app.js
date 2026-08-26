@@ -26,7 +26,7 @@
       photoMethodTitle: 'Método 2. Fotografía desde un punto fijo', photoStep1: 'Escoge una referencia estable desde la que puedas volver a fotografiar.', photoStep2: 'Guarda el lugar como punto permanente.', photoStep3: 'Anota la dirección de la fotografía y una referencia visible que ayude a repetir el encuadre.', photoStep4: 'En cada visita intenta usar el mismo lugar, altura aproximada y dirección.', photoStep5: 'Haz la fotografía antes de acercarte a la zona erosionada y añade una nota sobre los cambios observados.', photoWarning: 'Las fotografías repetidas permiten documentar cambios. Por sí solas no deben convertirse automáticamente en metros de erosión.',
       waterlineMethodTitle: 'Si mides hasta el borde del agua', waterlineMethodText: 'El borde del agua se mueve con la marea y el oleaje. Registra siempre la hora y el estado observado del mar. Para comparar dos medidas procura realizar las visitas en condiciones de marea semejantes. Una diferencia medida en horas o estados de marea distintos no debe interpretarse directamente como erosión.',
       minimumRecordTitle: 'Qué debe quedar registrado', minimum1: 'Código del punto permanente', minimum2: 'Fecha y hora', minimum3: 'Referencia fija utilizada', minimum4: 'Línea medida', minimum5: 'Distancia y método', minimum6: 'Fotografía y nota cuando sea posible', minimum7: 'Estado observado del mar', minimum8: 'Posición y precisión del celular cuando estén disponibles',
-      gpsTitle: 'Sobre el GPS del celular', gpsHelp: 'El GPS ayuda a localizar la observación. No tiene la precisión de un equipo profesional. COSTA VIVA conserva la precisión informada por el dispositivo para evitar aparentar una exactitud que no existe.', installTitle: 'Instalar COSTA VIVA', installHelp: 'En un navegador compatible utiliza Instalar o Añadir a pantalla de inicio. Después podrás abrir COSTA VIVA como una aplicación.',
+      gpsTitle: 'Sobre el GPS del celular', gpsHelp: 'El GPS ayuda a localizar la observación. No tiene la precisión de un equipo profesional. COSTA VIVA conserva la precisión informada por el dispositivo para evitar aparentar una exactitud que no existe.', installTitle: 'Instalar COSTA VIVA', installHelp: 'En un navegador compatible utiliza Instalar o Añadir a pantalla de inicio. Después podrás abrir COSTA VIVA como una aplicación.', installOnDevice: 'INSTALAR EN ESTE CELULAR', installModalKicker: 'Instalar en el dispositivo', installModalTitle: 'Instalar COSTA VIVA', installModalIntro: 'La instalación permite abrir COSTA VIVA desde la pantalla principal y facilita el uso en campo.', installNativeReady: 'Tu navegador permite instalar COSTA VIVA directamente.', installNow: 'INSTALAR AHORA', installManualTitle: 'Cómo instalar', installWordingNote: 'El nombre exacto de la opción puede variar según el navegador y el teléfono.', installAndroid1: 'Abre el menú del navegador con los tres puntos.', installAndroid2: 'Busca Instalar aplicación o Añadir a pantalla de inicio.', installAndroid3: 'Confirma la instalación y abre COSTA VIVA desde su icono.', installIOS1: 'Abre COSTA VIVA en Safari.', installIOS2: 'Pulsa Compartir.', installIOS3: 'Elige Añadir a pantalla de inicio y confirma.', installDesktop1: 'Busca el icono de instalación en la barra de direcciones o abre el menú del navegador.', installDesktop2: 'Elige Instalar COSTA VIVA o Instalar aplicación.', installDesktop3: 'Confirma la instalación.', installedAlready: 'COSTA VIVA ya está instalada en este dispositivo.',
       projectInfoKicker: 'INFORMACIÓN DEL PROYECTO', projectInfoSubtitle: 'Herramienta abierta de ciencia popular para observación comunitaria de la costa', projectInfoAria: 'Información del proyecto',
       projectPurposeTitle: 'Para qué existe', projectPurposeText: 'COSTA VIVA nace para que comunidades con medios limitados puedan documentar cambios de su costa de forma ordenada, repetible y verificable usando celulares comunes y métodos sencillos de campo. La herramienta ayuda a conservar qué se observó, dónde, cuándo, cómo se midió y qué evidencia quedó registrada.',
       popularScienceTitle: 'Ciencia popular', popularScienceText: 'La sofisticación está en el método y no en exigir equipos costosos. Un registro comunitario gana valor cuando conserva el procedimiento, la incertidumbre, la fecha, la posición disponible, las fotografías, las notas y las mediciones repetidas. COSTA VIVA busca hacer posible ese trabajo sin convertir un celular en un instrumento profesional que no es.',
@@ -64,7 +64,7 @@
       photoMethodTitle: 'Método 2. Fotografia a partir de um ponto fixo', photoStep1: 'Escolha uma referência estável de onde seja possível voltar a fotografar.', photoStep2: 'Salve o lugar como ponto permanente.', photoStep3: 'Registre a direção da fotografia e uma referência visível que ajude a repetir o enquadramento.', photoStep4: 'Em cada visita procure usar o mesmo lugar, altura aproximada e direção.', photoStep5: 'Faça a fotografia antes de se aproximar da zona erodida e acrescente uma nota sobre as mudanças observadas.', photoWarning: 'Fotografias repetidas permitem documentar mudanças. Sozinhas não devem ser transformadas automaticamente em metros de erosão.',
       waterlineMethodTitle: 'Se medir até a borda da água', waterlineMethodText: 'A borda da água se move com a maré e a ondulação. Registre sempre a hora e o estado observado do mar. Para comparar duas medições procure realizar as visitas em condições de maré semelhantes. Uma diferença medida em horários ou estados de maré distintos não deve ser interpretada diretamente como erosão.',
       minimumRecordTitle: 'O que deve ficar registrado', minimum1: 'Código do ponto permanente', minimum2: 'Data e hora', minimum3: 'Referência fixa utilizada', minimum4: 'Linha medida', minimum5: 'Distância e método', minimum6: 'Fotografia e nota quando possível', minimum7: 'Estado observado do mar', minimum8: 'Posição e precisão do celular quando estiverem disponíveis',
-      gpsTitle: 'Sobre o GPS do celular', gpsHelp: 'O GPS ajuda a localizar a observação. Não tem a precisão de um equipamento profissional. COSTA VIVA conserva a precisão informada pelo dispositivo para evitar aparentar uma exatidão que não existe.', installTitle: 'Instalar COSTA VIVA', installHelp: 'Em um navegador compatível use Instalar ou Adicionar à tela inicial. Depois você poderá abrir COSTA VIVA como um aplicativo.',
+      gpsTitle: 'Sobre o GPS do celular', gpsHelp: 'O GPS ajuda a localizar a observação. Não tem a precisão de um equipamento profissional. COSTA VIVA conserva a precisão informada pelo dispositivo para evitar aparentar uma exatidão que não existe.', installTitle: 'Instalar COSTA VIVA', installHelp: 'Em um navegador compatível use Instalar ou Adicionar à tela inicial. Depois você poderá abrir COSTA VIVA como um aplicativo.', installOnDevice: 'INSTALAR NESTE CELULAR', installModalKicker: 'Instalar no dispositivo', installModalTitle: 'Instalar COSTA VIVA', installModalIntro: 'A instalação permite abrir COSTA VIVA pela tela inicial e facilita o uso em campo.', installNativeReady: 'Seu navegador permite instalar COSTA VIVA diretamente.', installNow: 'INSTALAR AGORA', installManualTitle: 'Como instalar', installWordingNote: 'O nome exato da opção pode variar conforme o navegador e o celular.', installAndroid1: 'Abra o menu do navegador pelos três pontos.', installAndroid2: 'Procure Instalar aplicativo ou Adicionar à tela inicial.', installAndroid3: 'Confirme a instalação e abra COSTA VIVA pelo ícone.', installIOS1: 'Abra COSTA VIVA no Safari.', installIOS2: 'Toque em Compartilhar.', installIOS3: 'Escolha Adicionar à Tela de Início e confirme.', installDesktop1: 'Procure o ícone de instalação na barra de endereços ou abra o menu do navegador.', installDesktop2: 'Escolha Instalar COSTA VIVA ou Instalar aplicativo.', installDesktop3: 'Confirme a instalação.', installedAlready: 'COSTA VIVA já está instalada neste dispositivo.',
       projectInfoKicker: 'INFORMAÇÕES DO PROJETO', projectInfoSubtitle: 'Ferramenta aberta de ciência popular para observação comunitária da costa', projectInfoAria: 'Informações do projeto',
       projectPurposeTitle: 'Para que existe', projectPurposeText: 'COSTA VIVA nasce para que comunidades com meios limitados possam documentar mudanças em sua costa de forma organizada, repetível e verificável usando celulares comuns e métodos simples de campo. A ferramenta ajuda a conservar o que foi observado, onde, quando, como foi medido e qual evidência ficou registrada.',
       popularScienceTitle: 'Ciência popular', popularScienceText: 'A sofisticação está no método e não na exigência de equipamentos caros. Um registro comunitário ganha valor quando conserva o procedimento, a incerteza, a data, a posição disponível, as fotografias, as notas e as medições repetidas. COSTA VIVA busca tornar esse trabalho possível sem transformar o celular em um instrumento profissional que ele não é.',
@@ -127,6 +127,7 @@
     $('#subtitle').textContent = tr('subtitle')
     $('#first-run-subtitle').textContent = tr('subtitle')
     $('#install-btn').textContent = tr('install')
+    updateInstallGuide()
     $('#project-info-btn').setAttribute('aria-label', tr('projectInfoAria'))
     $('#project-info-btn').title = tr('projectInfoAria')
     $$('#lang-es, #lang-pt').forEach(btn => btn.classList.toggle('active', btn.id === `lang-${lang}`))
@@ -1271,22 +1272,97 @@
     return String(value ?? '').replace(/[&<>'"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', "'":'&#39;', '"':'&quot;' }[c]))
   }
 
+  function isStandalone() {
+    return window.matchMedia?.('(display-mode: standalone)').matches || window.navigator.standalone === true
+  }
+
+  function installPlatform() {
+    const ua = navigator.userAgent || ''
+    const isiOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+    const isAndroid = /Android/i.test(ua)
+    return isiOS ? 'ios' : isAndroid ? 'android' : 'desktop'
+  }
+
+  function updateInstallGuide() {
+    const list = $('#install-steps')
+    if (!list) return
+    const platform = installPlatform()
+    const keys = platform === 'ios'
+      ? ['installIOS1', 'installIOS2', 'installIOS3']
+      : platform === 'android'
+        ? ['installAndroid1', 'installAndroid2', 'installAndroid3']
+        : ['installDesktop1', 'installDesktop2', 'installDesktop3']
+    list.innerHTML = keys.map(key => `<li>${escapeHtml(tr(key))}</li>`).join('')
+    const nativeReady = $('#install-native-ready')
+    if (nativeReady) nativeReady.hidden = !state.installPrompt
+  }
+
+  function openInstallModal() {
+    if (isStandalone()) {
+      showToast(tr('installedAlready'))
+      return
+    }
+    updateInstallGuide()
+    $('#install-modal').hidden = false
+    document.body.style.overflow = 'hidden'
+    $('#install-modal-close').focus()
+  }
+
+  function closeInstallModal() {
+    $('#install-modal').hidden = true
+    document.body.style.overflow = ''
+    $('#install-btn').focus()
+  }
+
+  async function requestNativeInstall() {
+    if (!state.installPrompt) {
+      openInstallModal()
+      return
+    }
+    const promptEvent = state.installPrompt
+    state.installPrompt = null
+    promptEvent.prompt()
+    const choice = await promptEvent.userChoice
+    if (choice?.outcome === 'accepted') {
+      $('#install-btn').hidden = true
+      $('#help-install-btn').hidden = true
+      closeInstallModal()
+    } else {
+      updateInstallGuide()
+    }
+  }
+
   function setupInstall() {
+    const installed = isStandalone()
+    $('#install-btn').hidden = installed
+    $('#help-install-btn').hidden = installed
+
     window.addEventListener('beforeinstallprompt', event => {
       event.preventDefault()
       state.installPrompt = event
       $('#install-btn').hidden = false
+      $('#help-install-btn').hidden = false
+      updateInstallGuide()
     })
-    $('#install-btn').addEventListener('click', async () => {
-      if (!state.installPrompt) {
-        showToast(tr('installUnavailable'))
-        return
-      }
-      state.installPrompt.prompt()
-      await state.installPrompt.userChoice
+
+    window.addEventListener('appinstalled', () => {
       state.installPrompt = null
       $('#install-btn').hidden = true
+      $('#help-install-btn').hidden = true
+      if (!$('#install-modal').hidden) closeInstallModal()
     })
+
+    $('#install-btn').addEventListener('click', () => {
+      if (state.installPrompt) requestNativeInstall()
+      else openInstallModal()
+    })
+    $('#help-install-btn').addEventListener('click', () => {
+      if (state.installPrompt) requestNativeInstall()
+      else openInstallModal()
+    })
+    $('#install-native-btn').addEventListener('click', requestNativeInstall)
+    $('#install-modal-close').addEventListener('click', closeInstallModal)
+    $('#install-modal').addEventListener('click', event => { if (event.target === $('#install-modal')) closeInstallModal() })
   }
 
   function setupServiceWorker() {
@@ -1315,6 +1391,7 @@
     $('#project-info-modal').addEventListener('click', event => { if (event.target === $('#project-info-modal')) closeProjectInfo() })
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape' && !$('#project-info-modal').hidden) closeProjectInfo()
+      if (event.key === 'Escape' && !$('#install-modal').hidden) closeInstallModal()
     })
     $$('.nav-item').forEach(btn => btn.addEventListener('click', () => showScreen(btn.dataset.target)))
     $('#activate-mode').addEventListener('click', activateObservationMode)

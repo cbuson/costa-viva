@@ -178,3 +178,10 @@ Referencia archivada
 Busón Buesa, C. (2026). *COSTA VIVA* (Version v0.5.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.22113035
 
 La versión v0.5.0 permanece como registro archivado e inmutable. Esta actualización no modifica ese depósito.
+
+
+## Versión 0.5.2
+
+La versión 0.5.2 hace visible la instalación de COSTA VIVA como PWA. El botón Instalar permanece accesible en la cabecera cuando la aplicación no está instalada y se añade una segunda acción de instalación dentro de Ayuda.
+
+Cuando el navegador ofrece el flujo nativo de instalación, COSTA VIVA lo utiliza. Cuando ese flujo no está disponible, la aplicación muestra instrucciones adaptadas a Android, iOS o escritorio sin simular una instalación que el navegador no haya realizado.

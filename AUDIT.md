@@ -106,3 +106,13 @@ Se incorpora la relación con ODS 10, 11, 13, 14, 16 y 17 dejando claro que no e
 - Texto bilingüe ES y PT para el encabezado y la nota de versión.
 - La referencia bibliográfica se mantiene sin traducir para preservar su forma de citación.
 - La release v0.5.0 archivada en Zenodo no se modifica.
+
+
+## V0.5.2 · Instalación PWA visible
+
+- Botón Instalar visible también en pantallas de 320 a 420 px cuando la aplicación no está instalada.
+- Botón adicional de instalación dentro de Ayuda.
+- Uso del evento beforeinstallprompt cuando el navegador lo ofrece.
+- Instrucciones manuales adaptadas a Android, iOS y escritorio cuando no existe prompt nativo.
+- Detección de modo standalone para no ofrecer instalación después de instalar la PWA.
+- Ocultación automática de las acciones de instalación tras appinstalled.

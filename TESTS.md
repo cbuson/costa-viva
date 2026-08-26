@@ -174,3 +174,13 @@ Comprobar que el panel mantiene lectura correcta a 320, 360, 375, 390, 412, 430 
 - Confirmar el DOI 10.5281/zenodo.22113035.
 - Confirmar que el enlace DOI abre en una nueva pestaña.
 - Confirmar que el pie muestra COSTA VIVA v0.5.1.
+
+
+## Instalación PWA · v0.5.2
+
+- Verificar que Instalar sea visible en 320, 360, 375, 390, 412 y 430 px antes de instalar.
+- En Android Chrome comprobar el flujo nativo cuando beforeinstallprompt esté disponible.
+- Comprobar que, si el prompt nativo no está disponible, el botón abre una guía manual y no finge una instalación.
+- En iOS Safari comprobar que la guía indique Compartir y Añadir a pantalla de inicio.
+- Comprobar el botón de instalación dentro de Ayuda.
+- Tras instalar, abrir la PWA y confirmar que los botones de instalación no vuelven a mostrarse en modo standalone.
