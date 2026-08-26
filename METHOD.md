@@ -180,3 +180,13 @@ COSTA VIVA distingue tres objetos que no deben confundirse. El estado del mar ob
 La estación TICON más próxima se registra con su identificador, coordenadas y distancia al punto de observación. La proximidad espacial no se presenta como garantía de representatividad mareográfica. La futura altura astronómica deberá conservar los constituyentes usados, el método de predicción y la versión del motor.
 
 La predicción astronómica no deberá utilizarse como nivel real observado porque puede diferir por viento, oleaje, presión atmosférica, descarga fluvial y otros procesos no astronómicos.
+
+## Comprobación de aplicabilidad del módulo mareal · v0.5.13
+
+COSTA VIVA comprueba primero si la posición está claramente alejada de la costa antes de buscar una referencia TICON 3.
+
+La comprobación utiliza una máscara terrestre simplificada de Natural Earth 1:110m. Si una posición se encuentra dentro de una masa terrestre reconocida y a 100 km o más del borde exterior aproximado, la aplicación considera la marea no aplicable en esa ubicación.
+
+Esta comprobación es un filtro de coherencia y no una medición costera. La resolución 1:110m no permite utilizar esa distancia para estudios geomorfológicos, delimitaciones legales ni análisis fino de proximidad al litoral.
+
+Cuando la geometría simplificada no permite clasificar con seguridad una ubicación, COSTA VIVA evita excluirla automáticamente. Este comportamiento reduce el riesgo de falsos negativos en islas pequeñas o costas mal representadas a esa escala.

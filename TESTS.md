@@ -254,7 +254,7 @@ Comprobar que el panel mantiene lectura correcta a 320, 360, 375, 390, 412, 430 
 - [ ] La versión Wayuunaiki será revisada por hablantes Wayuu antes de considerarse validada.
 
 
-## Wayuunaiki 0.5.12
+## Wayuunaiki 0.5.13
 
 - [x] Las 388 claves de español tienen una cadena provisional WY.
 - [x] WY ya no utiliza el objeto español como fallback por diseño.
@@ -274,3 +274,13 @@ Comprobar que el panel mantiene lectura correcta a 320, 360, 375, 390, 412, 430 
 - [ ] El registro guarda la referencia TICON sin altura mareal falsa.
 - [ ] ES, PT y WY muestran el nuevo bloque.
 - [ ] La ayuda y la i citan DOI y licencia de TICON 3.
+
+## Pruebas de aplicabilidad costera · v0.5.13
+
+- [x] La posición de prueba en Campo Grande MS se clasifica como claramente interior con la máscara incluida.
+- [x] Una posición de prueba próxima a Riohacha no se bloquea como interior.
+- [ ] Probar en un celular físico en Campo Grande y comprobar el mensaje No aplicable en esta ubicación.
+- [ ] Probar en Arroyo Guerrero y comprobar que el filtro no bloquea el módulo mareal.
+- [ ] Probar sin Internet después de instalar la PWA.
+- [ ] Probar una isla pequeña que no figure en la máscara simplificada y comprobar que no se excluye automáticamente.
+- [ ] Comprobar ES, PT y WY.

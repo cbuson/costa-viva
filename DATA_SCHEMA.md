@@ -86,3 +86,18 @@ Los registros recibidos añaden el objeto `exchange` con `received`, `receivedAt
 ## tideReference · v0.5.11
 
 Cuando existe una referencia TICON seleccionada, el registro puede incluir `tideReference` con `source`, `doi`, `stationId`, `stationSource`, `stationLatitude`, `stationLongitude`, `distanceKm`, `estimateAvailable` y `note`. En 0.5.11 `estimateAvailable` permanece en `false` porque la reconstrucción armónica aún no se ha validado.
+
+## tideApplicability · v0.5.13
+
+Cada registro puede conservar `tideApplicability` aunque no exista una estación TICON instalada.
+
+Incluye
+
+- `status`
+- `approximateCoastDistanceKm`
+- `method`
+- `thresholdKm`
+
+El estado `clearly-inland` significa que la posición fue clasificada como claramente interior mediante una máscara terrestre Natural Earth 1:110m y una distancia aproximada igual o superior al umbral configurado.
+
+Este dato solo controla si resulta razonable ofrecer información mareal. No representa una medición precisa de la distancia a la línea de costa.

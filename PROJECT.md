@@ -120,3 +120,11 @@ Este criterio aplica el mismo principio de control comunitario a la lengua. La c
 ## TICON 3
 
 El módulo mareal utiliza TICON 3 como referencia de desarrollo por su cobertura global de mareógrafos, disponibilidad de 40 constituyentes, identificación del tipo de estación y licencia CC BY 4.0. COSTA VIVA conserva explícitamente la cita y no oculta la distancia entre el punto comunitario y el mareógrafo utilizado como referencia.
+
+## Coherencia geográfica del módulo mareal
+
+COSTA VIVA no debe ofrecer información mareal simplemente porque exista una estación TICON cercana en términos relativos.
+
+Desde la versión 0.5.13 la aplicación realiza primero una comprobación geográfica aproximada con Natural Earth 1:110m. Una posición claramente interior se marca como no aplicable para el módulo mareal.
+
+La comprobación es deliberadamente conservadora y transparente. Su función es evitar información absurda y no sustituye cartografía costera de detalle.

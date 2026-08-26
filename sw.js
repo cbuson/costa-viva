@@ -1,4 +1,4 @@
-const CACHE = 'costa-viva-v17'
+const CACHE = 'costa-viva-v18'
 const APP_SHELL = [
   './',
   './index.html',
@@ -7,6 +7,7 @@ const APP_SHELL = [
   './manifest.webmanifest',
   './assets/icon-192.png',
   './assets/icon-512.png',
+  './assets/coastal-landmask-110m.geojson',
   './LICENSE',
   './CONTENT-LICENSE.md',
   './PROJECT.md',
@@ -35,6 +36,22 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return
   const url = new URL(event.request.url)
+
+  if (url.hostname === 'raw.githubusercontent.com' && url.pathname.endsWith('/natural-earth-vector/master/geojson/ne_50m_coastline.geojson')) {
+    event.respondWith((async () => {
+      const cache = await caches.open(CACHE)
+      try {
+        const response = await fetch(event.request, { cache: 'no-cache' })
+        if (response && response.ok) await cache.put(event.request, response.clone())
+        return response
+      } catch (error) {
+        const cached = await cache.match(event.request)
+        if (cached) return cached
+        throw error
+      }
+    })())
+    return
+  }
 
   if (url.hostname === 'tile.openstreetmap.org' || url.hostname === 'server.arcgisonline.com') {
     event.respondWith(fetch(event.request).catch(() => new Response('', { status: 503 })))

@@ -6,6 +6,8 @@
   const RECORD_STORE = 'records'
   const META_STORE = 'meta'
   const TIDE_STORE = 'tideStations'
+  const COAST_MASK_URL = './assets/coastal-landmask-110m.geojson'
+  const COAST_INLAND_THRESHOLD_KM = 100
 
   const i18n = {
     es: {
@@ -504,6 +506,10 @@
     tideEstimatedTitle: 'Marea astronómica estimada',
     tideNeedLocation: 'Activa la ubicación para buscar una referencia TICON 3',
     tideDataNotInstalled: 'Datos TICON 3 no instalados',
+    tideOutsideCoastalZone: 'No aplicable en esta ubicación',
+    tideOutsideCoastalZoneMeta: 'Ubicación interior · aprox. {distance} km de la costa',
+    tideCoastCheckUnavailable: 'No se pudo comprobar la proximidad a la costa',
+    tideCoastCheckUnavailableMeta: 'Con conexión, COSTA VIVA intentará comprobar si esta ubicación está dentro de la zona costera.',
     tideReferenceReady: 'Referencia TICON 3 localizada',
     tideStationMeta: 'Estación {station} · {distance} km',
     tideEstimateCaution: 'Estimación astronómica. No equivale al nivel real observado del mar.',
@@ -527,13 +533,22 @@
     tideProjectRuleTitle: 'Una estimación no es una observación',
     tideProjectRuleText: 'La marea calculada se conservará separada del estado del mar observado por la comunidad. La aplicación no debe presentar la predicción astronómica como nivel real del mar ni como evidencia suficiente de erosión.',
     tideRecordLabel: 'Referencia mareal',
-    tideReferenceOnly: 'TICON 3 · referencia, sin altura calculada'
+    tideReferenceOnly: 'TICON 3 · referencia, sin altura calculada',
+    tideOutsideCoastalZone: 'No aplicable en esta ubicación',
+    tideOutsideCoastalMeta: 'Ubicación interior · costa aproximada a {distance} km',
+    tideOutsideCoastalNote: 'COSTA VIVA no calcula una referencia mareal cuando la ubicación está claramente alejada de la costa.',
+    tideCoastCheckTitle: 'Comprobación geográfica costera',
+    tideCoastCheckText: 'Antes de buscar una estación TICON 3, COSTA VIVA realiza una comprobación aproximada con una máscara terrestre de Natural Earth 1:110m. Si el punto está claramente en el interior, la marea se marca como no aplicable. Esta comprobación solo evita resultados absurdos y no mide la distancia costera con precisión.'
   })
 
   Object.assign(i18n.pt, {
     tideEstimatedTitle: 'Maré astronômica estimada',
     tideNeedLocation: 'Ative a localização para buscar uma referência TICON 3',
     tideDataNotInstalled: 'Dados TICON 3 não instalados',
+    tideOutsideCoastalZone: 'Não aplicável nesta localização',
+    tideOutsideCoastalZoneMeta: 'Localização interior · aprox. {distance} km da costa',
+    tideCoastCheckUnavailable: 'Não foi possível verificar a proximidade da costa',
+    tideCoastCheckUnavailableMeta: 'Com conexão, COSTA VIVA tentará verificar se esta localização está dentro da zona costeira.',
     tideReferenceReady: 'Referência TICON 3 localizada',
     tideStationMeta: 'Estação {station} · {distance} km',
     tideEstimateCaution: 'Estimativa astronômica. Não equivale ao nível real observado do mar.',
@@ -557,13 +572,22 @@
     tideProjectRuleTitle: 'Uma estimativa não é uma observação',
     tideProjectRuleText: 'A maré calculada será mantida separada do estado do mar observado pela comunidade. O aplicativo não deve apresentar a previsão astronômica como nível real do mar nem como evidência suficiente de erosão.',
     tideRecordLabel: 'Referência de maré',
-    tideReferenceOnly: 'TICON 3 · referência, sem altura calculada'
+    tideReferenceOnly: 'TICON 3 · referência, sem altura calculada',
+    tideOutsideCoastalZone: 'Não aplicável nesta localização',
+    tideOutsideCoastalMeta: 'Localização interior · costa aproximada a {distance} km',
+    tideOutsideCoastalNote: 'COSTA VIVA não calcula uma referência de maré quando a localização está claramente distante da costa.',
+    tideCoastCheckTitle: 'Verificação geográfica costeira',
+    tideCoastCheckText: 'Antes de buscar uma estação TICON 3, COSTA VIVA realiza uma verificação aproximada com uma máscara terrestre Natural Earth 1:110m. Se o ponto estiver claramente no interior, a maré é marcada como não aplicável. Esta verificação apenas evita resultados absurdos e não mede a distância costeira com precisão.'
   })
 
   Object.assign(i18n.guc, {
     tideEstimatedTitle: 'Palaa · marea astronómica ayaawajünaka',
     tideNeedLocation: 'Püjütaa apülee süpüla achajaa TICON 3',
     tideDataNotInstalled: 'TICON 3 nnojotsü anaajünain yaa',
+    tideOutsideCoastalZone: 'Nnojotsü marea yaa · apülee tüü nnojotsü motsaain palaa',
+    tideOutsideCoastalZoneMeta: 'Apülee interior · {distance} km süpüshi palaa (ayaawajünaka)',
+    tideCoastCheckUnavailable: 'Nnojotsü ainkain ayaawataa eere palaa',
+    tideCoastCheckUnavailableMeta: "Müleka eewain internet, COSTA VIVA ayaawatüin apülee tüü süpüla e'rajawaa müleka motsaain palaa.",
     tideReferenceReady: 'TICON 3 eejüsü apülee süpüla e\'rajawaa',
     tideStationMeta: 'Estación {station} · {distance} km',
     tideEstimateCaution: 'Ayaawajünaka ne\'e. Nnojotsü shia süka level palaa e\'rajünaka.',
@@ -587,7 +611,12 @@
     tideProjectRuleTitle: 'Ayaawajünaka nnojotsü shia e\'rajünaka',
     tideProjectRuleText: 'Marea calculada anaajünü wane\'eya sümaa palaa e\'rajünaka sünain comunidad. Nnojotsü ee\'iyalaain müin nivel real palaa niainjain evidencia ne\'e erosión.',
     tideRecordLabel: 'Kasachiki marea',
-    tideReferenceOnly: 'TICON 3 · referencia, nnojotsü altura calculada'
+    tideReferenceOnly: 'TICON 3 · referencia, nnojotsü altura calculada',
+    tideOutsideCoastalZone: 'Nnojotsü ainkain marea sulu\'u apülee tüü',
+    tideOutsideCoastalMeta: 'Apülee sulu\'u mma · palaa eejüsü {distance} km süchiki',
+    tideOutsideCoastalNote: 'COSTA VIVA nnojotsü aainjain referencia marea müleka apülee tüü wanee motsaain palaa.',
+    tideCoastCheckTitle: 'E\'rajawaa apülee palaa',
+    tideCoastCheckText: 'COSTA VIVA e\'rajüsü palajana müleka apülee tüü eejüsü süchiki palaa süka Natural Earth 1:110m. Tüü wanee ayaawajünaka ne\'e süpüla nnojolaa e\'iyataa marea sulu\'u mma motsaain palaa.'
   })
 
 
@@ -620,7 +649,12 @@
     pendingImport: null,
     tideStations: [],
     tideNearest: null,
-    tideDatasetReady: false
+    tideCoastDistanceKm: null,
+    coastlineLines: [],
+    tideDatasetReady: false,
+    coastMask: null,
+    coastMaskReady: false,
+    tideCoastCheck: null
   }
 
   const $ = selector => document.querySelector(selector)
@@ -765,6 +799,76 @@
     })
   }
 
+  const COASTLINE_URL = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_coastline.geojson'
+  const COASTAL_APPLICABILITY_KM = 50
+
+  async function loadCoastlineReference() {
+    if (state.coastlineLines?.length) return true
+    try {
+      const response = await fetch(COASTLINE_URL, { cache: 'force-cache' })
+      if (!response.ok) throw new Error(`Coastline HTTP ${response.status}`)
+      const geojson = await response.json()
+      const lines = []
+      for (const feature of geojson.features || []) {
+        const geometry = feature?.geometry
+        if (!geometry) continue
+        if (geometry.type === 'LineString') lines.push(geometry.coordinates)
+        else if (geometry.type === 'MultiLineString') lines.push(...geometry.coordinates)
+      }
+      state.coastlineLines = lines.filter(line => Array.isArray(line) && line.length > 1)
+      return state.coastlineLines.length > 0
+    } catch (error) {
+      console.warn('Coastline reference unavailable', error)
+      state.coastlineLines = []
+      return false
+    }
+  }
+
+  function pointSegmentDistanceKm(lat, lon, a, b) {
+    const rad = Math.PI / 180
+    const meanLat = ((lat + a[1] + b[1]) / 3) * rad
+    const kx = 111.320 * Math.cos(meanLat)
+    const ky = 110.574
+    const px = lon * kx, py = lat * ky
+    const ax = a[0] * kx, ay = a[1] * ky
+    const bx = b[0] * kx, by = b[1] * ky
+    const dx = bx - ax, dy = by - ay
+    const den = dx * dx + dy * dy
+    let t = den ? ((px - ax) * dx + (py - ay) * dy) / den : 0
+    t = Math.max(0, Math.min(1, t))
+    return Math.hypot(px - (ax + t * dx), py - (ay + t * dy))
+  }
+
+  function approximateDistanceToCoastKm(lat, lon) {
+    if (!state.coastlineLines?.length) return null
+    let best = Infinity
+    for (const line of state.coastlineLines) {
+      for (let i = 1; i < line.length; i++) {
+        const a = line[i - 1], b = line[i]
+        if (!Array.isArray(a) || !Array.isArray(b)) continue
+        // Fast rejection using an intentionally generous geographic window.
+        const minLat = Math.min(a[1], b[1]) - 3
+        const maxLat = Math.max(a[1], b[1]) + 3
+        if (lat < minLat || lat > maxLat) continue
+        const minLon = Math.min(a[0], b[0]) - 3
+        const maxLon = Math.max(a[0], b[0]) + 3
+        if (lon < minLon || lon > maxLon) continue
+        const d = pointSegmentDistanceKm(lat, lon, a, b)
+        if (d < best) best = d
+      }
+    }
+    // If the 3-degree window found nothing, do a complete pass. This is rare.
+    if (!Number.isFinite(best)) {
+      for (const line of state.coastlineLines) {
+        for (let i = 1; i < line.length; i++) {
+          const d = pointSegmentDistanceKm(lat, lon, line[i - 1], line[i])
+          if (d < best) best = d
+        }
+      }
+    }
+    return Number.isFinite(best) ? best : null
+  }
+
   function haversineKm(lat1, lon1, lat2, lon2) {
     const r = 6371.0088
     const rad = Math.PI / 180
@@ -783,7 +887,87 @@
     return best
   }
 
-  function updateTideUI() {
+  function normalizeLonDelta(delta) {
+    let value = delta
+    while (value > 180) value -= 360
+    while (value < -180) value += 360
+    return value
+  }
+
+  function pointInRing(lon, lat, ring) {
+    let inside = false
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      const xi = ring[i][0], yi = ring[i][1]
+      const xj = ring[j][0], yj = ring[j][1]
+      const intersects = ((yi > lat) !== (yj > lat)) &&
+        (lon < (xj - xi) * (lat - yi) / ((yj - yi) || Number.EPSILON) + xi)
+      if (intersects) inside = !inside
+    }
+    return inside
+  }
+
+  function pointInPolygon(lon, lat, polygon) {
+    if (!polygon?.length || !pointInRing(lon, lat, polygon[0])) return false
+    for (let i = 1; i < polygon.length; i += 1) {
+      if (pointInRing(lon, lat, polygon[i])) return false
+    }
+    return true
+  }
+
+  function pointSegmentDistanceKm(lat, lon, a, b) {
+    const latKm = 110.574
+    const lonKm = 111.320 * Math.max(0.01, Math.cos(lat * Math.PI / 180))
+    const ax = normalizeLonDelta(a[0] - lon) * lonKm
+    const ay = (a[1] - lat) * latKm
+    const bx = normalizeLonDelta(b[0] - lon) * lonKm
+    const by = (b[1] - lat) * latKm
+    const vx = bx - ax, vy = by - ay
+    const denom = vx * vx + vy * vy
+    const t = denom > 0 ? Math.max(0, Math.min(1, -(ax * vx + ay * vy) / denom)) : 0
+    const dx = ax + t * vx, dy = ay + t * vy
+    return Math.hypot(dx, dy)
+  }
+
+  function coastalApplicability(lat, lon) {
+    const geometry = state.coastMask?.geometry
+    if (!state.coastMaskReady || !geometry) return { status: 'unknown', distanceKm: null }
+    const polygons = geometry.type === 'MultiPolygon' ? geometry.coordinates : geometry.type === 'Polygon' ? [geometry.coordinates] : []
+    let containing = null
+    for (const polygon of polygons) {
+      if (pointInPolygon(lon, lat, polygon)) { containing = polygon; break }
+    }
+    // If the coarse land mask does not contain the point, do not block the tide module.
+    // This avoids false exclusions on small islands omitted at 1:110m scale.
+    if (!containing) return { status: 'not-clearly-inland', distanceKm: null }
+    let best = Infinity
+    for (const ring of containing) {
+      for (let i = 1; i < ring.length; i += 1) {
+        const distanceKm = pointSegmentDistanceKm(lat, lon, ring[i - 1], ring[i])
+        if (distanceKm < best) best = distanceKm
+      }
+    }
+    if (!Number.isFinite(best)) return { status: 'unknown', distanceKm: null }
+    return {
+      status: best >= COAST_INLAND_THRESHOLD_KM ? 'clearly-inland' : 'coastal-or-near',
+      distanceKm: best
+    }
+  }
+
+  async function loadCoastMask() {
+    try {
+      const response = await fetch(COAST_MASK_URL, { cache: 'no-cache' })
+      if (!response.ok) throw new Error(`Coast mask HTTP ${response.status}`)
+      state.coastMask = await response.json()
+      state.coastMaskReady = Boolean(state.coastMask?.geometry)
+    } catch (error) {
+      console.warn('Coastal applicability mask unavailable', error)
+      state.coastMask = null
+      state.coastMaskReady = false
+    }
+    updateTideUI()
+  }
+
+  async function updateTideUI() {
     const main = $('#status-tide-main')
     const meta = $('#status-tide-meta')
     const note = $('#status-tide-note')
@@ -793,13 +977,33 @@
     const pos = state.latestPosition?.coords
     if (!Number.isFinite(pos?.latitude) || !Number.isFinite(pos?.longitude)) {
       state.tideNearest = null
+      state.tideCoastDistanceKm = null
       main.textContent = tr('tideNeedLocation')
       return
     }
+
+    const coastReady = state.coastlineLines?.length || await loadCoastlineReference()
+    if (!coastReady) {
+      state.tideNearest = null
+      state.tideCoastDistanceKm = null
+      main.textContent = tr('tideCoastCheckUnavailable')
+      meta.textContent = tr('tideCoastCheckUnavailableMeta')
+      return
+    }
+
+    const coastDistanceKm = approximateDistanceToCoastKm(pos.latitude, pos.longitude)
+    state.tideCoastDistanceKm = coastDistanceKm
+    if (Number.isFinite(coastDistanceKm) && coastDistanceKm > COASTAL_APPLICABILITY_KM) {
+      state.tideNearest = null
+      main.textContent = tr('tideOutsideCoastalZone')
+      meta.textContent = tr('tideOutsideCoastalZoneMeta', { distance: Math.round(coastDistanceKm) })
+      return
+    }
+
     if (!state.tideDatasetReady || !state.tideStations.length) {
       state.tideNearest = null
       main.textContent = tr('tideDataNotInstalled')
-      meta.textContent = tr('tidePredictionPending')
+      meta.textContent = Number.isFinite(coastDistanceKm) ? `≈ ${coastDistanceKm.toFixed(1)} km · ${tr('tidePredictionPending')}` : tr('tidePredictionPending')
       return
     }
     const nearest = findNearestTideStation(pos.latitude, pos.longitude)
@@ -811,7 +1015,8 @@
     }
     main.textContent = tr('tideReferenceReady')
     const stationName = nearest.station.source || nearest.station.id
-    meta.textContent = tr('tideStationMeta', { station: stationName, distance: nearest.distanceKm.toFixed(1) })
+    const coastPart = Number.isFinite(coastDistanceKm) ? ` · costa ≈ ${coastDistanceKm.toFixed(1)} km` : ''
+    meta.textContent = `${tr('tideStationMeta', { station: stationName, distance: nearest.distanceKm.toFixed(1) })}${coastPart}`
     note.textContent = `${tr('tidePredictionPending')}. ${tr('tideEstimateCaution')}`
   }
 
@@ -1259,6 +1464,12 @@
         distanceKm: Number(state.tideNearest.distanceKm.toFixed(3)),
         estimateAvailable: false,
         note: 'Harmonic height disabled pending predictor validation'
+      } : null,
+      tideApplicability: state.tideCoastCheck ? {
+        status: state.tideCoastCheck.status,
+        approximateCoastDistanceKm: Number.isFinite(state.tideCoastCheck.distanceKm) ? Number(state.tideCoastCheck.distanceKm.toFixed(1)) : null,
+        method: 'Natural Earth 1:110m coarse land-mask check',
+        thresholdKm: COAST_INLAND_THRESHOLD_KM
       } : null,
       permanentPointId,
       isPermanentRoot,
@@ -2684,6 +2895,7 @@
     setupServiceWorker()
     setLanguage(state.lang)
     try { await loadState() } catch (error) { console.error('Database init failed', error) }
+    await loadCoastMask()
     await loadTideDatasetState()
     if (localStorage.getItem('costa-viva-first-run') === 'done') $('#first-run').style.display = 'none'
     setTimeout(() => initMap(), 0)

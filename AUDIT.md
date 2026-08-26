@@ -162,15 +162,25 @@ Se incorpora intercambio comunitario descentralizado con selección de registros
 Se añadió soporte experimental para Wayuunaiki mediante el código `guc`. No se declara traducción completa. La implementación usa el catálogo español como respaldo y sustituye únicamente términos documentados en fuentes lingüísticas consultadas. Esta decisión evita presentar traducciones automáticas no verificadas como vocabulario validado por la comunidad.
 
 
-## 0.5.12 Wayuunaiki
+## 0.5.13 Wayuunaiki
 
 Se sustituyó la capa parcial anterior por un borrador completo para las 388 cadenas de interfaz. La cobertura técnica es completa, pero la validación lingüística sigue pendiente. La aplicación lo declara expresamente y entrega una matriz CSV para revisión con hablantes Wayuu y expertos locales.
 
 
-## Auditoría mareal 0.5.12
+## Auditoría mareal 0.5.13
 
 - La interfaz nunca muestra una altura de marea inventada.
 - La tarjeta diferencia estimación astronómica y nivel real observado.
 - La importación TICON filtra únicamente filas `Coastal`.
 - La distancia a la estación queda visible y trazable.
 - El motor de altura permanece desactivado hasta validación científica.
+
+## Auditoría mareal 0.5.13
+
+Se incorpora una comprobación costera previa para evitar que una ubicación claramente interior reciba una referencia mareográfica solo por existir una estación TICON relativamente próxima.
+
+La comprobación utiliza una máscara terrestre Natural Earth 1:110m incluida en la aplicación y disponible offline.
+
+El umbral de 100 km se utiliza únicamente para identificar situaciones claramente interiores. La aplicación no presenta la distancia calculada como una medición precisa de la costa.
+
+Las posiciones que la máscara de baja resolución no puede clasificar como tierra continental no se bloquean automáticamente. Esto protege frente a errores en pequeñas islas y geografías costeras omitidas por la escala.

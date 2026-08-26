@@ -252,14 +252,14 @@ La capa Wayuunaiki es deliberadamente provisional. Solo se traducen términos cu
 Entre las referencias utilizadas para esta primera arquitectura se encuentran el *Diccionario de computación en wayuunaiki* y materiales de Wayuu Digital. Los términos documentados incorporados incluyen `Karalouta` para cuaderno, `Anaajawaa` para guardar, `Ee’irataa eemüin` para exportar, `Akaalijia` para ayuda, `Ayaawajaa` para medir y `Ajütaa` para enviar.
 
 
-## Wayuunaiki 0.5.12
+## Wayuunaiki 0.5.13
 
 La opción WY contiene ahora un borrador completo de las 388 cadenas de interfaz. Es una traducción provisional no validada y puede contener errores. Debe revisarse con hablantes Wayuu y expertos locales. El archivo `WAYUUNAIKI_REVIEW.csv` facilita la revisión cadena por cadena.
 
 
 ## Marea astronómica estimada · integración TICON 3
 
-La versión 0.5.12 incorpora la interfaz y la arquitectura local para TICON 3. La tarjeta aparece en Registrar, debajo de Dirección. El usuario puede importar el archivo oficial `TICON_3.txt`, que se filtra a estaciones `Coastal` y se almacena en IndexedDB. COSTA VIVA muestra la estación de referencia más próxima y su distancia.
+La versión 0.5.13 incorpora la interfaz y la arquitectura local para TICON 3. La tarjeta aparece en Registrar, debajo de Dirección. El usuario puede importar el archivo oficial `TICON_3.txt`, que se filtra a estaciones `Coastal` y se almacena en IndexedDB. COSTA VIVA muestra la estación de referencia más próxima y su distancia.
 
 La altura mareal permanece deliberadamente desactivada en esta versión hasta validar un motor armónico que reconstruya correctamente los constituyentes, argumentos astronómicos y correcciones nodales. No se muestran números simulados.
 
@@ -271,3 +271,16 @@ Hart-Davis, M. G., Dettmering, D. & Seitz, F. (2022). TICON-3. PANGAEA. https://
 ## Desarrollo local
 
 En `localhost` y `127.0.0.1` COSTA VIVA desactiva el service worker y elimina las cachés antiguas de la propia aplicación. Esto evita que una versión anterior oculte cambios de interfaz durante las pruebas locales. La PWA y el funcionamiento offline permanecen activos en GitHub Pages y otros orígenes HTTPS de producción.
+
+## Comprobación costera 0.5.13
+
+Antes de buscar una referencia TICON 3, COSTA VIVA comprueba si la posición está claramente en el interior mediante una máscara terrestre Natural Earth 1:110m incluida en la PWA.
+
+Si una posición continental está aproximadamente a 100 km o más de la costa representada por esa máscara, la tarjeta muestra **No aplicable en esta ubicación** y no selecciona una estación mareográfica.
+
+La distancia es solo un filtro aproximado de coherencia. No se utiliza como medición científica de la línea de costa.
+
+
+### Filtro de coherencia costera
+
+El módulo de marea comprueba primero la proximidad aproximada a la línea de costa. Una ubicación claramente interior no recibe una referencia mareal. La comprobación usa Natural Earth 1:50m y funciona como control de coherencia, no como delimitación oficial de zona costera.
