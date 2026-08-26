@@ -138,3 +138,8 @@ Desde la versión 0.5.15 el formato principal para intercambio comunitario es ZI
 ### Compartir en navegadores móviles · 0.5.16
 
 La interfaz distingue entre preparar el paquete, adjuntar el ZIP y abrir el menú del sistema. Un navegador puede permitir Web Share y a la vez bloquear ZIP. En ese caso COSTA VIVA no presenta el archivo como enviado. Lo guarda y abre el selector nativo para mantener un flujo comprensible hacia WhatsApp, correo u otras aplicaciones.
+
+
+### Compartir en navegadores móviles · 0.5.17
+
+La interfaz prioriza que una pulsación sobre Abrir menú para compartir invoque inmediatamente la hoja nativa del sistema. No se ejecuta una descarga previa que pueda bloquear ese gesto.

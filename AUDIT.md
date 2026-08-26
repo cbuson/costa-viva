@@ -200,3 +200,8 @@ La importación acepta tanto el nuevo formato `costa-viva-zip` versión 2 como e
 ## Auditoría de compartir · 0.5.16
 
 Se separa la capacidad de compartir el archivo ZIP de la capacidad de abrir la hoja nativa del sistema. Cuando Chromium rechaza `application/zip`, la aplicación conserva el archivo localmente y usa Web Share de texto para abrir el selector de aplicaciones. Esta estrategia no afirma que el ZIP haya sido enviado cuando el navegador no permite adjuntarlo.
+
+
+## Auditoría de compartir · 0.5.17
+
+Se elimina la descarga automática previa al Web Share. Esa descarga abría un diálogo del navegador y podía consumir la activación transitoria requerida por navigator.share. El flujo separa ahora compartir y guardar.

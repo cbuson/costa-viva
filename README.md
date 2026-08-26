@@ -302,3 +302,8 @@ El botón Compartir ZIP intenta entregar el ZIP al menú nativo mediante Web Sha
 ## Versión 0.5.16
 
 El botón de intercambio abre siempre que sea posible el menú nativo de compartir del dispositivo. Primero intenta adjuntar el ZIP directamente. Si el navegador bloquea archivos ZIP, COSTA VIVA guarda el ZIP en Descargas y abre igualmente la hoja de compartir con un mensaje de acompañamiento para que la persona pueda elegir WhatsApp, correo u otra aplicación. El navegador no puede forzar que una aplicación receptora adjunte un ZIP que Chrome ha rechazado, por lo que en ese caso el archivo debe añadirse como documento desde Descargas.
+
+
+## Versión 0.5.17
+
+Se corrige el flujo móvil de compartir. El botón Abrir menú para compartir ya no inicia ninguna descarga antes de llamar al menú nativo. Si el navegador admite ZIP mediante Web Share, el archivo se adjunta. Si no lo admite, se abre igualmente la hoja nativa con un mensaje y el ZIP permanece en memoria hasta que la persona pulse Guardar ZIP. Esto evita el diálogo de volver a descargar que impedía llegar al menú de Android.

@@ -321,3 +321,12 @@ Pruebas históricas del flujo anterior, sustituidas por ZIP en 0.5.15.
 - [ ] WhatsApp, correo u otra aplicación pueden seleccionarse desde la hoja nativa.
 - [ ] El mensaje indica el nombre del ZIP guardado y que puede adjuntarse desde Descargas si no viaja automáticamente.
 - [ ] Cancelar la hoja de compartir no genera mensajes falsos de envío.
+
+
+## Menú nativo de compartir · 0.5.17
+
+- Preparar un ZIP y pulsar Abrir menú para compartir en Chrome Android.
+- Confirmar que no aparece un diálogo de descarga antes del menú nativo.
+- Si navigator.canShare acepta application/zip, verificar que el ZIP llega adjunto.
+- Si no acepta ZIP, verificar que se abre igualmente la hoja nativa con texto y URL.
+- Confirmar que Guardar ZIP sigue descargando el paquete de forma independiente.

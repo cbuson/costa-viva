@@ -202,3 +202,8 @@ La posibilidad de enviar el ZIP directamente depende del navegador y del sistema
 ## Intercambio desde el celular · v0.5.16
 
 COSTA VIVA intenta compartir el ZIP estándar directamente. Si el navegador no autoriza ese tipo de archivo mediante Web Share, el ZIP se guarda localmente y la aplicación abre igualmente el menú nativo mediante un mensaje de acompañamiento. La persona conserva la decisión sobre la aplicación destinataria y, cuando sea necesario, adjunta manualmente el ZIP desde Descargas.
+
+
+## Compartir y guardar · v0.5.17
+
+Compartir y guardar son acciones separadas. COSTA VIVA intenta adjuntar el ZIP solo cuando navigator.canShare confirma que el navegador lo admite. Si no lo admite, abre el menú nativo sin descargar automáticamente. La persona puede guardar el ZIP mediante un botón independiente y adjuntarlo posteriormente como documento.
