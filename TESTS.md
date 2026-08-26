@@ -235,8 +235,8 @@ Comprobar que el panel mantiene lectura correcta a 320, 360, 375, 390, 412, 430 
 - [ ] Excluir coordenadas y comprobar que no aparecen en JSON, CSV ni GeoJSON
 - [ ] Excluir notas, mediciones y tipos de multimedia de forma independiente
 - [ ] Compartir mediante Web Share cuando el dispositivo lo permita
-- [ ] Comprobar fallback por descarga `.cvpack` cuando Web Share no admita archivos
-- [ ] Importar `.cvpack` en otro dispositivo COSTA VIVA
+- [ ] Comprobar fallback por guardado `.zip` cuando Web Share no admita ZIP
+- [ ] Importar `.zip` en otro dispositivo COSTA VIVA
 - [ ] Confirmar que los registros importados aparecen como Recibidos
 - [ ] Confirmar que una segunda importación del mismo paquete no duplica UUID existentes
 - [ ] Comprobar preservación de fotografías, vídeos y audios seleccionados
@@ -287,6 +287,8 @@ Comprobar que el panel mantiene lectura correcta a 320, 360, 375, 390, 412, 430 
 
 ## Compartir desde celular · 0.5.14
 
+Pruebas históricas del flujo anterior, sustituidas por ZIP en 0.5.15.
+
 1. Seleccionar uno o más registros.
 2. Elegir contenido y destinatario.
 3. Pulsar Preparar y compartir.
@@ -296,3 +298,17 @@ Comprobar que el panel mantiene lectura correcta a 320, 360, 375, 390, 412, 430 
 7. Cancelar y repetir con fotografías, vídeo y audio seleccionados.
 8. Verificar que si un conjunto de archivos no es aceptado, la aplicación reduce el conjunto a CSV y texto antes de recurrir a compartir solo texto.
 9. Confirmar que Guardar paquete completo descarga el `.cvpack` sin enviar nada a un servidor.
+
+
+## ZIP comunitario · 0.5.15
+
+1. Seleccionar uno o más registros y preparar el ZIP.
+2. Confirmar que el nombre termina en `.zip`.
+3. Abrir el ZIP fuera de COSTA VIVA y verificar `manifest.json`, `registros.json`, `registros.csv` y `LEEME-README.txt`.
+4. Cuando se comparten coordenadas, comprobar `puntos.geojson`.
+5. Cuando se comparten fotografías, comprobar que las evidencias seleccionadas están dentro de `evidencias/`.
+6. Pulsar Compartir ZIP y comprobar si `navigator.canShare` permite el archivo en Android Chrome.
+7. Si el navegador no admite ZIP, confirmar que COSTA VIVA guarda el ZIP y no sustituye silenciosamente el contenido por otro formato.
+8. Pulsar Guardar ZIP y comprobar que siempre descarga el archivo.
+9. Importar el ZIP en otra instalación de COSTA VIVA.
+10. Confirmar compatibilidad de importación con un `.cvpack` antiguo.

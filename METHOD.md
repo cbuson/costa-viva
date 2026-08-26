@@ -170,7 +170,7 @@ Esta orientación toma como referencia los principios CARE para la gobernanza de
 
 Antes de compartir, la persona selecciona los registros y los componentes incluidos. Los datos básicos de identificación del registro se conservan para mantener trazabilidad. Coordenadas y sensores, notas, mediciones y archivos multimedia son seleccionables. Si las coordenadas se excluyen, COSTA VIVA elimina esos campos estructurados y, para fotografías originales disponibles, genera una copia JPEG nueva sin metadatos EXIF del archivo fuente. Los vídeos y otros archivos originales pueden conservar metadatos propios del dispositivo, por lo que la interfaz advierte de este límite.
 
-El paquete `.cvpack` contiene un manifiesto, registros estructurados y únicamente las evidencias seleccionadas. Al importarlo en otro dispositivo, los registros quedan marcados como recibidos y se registra la procedencia del paquete. La importación no cambia la autoría ni implica cesión de derechos sobre los datos.
+El intercambio se materializa como un ZIP estándar. Contiene un manifiesto, registros estructurados y únicamente las evidencias seleccionadas. Al importarlo en otro dispositivo, los registros quedan marcados como recibidos y se registra la procedencia del ZIP. La importación no cambia la autoría ni implica cesión de derechos sobre los datos. Las versiones anteriores `.cvpack` continúan siendo aceptadas para mantener compatibilidad.
 
 
 ## Módulo mareal
@@ -190,3 +190,10 @@ La comprobación utiliza una máscara terrestre simplificada de Natural Earth 1:
 Esta comprobación es un filtro de coherencia y no una medición costera. La resolución 1:110m no permite utilizar esa distancia para estudios geomorfológicos, delimitaciones legales ni análisis fino de proximidad al litoral.
 
 Cuando la geometría simplificada no permite clasificar con seguridad una ubicación, COSTA VIVA evita excluirla automáticamente. Este comportamiento reduce el riesgo de falsos negativos en islas pequeñas o costas mal representadas a esa escala.
+
+
+## Exportación ZIP · v0.5.15
+
+ZIP se adopta como formato principal porque es abierto, ampliamente reconocido y puede inspeccionarse sin depender de COSTA VIVA. El paquete conserva estructura y trazabilidad mediante `manifest.json` y `registros.json`. El archivo `LEEME-README.txt` explica el contexto de intercambio y recuerda que registrar o compartir no implica cesión automática de derechos.
+
+La posibilidad de enviar el ZIP directamente depende del navegador y del sistema operativo. COSTA VIVA comprueba esa capacidad antes de invocar el menú nativo. Si el navegador no acepta ZIP en Web Share, el archivo se guarda localmente para adjuntarlo manualmente.

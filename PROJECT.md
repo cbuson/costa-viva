@@ -128,3 +128,8 @@ COSTA VIVA no debe ofrecer información mareal simplemente porque exista una est
 Desde la versión 0.5.13 la aplicación realiza primero una comprobación geográfica aproximada con Natural Earth 1:110m. Una posición claramente interior se marca como no aplicable para el módulo mareal.
 
 La comprobación es deliberadamente conservadora y transparente. Su función es evitar información absurda y no sustituye cartografía costera de detalle.
+
+
+## Intercambio universal mediante ZIP
+
+Desde la versión 0.5.15 el formato principal para intercambio comunitario es ZIP estándar. La elección busca que una comunidad pueda abrir, conservar y trasladar sus propios archivos sin depender de una extensión específica de COSTA VIVA. El ZIP se crea localmente y conserva solamente los componentes que la persona decidió incluir.

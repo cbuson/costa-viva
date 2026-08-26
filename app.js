@@ -24,11 +24,11 @@
       followup: 'Seguimiento del punto', pointType: 'Tipo de registro', independent: 'Observación independiente', newPermanent: 'Crear nuevo punto permanente', permanentHelp: 'Los puntos permanentes permiten regresar al mismo lugar y construir una historia de observaciones.',
       evidence: 'Evidencias', photos: 'Fotos', videos: 'Vídeos', recordAudio: 'Grabar audio', audioReady: 'Listo para grabar', stop: 'Detener', removeAudio: 'Eliminar audio', photoOverlayHelp: 'Las fotografías guardadas generan una copia documentada con fecha, código, posición, precisión, altitud y dirección cuando esos datos están disponibles.', saveObservation: 'GUARDAR OBSERVACIÓN',
       notebook: 'Cuaderno', notebookIntro: 'Consulta las observaciones guardadas en este dispositivo.', records: 'registros', search: 'Buscar', searchPlaceholder: 'Código o nota', filterCategory: 'Tipo', all: 'Todos', withMedia: 'Con multimedia', onlyPermanent: 'Puntos permanentes',
-      export: 'Exportar', exportIntro: 'Prepara una copia de los registros para conservarlos o compartirlos.', fullData: 'Datos completos', tableData: 'Tabla de registros', mapData: 'Puntos para SIG', evidencePackage: 'Datos y evidencias', sharePackage: 'Compartir paquete', shareHelp: 'En dispositivos compatibles se abrirá el menú para compartir. Si no está disponible, se descargará el paquete para que puedas adjuntarlo al correo.', privacyPrinciple: 'Los registros permanecen bajo control de la comunidad y solo salen del dispositivo cuando decides exportarlos o compartirlos.',
-      communityExchangeTitle: 'Compartir entre personas y comunidades', communityExchangeIntro: 'Elige qué registros y qué contenidos quieres compartir. COSTA VIVA prepara el paquete y el celular te permite escoger WhatsApp, correo, Quick Share, Bluetooth u otra aplicación disponible.', shareRecords: 'Compartir registros', importPackage: 'Importar paquete COSTA VIVA', shareHelpCommunity: 'COSTA VIVA no envía los registros a un servidor propio. El medio de envío depende de las aplicaciones instaladas en el dispositivo.', onlyReceived: 'Registros recibidos', received: 'Recibido', receivedFromNotebook: 'Recibido · cuaderno {value}',
-      shareModalTitle: 'Compartir registros', shareModalIntro: 'Tú decides qué sale de este dispositivo, con quién y con qué contenido.', chooseRecordsTitle: 'Elige los registros', selectAll: 'Seleccionar todos', selectNone: 'Ninguno', chooseContentTitle: 'Elige qué compartir', basicRecordData: 'Datos básicos del registro', shareMeasurements: 'Mediciones', shareNotes: 'Notas', shareCoordinates: 'Coordenadas y sensores', sharePhotos: 'Fotografías', shareVideos: 'Vídeos', shareAudios: 'Audios', selectAllContent: 'Incluir todo', clearOptionalContent: 'Quitar opcionales', shareSensitiveWarning: 'Las coordenadas pueden revelar lugares sensibles. Compártelas solo cuando sea necesario y exista una decisión consciente.', recipientTitle: '¿Con quién vas a compartir?', recipientMyCommunity: 'Mi comunidad', recipientOtherCommunity: 'Otra comunidad', recipientResearch: 'Investigador o universidad', recipientPublic: 'Institución pública', recipientOrganization: 'Organización social', recipientOther: 'Otra persona', purposeOptional: 'Finalidad opcional', purposePlaceholder: 'Ejemplo seguimiento comunitario o investigación acordada', shareControlReminder: 'COSTA VIVA prepara el archivo. No lo sube a un servidor propio y no recibe una copia.', prepareAndShare: 'PREPARAR Y COMPARTIR', noShareRecordsSelected: 'Selecciona al menos un registro.', preparingShare: 'Preparando paquete', sharedPackageReady: 'Paquete preparado. Pulsa Compartir ahora para abrir WhatsApp, correo u otras aplicaciones instaladas.', nativeShareNow: 'COMPARTIR AHORA', saveFullPackage: 'GUARDAR PAQUETE COMPLETO', shareMenuOpened: 'Menú del celular abierto.', shareTextFallback: 'El dispositivo no admite estos archivos juntos. Se abrirá el menú con un resumen compatible.',
-      importTitle: 'Importar registros recibidos', importSeparationHelp: 'Los registros recibidos se identifican como tales y conservan información de procedencia. No se presentan como observaciones creadas por este teléfono.', confirmImport: 'IMPORTAR', cancel: 'Cancelar', importInvalid: 'Este archivo no es un paquete COSTA VIVA compatible.', importReading: 'Leyendo paquete', importSummaryText: '{count} registros · creado {date}', importRecipientText: 'Finalidad declarada al compartir: {value}', importNoPurpose: 'Sin finalidad declarada', importComplete: 'Importación terminada. {added} añadidos y {skipped} ya existentes.', importFailed: 'No se pudo importar el paquete.', sourceNotebook: 'Cuaderno de origen',
-      sharingHelpTitle: 'Compartir sin perder el control', sharingHelpIntro: 'COSTA VIVA permite preparar un intercambio entre comunidades y personas sin enviar los registros a un servidor propio.', shareWithWhomTitle: 'Con quién puedes compartir', shareWithWhomText: 'Puedes compartir con tu comunidad, otra comunidad, un investigador, una institución u otra persona.', shareWhatTitle: 'Qué puedes incluir', shareWhatText: 'Antes de enviar eliges los registros y también si incluyes coordenadas, notas, mediciones, fotografías, vídeos o audios.', sharingHelpText: 'Puedes compartir con tu comunidad, otra comunidad, un investigador, una institución u otra persona. Antes de enviar, eliges los registros y también si incluyes coordenadas, notas, mediciones, fotografías, vídeos o audios.', shareNotAllTitle: 'Compartir no significa entregar todo', shareNotAllText: 'El paquete se prepara en el celular. Después Android, iOS o el navegador muestran las aplicaciones disponibles para enviarlo. COSTA VIVA no decide el destinatario ni recibe una copia.', mediaMetadataTitle: 'Atención sobre fotos, vídeos y metadatos', mediaMetadataCaution: 'Atención. Algunos archivos originales de cámara o vídeo pueden contener metadatos creados por el propio dispositivo. Si una localización es sensible, revisa también los archivos multimedia antes de compartirlos.',
+      export: 'Exportar', exportIntro: 'Prepara una copia de los registros para conservarlos o compartirlos.', fullData: 'Datos completos', tableData: 'Tabla de registros', mapData: 'Puntos para SIG', evidencePackage: 'ZIP con datos y evidencias', sharePackage: 'Compartir ZIP', shareHelp: 'COSTA VIVA prepara un archivo ZIP estándar con los registros y evidencias elegidos. Si el navegador permite compartir ZIP directamente, abrirá el menú del celular. Si no, podrás guardar el ZIP y adjuntarlo en WhatsApp, correo u otra aplicación.', privacyPrinciple: 'Los registros permanecen bajo control de la comunidad y solo salen del dispositivo cuando decides exportarlos o compartirlos.',
+      communityExchangeTitle: 'Compartir entre personas y comunidades', communityExchangeIntro: 'Elige qué registros y qué contenidos quieres compartir. COSTA VIVA prepara un ZIP estándar. Después puedes intentar compartir ese ZIP o guardarlo para adjuntarlo en WhatsApp, correo, Quick Share, Bluetooth u otra aplicación.', shareRecords: 'Compartir registros', importPackage: 'Importar ZIP COSTA VIVA', shareHelpCommunity: 'COSTA VIVA no envía los registros a un servidor propio. Prepara un ZIP estándar y el medio de envío depende del navegador y de las aplicaciones instaladas.', onlyReceived: 'Registros recibidos', received: 'Recibido', receivedFromNotebook: 'Recibido · cuaderno {value}',
+      shareModalTitle: 'Compartir registros', shareModalIntro: 'Tú decides qué sale de este dispositivo, con quién y con qué contenido.', chooseRecordsTitle: 'Elige los registros', selectAll: 'Seleccionar todos', selectNone: 'Ninguno', chooseContentTitle: 'Elige qué compartir', basicRecordData: 'Datos básicos del registro', shareMeasurements: 'Mediciones', shareNotes: 'Notas', shareCoordinates: 'Coordenadas y sensores', sharePhotos: 'Fotografías', shareVideos: 'Vídeos', shareAudios: 'Audios', selectAllContent: 'Incluir todo', clearOptionalContent: 'Quitar opcionales', shareSensitiveWarning: 'Las coordenadas pueden revelar lugares sensibles. Compártelas solo cuando sea necesario y exista una decisión consciente.', recipientTitle: '¿Con quién vas a compartir?', recipientMyCommunity: 'Mi comunidad', recipientOtherCommunity: 'Otra comunidad', recipientResearch: 'Investigador o universidad', recipientPublic: 'Institución pública', recipientOrganization: 'Organización social', recipientOther: 'Otra persona', purposeOptional: 'Finalidad opcional', purposePlaceholder: 'Ejemplo seguimiento comunitario o investigación acordada', shareControlReminder: 'COSTA VIVA prepara el ZIP en este dispositivo. No lo sube a un servidor propio y no recibe una copia.', prepareAndShare: 'PREPARAR ZIP', noShareRecordsSelected: 'Selecciona al menos un registro.', preparingShare: 'Preparando ZIP', sharedPackageReady: 'ZIP preparado. Pulsa Compartir ZIP para intentar abrir el menú del dispositivo o Guardar ZIP para conservarlo.', nativeShareNow: 'COMPARTIR ZIP', saveFullPackage: 'GUARDAR ZIP', shareMenuOpened: 'Menú del dispositivo abierto con el ZIP.', shareTextFallback: 'Este navegador no permite compartir el ZIP directamente. El ZIP se guardará para que puedas adjuntarlo manualmente en WhatsApp, correo u otra aplicación.',
+      importTitle: 'Importar registros recibidos', importSeparationHelp: 'Los registros recibidos se identifican como tales y conservan información de procedencia. No se presentan como observaciones creadas por este teléfono.', confirmImport: 'IMPORTAR', cancel: 'Cancelar', importInvalid: 'Este archivo ZIP no es un intercambio COSTA VIVA compatible.', importReading: 'Leyendo ZIP', importSummaryText: '{count} registros · creado {date}', importRecipientText: 'Finalidad declarada al compartir: {value}', importNoPurpose: 'Sin finalidad declarada', importComplete: 'Importación terminada. {added} añadidos y {skipped} ya existentes.', importFailed: 'No se pudo importar el ZIP.', sourceNotebook: 'Cuaderno de origen',
+      sharingHelpTitle: 'Compartir sin perder el control', sharingHelpIntro: 'COSTA VIVA permite preparar un ZIP estándar para intercambiar registros entre comunidades y personas sin enviarlos a un servidor propio.', shareWithWhomTitle: 'Con quién puedes compartir', shareWithWhomText: 'Puedes compartir con tu comunidad, otra comunidad, un investigador, una institución u otra persona.', shareWhatTitle: 'Qué puedes incluir', shareWhatText: 'Antes de enviar eliges los registros y también si incluyes coordenadas, notas, mediciones, fotografías, vídeos o audios.', sharingHelpText: 'Puedes compartir con tu comunidad, otra comunidad, un investigador, una institución u otra persona. Antes de enviar, eliges los registros y también si incluyes coordenadas, notas, mediciones, fotografías, vídeos o audios.', shareNotAllTitle: 'Compartir no significa entregar todo', shareNotAllText: 'El ZIP se prepara en el celular. Si el navegador permite compartir ZIP directamente, abre el menú del dispositivo. Si no lo permite, el ZIP se guarda para adjuntarlo manualmente. COSTA VIVA no decide el destinatario ni recibe una copia.', mediaMetadataTitle: 'Atención sobre fotos, vídeos y metadatos', mediaMetadataCaution: 'Atención. Algunos archivos originales de cámara o vídeo pueden contener metadatos creados por el propio dispositivo. Si una localización es sensible, revisa también los archivos multimedia antes de compartirlos.',
       help: 'Ayuda', helpIntro: 'Guía breve para usar COSTA VIVA en campo.', helpActivateTitle: 'Activa el modo de observación', helpActivateText: 'Permite que el teléfono compruebe ubicación, orientación, cámara y micrófono. Puedes continuar aunque alguna función no esté disponible.', helpObserveTitle: 'Registra lo que observas', helpObserveText: 'Describe lo que está ocurriendo sin necesidad de explicar la causa.', helpPhotoTitle: 'Toma evidencias', helpPhotoText: 'Añade fotografías, vídeo, audio o una medición sencilla. Las fotografías documentadas conservan los datos disponibles del dispositivo.', helpReturnTitle: 'Vuelve al mismo punto', helpReturnText: 'Los puntos permanentes permiten comparar observaciones realizadas en distintos momentos.',
       dataControlHelpTitle: 'Tus datos y tu decisión', dataControlHelpIntro: 'Registrar información no significa entregarla. COSTA VIVA guarda los registros primero en este dispositivo y no los envía automáticamente a investigadores, universidades o instituciones.', whoSeesTitle: '¿Quién puede ver mis registros?', whoSeesText: 'Mientras no los exportes o compartas, permanecen en el almacenamiento local de este dispositivo. Recuerda que una persona con acceso al teléfono o al perfil del navegador podría acceder a ellos.', researcherAccessTitle: '¿COSTA VIVA los envía al investigador?', researcherAccessText: 'No. El autor de la herramienta, una universidad o cualquier otra organización no recibe automáticamente tus coordenadas, fotografías, vídeos, audios, notas o mediciones.', mustShareTitle: '¿Tengo que compartirlos?', mustShareText: 'No. La comunidad decide si conserva, exporta o comparte los registros. Si alguien solicita utilizarlos, es razonable preguntar para qué se usarán, quién tendrá acceso y qué beneficio o devolución recibirá la comunidad.', registerNotCedeTitle: 'Registrar no significa ceder', registerNotCedeText: 'COSTA VIVA ayuda a producir y organizar registros. No convierte al desarrollador, al investigador ni a una institución en propietario automático de los datos de la comunidad.',
       fieldMethodsTitle: 'Cómo medir con medios sencillos', fieldMethodsIntro: 'COSTA VIVA es una herramienta de ciencia popular. Una cinta, dos puntos de referencia y una forma constante de medir pueden producir una serie útil si siempre se repite el mismo procedimiento.', goldenRuleTitle: 'Regla principal', goldenRuleText: 'No importa medir muchas cosas. Importa medir siempre la misma cosa, desde la misma referencia, por la misma línea y dejando registrado cómo se hizo.',
@@ -72,11 +72,11 @@
       followup: 'Acompanhamento do ponto', pointType: 'Tipo de registro', independent: 'Observação independente', newPermanent: 'Criar novo ponto permanente', permanentHelp: 'Os pontos permanentes permitem voltar ao mesmo lugar e construir uma história de observações.',
       evidence: 'Evidências', photos: 'Fotos', videos: 'Vídeos', recordAudio: 'Gravar áudio', audioReady: 'Pronto para gravar', stop: 'Parar', removeAudio: 'Excluir áudio', photoOverlayHelp: 'As fotografias salvas geram uma cópia documentada com data, código, posição, precisão, altitude e direção quando esses dados estão disponíveis.', saveObservation: 'SALVAR OBSERVAÇÃO',
       notebook: 'Caderno', notebookIntro: 'Consulte as observações salvas neste dispositivo.', records: 'registros', search: 'Buscar', searchPlaceholder: 'Código ou nota', filterCategory: 'Tipo', all: 'Todos', withMedia: 'Com multimídia', onlyPermanent: 'Pontos permanentes',
-      export: 'Exportar', exportIntro: 'Prepare uma cópia dos registros para conservar ou compartilhar.', fullData: 'Dados completos', tableData: 'Tabela de registros', mapData: 'Pontos para SIG', evidencePackage: 'Dados e evidências', sharePackage: 'Compartilhar pacote', shareHelp: 'Em dispositivos compatíveis será aberto o menu de compartilhamento. Se não estiver disponível, o pacote será baixado para que possa ser anexado ao e-mail.', privacyPrinciple: 'Os registros permanecem sob controle da comunidade e só saem do dispositivo quando você decide exportar ou compartilhar.',
-      communityExchangeTitle: 'Compartilhar entre pessoas e comunidades', communityExchangeIntro: 'Escolha quais registros e quais conteúdos deseja compartilhar. COSTA VIVA prepara o pacote e o celular permite escolher WhatsApp, e-mail, Quick Share, Bluetooth ou outro aplicativo disponível.', shareRecords: 'Compartilhar registros', importPackage: 'Importar pacote COSTA VIVA', shareHelpCommunity: 'COSTA VIVA não envia os registros para um servidor próprio. O meio de envio depende dos aplicativos instalados no dispositivo.', onlyReceived: 'Registros recebidos', received: 'Recebido', receivedFromNotebook: 'Recebido · caderno {value}',
-      shareModalTitle: 'Compartilhar registros', shareModalIntro: 'Você decide o que sai deste dispositivo, com quem e com qual conteúdo.', chooseRecordsTitle: 'Escolha os registros', selectAll: 'Selecionar todos', selectNone: 'Nenhum', chooseContentTitle: 'Escolha o que compartilhar', basicRecordData: 'Dados básicos do registro', shareMeasurements: 'Medições', shareNotes: 'Notas', shareCoordinates: 'Coordenadas e sensores', sharePhotos: 'Fotografias', shareVideos: 'Vídeos', shareAudios: 'Áudios', selectAllContent: 'Incluir tudo', clearOptionalContent: 'Remover opcionais', shareSensitiveWarning: 'As coordenadas podem revelar lugares sensíveis. Compartilhe somente quando for necessário e houver uma decisão consciente.', recipientTitle: 'Com quem você vai compartilhar?', recipientMyCommunity: 'Minha comunidade', recipientOtherCommunity: 'Outra comunidade', recipientResearch: 'Pesquisador ou universidade', recipientPublic: 'Instituição pública', recipientOrganization: 'Organização social', recipientOther: 'Outra pessoa', purposeOptional: 'Finalidade opcional', purposePlaceholder: 'Exemplo acompanhamento comunitário ou pesquisa acordada', shareControlReminder: 'COSTA VIVA prepara o arquivo. Não o envia para um servidor próprio e não recebe uma cópia.', prepareAndShare: 'PREPARAR E COMPARTILHAR', noShareRecordsSelected: 'Selecione pelo menos um registro.', preparingShare: 'Preparando pacote', sharedPackageReady: 'Pacote preparado. Toque em Compartilhar agora para abrir WhatsApp, e-mail ou outros aplicativos instalados.', nativeShareNow: 'COMPARTILHAR AGORA', saveFullPackage: 'SALVAR PACOTE COMPLETO', shareMenuOpened: 'Menu do celular aberto.', shareTextFallback: 'O dispositivo não aceita estes arquivos juntos. O menu será aberto com um resumo compatível.',
-      importTitle: 'Importar registros recebidos', importSeparationHelp: 'Os registros recebidos são identificados como tal e conservam informações de procedência. Não são apresentados como observações criadas por este celular.', confirmImport: 'IMPORTAR', cancel: 'Cancelar', importInvalid: 'Este arquivo não é um pacote COSTA VIVA compatível.', importReading: 'Lendo pacote', importSummaryText: '{count} registros · criado em {date}', importRecipientText: 'Finalidade declarada ao compartilhar: {value}', importNoPurpose: 'Sem finalidade declarada', importComplete: 'Importação concluída. {added} adicionados e {skipped} já existentes.', importFailed: 'Não foi possível importar o pacote.', sourceNotebook: 'Caderno de origem',
-      sharingHelpTitle: 'Compartilhar sem perder o controle', sharingHelpIntro: 'COSTA VIVA permite preparar um intercâmbio entre comunidades e pessoas sem enviar os registros para um servidor próprio.', shareWithWhomTitle: 'Com quem você pode compartilhar', shareWithWhomText: 'Você pode compartilhar com sua comunidade, outra comunidade, um pesquisador, uma instituição ou outra pessoa.', shareWhatTitle: 'O que você pode incluir', shareWhatText: 'Antes de enviar você escolhe os registros e também se inclui coordenadas, notas, medições, fotografias, vídeos ou áudios.', sharingHelpText: 'Você pode compartilhar com sua comunidade, outra comunidade, um pesquisador, uma instituição ou outra pessoa. Antes de enviar, escolhe os registros e também se inclui coordenadas, notas, medições, fotografias, vídeos ou áudios.', shareNotAllTitle: 'Compartilhar não significa entregar tudo', shareNotAllText: 'O pacote é preparado no celular. Depois Android, iOS ou o navegador mostram os aplicativos disponíveis para enviá-lo. COSTA VIVA não decide o destinatário e não recebe uma cópia.', mediaMetadataTitle: 'Atenção sobre fotos, vídeos e metadados', mediaMetadataCaution: 'Atenção. Alguns arquivos originais de câmera ou vídeo podem conter metadados criados pelo próprio dispositivo. Se uma localização for sensível, revise também os arquivos multimídia antes de compartilhá-los.',
+      export: 'Exportar', exportIntro: 'Prepare uma cópia dos registros para conservar ou compartilhar.', fullData: 'Dados completos', tableData: 'Tabela de registros', mapData: 'Pontos para SIG', evidencePackage: 'ZIP com dados e evidências', sharePackage: 'Compartilhar ZIP', shareHelp: 'COSTA VIVA prepara um arquivo ZIP padrão com os registros e evidências escolhidos. Se o navegador permitir compartilhar ZIP diretamente, abrirá o menu do celular. Caso contrário, você poderá salvar o ZIP e anexá-lo no WhatsApp, e-mail ou outro aplicativo.', privacyPrinciple: 'Os registros permanecem sob controle da comunidade e só saem do dispositivo quando você decide exportar ou compartilhar.',
+      communityExchangeTitle: 'Compartilhar entre pessoas e comunidades', communityExchangeIntro: 'Escolha quais registros e conteúdos deseja compartilhar. COSTA VIVA prepara um ZIP padrão. Depois você pode tentar compartilhar esse ZIP ou salvá-lo para anexar no WhatsApp, e-mail, Quick Share, Bluetooth ou outro aplicativo.', shareRecords: 'Compartilhar registros', importPackage: 'Importar ZIP COSTA VIVA', shareHelpCommunity: 'COSTA VIVA não envia os registros para um servidor próprio. Prepara um ZIP padrão e o meio de envio depende do navegador e dos aplicativos instalados.', onlyReceived: 'Registros recebidos', received: 'Recebido', receivedFromNotebook: 'Recebido · caderno {value}',
+      shareModalTitle: 'Compartilhar registros', shareModalIntro: 'Você decide o que sai deste dispositivo, com quem e com qual conteúdo.', chooseRecordsTitle: 'Escolha os registros', selectAll: 'Selecionar todos', selectNone: 'Nenhum', chooseContentTitle: 'Escolha o que compartilhar', basicRecordData: 'Dados básicos do registro', shareMeasurements: 'Medições', shareNotes: 'Notas', shareCoordinates: 'Coordenadas e sensores', sharePhotos: 'Fotografias', shareVideos: 'Vídeos', shareAudios: 'Áudios', selectAllContent: 'Incluir tudo', clearOptionalContent: 'Remover opcionais', shareSensitiveWarning: 'As coordenadas podem revelar lugares sensíveis. Compartilhe somente quando for necessário e houver uma decisão consciente.', recipientTitle: 'Com quem você vai compartilhar?', recipientMyCommunity: 'Minha comunidade', recipientOtherCommunity: 'Outra comunidade', recipientResearch: 'Pesquisador ou universidade', recipientPublic: 'Instituição pública', recipientOrganization: 'Organização social', recipientOther: 'Outra pessoa', purposeOptional: 'Finalidade opcional', purposePlaceholder: 'Exemplo acompanhamento comunitário ou pesquisa acordada', shareControlReminder: 'COSTA VIVA prepara o ZIP neste dispositivo. Não o envia para um servidor próprio e não recebe uma cópia.', prepareAndShare: 'PREPARAR ZIP', noShareRecordsSelected: 'Selecione pelo menos um registro.', preparingShare: 'Preparando ZIP', sharedPackageReady: 'ZIP preparado. Toque em Compartilhar ZIP para tentar abrir o menu do dispositivo ou Salvar ZIP para conservá-lo.', nativeShareNow: 'COMPARTILHAR ZIP', saveFullPackage: 'SALVAR ZIP', shareMenuOpened: 'Menu do dispositivo aberto com o ZIP.', shareTextFallback: 'Este navegador não permite compartilhar o ZIP diretamente. O ZIP será salvo para que você possa anexá-lo manualmente no WhatsApp, e-mail ou outro aplicativo.',
+      importTitle: 'Importar registros recebidos', importSeparationHelp: 'Os registros recebidos são identificados como tal e conservam informações de procedência. Não são apresentados como observações criadas por este celular.', confirmImport: 'IMPORTAR', cancel: 'Cancelar', importInvalid: 'Este arquivo ZIP não é um intercâmbio COSTA VIVA compatível.', importReading: 'Lendo ZIP', importSummaryText: '{count} registros · criado em {date}', importRecipientText: 'Finalidade declarada ao compartilhar: {value}', importNoPurpose: 'Sem finalidade declarada', importComplete: 'Importação concluída. {added} adicionados e {skipped} já existentes.', importFailed: 'Não foi possível importar o ZIP.', sourceNotebook: 'Caderno de origem',
+      sharingHelpTitle: 'Compartilhar sem perder o controle', sharingHelpIntro: 'COSTA VIVA permite preparar um ZIP padrão para intercambiar registros entre comunidades e pessoas sem enviá-los para um servidor próprio.', shareWithWhomTitle: 'Com quem você pode compartilhar', shareWithWhomText: 'Você pode compartilhar com sua comunidade, outra comunidade, um pesquisador, uma instituição ou outra pessoa.', shareWhatTitle: 'O que você pode incluir', shareWhatText: 'Antes de enviar você escolhe os registros e também se inclui coordenadas, notas, medições, fotografias, vídeos ou áudios.', sharingHelpText: 'Você pode compartilhar com sua comunidade, outra comunidade, um pesquisador, uma instituição ou outra pessoa. Antes de enviar, escolhe os registros e também se inclui coordenadas, notas, medições, fotografias, vídeos ou áudios.', shareNotAllTitle: 'Compartilhar não significa entregar tudo', shareNotAllText: 'O ZIP é preparado no celular. Se o navegador permitir compartilhar ZIP diretamente, abre o menu do dispositivo. Caso contrário, o ZIP é salvo para ser anexado manualmente. COSTA VIVA não decide o destinatário e não recebe uma cópia.', mediaMetadataTitle: 'Atenção sobre fotos, vídeos e metadados', mediaMetadataCaution: 'Atenção. Alguns arquivos originais de câmera ou vídeo podem conter metadados criados pelo próprio dispositivo. Se uma localização for sensível, revise também os arquivos multimídia antes de compartilhá-los.',
       help: 'Ajuda', helpIntro: 'Guia breve para usar COSTA VIVA em campo.', helpActivateTitle: 'Ative o modo de observação', helpActivateText: 'Permite que o celular verifique localização, orientação, câmera e microfone. Você pode continuar mesmo que alguma função não esteja disponível.', helpObserveTitle: 'Registre o que você observa', helpObserveText: 'Descreva o que está acontecendo sem precisar explicar a causa.', helpPhotoTitle: 'Registre evidências', helpPhotoText: 'Adicione fotografias, vídeo, áudio ou uma medição simples. As fotografias documentadas conservam os dados disponíveis do dispositivo.', helpReturnTitle: 'Volte ao mesmo ponto', helpReturnText: 'Os pontos permanentes permitem comparar observações realizadas em diferentes momentos.',
       dataControlHelpTitle: 'Seus dados e sua decisão', dataControlHelpIntro: 'Registrar informação não significa entregá-la. COSTA VIVA salva os registros primeiro neste dispositivo e não os envia automaticamente a pesquisadores, universidades ou instituições.', whoSeesTitle: 'Quem pode ver meus registros?', whoSeesText: 'Enquanto você não os exportar ou compartilhar, eles permanecem no armazenamento local deste dispositivo. Lembre que uma pessoa com acesso ao celular ou ao perfil do navegador poderá acessá-los.', researcherAccessTitle: 'COSTA VIVA envia os dados ao pesquisador?', researcherAccessText: 'Não. O autor da ferramenta, uma universidade ou qualquer outra organização não recebe automaticamente suas coordenadas, fotografias, vídeos, áudios, notas ou medições.', mustShareTitle: 'Tenho que compartilhá-los?', mustShareText: 'Não. A comunidade decide se conserva, exporta ou compartilha os registros. Se alguém solicitar seu uso, é razoável perguntar para que serão usados, quem terá acesso e qual benefício ou devolutiva a comunidade receberá.', registerNotCedeTitle: 'Registrar não significa ceder', registerNotCedeText: 'COSTA VIVA ajuda a produzir e organizar registros. Não transforma o desenvolvedor, o pesquisador nem uma instituição em proprietário automático dos dados da comunidade.',
       fieldMethodsTitle: 'Como medir com meios simples', fieldMethodsIntro: 'COSTA VIVA é uma ferramenta de ciência popular. Uma fita, dois pontos de referência e uma forma constante de medir podem produzir uma série útil quando o mesmo procedimento é repetido.', goldenRuleTitle: 'Regra principal', goldenRuleText: 'Não importa medir muitas coisas. Importa medir sempre a mesma coisa, a partir da mesma referência, pela mesma linha e deixando registrado como a medição foi feita.',
@@ -213,14 +213,14 @@
       "tableData": "Tabla anaajünaka",
       "mapData": "Apülee süpüla SIG",
       "evidencePackage": "Kasachiki otta ayaawaseirua",
-      "sharePackage": "Ajütaa paquete",
+      "sharePackage": "Ajütaa ZIP",
       "shareHelp": "Müleka ainkaa celular, ee'iyatünü menu süpüla ajütaa. Müleka nnojotsü, paquete ee'iyalajünü süpüla correo.",
       "privacyPrinciple": "Na anaajünakana eejatü nain wayuukana. Ajütünü ne'e müleka wayuu aneeküin exportar je ajütaa.",
       "communityExchangeTitle": "Ajütaa kasachiki akotchirawaa wayuu",
-      "communityExchangeIntro": "Pünee kasa anaajünaka otta kasa ajütünü. COSTA VIVA aainjüsü paquete, celular aneeküshi WhatsApp, correo, Quick Share, Bluetooth je wane aplicación.",
+      "communityExchangeIntro": "Pünee kasa anaajünaka otta kasa ajütünü. COSTA VIVA aainjüsü ZIP, celular aneeküshi WhatsApp, correo, Quick Share, Bluetooth je wane aplicación.",
       "shareRecords": "Ajütaa anaajünaka",
-      "importPackage": "Ekerolaa paquete COSTA VIVA",
-      "shareHelpCommunity": "COSTA VIVA nnojotsü ajütüin kasachiki amüin servidor. Celularka otta aplicación aneeküshi wopu ajütaa.",
+      "importPackage": "Ekerolaa ZIP COSTA VIVA",
+      "shareHelpCommunity": "COSTA VIVA nnojotsü ajütüin kasachiki amüin servidor. Aainjüsü ZIP sulu'u celular otta aplicación aneeküshi wopu ajütaa.",
       "onlyReceived": "Anaajünaka antünaka",
       "received": "Antüsü",
       "receivedFromNotebook": "Antüsü · karalouta {value}",
@@ -250,19 +250,19 @@
       "purposeOptional": "Kasa süpüla, müleka pünee",
       "purposePlaceholder": "Ayaawajaa akotchirawaa je atüjalaa anain",
       "shareControlReminder": "COSTA VIVA aainjüsü archivo. Nnojotsü ojuittüin amüin servidor otta nnojotsü anaajüin copia.",
-      "prepareAndShare": "A'AINJAA OTTA AJÜTAA",
+      "prepareAndShare": "A'AINJAA ZIP",
       "noShareRecordsSelected": "Pünee wane anaajünaka.",
-      "preparingShare": "Aainjünü paquete",
-      "sharedPackageReady": "Anaasü paquete süpüla ajütaa.",
-      "nativeShareNow": "AJÜTAA JEEKA",
-      "saveFullPackage": "ANAajaa PAQUETE MÜIN",
+      "preparingShare": "Aainjünü ZIP",
+      "sharedPackageReady": "Anaasü ZIP süpüla ajütaa.",
+      "nativeShareNow": "AJÜTAA ZIP",
+      "saveFullPackage": "ANAAJAA ZIP",
       "shareMenuOpened": "Eekai süpüla ajütaa.",
       "shareTextFallback": "Paquete nnojotsü süpüla ajütaa sümaa naa kasa. Eejiree akumajaa jüchikua.",
       "importTitle": "Ekerolaa anaajünaka antünaka",
       "importSeparationHelp": "Anaajünaka antünaka ayaawatünü müsia. Anaajüsü achiki jalajeerü. Nnojotsü e'iyatünü müsia e'rajawaa aainjünaka süka celular tüü.",
       "confirmImport": "EKEROLAA",
       "cancel": "Aakataa",
-      "importInvalid": "Archivo tüü nnojotsü paquete COSTA VIVA anain.",
+      "importInvalid": "Archivo ZIP tüü nnojotsü COSTA VIVA anain.",
       "importReading": "Aashaje'eraa paquete",
       "importSummaryText": "{count} anaajünaka · aainjüsü {date}",
       "importRecipientText": "Kasa süpüla ajütaa: {value}",
@@ -278,7 +278,7 @@
       "shareWhatText": "Palajana ajütaa, pünee anaajünaka otta coordenada, ashajaa, ayaawataa, ayaakua, video je audio.",
       "sharingHelpText": "Püjüta amüin püshii je wane wayuu. Palajana ajütaa, pünee anaajünaka otta kasa sümaa.",
       "shareNotAllTitle": "Ajütaa nnojotsü ayalajaa apüshua'a",
-      "shareNotAllText": "Paquete aainjünü sulu'u celular. Android, iOS je navegador ee'iyatüsü aplicación süpüla ajütaa. COSTA VIVA nnojotsü aneeküin kachon otta nnojotsü anaajüin copia.",
+      "shareNotAllText": "ZIP aainjünü sulu'u celular. Android, iOS je navegador ee'iyatüsü aplicación süpüla ajütaa. COSTA VIVA nnojotsü aneeküin kachon otta nnojotsü anaajüin copia.",
       "mediaMetadataTitle": "Jalia sümaa ayaakua, video otta metadata",
       "mediaMetadataCaution": "Jalia. Wane archivo cámara je video eesü metadata aainjünaka süka celular. Müleka apülee kapülain, pü'raaja multimedia palajana ajütaa.",
       "help": "Akaalijia",
@@ -2446,10 +2446,10 @@
       sharedRecords.push(shared)
     }
     const manifest = {
-      format: 'costa-viva-cvpack',
-      formatVersion: 1,
+      format: 'costa-viva-zip',
+      formatVersion: 2,
       app: 'COSTA VIVA',
-      appVersion: '0.5.14',
+      appVersion: '0.5.15',
       packageId,
       createdAt,
       sourceNotebookId,
@@ -2464,7 +2464,7 @@
         automaticUpload: false
       }
     }
-    const payload = { app: 'COSTA VIVA', schemaVersion: 3, exchangeFormat: 1, exportedAt: createdAt, records: sharedRecords }
+    const payload = { app: 'COSTA VIVA', schemaVersion: 3, exchangeFormat: 2, exportedAt: createdAt, records: sharedRecords }
     const readme = `COSTA VIVA\n\nES\nEste paquete fue preparado localmente para compartir registros seleccionados. Registrar no significa ceder. La recepción del archivo no transfiere automáticamente propiedad ni derechos sobre la información.\n\nPT\nEste pacote foi preparado localmente para compartilhar registros selecionados. Registrar não significa ceder. O recebimento do arquivo não transfere automaticamente propriedade nem direitos sobre a informação.\n\nPackage ID ${packageId}\nSource notebook ${sourceNotebookId}\n`
     entries.unshift(
       { name: 'manifest.json', data: JSON.stringify(manifest, null, 2) },
@@ -2474,7 +2474,7 @@
     )
     if (options.coordinates) entries.splice(3, 0, { name: 'puntos.geojson', data: sharedGeoJSONText(sharedRecords) })
     const blob = await makeZip(entries)
-    const filename = `costa-viva-${createdAt.slice(0,10)}-${packageId.slice(0,8)}.cvpack`
+    const filename = `COSTA-VIVA-${createdAt.slice(0,10)}-${packageId.slice(0,8)}.zip`
     return { blob, filename, manifest, entries, sharedRecords, readme }
   }
 
@@ -2483,19 +2483,8 @@
     if (host) host.hidden = !visible
   }
 
-  function shareCompatibleFiles(pkg) {
-    const files = []
-    const csv = sharedCSVText(pkg.sharedRecords || [])
-    files.push(new File([csv], 'COSTA-VIVA-registros.csv', { type: 'text/csv' }))
-    files.push(new File([pkg.readme || 'COSTA VIVA'], 'COSTA-VIVA-LEEME.txt', { type: 'text/plain' }))
-    for (const entry of pkg.entries || []) {
-      if (!(entry.data instanceof Blob)) continue
-      const type = entry.data.type || ''
-      if (!/^(image|audio|video)\//.test(type)) continue
-      const name = safeFilename(entry.name.split('/').pop() || `evidencia-${files.length + 1}`)
-      files.push(new File([entry.data], name, { type }))
-    }
-    return files
+  function preparedZipFile(pkg) {
+    return new File([pkg.blob], pkg.filename || 'COSTA-VIVA.zip', { type: 'application/zip' })
   }
 
   async function openPreparedShareMenu() {
@@ -2504,38 +2493,23 @@
     const recipientType = pkg.recipientType || 'other'
     const purpose = pkg.purpose || ''
     const text = `${recipientLabel(recipientType)}${purpose ? ` · ${purpose}` : ''}`
-    if (!navigator.share) {
-      showToast(tr('shareUnavailable'))
-      downloadBlob(pkg.blob, pkg.filename)
-      return
-    }
-    const candidates = shareCompatibleFiles(pkg)
-    const attempts = [
-      candidates,
-      candidates.filter(file => file.type === 'text/csv' || file.type === 'text/plain'),
-      candidates.filter(file => file.type === 'text/csv')
-    ].filter(files => files.length)
-    for (const files of attempts) {
+    const zipFile = preparedZipFile(pkg)
+
+    if (navigator.share) {
       try {
-        if (navigator.canShare?.({ files }) === false) continue
-        await navigator.share({ title: 'COSTA VIVA', text, files })
-        $('#share-modal-status').textContent = tr('shareMenuOpened')
-        return
+        const canShareZip = navigator.canShare ? navigator.canShare({ files: [zipFile] }) : true
+        if (canShareZip) {
+          await navigator.share({ title: 'COSTA VIVA', text, files: [zipFile] })
+          $('#share-modal-status').textContent = tr('shareMenuOpened')
+          return
+        }
       } catch (error) {
         if (error?.name === 'AbortError') return
-        if (error?.name === 'NotAllowedError' || error?.name === 'TypeError' || error?.name === 'DataError') continue
-        console.warn('Share attempt failed', error)
+        console.warn('ZIP share attempt failed', error)
       }
     }
-    try {
-      $('#share-modal-status').textContent = tr('shareTextFallback')
-      await navigator.share({ title: 'COSTA VIVA', text })
-      return
-    } catch (error) {
-      if (error?.name === 'AbortError') return
-      console.warn('Text share failed', error)
-    }
-    showToast(tr('shareUnavailable'))
+
+    $('#share-modal-status').textContent = tr('shareTextFallback')
     downloadBlob(pkg.blob, pkg.filename)
   }
 
@@ -2628,7 +2602,7 @@
       if (!manifestText || !recordsText) throw new Error('Missing package files')
       const manifest = JSON.parse(manifestText)
       const payload = JSON.parse(recordsText)
-      if (manifest.format !== 'costa-viva-cvpack' || manifest.formatVersion !== 1 || !Array.isArray(payload.records)) throw new Error('Unsupported package')
+      if (!['costa-viva-zip','costa-viva-cvpack'].includes(manifest.format) || ![1,2].includes(manifest.formatVersion) || !Array.isArray(payload.records)) throw new Error('Unsupported package')
       state.pendingImport = { manifest, payload, entries, filename: file.name }
       const summary = $('#import-summary')
       const date = new Date(manifest.createdAt).toLocaleString(state.lang === 'pt' ? 'pt-BR' : 'es-ES')
@@ -2712,7 +2686,7 @@
           media: rebuildImportedMedia(raw, entries),
           provenance: {
             ...(raw.provenance || {}),
-            receivedVia: 'costa-viva-cvpack'
+            receivedVia: manifest.format || 'costa-viva-zip'
           },
           exchange: {
             received: true,

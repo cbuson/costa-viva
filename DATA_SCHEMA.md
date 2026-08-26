@@ -76,9 +76,9 @@ Una observación puede contener varias categorías simultáneas cuando ocurren e
 
 `no_change` es incompatible con cualquier categoría que describa un cambio. La interfaz impide guardar esa combinación contradictoria.
 
-## Intercambio `.cvpack` · v0.5.7
+## Intercambio ZIP · v0.5.15
 
-El paquete de intercambio contiene `manifest.json`, `registros.json`, `registros.csv`, un archivo bilingüe de lectura y las evidencias seleccionadas. `puntos.geojson` solo se incorpora cuando la persona decide compartir coordenadas.
+El ZIP de intercambio contiene `manifest.json`, `registros.json`, `registros.csv`, un archivo bilingüe de lectura y las evidencias seleccionadas. `puntos.geojson` solo se incorpora cuando la persona decide compartir coordenadas.
 
 Los registros recibidos añaden el objeto `exchange` con `received`, `receivedAt`, `packageId`, `sourceNotebookId`, `sourceNotebookShort`, `sourceCode`, `intendedRecipient`, `purpose` y `contentSelection`. El UUID original se conserva para detectar reimportaciones. El código visible se prefija con una referencia breve al cuaderno de origen para evitar colisiones entre dispositivos.
 
@@ -101,3 +101,8 @@ Incluye
 El estado `clearly-inland` significa que la posición fue clasificada como claramente interior mediante una máscara terrestre Natural Earth 1:110m y una distancia aproximada igual o superior al umbral configurado.
 
 Este dato solo controla si resulta razonable ofrecer información mareal. No representa una medición precisa de la distancia a la línea de costa.
+
+
+### Compatibilidad de intercambio
+
+Los nuevos archivos utilizan `manifest.format = costa-viva-zip` y `formatVersion = 2`. La importación mantiene compatibilidad con `costa-viva-cvpack` y `formatVersion = 1` para no romper intercambios creados con versiones anteriores.

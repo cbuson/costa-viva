@@ -237,9 +237,9 @@ La ayuda aclara que las imágenes satelitales sirven como referencia territorial
 
 ## Intercambio comunitario descentralizado
 
-COSTA VIVA permite seleccionar registros concretos y decidir qué contenidos se comparten. La persona puede incluir o excluir coordenadas y sensores, notas, mediciones, fotografías, vídeos y audios antes de preparar el archivo. El paquete se genera localmente con extensión `.cvpack` y se entrega al menú de compartir del dispositivo, que puede ofrecer WhatsApp, correo electrónico, Quick Share, Bluetooth u otras aplicaciones instaladas. COSTA VIVA no envía una copia a un servidor propio.
+COSTA VIVA permite seleccionar registros concretos y decidir qué contenidos se comparten. La persona puede incluir o excluir coordenadas y sensores, notas, mediciones, fotografías, vídeos y audios antes de preparar el archivo. El intercambio se genera localmente como un archivo `.zip` estándar. El ZIP contiene los registros estructurados y únicamente las evidencias seleccionadas. COSTA VIVA intenta compartir el ZIP directamente cuando el navegador lo permite. Si el navegador no admite ZIP mediante Web Share, el archivo se guarda en el dispositivo para que la persona pueda adjuntarlo manualmente en WhatsApp, correo electrónico, Quick Share, Bluetooth u otra aplicación. COSTA VIVA no envía una copia a un servidor propio.
 
-Los paquetes `.cvpack` pueden importarse en otro COSTA VIVA. Los registros importados quedan identificados como recibidos, conservan la procedencia del cuaderno de origen y no se presentan como observaciones creadas por el teléfono receptor. Los identificadores internos originales se conservan para detectar duplicados, mientras que el código visible recibido incorpora una referencia al cuaderno de origen para evitar confusiones entre códigos iguales creados en dispositivos diferentes.
+Los ZIP de intercambio de COSTA VIVA pueden importarse en otra instalación de COSTA VIVA. Por compatibilidad, la aplicación también puede leer los antiguos archivos `.cvpack` generados por versiones anteriores. Los registros importados quedan identificados como recibidos, conservan la procedencia del cuaderno de origen y no se presentan como observaciones creadas por el teléfono receptor. Los identificadores internos originales se conservan para detectar duplicados, mientras que el código visible recibido incorpora una referencia al cuaderno de origen para evitar confusiones entre códigos iguales creados en dispositivos diferentes.
 
 El diseño aplica dos principios explícitos. **Registrar no significa ceder** y **compartir no significa entregar todo**.
 
@@ -287,4 +287,13 @@ El módulo de marea comprueba primero la proximidad aproximada a la línea de co
 
 ## Versión 0.5.14
 
+Esta sección documenta el comportamiento histórico, sustituido por ZIP estándar en 0.5.15.
+
 La función de intercambio comunitario utiliza ahora un flujo en dos pasos. Primero prepara localmente el paquete. Después una segunda acción explícita abre el menú nativo del dispositivo para compartir con aplicaciones compatibles como WhatsApp o correo. Esto evita perder la activación temporal exigida por la Web Share API durante la creación del paquete. Cuando el formato `.cvpack` no puede compartirse directamente, COSTA VIVA intenta compartir un CSV, un archivo de texto y las evidencias multimedia compatibles. El paquete completo sigue disponible para guardarlo localmente.
+
+
+## Versión 0.5.15
+
+El intercambio comunitario adopta ZIP como formato principal. El archivo es un ZIP estándar y transparente que puede abrirse fuera de COSTA VIVA. Contiene `manifest.json`, `registros.json`, `registros.csv`, `LEEME-README.txt`, `puntos.geojson` cuando se comparten coordenadas y las fotografías, vídeos o audios seleccionados. Las fotografías pueden incluir original y versión documentada cuando ambas están disponibles.
+
+El botón Compartir ZIP intenta entregar el ZIP al menú nativo mediante Web Share. Como los navegadores no garantizan el intercambio directo de archivos ZIP, COSTA VIVA comprueba la compatibilidad en el dispositivo. Cuando no es posible, guarda el ZIP localmente para que pueda adjuntarse manualmente. El botón Guardar ZIP siempre conserva una copia local.

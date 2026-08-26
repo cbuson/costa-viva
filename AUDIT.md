@@ -188,3 +188,10 @@ Las posiciones que la máscara de baja resolución no puede clasificar como tier
 ## Auditoría de compartir · 0.5.14
 
 Se detectó que la creación asíncrona del paquete podía consumir la activación temporal requerida por Web Share y que los archivos ZIP o `.cvpack` no figuran entre los tipos de archivo normalmente compartibles documentados por MDN. Se separó preparación y apertura del menú nativo. La aplicación prueba archivos compatibles y conserva la descarga del paquete completo como alternativa.
+
+
+## Auditoría de intercambio ZIP · 0.5.15
+
+Se sustituye `.cvpack` como formato principal de intercambio por ZIP estándar. El contenido mantiene manifiesto, registros estructurados y evidencias seleccionadas. La aplicación intenta compartir el ZIP directamente solo cuando el navegador declara que el archivo es compartible. Si Web Share no admite ZIP, se guarda el archivo localmente para adjuntarlo mediante la aplicación elegida por la persona usuaria. No se realiza ninguna subida automática ni se crea una copia en servidores de COSTA VIVA.
+
+La importación acepta tanto el nuevo formato `costa-viva-zip` versión 2 como el antiguo `costa-viva-cvpack` versión 1 para preservar compatibilidad.
