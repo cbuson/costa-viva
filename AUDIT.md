@@ -156,3 +156,7 @@ Se añade advertencia metodológica sobre la fecha potencialmente diferente de l
 ## Cambio v0.5.7
 
 Se incorpora intercambio comunitario descentralizado con selección de registros y contenido, uso del menú nativo de compartir, paquete `.cvpack`, importación entre instalaciones COSTA VIVA, identificación de registros recibidos y prevención de duplicados por UUID. No se introduce servidor central ni cuenta obligatoria. La selección del destinatario se guarda solamente como contexto declarado dentro del paquete.
+
+## Auditoría lingüística 0.5.8
+
+Se añadió soporte experimental para Wayuunaiki mediante el código `guc`. No se declara traducción completa. La implementación usa el catálogo español como respaldo y sustituye únicamente términos documentados en fuentes lingüísticas consultadas. Esta decisión evita presentar traducciones automáticas no verificadas como vocabulario validado por la comunidad.

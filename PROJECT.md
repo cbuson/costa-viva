@@ -109,3 +109,9 @@ La base Sin mapa preserva el acceso a los puntos almacenados cuando no se desea 
 La arquitectura de COSTA VIVA no presupone que el destinatario natural de los datos sea un investigador. Los registros pueden compartirse con personas de la misma comunidad, otras comunidades, organizaciones, instituciones públicas o equipos de investigación. La persona usuaria selecciona los registros, el contenido y una finalidad opcional antes de generar el paquete.
 
 El paquete de intercambio se prepara localmente. El sistema operativo decide qué canales están disponibles, por ejemplo WhatsApp, correo, Quick Share o Bluetooth. La aplicación no mantiene una copia central del paquete. Otro dispositivo con COSTA VIVA puede importar el archivo y mantener los registros recibidos diferenciados de los propios.
+
+## Wayuunaiki y soberanía lingüística
+
+COSTA VIVA incorpora desde la versión 0.5.8 una arquitectura experimental para Wayuunaiki. La traducción no se considera cerrada ni validada. Se evita completar la interfaz mediante traducción automática o términos inventados. Cuando no existe una equivalencia documentada se conserva provisionalmente el castellano hasta realizar revisión con hablantes Wayuu.
+
+Este criterio aplica el mismo principio de control comunitario a la lengua. La comunidad debe poder decidir no solo qué datos comparte sino también cómo quiere que la herramienta se exprese en su lengua.

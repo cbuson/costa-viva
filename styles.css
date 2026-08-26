@@ -222,3 +222,21 @@ textarea{resize:vertical;min-height:110px}
   .share-modal-card{padding:58px 12px 14px}
   .share-record-list{max-height:260px}
 }
+
+.wayuu-beta-banner{margin:10px auto 0;max-width:1100px;padding:10px 14px;border:1px solid #ffbe2e;border-radius:12px;background:#fff4d4;color:#1b1b1b;display:flex;gap:8px;align-items:flex-start;font-size:.9rem;line-height:1.35}
+.wayuu-beta-banner[hidden]{display:none}
+.wayuu-beta-banner strong{white-space:nowrap;color:#162e51}
+@media(max-width:520px){.wayuu-beta-banner{margin:8px 10px 0;display:block}.wayuu-beta-banner strong{display:block;margin-bottom:3px}.lang-btn{min-width:34px;padding-left:6px;padding-right:6px}}
+
+
+/* Ayuda vertical para intercambio comunitario · v0.5.9 */
+.help-steps>.map-help-card{display:block;width:100%;min-width:0}
+.share-help-accordion{border-left:5px solid var(--success);background:#fbfdf9}
+.share-help-accordion .protocol-heading,.share-help-accordion .protocol-detail{width:100%;min-width:0}
+@media(max-width:620px){
+  .share-help-accordion{display:block!important}
+  .share-help-accordion>*{width:100%;min-width:0}
+  .share-help-accordion .protocol-detail{display:block}
+  .share-help-accordion .protocol-detail summary{width:100%;white-space:normal;overflow-wrap:anywhere}
+  .map-help-card{display:block!important}
+}

@@ -242,3 +242,13 @@ Comprobar que el panel mantiene lectura correcta a 320, 360, 375, 390, 412, 430 
 - [ ] Comprobar preservación de fotografías, vídeos y audios seleccionados
 - [ ] Comprobar que códigos iguales de diferentes cuadernos no se confunden en el dispositivo receptor
 - [ ] Revisar advertencia de metadatos de multimedia cuando se ocultan coordenadas
+
+## Wayuunaiki 0.5.8
+
+- [ ] El selector W activa el idioma interno `guc`.
+- [ ] Al activar W aparece el aviso de versión en construcción comunitaria.
+- [ ] Los términos Wayuunaiki documentados se muestran correctamente con caracteres Unicode.
+- [ ] Los textos no verificados permanecen en castellano y no muestran traducciones inventadas.
+- [ ] ES y PT continúan funcionando sin regresiones.
+- [ ] La cabecera con ES PT W e i funciona a 320 px sin desbordamiento horizontal.
+- [ ] La versión Wayuunaiki será revisada por hablantes Wayuu antes de considerarse validada.

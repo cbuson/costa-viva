@@ -242,3 +242,11 @@ COSTA VIVA permite seleccionar registros concretos y decidir qué contenidos se 
 Los paquetes `.cvpack` pueden importarse en otro COSTA VIVA. Los registros importados quedan identificados como recibidos, conservan la procedencia del cuaderno de origen y no se presentan como observaciones creadas por el teléfono receptor. Los identificadores internos originales se conservan para detectar duplicados, mientras que el código visible recibido incorpora una referencia al cuaderno de origen para evitar confusiones entre códigos iguales creados en dispositivos diferentes.
 
 El diseño aplica dos principios explícitos. **Registrar no significa ceder** y **compartir no significa entregar todo**.
+
+## Wayuunaiki experimental
+
+Desde la versión 0.5.8 COSTA VIVA incluye una tercera opción lingüística `W` para Wayuunaiki, código ISO 639-3 `guc`.
+
+La capa Wayuunaiki es deliberadamente provisional. Solo se traducen términos cuya equivalencia ha podido documentarse en recursos lingüísticos existentes. El resto permanece temporalmente en castellano para evitar inventar vocabulario. La interfaz completa deberá revisarse con hablantes Wayuu antes de declararse validada.
+
+Entre las referencias utilizadas para esta primera arquitectura se encuentran el *Diccionario de computación en wayuunaiki* y materiales de Wayuu Digital. Los términos documentados incorporados incluyen `Karalouta` para cuaderno, `Anaajawaa` para guardar, `Ee’irataa eemüin` para exportar, `Akaalijia` para ayuda, `Ayaawajaa` para medir y `Ajütaa` para enviar.

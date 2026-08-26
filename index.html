@@ -25,10 +25,16 @@
         <div class="lang-switch" aria-label="Idioma">
           <button id="lang-es" type="button" class="lang-btn active">ES</button>
           <button id="lang-pt" type="button" class="lang-btn">PT</button>
+          <button id="lang-guc" type="button" class="lang-btn" title="Wayuunaiki">W</button>
         </div>
         <button id="project-info-btn" type="button" class="info-btn" aria-label="Información del proyecto" title="Información del proyecto">i</button>
       </div>
     </header>
+
+    <div id="wayuu-beta-banner" class="wayuu-beta-banner" hidden>
+      <strong>Wayuunaiki</strong>
+      <span data-i18n="wayuuBetaBanner">Versión en construcción comunitaria. Se muestran términos documentados y el resto permanece temporalmente en español hasta revisión por hablantes Wayuu.</span>
+    </div>
 
     <main>
       <section id="screen-map" class="screen active" data-screen="map">
@@ -304,15 +310,31 @@
             <p data-i18n="mapBasesHelp">Puedes elegir Mapa, Satélite o Sin mapa. El mapa satelital ayuda a reconocer la costa, pero la imagen puede corresponder a otra fecha y no debe usarse por sí sola para medir cuánto retrocedió la línea de costa.</p>
           </article>
 
-          <article class="card share-help-card">
-            <h3 data-i18n="sharingHelpTitle">Compartir sin perder el control</h3>
-            <p data-i18n="sharingHelpText">Puedes compartir con tu comunidad, otra comunidad, un investigador, una institución u otra persona. Antes de enviar, eliges los registros y también si incluyes coordenadas, notas, mediciones, fotografías, vídeos o audios.</p>
-            <div class="project-principle">
-              <strong data-i18n="shareNotAllTitle">Compartir no significa entregar todo</strong>
-              <p data-i18n="shareNotAllText">El paquete se prepara en el celular. Después Android, iOS o el navegador muestran las aplicaciones disponibles para enviarlo. COSTA VIVA no decide el destinatario ni recibe una copia.</p>
+          <section class="share-help-accordion card">
+            <div class="protocol-heading">
+              <span class="protocol-icon">🔄</span>
+              <div>
+                <h3 data-i18n="sharingHelpTitle">Compartir sin perder el control</h3>
+                <p data-i18n="sharingHelpIntro">COSTA VIVA permite preparar un intercambio entre comunidades y personas sin enviar los registros a un servidor propio.</p>
+              </div>
             </div>
-            <p class="project-scope-note" data-i18n="mediaMetadataCaution">Atención. Algunos archivos originales de cámara o vídeo pueden contener metadatos creados por el propio dispositivo. Si una localización es sensible, revisa también los archivos multimedia antes de compartirlos.</p>
-          </article>
+            <details class="protocol-detail">
+              <summary><strong data-i18n="shareWithWhomTitle">Con quién puedes compartir</strong></summary>
+              <div class="protocol-body"><p data-i18n="shareWithWhomText">Puedes compartir con tu comunidad, otra comunidad, un investigador, una institución u otra persona.</p></div>
+            </details>
+            <details class="protocol-detail">
+              <summary><strong data-i18n="shareWhatTitle">Qué puedes incluir</strong></summary>
+              <div class="protocol-body"><p data-i18n="shareWhatText">Antes de enviar eliges los registros y también si incluyes coordenadas, notas, mediciones, fotografías, vídeos o audios.</p></div>
+            </details>
+            <details class="protocol-detail">
+              <summary><strong data-i18n="shareNotAllTitle">Compartir no significa entregar todo</strong></summary>
+              <div class="protocol-body"><p data-i18n="shareNotAllText">El paquete se prepara en el celular. Después Android, iOS o el navegador muestran las aplicaciones disponibles para enviarlo. COSTA VIVA no decide el destinatario ni recibe una copia.</p></div>
+            </details>
+            <details class="protocol-detail">
+              <summary><strong data-i18n="mediaMetadataTitle">Atención sobre fotos, vídeos y metadatos</strong></summary>
+              <div class="protocol-body"><p data-i18n="mediaMetadataCaution">Atención. Algunos archivos originales de cámara o vídeo pueden contener metadatos creados por el propio dispositivo. Si una localización es sensible, revisa también los archivos multimedia antes de compartirlos.</p></div>
+            </details>
+          </section>
 
           <section class="data-control-help card">
             <div class="protocol-heading">
@@ -413,6 +435,16 @@
           <div class="project-principle">
             <strong data-i18n="popularScienceTitle">Ciencia popular</strong>
             <p data-i18n="popularScienceText">La sofisticación está en el método y no en exigir equipos costosos. Un registro comunitario gana valor cuando conserva el procedimiento, la incertidumbre, la fecha, la posición disponible, las fotografías, las notas y las mediciones repetidas. COSTA VIVA busca hacer posible ese trabajo sin convertir un celular en un instrumento profesional que no es.</p>
+          </div>
+        </section>
+
+        <section class="project-info-section wayuu-language-section">
+          <h3 data-i18n="wayuuLanguageTitle">Wayuunaiki y construcción comunitaria</h3>
+          <p data-i18n="wayuuLanguageText1">COSTA VIVA incorpora una opción experimental en Wayuunaiki. No se presenta como traducción definitiva. Los términos incluidos proceden de recursos lingüísticos documentados y el resto de la interfaz conserva temporalmente el castellano cuando no existe una equivalencia verificada.</p>
+          <p data-i18n="wayuuLanguageText2">La versión completa deberá revisarse con hablantes Wayuu. La finalidad no es traducir palabra por palabra, sino construir una interfaz comprensible y culturalmente pertinente junto con la comunidad.</p>
+          <div class="project-principle">
+            <strong data-i18n="wayuuLanguagePrincipleTitle">La lengua también pertenece a la comunidad</strong>
+            <p data-i18n="wayuuLanguagePrincipleText">COSTA VIVA no inventará términos para completar una pantalla. Cuando una traducción no esté verificada se mostrará de forma provisional hasta que pueda ser revisada comunitariamente.</p>
           </div>
         </section>
 
