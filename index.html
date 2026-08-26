@@ -95,6 +95,15 @@
           <div class="status-card"><span>🎯</span><div><strong data-i18n="accuracy">Precisión</strong><small id="status-accuracy" data-i18n="notAvailable">No disponible</small></div></div>
           <div class="status-card"><span>⬆️</span><div><strong data-i18n="altitude">Altitud</strong><small id="status-altitude" data-i18n="notAvailable">No disponible</small></div></div>
           <div class="status-card"><span>🧭</span><div><strong data-i18n="direction">Dirección</strong><small id="status-heading" data-i18n="notAvailable">No disponible</small></div></div>
+          <div class="status-card tide-status-card" id="tide-status-card">
+            <span>🌊</span>
+            <div class="tide-status-content">
+              <strong data-i18n="tideEstimatedTitle">Marea astronómica estimada</strong>
+              <small id="status-tide-main" data-i18n="tideNeedLocation">Activa la ubicación para buscar una referencia TICON 3</small>
+              <small id="status-tide-meta" class="tide-status-meta"></small>
+              <small id="status-tide-note" class="tide-status-note" data-i18n="tideEstimateCaution">Estimación astronómica. No equivale al nivel real observado del mar.</small>
+            </div>
+          </div>
           <div class="status-card"><span>📷</span><div><strong data-i18n="camera">Cámara</strong><small id="status-camera" data-i18n="notActivated">No activada</small></div></div>
           <div class="status-card"><span>🎙️</span><div><strong data-i18n="microphone">Micrófono</strong><small id="status-microphone" data-i18n="notActivated">No activada</small></div></div>
         </div>
@@ -301,6 +310,39 @@
                 <li data-i18n="minimum8">Posición y precisión del celular cuando estén disponibles</li>
               </ul>
             </div>
+          </section>
+
+          <section class="card tide-help-card">
+            <div class="protocol-heading">
+              <span class="protocol-icon">🌊</span>
+              <div>
+                <h3 data-i18n="tideHelpTitle">Marea astronómica estimada · TICON 3</h3>
+                <p data-i18n="tideHelpIntro">COSTA VIVA prepara el uso offline de TICON 3 como referencia mareográfica. La aplicación buscará la estación costera disponible más próxima y siempre mostrará su distancia.</p>
+              </div>
+            </div>
+            <div class="protocol-rule tide-rule">
+              <strong data-i18n="tideEstimateLabel">Marea estimada, nunca marea real</strong>
+              <p data-i18n="tideHelpCaution">La predicción astronómica no incluye necesariamente viento, oleaje, presión atmosférica, descarga fluvial ni otros procesos que modifican el nivel real del mar.</p>
+            </div>
+            <details class="protocol-detail">
+              <summary><strong data-i18n="tideSourceTitle">Fuente y trazabilidad</strong></summary>
+              <div class="protocol-body">
+                <p data-i18n="tideSourceText">TICON 3 contiene constantes armónicas de 40 constituyentes para 3.471 mareógrafos globales. COSTA VIVA utiliza únicamente estaciones identificadas como Coastal y conserva la estación de referencia y su distancia.</p>
+                <p><strong>TICON 3</strong> · Hart-Davis, M. G., Dettmering, D. &amp; Seitz, F. (2022) · <a href="https://doi.org/10.1594/PANGAEA.951610" target="_blank" rel="noopener">doi:10.1594/PANGAEA.951610</a> · CC BY 4.0</p>
+              </div>
+            </details>
+            <details class="protocol-detail">
+              <summary><strong data-i18n="tideOfflineTitle">Datos para uso offline</strong></summary>
+              <div class="protocol-body">
+                <p data-i18n="tideOfflineText">La arquitectura permite guardar las estaciones TICON 3 en este dispositivo. En esta versión de integración el archivo puede importarse manualmente para probar selección de estación y distancia. La altura mareal no se mostrará hasta validar el motor armónico.</p>
+                <div class="tide-actions">
+                  <a class="secondary-btn tide-source-link" href="https://doi.org/10.1594/PANGAEA.951610" target="_blank" rel="noopener" data-i18n="tideOpenSource">ABRIR FUENTE TICON 3</a>
+                  <button id="ticon-import-btn" type="button" class="primary-btn" data-i18n="tideImportFile">IMPORTAR TICON_3.TXT</button>
+                  <input id="ticon-file-input" type="file" accept=".txt,.tab,text/plain" hidden>
+                </div>
+                <p id="ticon-import-status" class="helper" data-i18n="tideNoDataset">Datos TICON 3 no instalados en este dispositivo.</p>
+              </div>
+            </details>
           </section>
 
           <article class="card warning"><h3 data-i18n="gpsTitle">Sobre el GPS del celular</h3><p data-i18n="gpsHelp">El GPS ayuda a localizar la observación. No tiene la precisión de un equipo profesional. COSTA VIVA conserva la precisión informada por el dispositivo para evitar aparentar una exactitud que no existe.</p></article>
@@ -557,6 +599,16 @@
           </div>
         </section>
 
+        <section class="project-info-section tide-source-section">
+          <h3 data-i18n="tideProjectTitle">Referencia mareográfica y marea astronómica</h3>
+          <p data-i18n="tideProjectText">COSTA VIVA adopta TICON 3 como fuente abierta de constantes armónicas mareográficas para el desarrollo del módulo de marea astronómica estimada. La herramienta debe mostrar siempre la fuente, la estación utilizada y la distancia entre esa estación y el punto registrado.</p>
+          <div class="project-principle">
+            <strong data-i18n="tideProjectRuleTitle">Una estimación no es una observación</strong>
+            <p data-i18n="tideProjectRuleText">La marea calculada se conservará separada del estado del mar observado por la comunidad. La aplicación no debe presentar la predicción astronómica como nivel real del mar ni como evidencia suficiente de erosión.</p>
+          </div>
+          <p class="project-scope-note">Hart-Davis, M. G., Dettmering, D. &amp; Seitz, F. (2022). <em>TICON-3: Tidal Constants based on GESLA-3 sea-level records from globally distributed tide gauges including gauge type information</em>. PANGAEA. <a href="https://doi.org/10.1594/PANGAEA.951610" target="_blank" rel="noopener">https://doi.org/10.1594/PANGAEA.951610</a> · CC BY 4.0.</p>
+        </section>
+
         <section class="project-info-section project-caution">
           <h3 data-i18n="limitsTitle">Alcance y límites</h3>
           <p data-i18n="limitsText">COSTA VIVA ayuda a documentar observaciones y series comunitarias. No sustituye levantamientos topográficos, GNSS profesional, estudios oceanográficos, peritajes, sistemas oficiales de alerta ni decisiones de protección civil. Los registros deben interpretarse teniendo en cuenta el método utilizado y su incertidumbre.</p>
@@ -574,7 +626,7 @@
 
         <div class="project-info-footer">
           <span>© 2026 Carlos Busón Buesa</span>
-          <span>COSTA VIVA · v0.5.7</span>
+          <span>COSTA VIVA · v0.5.11</span>
         </div>
       </div>
     </div>

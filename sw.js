@@ -1,4 +1,4 @@
-const CACHE = 'costa-viva-v15'
+const CACHE = 'costa-viva-v17'
 const APP_SHELL = [
   './',
   './index.html',
@@ -9,7 +9,8 @@ const APP_SHELL = [
   './assets/icon-512.png',
   './LICENSE',
   './CONTENT-LICENSE.md',
-  './PROJECT.md'
+  './PROJECT.md',
+  './TIDES.md'
 ]
 
 self.addEventListener('install', event => {

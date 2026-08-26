@@ -81,3 +81,8 @@ Una observación puede contener varias categorías simultáneas cuando ocurren e
 El paquete de intercambio contiene `manifest.json`, `registros.json`, `registros.csv`, un archivo bilingüe de lectura y las evidencias seleccionadas. `puntos.geojson` solo se incorpora cuando la persona decide compartir coordenadas.
 
 Los registros recibidos añaden el objeto `exchange` con `received`, `receivedAt`, `packageId`, `sourceNotebookId`, `sourceNotebookShort`, `sourceCode`, `intendedRecipient`, `purpose` y `contentSelection`. El UUID original se conserva para detectar reimportaciones. El código visible se prefija con una referencia breve al cuaderno de origen para evitar colisiones entre dispositivos.
+
+
+## tideReference · v0.5.11
+
+Cuando existe una referencia TICON seleccionada, el registro puede incluir `tideReference` con `source`, `doi`, `stationId`, `stationSource`, `stationLatitude`, `stationLongitude`, `distanceKm`, `estimateAvailable` y `note`. En 0.5.11 `estimateAvailable` permanece en `false` porque la reconstrucción armónica aún no se ha validado.

@@ -254,7 +254,7 @@ Comprobar que el panel mantiene lectura correcta a 320, 360, 375, 390, 412, 430 
 - [ ] La versión Wayuunaiki será revisada por hablantes Wayuu antes de considerarse validada.
 
 
-## Wayuunaiki 0.5.10
+## Wayuunaiki 0.5.12
 
 - [x] Las 388 claves de español tienen una cadena provisional WY.
 - [x] WY ya no utiliza el objeto español como fallback por diseño.
@@ -263,3 +263,14 @@ Comprobar que el panel mantiene lectura correcta a 320, 360, 375, 390, 412, 430 
 - [x] Se genera `WAYUUNAIKI_REVIEW.csv` para revisión local.
 - [ ] Revisión lingüística por hablantes Wayuu.
 - [ ] Revisión de variantes locales y adecuación cultural.
+
+
+## Pruebas TICON 3
+
+- [ ] Sin ubicación, la tarjeta solicita activar GPS.
+- [ ] Con ubicación y sin dataset, informa que TICON 3 no está instalado.
+- [ ] Un archivo TICON 3 válido importa solo estaciones `Coastal`.
+- [ ] Tras importar, muestra estación de referencia y distancia.
+- [ ] El registro guarda la referencia TICON sin altura mareal falsa.
+- [ ] ES, PT y WY muestran el nuevo bloque.
+- [ ] La ayuda y la i citan DOI y licencia de TICON 3.

@@ -115,3 +115,8 @@ El paquete de intercambio se prepara localmente. El sistema operativo decide qu�
 COSTA VIVA incorpora desde la versión 0.5.8 una arquitectura experimental para Wayuunaiki. La traducción no se considera cerrada ni validada. Se evita completar la interfaz mediante traducción automática o términos inventados. Cuando no existe una equivalencia documentada se conserva provisionalmente el castellano hasta realizar revisión con hablantes Wayuu.
 
 Este criterio aplica el mismo principio de control comunitario a la lengua. La comunidad debe poder decidir no solo qué datos comparte sino también cómo quiere que la herramienta se exprese en su lengua.
+
+
+## TICON 3
+
+El módulo mareal utiliza TICON 3 como referencia de desarrollo por su cobertura global de mareógrafos, disponibilidad de 40 constituyentes, identificación del tipo de estación y licencia CC BY 4.0. COSTA VIVA conserva explícitamente la cita y no oculta la distancia entre el punto comunitario y el mareógrafo utilizado como referencia.

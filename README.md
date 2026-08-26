@@ -252,6 +252,22 @@ La capa Wayuunaiki es deliberadamente provisional. Solo se traducen términos cu
 Entre las referencias utilizadas para esta primera arquitectura se encuentran el *Diccionario de computación en wayuunaiki* y materiales de Wayuu Digital. Los términos documentados incorporados incluyen `Karalouta` para cuaderno, `Anaajawaa` para guardar, `Ee’irataa eemüin` para exportar, `Akaalijia` para ayuda, `Ayaawajaa` para medir y `Ajütaa` para enviar.
 
 
-## Wayuunaiki 0.5.10
+## Wayuunaiki 0.5.12
 
 La opción WY contiene ahora un borrador completo de las 388 cadenas de interfaz. Es una traducción provisional no validada y puede contener errores. Debe revisarse con hablantes Wayuu y expertos locales. El archivo `WAYUUNAIKI_REVIEW.csv` facilita la revisión cadena por cadena.
+
+
+## Marea astronómica estimada · integración TICON 3
+
+La versión 0.5.12 incorpora la interfaz y la arquitectura local para TICON 3. La tarjeta aparece en Registrar, debajo de Dirección. El usuario puede importar el archivo oficial `TICON_3.txt`, que se filtra a estaciones `Coastal` y se almacena en IndexedDB. COSTA VIVA muestra la estación de referencia más próxima y su distancia.
+
+La altura mareal permanece deliberadamente desactivada en esta versión hasta validar un motor armónico que reconstruya correctamente los constituyentes, argumentos astronómicos y correcciones nodales. No se muestran números simulados.
+
+Fuente prevista
+
+Hart-Davis, M. G., Dettmering, D. & Seitz, F. (2022). TICON-3. PANGAEA. https://doi.org/10.1594/PANGAEA.951610 · CC BY 4.0.
+
+
+## Desarrollo local
+
+En `localhost` y `127.0.0.1` COSTA VIVA desactiva el service worker y elimina las cachés antiguas de la propia aplicación. Esto evita que una versión anterior oculte cambios de interfaz durante las pruebas locales. La PWA y el funcionamiento offline permanecen activos en GitHub Pages y otros orígenes HTTPS de producción.

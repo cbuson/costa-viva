@@ -171,3 +171,12 @@ Esta orientación toma como referencia los principios CARE para la gobernanza de
 Antes de compartir, la persona selecciona los registros y los componentes incluidos. Los datos básicos de identificación del registro se conservan para mantener trazabilidad. Coordenadas y sensores, notas, mediciones y archivos multimedia son seleccionables. Si las coordenadas se excluyen, COSTA VIVA elimina esos campos estructurados y, para fotografías originales disponibles, genera una copia JPEG nueva sin metadatos EXIF del archivo fuente. Los vídeos y otros archivos originales pueden conservar metadatos propios del dispositivo, por lo que la interfaz advierte de este límite.
 
 El paquete `.cvpack` contiene un manifiesto, registros estructurados y únicamente las evidencias seleccionadas. Al importarlo en otro dispositivo, los registros quedan marcados como recibidos y se registra la procedencia del paquete. La importación no cambia la autoría ni implica cesión de derechos sobre los datos.
+
+
+## Módulo mareal
+
+COSTA VIVA distingue tres objetos que no deben confundirse. El estado del mar observado por la comunidad, la referencia mareográfica TICON 3 y la futura marea astronómica calculada. La versión 0.5.11 implementa los dos primeros.
+
+La estación TICON más próxima se registra con su identificador, coordenadas y distancia al punto de observación. La proximidad espacial no se presenta como garantía de representatividad mareográfica. La futura altura astronómica deberá conservar los constituyentes usados, el método de predicción y la versión del motor.
+
+La predicción astronómica no deberá utilizarse como nivel real observado porque puede diferir por viento, oleaje, presión atmosférica, descarga fluvial y otros procesos no astronómicos.

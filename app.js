@@ -2,9 +2,10 @@
   'use strict'
 
   const DB_NAME = 'costa-viva-db'
-  const DB_VERSION = 2
+  const DB_VERSION = 3
   const RECORD_STORE = 'records'
   const META_STORE = 'meta'
+  const TIDE_STORE = 'tideStations'
 
   const i18n = {
     es: {
@@ -499,6 +500,97 @@
   }
 
 
+  Object.assign(i18n.es, {
+    tideEstimatedTitle: 'Marea astronómica estimada',
+    tideNeedLocation: 'Activa la ubicación para buscar una referencia TICON 3',
+    tideDataNotInstalled: 'Datos TICON 3 no instalados',
+    tideReferenceReady: 'Referencia TICON 3 localizada',
+    tideStationMeta: 'Estación {station} · {distance} km',
+    tideEstimateCaution: 'Estimación astronómica. No equivale al nivel real observado del mar.',
+    tidePredictionPending: 'Altura mareal pendiente de validación del motor armónico',
+    tideHelpTitle: 'Marea astronómica estimada · TICON 3',
+    tideHelpIntro: 'COSTA VIVA prepara el uso offline de TICON 3 como referencia mareográfica. La aplicación buscará la estación costera disponible más próxima y siempre mostrará su distancia.',
+    tideEstimateLabel: 'Marea estimada, nunca marea real',
+    tideHelpCaution: 'La predicción astronómica no incluye necesariamente viento, oleaje, presión atmosférica, descarga fluvial ni otros procesos que modifican el nivel real del mar.',
+    tideSourceTitle: 'Fuente y trazabilidad',
+    tideSourceText: 'TICON 3 contiene constantes armónicas de 40 constituyentes para 3.471 mareógrafos globales. COSTA VIVA utiliza únicamente estaciones identificadas como Coastal y conserva la estación de referencia y su distancia.',
+    tideOfflineTitle: 'Datos para uso offline',
+    tideOfflineText: 'La arquitectura permite guardar las estaciones TICON 3 en este dispositivo. En esta versión de integración el archivo puede importarse manualmente para probar selección de estación y distancia. La altura mareal no se mostrará hasta validar el motor armónico.',
+    tideOpenSource: 'ABRIR FUENTE TICON 3',
+    tideImportFile: 'IMPORTAR TICON_3.TXT',
+    tideNoDataset: 'Datos TICON 3 no instalados en este dispositivo.',
+    tideImportReading: 'Leyendo TICON 3…',
+    tideImportSuccess: 'TICON 3 instalado · {count} estaciones costeras',
+    tideImportInvalid: 'No se pudo reconocer un archivo TICON 3 válido.',
+    tideProjectTitle: 'Referencia mareográfica y marea astronómica',
+    tideProjectText: 'COSTA VIVA adopta TICON 3 como fuente abierta de constantes armónicas mareográficas para el desarrollo del módulo de marea astronómica estimada. La herramienta debe mostrar siempre la fuente, la estación utilizada y la distancia entre esa estación y el punto registrado.',
+    tideProjectRuleTitle: 'Una estimación no es una observación',
+    tideProjectRuleText: 'La marea calculada se conservará separada del estado del mar observado por la comunidad. La aplicación no debe presentar la predicción astronómica como nivel real del mar ni como evidencia suficiente de erosión.',
+    tideRecordLabel: 'Referencia mareal',
+    tideReferenceOnly: 'TICON 3 · referencia, sin altura calculada'
+  })
+
+  Object.assign(i18n.pt, {
+    tideEstimatedTitle: 'Maré astronômica estimada',
+    tideNeedLocation: 'Ative a localização para buscar uma referência TICON 3',
+    tideDataNotInstalled: 'Dados TICON 3 não instalados',
+    tideReferenceReady: 'Referência TICON 3 localizada',
+    tideStationMeta: 'Estação {station} · {distance} km',
+    tideEstimateCaution: 'Estimativa astronômica. Não equivale ao nível real observado do mar.',
+    tidePredictionPending: 'Altura da maré aguardando validação do motor harmônico',
+    tideHelpTitle: 'Maré astronômica estimada · TICON 3',
+    tideHelpIntro: 'COSTA VIVA prepara o uso offline do TICON 3 como referência maregráfica. O aplicativo buscará a estação costeira disponível mais próxima e sempre mostrará sua distância.',
+    tideEstimateLabel: 'Maré estimada, nunca maré real',
+    tideHelpCaution: 'A previsão astronômica não inclui necessariamente vento, ondas, pressão atmosférica, descarga fluvial ou outros processos que modificam o nível real do mar.',
+    tideSourceTitle: 'Fonte e rastreabilidade',
+    tideSourceText: 'TICON 3 contém constantes harmônicas de 40 constituintes para 3.471 marégrafos globais. COSTA VIVA utiliza apenas estações identificadas como Coastal e conserva a estação de referência e sua distância.',
+    tideOfflineTitle: 'Dados para uso offline',
+    tideOfflineText: 'A arquitetura permite guardar as estações TICON 3 neste dispositivo. Nesta versão de integração o arquivo pode ser importado manualmente para testar a seleção da estação e a distância. A altura da maré não será exibida até a validação do motor harmônico.',
+    tideOpenSource: 'ABRIR FONTE TICON 3',
+    tideImportFile: 'IMPORTAR TICON_3.TXT',
+    tideNoDataset: 'Dados TICON 3 não instalados neste dispositivo.',
+    tideImportReading: 'Lendo TICON 3…',
+    tideImportSuccess: 'TICON 3 instalado · {count} estações costeiras',
+    tideImportInvalid: 'Não foi possível reconhecer um arquivo TICON 3 válido.',
+    tideProjectTitle: 'Referência maregráfica e maré astronômica',
+    tideProjectText: 'COSTA VIVA adota TICON 3 como fonte aberta de constantes harmônicas maregráficas para o desenvolvimento do módulo de maré astronômica estimada. A ferramenta deve sempre mostrar a fonte, a estação utilizada e a distância entre essa estação e o ponto registrado.',
+    tideProjectRuleTitle: 'Uma estimativa não é uma observação',
+    tideProjectRuleText: 'A maré calculada será mantida separada do estado do mar observado pela comunidade. O aplicativo não deve apresentar a previsão astronômica como nível real do mar nem como evidência suficiente de erosão.',
+    tideRecordLabel: 'Referência de maré',
+    tideReferenceOnly: 'TICON 3 · referência, sem altura calculada'
+  })
+
+  Object.assign(i18n.guc, {
+    tideEstimatedTitle: 'Palaa · marea astronómica ayaawajünaka',
+    tideNeedLocation: 'Püjütaa apülee süpüla achajaa TICON 3',
+    tideDataNotInstalled: 'TICON 3 nnojotsü anaajünain yaa',
+    tideReferenceReady: 'TICON 3 eejüsü apülee süpüla e\'rajawaa',
+    tideStationMeta: 'Estación {station} · {distance} km',
+    tideEstimateCaution: 'Ayaawajünaka ne\'e. Nnojotsü shia süka level palaa e\'rajünaka.',
+    tidePredictionPending: 'Ayaawataa marea eekai ee\'iyalaaya süpüla revisión',
+    tideHelpTitle: 'Palaa · marea astronómica ayaawajünaka · TICON 3',
+    tideHelpIntro: 'COSTA VIVA aainjüsü TICON 3 süpüla e\'rajawaa palaa offline. E\'iyatüsü estación coastal eekai motsaain otta sümaa süpüshi km.',
+    tideEstimateLabel: 'Marea ayaawajünaka, nnojotsü marea e\'rajünaka',
+    tideHelpCaution: 'Ayaawajünaka astronómica nnojotsü aapain sünain jouttai, a\'wanajawaa palaa, presión otta waneirua kasa eekai alüjain palaa.',
+    tideSourceTitle: 'Eere sümaa achiki kasachiki',
+    tideSourceText: 'TICON 3 eejüsü constantes armónicas 40 süpüla 3.471 mareógrafos. COSTA VIVA ayonnajüsü ne\'e estaciones Coastal otta anaajüsü apülee sümaa distancia.',
+    tideOfflineTitle: 'Kasachiki süpüla offline',
+    tideOfflineText: 'Anainjatüsü anaajaa TICON 3 sulu\'u celular. Sulu\'u versión tüü, archivo TICON_3.txt anainjatüsü importajaa süpüla prueba. Altura marea nnojotsü ee\'iyalaain jüma nnojotsü joolu\'u validación motor armónico.',
+    tideOpenSource: 'E\'RAJAA TICON 3',
+    tideImportFile: 'IMPORTAJAA TICON_3.TXT',
+    tideNoDataset: 'TICON 3 nnojotsü anaajünain sulu\'u celular tüü.',
+    tideImportReading: 'Aashajünü TICON 3…',
+    tideImportSuccess: 'TICON 3 anaasü · {count} estaciones coastal',
+    tideImportInvalid: 'Nnojotsü ainkain e\'rajawaa archivo TICON 3.',
+    tideProjectTitle: 'TICON 3 otta marea astronómica ayaawajünaka',
+    tideProjectText: 'COSTA VIVA atüjüsü TICON 3 süpüla constantes armónicas otta marea astronómica ayaawajünaka. E\'iyatüsü source, estación otta distancia.',
+    tideProjectRuleTitle: 'Ayaawajünaka nnojotsü shia e\'rajünaka',
+    tideProjectRuleText: 'Marea calculada anaajünü wane\'eya sümaa palaa e\'rajünaka sünain comunidad. Nnojotsü ee\'iyalaain müin nivel real palaa niainjain evidencia ne\'e erosión.',
+    tideRecordLabel: 'Kasachiki marea',
+    tideReferenceOnly: 'TICON 3 · referencia, nnojotsü altura calculada'
+  })
+
+
   const categoryKeys = {
     beach_loss: 'beachLoss', sand_gain: 'sandGain', water_reach: 'waterReach', flood: 'flood', home: 'homeAffected', road: 'roadAffected', vegetation: 'vegetationAffected', no_change: 'noChange', other: 'other'
   }
@@ -525,7 +617,10 @@
     baseLayer: ['osm', 'satellite', 'none'].includes(localStorage.getItem('costa-viva-map-layer')) ? localStorage.getItem('costa-viva-map-layer') : 'osm',
     userMarker: null,
     installPrompt: null,
-    pendingImport: null
+    pendingImport: null,
+    tideStations: [],
+    tideNearest: null,
+    tideDatasetReady: false
   }
 
   const $ = selector => document.querySelector(selector)
@@ -568,6 +663,9 @@
     updateSensorUI()
     updateMapLayerUI()
     renderAll()
+    updateTideUI()
+    const tideImportStatus = $('#ticon-import-status')
+    if (tideImportStatus) tideImportStatus.textContent = state.tideDatasetReady ? tr('tideImportSuccess', { count: state.tideStations.length }) : tr('tideNoDataset')
   }
 
   function openDB() {
@@ -586,6 +684,10 @@
           if (!store.indexNames.contains('createdAt')) store.createIndex('createdAt', 'createdAt')
         }
         if (!db.objectStoreNames.contains(META_STORE)) db.createObjectStore(META_STORE, { keyPath: 'key' })
+        if (!db.objectStoreNames.contains(TIDE_STORE)) {
+          const tideStore = db.createObjectStore(TIDE_STORE, { keyPath: 'id' })
+          tideStore.createIndex('type', 'type', { unique: false })
+        }
       }
       req.onsuccess = () => resolve(req.result)
       req.onerror = () => reject(req.error)
@@ -641,6 +743,145 @@
     })
   }
 
+
+  async function idbGetAllTideStations() {
+    const db = await openDB()
+    return new Promise((resolve, reject) => {
+      const req = db.transaction(TIDE_STORE, 'readonly').objectStore(TIDE_STORE).getAll()
+      req.onsuccess = () => resolve(req.result || [])
+      req.onerror = () => reject(req.error)
+    })
+  }
+
+  async function idbReplaceTideStations(stations) {
+    const db = await openDB()
+    return new Promise((resolve, reject) => {
+      const tx = db.transaction(TIDE_STORE, 'readwrite')
+      const store = tx.objectStore(TIDE_STORE)
+      store.clear()
+      stations.forEach(station => store.put(station))
+      tx.oncomplete = () => resolve()
+      tx.onerror = () => reject(tx.error)
+    })
+  }
+
+  function haversineKm(lat1, lon1, lat2, lon2) {
+    const r = 6371.0088
+    const rad = Math.PI / 180
+    const dLat = (lat2 - lat1) * rad
+    const dLon = (lon2 - lon1) * rad
+    const a = Math.sin(dLat / 2) ** 2 + Math.cos(lat1 * rad) * Math.cos(lat2 * rad) * Math.sin(dLon / 2) ** 2
+    return 2 * r * Math.asin(Math.min(1, Math.sqrt(a)))
+  }
+
+  function findNearestTideStation(lat, lon) {
+    let best = null
+    for (const station of state.tideStations) {
+      const distanceKm = haversineKm(lat, lon, station.lat, station.lon)
+      if (!best || distanceKm < best.distanceKm) best = { station, distanceKm }
+    }
+    return best
+  }
+
+  function updateTideUI() {
+    const main = $('#status-tide-main')
+    const meta = $('#status-tide-meta')
+    const note = $('#status-tide-note')
+    if (!main || !meta || !note) return
+    meta.textContent = ''
+    note.textContent = tr('tideEstimateCaution')
+    const pos = state.latestPosition?.coords
+    if (!Number.isFinite(pos?.latitude) || !Number.isFinite(pos?.longitude)) {
+      state.tideNearest = null
+      main.textContent = tr('tideNeedLocation')
+      return
+    }
+    if (!state.tideDatasetReady || !state.tideStations.length) {
+      state.tideNearest = null
+      main.textContent = tr('tideDataNotInstalled')
+      meta.textContent = tr('tidePredictionPending')
+      return
+    }
+    const nearest = findNearestTideStation(pos.latitude, pos.longitude)
+    state.tideNearest = nearest
+    if (!nearest) {
+      main.textContent = tr('tideDataNotInstalled')
+      meta.textContent = tr('tidePredictionPending')
+      return
+    }
+    main.textContent = tr('tideReferenceReady')
+    const stationName = nearest.station.source || nearest.station.id
+    meta.textContent = tr('tideStationMeta', { station: stationName, distance: nearest.distanceKm.toFixed(1) })
+    note.textContent = `${tr('tidePredictionPending')}. ${tr('tideEstimateCaution')}`
+  }
+
+  function parseTicon3Text(text) {
+    const stations = new Map()
+    const lines = String(text || '').split(/\r?\n/)
+    for (const raw of lines) {
+      const line = raw.trim()
+      if (!line || line.startsWith('#') || line.startsWith('/*') || line.startsWith('*/')) continue
+      const cols = line.split('\t')
+      if (cols.length < 14) continue
+      const lat = Number(cols[0])
+      let lon = Number(cols[1])
+      if (!Number.isFinite(lat) || !Number.isFinite(lon)) continue
+      if (lon > 180) lon -= 360
+      const type = String(cols[13] || '').trim()
+      if (type.toLowerCase() !== 'coastal') continue
+      const constituent = String(cols[2] || '').trim()
+      const ampCm = Number(cols[3])
+      const phaseDeg = Number(cols[4])
+      if (!constituent || !Number.isFinite(ampCm) || !Number.isFinite(phaseDeg)) continue
+      const source = String(cols[12] || '').trim() || 'TICON-3'
+      const id = `${lat.toFixed(6)}|${lon.toFixed(6)}|${source}`
+      if (!stations.has(id)) stations.set(id, { id, lat, lon, source, type: 'Coastal', firstObservation: cols[10] || null, lastObservation: cols[11] || null, constituents: {} })
+      stations.get(id).constituents[constituent] = {
+        amplitudeCm: ampCm,
+        phaseDeg,
+        amplitudeSdCm: Number.isFinite(Number(cols[5])) ? Number(cols[5]) : null,
+        phaseSdDeg: Number.isFinite(Number(cols[6])) ? Number(cols[6]) : null
+      }
+    }
+    return Array.from(stations.values())
+  }
+
+  async function importTicon3File(file) {
+    const status = $('#ticon-import-status')
+    if (!file) return
+    status.textContent = tr('tideImportReading')
+    try {
+      const text = await file.text()
+      const stations = parseTicon3Text(text)
+      if (!stations.length) throw new Error('No coastal TICON rows found')
+      await idbReplaceTideStations(stations)
+      state.tideStations = stations
+      state.tideDatasetReady = true
+      await idbSetMeta('ticon3ImportedAt', new Date().toISOString())
+      await idbSetMeta('ticon3StationCount', stations.length)
+      status.textContent = tr('tideImportSuccess', { count: stations.length })
+      updateTideUI()
+      showToast(tr('tideImportSuccess', { count: stations.length }))
+    } catch (error) {
+      console.error('TICON import failed', error)
+      status.textContent = tr('tideImportInvalid')
+    }
+  }
+
+  async function loadTideDatasetState() {
+    try {
+      state.tideStations = await idbGetAllTideStations()
+      state.tideDatasetReady = state.tideStations.length > 0
+      const status = $('#ticon-import-status')
+      if (status) status.textContent = state.tideDatasetReady ? tr('tideImportSuccess', { count: state.tideStations.length }) : tr('tideNoDataset')
+    } catch (error) {
+      console.warn('TICON state unavailable', error)
+      state.tideStations = []
+      state.tideDatasetReady = false
+    }
+    updateTideUI()
+  }
+
   async function loadState() {
     state.records = await idbGetAllRecords()
     const stored = await idbGetMeta('counter')
@@ -685,6 +926,7 @@
     } else {
       $('#status-heading').textContent = tr('notAvailable')
     }
+    updateTideUI()
     if (!state.sensorActive) {
       $('#status-camera').textContent = tr('notActivated')
       $('#status-microphone').textContent = tr('notActivated')
@@ -1007,6 +1249,17 @@
         reference: $('#measure-reference').value.trim() || null
       } : null,
       sea: { level: $('#sea-level').value, waves: $('#wave-state').value },
+      tideReference: state.tideNearest ? {
+        source: 'TICON-3',
+        doi: '10.1594/PANGAEA.951610',
+        stationId: state.tideNearest.station.id,
+        stationSource: state.tideNearest.station.source,
+        stationLatitude: state.tideNearest.station.lat,
+        stationLongitude: state.tideNearest.station.lon,
+        distanceKm: Number(state.tideNearest.distanceKm.toFixed(3)),
+        estimateAvailable: false,
+        note: 'Harmonic height disabled pending predictor validation'
+      } : null,
       permanentPointId,
       isPermanentRoot,
       media: state.draftMedia,
@@ -1501,6 +1754,7 @@
       [tr('coordinates'), recordLocationText(record)],
       [tr('altitude'), record.location?.altitude == null ? tr('notAvailable') : `${record.location.altitude.toFixed(1)} m`],
       [tr('direction'), record.location?.heading == null ? tr('notAvailable') : `${Math.round(record.location.heading)}° ${cardinal(record.location.heading)}`],
+      [tr('tideRecordLabel'), record.tideReference ? `${tr('tideReferenceOnly')} · ${record.tideReference.stationSource || record.tideReference.stationId} · ${Number(record.tideReference.distanceKm).toFixed(1)} km` : tr('notAvailable')],
       [tr('pointLabel'), record.permanentPointId || tr('independentLabel')]
     ]
     if (record.exchange?.received) {
@@ -1611,8 +1865,8 @@
   }
 
   function exportCSVText() {
-    const headers = ['uuid','code','created_at','categories','category_primary','note','latitude','longitude','accuracy_m','altitude_m','heading_deg','measurement_value','measurement_unit','measurement_method','measurement_target','measurement_reference','sea_level','waves','permanent_point_id','media_count']
-    const rows = state.records.map(r => [r.uuid,r.code,r.createdAt,recordCategories(r).join('|'),recordCategories(r)[0] || '',r.observationText,r.location?.latitude,r.location?.longitude,r.location?.accuracy,r.location?.altitude,r.location?.heading,r.measurement?.value,r.measurement?.unit,r.measurement?.method,r.measurement?.target,r.measurement?.reference,r.sea?.level,r.sea?.waves,r.permanentPointId,r.media?.length || 0])
+    const headers = ['uuid','code','created_at','categories','category_primary','note','latitude','longitude','accuracy_m','altitude_m','heading_deg','measurement_value','measurement_unit','measurement_method','measurement_target','measurement_reference','sea_level','waves','tide_source','tide_station','tide_distance_km','tide_estimate_available','permanent_point_id','media_count']
+    const rows = state.records.map(r => [r.uuid,r.code,r.createdAt,recordCategories(r).join('|'),recordCategories(r)[0] || '',r.observationText,r.location?.latitude,r.location?.longitude,r.location?.accuracy,r.location?.altitude,r.location?.heading,r.measurement?.value,r.measurement?.unit,r.measurement?.method,r.measurement?.target,r.measurement?.reference,r.sea?.level,r.sea?.waves,r.tideReference?.source,r.tideReference?.stationSource || r.tideReference?.stationId,r.tideReference?.distanceKm,r.tideReference?.estimateAvailable,r.permanentPointId,r.media?.length || 0])
     return [headers, ...rows].map(row => row.map(csvEscape).join(',')).join('\n')
   }
 
@@ -1620,7 +1874,7 @@
     const features = state.records.filter(r => Number.isFinite(r.location?.latitude) && Number.isFinite(r.location?.longitude)).map(r => ({
       type: 'Feature',
       geometry: { type: 'Point', coordinates: [r.location.longitude, r.location.latitude] },
-      properties: { code: r.code, uuid: r.uuid, createdAt: r.createdAt, categories: recordCategories(r), category_primary: recordCategories(r)[0] || null, observationText: r.observationText, accuracy_m: r.location.accuracy, altitude_m: r.location.altitude, heading_deg: r.location.heading, measurement_value: r.measurement?.value ?? null, measurement_unit: r.measurement?.unit ?? null, measurement_method: r.measurement?.method ?? null, measurement_target: r.measurement?.target ?? null, measurement_reference: r.measurement?.reference ?? null, permanentPointId: r.permanentPointId }
+      properties: { code: r.code, uuid: r.uuid, createdAt: r.createdAt, categories: recordCategories(r), category_primary: recordCategories(r)[0] || null, observationText: r.observationText, accuracy_m: r.location.accuracy, altitude_m: r.location.altitude, heading_deg: r.location.heading, measurement_value: r.measurement?.value ?? null, measurement_unit: r.measurement?.unit ?? null, measurement_method: r.measurement?.method ?? null, measurement_target: r.measurement?.target ?? null, measurement_reference: r.measurement?.reference ?? null, tide_source: r.tideReference?.source ?? null, tide_station: r.tideReference?.stationSource ?? null, tide_distance_km: r.tideReference?.distanceKm ?? null, tide_estimate_available: r.tideReference?.estimateAvailable ?? null, permanentPointId: r.permanentPointId }
     }))
     return JSON.stringify({ type: 'FeatureCollection', name: 'COSTA VIVA', features }, null, 2)
   }
@@ -2313,8 +2567,24 @@
     $('#install-modal').addEventListener('click', event => { if (event.target === $('#install-modal')) closeInstallModal() })
   }
 
-  function setupServiceWorker() {
+  async function setupServiceWorker() {
     if (!('serviceWorker' in navigator)) return
+
+    const isLocalDev = ['localhost', '127.0.0.1', '::1'].includes(window.location.hostname)
+    if (isLocalDev) {
+      try {
+        const registrations = await navigator.serviceWorker.getRegistrations()
+        await Promise.all(registrations.map(registration => registration.unregister()))
+        if ('caches' in window) {
+          const keys = await caches.keys()
+          await Promise.all(keys.filter(key => key.startsWith('costa-viva-')).map(key => caches.delete(key)))
+        }
+        console.info('COSTA VIVA local development mode. Service worker disabled and old app caches cleared.')
+      } catch (error) {
+        console.warn('Could not clear local development service worker state', error)
+      }
+      return
+    }
 
     let reloadingForUpdate = false
     navigator.serviceWorker.addEventListener('controllerchange', () => {
@@ -2399,6 +2669,8 @@
     $('#prepare-share').addEventListener('click', prepareCommunityShare)
     $('#import-package-btn').addEventListener('click', () => $('#import-package-input').click())
     $('#import-package-input').addEventListener('change', event => readImportPackage(event.target.files?.[0]))
+    $('#ticon-import-btn')?.addEventListener('click', () => $('#ticon-file-input')?.click())
+    $('#ticon-file-input')?.addEventListener('change', event => { importTicon3File(event.target.files?.[0]); event.target.value = '' })
     $('#import-modal-close').addEventListener('click', closeImportModal)
     $('#cancel-import').addEventListener('click', closeImportModal)
     $('#confirm-import').addEventListener('click', confirmImportPackage)
@@ -2412,6 +2684,7 @@
     setupServiceWorker()
     setLanguage(state.lang)
     try { await loadState() } catch (error) { console.error('Database init failed', error) }
+    await loadTideDatasetState()
     if (localStorage.getItem('costa-viva-first-run') === 'done') $('#first-run').style.display = 'none'
     setTimeout(() => initMap(), 0)
   }
