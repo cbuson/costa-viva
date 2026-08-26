@@ -184,3 +184,22 @@ Comprobar que el panel mantiene lectura correcta a 320, 360, 375, 390, 412, 430 
 - En iOS Safari comprobar que la guía indique Compartir y Añadir a pantalla de inicio.
 - Comprobar el botón de instalación dentro de Ayuda.
 - Tras instalar, abrir la PWA y confirmar que los botones de instalación no vuelven a mostrarse en modo standalone.
+
+## Prueba específica v0.5.3
+
+- Abrir una versión anterior en Android y dejarla controlada por el Service Worker.
+- Publicar v0.5.3.
+- Reabrir COSTA VIVA con conexión.
+- Verificar que el nuevo Service Worker toma control y la página se actualiza una sola vez.
+- Verificar que aparecen los controles nuevos, incluido Instalar.
+- Desconectar Internet y comprobar que la aplicación sigue abriendo desde caché.
+
+
+## Pruebas v0.5.4
+
+- Cambiar ES y PT y verificar todos los textos de gobernanza.
+- Abrir y cerrar cada pregunta del bloque Tus datos y tu decisión.
+- Abrir el panel i y verificar la sección Gobernanza comunitaria de los datos.
+- Verificar que los enlaces CARE y OCAP® abren en una pestaña externa.
+- Verificar legibilidad a 320, 360, 375, 390, 412, 430 y 768 px.
+- Verificar que ningún texto afirma transferencia automática, propiedad del investigador o certificación OCAP®.

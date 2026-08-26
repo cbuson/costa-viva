@@ -1,4 +1,4 @@
-const CACHE = 'costa-viva-v8'
+const CACHE = 'costa-viva-v10'
 const APP_SHELL = [
   './',
   './index.html',
@@ -13,13 +13,22 @@ const APP_SHELL = [
 ]
 
 self.addEventListener('install', event => {
-  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(APP_SHELL)).then(() => self.skipWaiting()))
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE)
+    await Promise.all(APP_SHELL.map(async path => {
+      const response = await fetch(path, { cache: 'reload' })
+      if (response.ok) await cache.put(path, response)
+    }))
+    await self.skipWaiting()
+  })())
 })
 
 self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key)))).then(() => self.clients.claim())
-  )
+  event.waitUntil((async () => {
+    const keys = await caches.keys()
+    await Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key)))
+    await self.clients.claim()
+  })())
 })
 
 self.addEventListener('fetch', event => {
@@ -31,13 +40,25 @@ self.addEventListener('fetch', event => {
     return
   }
 
-  event.respondWith(
-    caches.match(event.request).then(cached => cached || fetch(event.request).then(response => {
-      if (url.origin === self.location.origin) {
-        const clone = response.clone()
-        caches.open(CACHE).then(cache => cache.put(event.request, clone))
+  if (url.origin !== self.location.origin) return
+
+  // Online first for the app itself. This prevents an old installed/cache-first
+  // version from hiding new interface controls after an update.
+  event.respondWith((async () => {
+    try {
+      const response = await fetch(event.request, { cache: 'no-cache' })
+      if (response && response.ok) {
+        const cache = await caches.open(CACHE)
+        cache.put(event.request, response.clone())
       }
       return response
-    }).catch(() => caches.match('./index.html')))
-  )
+    } catch (error) {
+      const cached = await caches.match(event.request, { ignoreSearch: true })
+      if (cached) return cached
+      if (event.request.mode === 'navigate') {
+        return (await caches.match('./index.html')) || (await caches.match('./'))
+      }
+      throw error
+    }
+  })())
 })

@@ -163,3 +163,14 @@ textarea{resize:vertical;min-height:110px}
 .choice:has(input:checked)::after{content:'✓';position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--primary);color:#fff;font-weight:900;font-size:.85rem}
 
 .install-help-action{margin-top:12px;width:100%}.install-modal-card{padding-top:58px}.install-ready{background:#e7f4e4;border:1px solid #7fb77d;border-radius:12px;padding:13px;margin:12px 0}.install-ready p{margin:0 0 10px;font-weight:700}.install-manual{margin-top:12px}.install-manual h3{margin:0 0 8px}.install-steps{margin:0;padding-left:24px}.install-steps li{padding:5px 0}.install-steps strong{color:var(--primary-darker)}
+
+/* Gobernanza comunitaria de datos · v0.5.4 */
+.data-control-help{background:#fff}
+.data-rights-rule{margin-top:12px}
+.governance-values strong{color:var(--primary-darker)}
+.governance-frameworks{margin-top:14px;padding:12px;border:1px solid #b7d5e8;border-radius:10px;background:#f5fafc}
+.governance-frameworks h4{margin:0 0 8px;color:var(--primary-darker);font-size:1rem}
+.framework-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.framework-links a{display:inline-flex;align-items:center;min-height:44px;padding:8px 10px;border:1px solid var(--primary);border-radius:8px;color:var(--primary-darker);font-weight:800;text-decoration:none;background:#fff}
+.framework-links a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media(max-width:620px){.framework-links{display:grid;grid-template-columns:1fr}.framework-links a{width:100%}}

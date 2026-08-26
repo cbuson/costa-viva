@@ -116,3 +116,16 @@ Se incorpora la relación con ODS 10, 11, 13, 14, 16 y 17 dejando claro que no e
 - Instrucciones manuales adaptadas a Android, iOS y escritorio cuando no existe prompt nativo.
 - Detección de modo standalone para no ofrecer instalación después de instalar la PWA.
 - Ocultación automática de las acciones de instalación tras appinstalled.
+
+## v0.5.3 · actualización PWA en móviles
+
+Se cambia la estrategia del Service Worker de cache first a network first para recursos propios. El objetivo es evitar que un teléfono siga mostrando una interfaz anterior después de publicar una actualización en GitHub Pages. El nuevo Service Worker fuerza la actualización de su registro y recarga una sola vez cuando una nueva versión toma el control. El funcionamiento offline se conserva mediante fallback a caché.
+
+
+## Auditoría v0.5.4
+
+- Se añadió gobernanza comunitaria de datos en la información del proyecto.
+- Se añadió una explicación práctica en Ayuda sobre quién puede ver, compartir y solicitar los registros.
+- Se verificó que no se afirme cumplimiento ni certificación OCAP®.
+- Se explicita que CARE y OCAP® son referencias y que los acuerdos propios de cada comunidad prevalecen.
+- Se mantiene la arquitectura local first y no se añade transmisión automática de registros.

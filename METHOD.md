@@ -155,3 +155,12 @@ Una visita puede documentar varios efectos al mismo tiempo. Por ejemplo, el mar 
 COSTA VIVA permite seleccionar varias categorías dentro del mismo registro cuando corresponden al mismo lugar y momento.
 
 La categoría `Sin cambio aparente` no debe combinarse con categorías que describen un cambio. La aplicación aplica esta restricción automáticamente.
+
+
+## Gobernanza de los registros comunitarios
+
+COSTA VIVA separa técnicamente registrar de compartir. La creación de un registro no supone consentimiento para investigación, publicación, cesión a terceros ni transferencia automática a un servidor del proyecto.
+
+Antes de compartir conjuntos de registros para investigación o uso institucional se recomienda acordar al menos la finalidad, las personas o entidades con acceso, el tratamiento de localizaciones sensibles, la forma de reconocimiento, la devolución de resultados y las condiciones para usos posteriores.
+
+Esta orientación toma como referencia los principios CARE para la gobernanza de datos indígenas. OCAP® se reconoce como una referencia específica de las First Nations de Canadá y no como una certificación aplicable automáticamente a COSTA VIVA.

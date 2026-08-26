@@ -30,6 +30,22 @@ COSTA VIVA se alinea principalmente con el ODS 13 Acción por el clima, ODS 11 C
 
 Esta relación expresa afinidad con esos objetivos y no implica reconocimiento o certificación oficial por parte de Naciones Unidas.
 
+## Gobernanza comunitaria de los datos
+
+COSTA VIVA parte de un principio central
+
+**Registrar no significa ceder.**
+
+Los registros permanecen inicialmente en el dispositivo y no se envían automáticamente al autor, a investigadores, universidades o instituciones. No existe una cuenta obligatoria ni un repositorio central de registros comunitarios.
+
+La comunidad decide si conserva, exporta o comparte la información. Cuando una organización o investigador solicita utilizarla, debería explicar la finalidad, quién tendrá acceso, cómo será protegida y qué beneficio o devolución puede recibir la comunidad.
+
+El diseño busca favorecer control comunitario, decisión informada, finalidad conocida, beneficio colectivo, reconocimiento, protección de información territorial sensible y derecho a no compartir.
+
+Como referencias éticas se consideran los principios CARE para la gobernanza de datos indígenas, centrados en beneficio colectivo, autoridad para controlar, responsabilidad y ética. También se reconoce OCAP® como un marco relacionado y específico de las First Nations de Canadá sobre propiedad, control, acceso y posesión. COSTA VIVA no afirma certificación, adopción formal ni cumplimiento OCAP®.
+
+La aplicación no sustituye los acuerdos propios que cada comunidad establezca sobre la producción, custodia, acceso, uso y devolución de sus datos.
+
 ## Autor
 
 Carlos Busón Buesa

@@ -113,6 +113,19 @@ COSTA VIVA intenta utilizar Web Share API con el paquete ZIP cuando el dispositi
 
 Cuando no es posible, descarga el paquete para que la persona pueda adjuntarlo manualmente.
 
+## Gobernanza comunitaria de los datos
+
+COSTA VIVA aplica una arquitectura local first. No existe un repositorio central de registros comunitarios ni una cuenta obligatoria que envíe automáticamente los datos de campo al autor, a una universidad o a otra institución.
+
+Registrar no significa ceder. La comunidad decide si conserva, exporta o comparte la información.
+
+La aplicación incorpora como referencias éticas los principios CARE para la gobernanza de datos indígenas. También reconoce OCAP® como un marco relacionado y específico de las First Nations de Canadá. COSTA VIVA no afirma certificación, adopción formal ni cumplimiento OCAP®.
+
+Referencias
+
+- Global Indigenous Data Alliance. CARE Principles for Indigenous Data Governance. https://www.gida-global.org/careprinciples
+- First Nations Information Governance Centre. The First Nations Principles of OCAP®. https://fnigc.ca/ocap-training/
+
 ## Privacidad
 
 No incluye publicidad.
@@ -185,3 +198,13 @@ La versión v0.5.0 permanece como registro archivado e inmutable. Esta actualiza
 La versión 0.5.2 hace visible la instalación de COSTA VIVA como PWA. El botón Instalar permanece accesible en la cabecera cuando la aplicación no está instalada y se añade una segunda acción de instalación dentro de Ayuda.
 
 Cuando el navegador ofrece el flujo nativo de instalación, COSTA VIVA lo utiliza. Cuando ese flujo no está disponible, la aplicación muestra instrucciones adaptadas a Android, iOS o escritorio sin simular una instalación que el navegador no haya realizado.
+
+### Actualización móvil v0.5.3
+
+La caché de la PWA usa ahora una estrategia online first para los recursos propios. Cuando existe conexión, COSTA VIVA busca la versión publicada más reciente. Si no existe conexión, utiliza la copia local. Esto reduce el riesgo de que un celular continúe mostrando una interfaz antigua después de una actualización.
+
+## Versión 0.5.4
+
+La versión 0.5.4 incorpora una política visible de gobernanza comunitaria de los datos en el panel de información y una ayuda práctica para las personas usuarias. Se explicita que registrar no significa ceder, que no existe transferencia automática de los registros comunitarios y que compartir requiere una decisión consciente.
+
+Se añaden como referencias los principios CARE para la gobernanza de datos indígenas y OCAP® en su contexto específico de las First Nations de Canadá, sin reclamar certificación ni adopción formal de esos marcos.
