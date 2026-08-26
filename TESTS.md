@@ -312,3 +312,12 @@ Pruebas históricas del flujo anterior, sustituidas por ZIP en 0.5.15.
 8. Pulsar Guardar ZIP y comprobar que siempre descarga el archivo.
 9. Importar el ZIP en otra instalación de COSTA VIVA.
 10. Confirmar compatibilidad de importación con un `.cvpack` antiguo.
+
+
+## Menú nativo de compartir · 0.5.16
+
+- [ ] En Android con ZIP admitido, Abrir menú para compartir entrega el ZIP a la hoja nativa.
+- [ ] En Android con ZIP bloqueado, COSTA VIVA guarda el ZIP y abre de todos modos la hoja nativa mediante Web Share de texto.
+- [ ] WhatsApp, correo u otra aplicación pueden seleccionarse desde la hoja nativa.
+- [ ] El mensaje indica el nombre del ZIP guardado y que puede adjuntarse desde Descargas si no viaja automáticamente.
+- [ ] Cancelar la hoja de compartir no genera mensajes falsos de envío.

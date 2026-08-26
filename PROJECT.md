@@ -133,3 +133,8 @@ La comprobación es deliberadamente conservadora y transparente. Su función es 
 ## Intercambio universal mediante ZIP
 
 Desde la versión 0.5.15 el formato principal para intercambio comunitario es ZIP estándar. La elección busca que una comunidad pueda abrir, conservar y trasladar sus propios archivos sin depender de una extensión específica de COSTA VIVA. El ZIP se crea localmente y conserva solamente los componentes que la persona decidió incluir.
+
+
+### Compartir en navegadores móviles · 0.5.16
+
+La interfaz distingue entre preparar el paquete, adjuntar el ZIP y abrir el menú del sistema. Un navegador puede permitir Web Share y a la vez bloquear ZIP. En ese caso COSTA VIVA no presenta el archivo como enviado. Lo guarda y abre el selector nativo para mantener un flujo comprensible hacia WhatsApp, correo u otras aplicaciones.

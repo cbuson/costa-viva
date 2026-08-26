@@ -297,3 +297,8 @@ La función de intercambio comunitario utiliza ahora un flujo en dos pasos. Prim
 El intercambio comunitario adopta ZIP como formato principal. El archivo es un ZIP estándar y transparente que puede abrirse fuera de COSTA VIVA. Contiene `manifest.json`, `registros.json`, `registros.csv`, `LEEME-README.txt`, `puntos.geojson` cuando se comparten coordenadas y las fotografías, vídeos o audios seleccionados. Las fotografías pueden incluir original y versión documentada cuando ambas están disponibles.
 
 El botón Compartir ZIP intenta entregar el ZIP al menú nativo mediante Web Share. Como los navegadores no garantizan el intercambio directo de archivos ZIP, COSTA VIVA comprueba la compatibilidad en el dispositivo. Cuando no es posible, guarda el ZIP localmente para que pueda adjuntarse manualmente. El botón Guardar ZIP siempre conserva una copia local.
+
+
+## Versión 0.5.16
+
+El botón de intercambio abre siempre que sea posible el menú nativo de compartir del dispositivo. Primero intenta adjuntar el ZIP directamente. Si el navegador bloquea archivos ZIP, COSTA VIVA guarda el ZIP en Descargas y abre igualmente la hoja de compartir con un mensaje de acompañamiento para que la persona pueda elegir WhatsApp, correo u otra aplicación. El navegador no puede forzar que una aplicación receptora adjunte un ZIP que Chrome ha rechazado, por lo que en ese caso el archivo debe añadirse como documento desde Descargas.

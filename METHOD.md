@@ -197,3 +197,8 @@ Cuando la geometría simplificada no permite clasificar con seguridad una ubicac
 ZIP se adopta como formato principal porque es abierto, ampliamente reconocido y puede inspeccionarse sin depender de COSTA VIVA. El paquete conserva estructura y trazabilidad mediante `manifest.json` y `registros.json`. El archivo `LEEME-README.txt` explica el contexto de intercambio y recuerda que registrar o compartir no implica cesión automática de derechos.
 
 La posibilidad de enviar el ZIP directamente depende del navegador y del sistema operativo. COSTA VIVA comprueba esa capacidad antes de invocar el menú nativo. Si el navegador no acepta ZIP en Web Share, el archivo se guarda localmente para adjuntarlo manualmente.
+
+
+## Intercambio desde el celular · v0.5.16
+
+COSTA VIVA intenta compartir el ZIP estándar directamente. Si el navegador no autoriza ese tipo de archivo mediante Web Share, el ZIP se guarda localmente y la aplicación abre igualmente el menú nativo mediante un mensaje de acompañamiento. La persona conserva la decisión sobre la aplicación destinataria y, cuando sea necesario, adjunta manualmente el ZIP desde Descargas.

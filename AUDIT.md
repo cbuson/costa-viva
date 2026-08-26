@@ -195,3 +195,8 @@ Se detectó que la creación asíncrona del paquete podía consumir la activaci�
 Se sustituye `.cvpack` como formato principal de intercambio por ZIP estándar. El contenido mantiene manifiesto, registros estructurados y evidencias seleccionadas. La aplicación intenta compartir el ZIP directamente solo cuando el navegador declara que el archivo es compartible. Si Web Share no admite ZIP, se guarda el archivo localmente para adjuntarlo mediante la aplicación elegida por la persona usuaria. No se realiza ninguna subida automática ni se crea una copia en servidores de COSTA VIVA.
 
 La importación acepta tanto el nuevo formato `costa-viva-zip` versión 2 como el antiguo `costa-viva-cvpack` versión 1 para preservar compatibilidad.
+
+
+## Auditoría de compartir · 0.5.16
+
+Se separa la capacidad de compartir el archivo ZIP de la capacidad de abrir la hoja nativa del sistema. Cuando Chromium rechaza `application/zip`, la aplicación conserva el archivo localmente y usa Web Share de texto para abrir el selector de aplicaciones. Esta estrategia no afirma que el ZIP haya sido enviado cuando el navegador no permite adjuntarlo.
