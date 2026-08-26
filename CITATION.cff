@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "Si utiliza COSTA VIVA, cite este software."
+title: "COSTA VIVA"
+version: "0.5.0"
+type: software
+license: MIT
+abstract: "COSTA VIVA es una aplicación web progresiva abierta y bilingüe de ciencia popular para el monitoreo comunitario de cambios costeros mediante teléfonos móviles. Permite registrar observaciones georreferenciadas, fotografías, vídeos, audios, notas, mediciones sencillas y puntos permanentes de seguimiento, conservando información sobre posición, precisión, fecha, hora y método."
+authors:
+  - given-names: "Carlos"
+    family-names: "Busón Buesa"
+    affiliation: "Universidade Federal de Mato Grosso do Sul"
+    orcid: "https://orcid.org/0000-0002-1446-2252"
+keywords:
+  - "ciencia popular"
+  - "monitoreo comunitario"
+  - "erosión costera"
+  - "cambio costero"
+  - "comunidades costeras"
+  - "ciencia ciudadana"
+  - "WebGIS"
+  - "PWA"
+  - "teléfonos móviles"
+  - "monitoreo ambiental"
+  - "La Guajira"
+  - "Arroyo Guerrero"
+  - "Wayuu"
+  - "cambio climático"
+  - "adaptación climática"
+repository-code: "https://github.com/cbuson/costa-viva"
+url: "https://cbuson.github.io/costa-viva/"
+date-released: "2026-08-26"
