@@ -361,7 +361,7 @@ Pruebas pendientes en dispositivo físico
 - tras recargar la aplicación se intenta recuperar el identificador de carpeta guardado y se vuelve a solicitar permiso cuando sea necesario
 
 
-## Pruebas v0.5.20 · Evolución e informe
+## Pruebas v0.5.21 · Evolución e informe
 
 - Crear un punto permanente y al menos dos observaciones vinculadas. Verificar que **VER EVOLUCIÓN** abre la cronología.
 - Añadir fotografías en dos fechas. Verificar el control Antes/Ahora y que no se inventa una comparación métrica.
@@ -372,3 +372,19 @@ Pruebas pendientes en dispositivo físico
 - Confirmar que el identificador del informe queda visible en el historial local.
 - Con carpeta COSTA VIVA conectada, guardar el PDF y su JSON en `Informes`.
 - Exportar ZIP completo y confirmar `informes/historial-informes.json`.
+
+
+## Pruebas v0.5.21 · estadísticas y almacenamiento
+
+1. Abrir Cuaderno sin registros y verificar que todas las estadísticas muestran cero.
+2. Crear un punto permanente y comprobar que aumenta Registros y Puntos permanentes.
+3. Crear una segunda observación asociada al mismo punto y comprobar que Puntos revisitados aumenta a uno.
+4. Añadir foto, vídeo y audio y verificar recuentos y aumento del peso de evidencias multimedia.
+5. Abrir Exportar y comprobar que el uso y margen del navegador aparecen solo cuando `navigator.storage.estimate()` está disponible.
+6. Verificar que la ayuda no presenta el margen como espacio libre total del teléfono.
+7. Pulsar Solicitar protección y comprobar los estados concedido, denegado y no compatible.
+8. Generar un informe y comprobar que aumenta el contador de informes.
+9. Descargar un ZIP completo y comprobar que se registra la fecha de la última copia.
+10. Crear un registro posterior y comprobar la advertencia de copia pendiente.
+11. Guardar todo en Carpeta COSTA VIVA y comprobar que la fecha y tipo de la última copia se actualizan a Carpeta.
+12. Cambiar ES, PT y WY y verificar que no aparecen claves internas sin traducir.

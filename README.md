@@ -323,7 +323,7 @@ El ZIP continúa siendo el formato recomendado para enviar por WhatsApp, correo 
 La carpeta externa no sustituye IndexedDB. Es una copia adicional bajo control de la persona usuaria. COSTA VIVA no obtiene acceso a ninguna carpeta hasta que la persona la selecciona y autoriza expresamente.
 
 
-## Versión 0.5.20 · evolución local e informe comunitario de evidencias
+## Versión 0.5.21 · evolución local e informe comunitario de evidencias
 
 Se incorpora una vista **Evolución del punto** para puntos permanentes. La comparación se realiza localmente en el dispositivo y reúne cronología, fotografías de fechas distintas y, cuando existen al menos dos mediciones compatibles, una gráfica de distancia documentada.
 
@@ -332,3 +332,12 @@ La gráfica es deliberadamente conservadora. Solo considera mediciones declarada
 En **Exportar** se añade **Informe comunitario de evidencias**. El usuario selecciona el seguimiento, el motivo de presentación, si desea incluir coordenadas exactas y una muestra fotográfica. El PDF se genera completamente en el dispositivo y puede descargarse o guardarse en `COSTA VIVA/Informes`. Cada informe recibe un identificador `CV-INF-AAAA-NNNNN` y su metadato de generación queda registrado localmente.
 
 El informe declara expresamente que organiza evidencias comunitarias y que no constituye por sí solo peritaje, certificación técnica, atribución causal ni determinación jurídica. El ZIP completo incorpora además `informes/historial-informes.json`.
+
+
+## Versión 0.5.21 · estadísticas locales y protección del cuaderno
+
+COSTA VIVA incorpora un resumen de seguimiento y un panel de almacenamiento calculados íntegramente en el dispositivo. El Cuaderno muestra registros, puntos permanentes, puntos revisitados, informes y días de seguimiento documentado. Exportar muestra una estimación del uso de la cuota del navegador, el margen estimado, el peso de las evidencias multimedia, el último respaldo completo y el estado de almacenamiento persistente cuando el navegador ofrece esa capacidad.
+
+Las cifras no se envían a COSTA VIVA ni a un servidor central. La estimación de `navigator.storage.estimate()` corresponde a la cuota del origen en el navegador y no debe interpretarse como espacio libre total del teléfono. Tampoco incluye ZIP descargados ni copias escritas en una carpeta externa COSTA VIVA.
+
+La aplicación permite solicitar almacenamiento persistente mediante `navigator.storage.persist()` cuando está disponible. La concesión depende del navegador y no sustituye la necesidad de copias periódicas.

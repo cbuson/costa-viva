@@ -217,10 +217,19 @@ Cada copia completa crea una exportación fechada con manifiesto, README, JSON, 
 Para transferencia se recomienda el ZIP porque aplicaciones de mensajería y correo no admiten de forma uniforme el envío directo de carpetas. La carpeta completa puede copiarse o transferirse con gestores de archivos o servicios que sí permitan directorios.
 
 
-## Evolución temporal e informes de evidencias · v0.5.20
+## Evolución temporal e informes de evidencias · v0.5.21
 
 La evolución temporal se construye únicamente con observaciones vinculadas al mismo punto permanente. La comparación fotográfica sirve como memoria visual y no se transforma automáticamente en una distancia de retroceso o avance.
 
 Una serie cuantitativa se considera comparable en esta versión cuando las mediciones han sido registradas con cinta métrica, sobre la misma línea objetivo y con la misma referencia fija declarada. Las unidades m y cm se normalizan internamente a metros para la gráfica. Pasos y estimaciones pueden conservarse en el registro, pero no entran en la gráfica de mediciones comparables.
 
 El informe comunitario de evidencias es una salida documental. Organiza cronología, observaciones, métodos, precisión disponible, fotografías y una serie comparable cuando existe. Su finalidad es facilitar comunicación y presentación de evidencia documentada. No sustituye peritajes, levantamientos profesionales, atribuciones causales ni decisiones de autoridad.
+
+
+## Control local del almacenamiento · v0.5.21
+
+Como parte del enfoque local-first, la aplicación informa a la persona usuaria sobre el volumen aproximado ocupado por el origen web, el peso de las evidencias multimedia guardadas en IndexedDB y la existencia o no de una copia completa reciente. Las estadísticas se calculan localmente y no se transmiten.
+
+La cuota presentada procede, cuando existe soporte, de `StorageManager.estimate()`. Es una estimación de la cuota concedida por el navegador y no equivale al espacio libre del dispositivo. La aplicación distingue además el almacenamiento gestionado por el navegador de los ZIP descargados y de las copias externas escritas en una carpeta elegida por la persona.
+
+Cuando el navegador ofrece `StorageManager.persist()`, COSTA VIVA permite solicitar protección persistente. Esta solicitud reduce el riesgo de eliminación automática por presión de almacenamiento en navegadores que la respetan, pero no constituye una garantía absoluta frente a pérdida, borrado manual, daño del dispositivo o reinstalación. La copia ZIP o en carpeta continúa siendo la medida de conservación recomendada.

@@ -387,3 +387,40 @@ close,Cerrar,Asürülaa,PENDIENTE DE REVISIÓN LOCAL,,,
 unavailableShort,No disponible,Nnojotsü eewain,PENDIENTE DE REVISIÓN LOCAL,,,
 independentLabel,Independiente,Wane'ewaika,PENDIENTE DE REVISIÓN LOCAL,,,
 newPermanentLabel,Nuevo punto permanente,Apülee ichee jeketü,PENDIENTE DE REVISIÓN LOCAL,,,
+trackingSummaryTitle,Mi seguimiento,Mi seguimiento · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+trackingSummaryIntro,Resumen local del trabajo acumulado en este dispositivo.,Resumen local del trabajo acumulado en este dispositivo. · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+trackingRecords,Registros,Registros · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+trackingPoints,Puntos permanentes,Puntos permanentes · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+trackingRevisited,Puntos revisitados,Puntos revisitados · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+trackingReports,Informes,Informes · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+trackingDays,Días de seguimiento documentado,Días de seguimiento documentado · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+trackingLocalOnly,Estas estadísticas se calculan únicamente en este dispositivo. COSTA VIVA no las envía a ningún servidor.,Estas estadísticas se calculan únicamente en este dispositivo. COSTA VIVA no las envía a ningún servidor. · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageTitle,Almacenamiento local,Almacenamiento local · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageIntro,Comprueba cuánto trabajo conserva COSTA VIVA en este navegador y cuándo hiciste la última copia completa.,Comprueba cuánto trabajo conserva COSTA VIVA en este navegador y cuándo hiciste la última copia completa. · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageUsed,Uso local aproximado,Uso local aproximado · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageAvailable,Margen del navegador,Margen del navegador · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageMediaPayload,Evidencias multimedia,Evidencias multimedia · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+lastFullBackup,Última copia completa,Última copia completa · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageAudios,Audios,Audios · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageProtectionTitle,Protección del almacenamiento,Protección del almacenamiento · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageProtectionChecking,Comprobando…,Comprobando… · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageProtectionPersistent,Persistente solicitado y concedido por el navegador.,Persistente solicitado y concedido por el navegador. · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageProtectionStandard,Almacenamiento estándar del navegador. Conviene mantener copias periódicas.,Almacenamiento estándar del navegador. Conviene mantener copias periódicas. · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageProtectionUnsupported,Este navegador no informa sobre almacenamiento persistente.,Este navegador no informa sobre almacenamiento persistente. · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+requestStorageProtection,SOLICITAR PROTECCIÓN,SOLICITAR PROTECCIÓN · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageProtectionGranted,El navegador concedió almacenamiento persistente.,El navegador concedió almacenamiento persistente. · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageProtectionDenied,El navegador no concedió almacenamiento persistente.,El navegador no concedió almacenamiento persistente. · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+backupNow,HACER COPIA ZIP AHORA,HACER COPIA ZIP AHORA · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+refreshStorage,ACTUALIZAR,ACTUALIZAR · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageEstimateHelp,La estimación corresponde a la cuota del navegador y no al espacio libre total del teléfono.,La estimación corresponde a la cuota del navegador y no al espacio libre total del teléfono. · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageNoRecords,Aún no hay registros guardados.,Aún no hay registros guardados. · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageBackupMissing,Todavía no consta una copia completa.,Todavía no consta una copia completa. · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageBackupPending,Hay registros posteriores a la última copia.,Hay registros posteriores a la última copia. · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageBackupCurrent,La copia completa está al día respecto del último registro guardado.,La copia completa está al día respecto del último registro guardado. · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageQuotaHigh,La cuota local del navegador está muy utilizada.,La cuota local del navegador está muy utilizada. · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageNotAvailable,No disponible,No disponible · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageNever,Nunca,Nunca · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+backupTypeZip,ZIP,ZIP · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+backupTypeFolder,Carpeta,Carpeta · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageBackupRecorded,Copia completa registrada.,Copia completa registrada. · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.
+storageRefreshDone,Estadísticas actualizadas.,Estadísticas actualizadas. · WY revisión,PENDIENTE DE REVISIÓN LOCAL,,,Módulo v0.5.21. No se afirma traducción validada.

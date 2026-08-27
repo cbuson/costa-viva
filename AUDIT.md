@@ -219,10 +219,23 @@ Se mantiene un ZIP estándar y se añade una carpeta visible bajo permiso explí
 La función debe validarse todavía en los teléfonos Android objetivo. Si el navegador no admite File System Access la aplicación no presenta una carpeta ficticia y mantiene la descarga ZIP como alternativa.
 
 
-## Auditoría funcional v0.5.20
+## Auditoría funcional v0.5.21
 
 Se añade una capa de devolución visible del seguimiento a la comunidad mediante dos funciones locales. **Evolución del punto** transforma registros del mismo punto permanente en una secuencia visual sin realizar inferencias causales automáticas. **Informe comunitario de evidencias** produce un PDF local identificable y exportable.
 
 Control metodológico principal. La gráfica cuantitativa no mezcla estimaciones, pasos ni referencias distintas. En esta versión solo grafica mediciones con cinta, misma línea objetivo y misma referencia fija. El PDF incluye un descargo explícito sobre precisión del dispositivo, alcance no pericial y ausencia de determinación causal o jurídica.
 
 Control de soberanía. La generación del informe no requiere servidor. El historial de informes permanece en IndexedDB. El usuario decide si incorpora coordenadas exactas y si guarda el PDF fuera del almacenamiento interno. `Registrar no significa ceder` permanece como regla de gobernanza.
+
+
+## Auditoría funcional v0.5.21 · almacenamiento local
+
+Se añadió un panel de almacenamiento con cálculo local de multimedia, estimación de uso y cuota del navegador, estado de persistencia y fecha de la última copia completa. Se añadió un resumen local del seguimiento en Cuaderno.
+
+Criterios de cautela aplicados
+
+- La cuota del navegador no se presenta como espacio libre total del teléfono.
+- Los archivos externos descargados o escritos en la carpeta COSTA VIVA no se incluyen en el cálculo del origen.
+- La persistencia se solicita mediante acción explícita y no se presenta como garantía absoluta.
+- Las estadísticas permanecen locales y no generan telemetría.
+- Una copia se marca al preparar un ZIP completo o terminar correctamente una copia completa en la carpeta COSTA VIVA.

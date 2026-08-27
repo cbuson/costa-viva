@@ -645,7 +645,7 @@
   })
 
 
-  // v0.5.20 · evolución local e informe comunitario de evidencias
+  // v0.5.21 · evolución local e informe comunitario de evidencias
   Object.assign(i18n.es, {
     evidenceReportTitle: 'Informe comunitario de evidencias',
     evidenceReportIntro: 'Convierte una serie de observaciones en un documento ordenado para mostrar a autoridades, organizaciones o técnicos.',
@@ -670,7 +670,7 @@
     noComparableMeasurements: 'Todavía no hay al menos dos mediciones con cinta suficientemente comparables para construir una gráfica.',
     documentedDistance: 'Distancia documentada', timeline: 'Línea del tiempo', evidenceCount: 'evidencias', measurementsCount: 'mediciones',
     reportCommunityEvidence: 'INFORME COMUNITARIO DE EVIDENCIAS COSTERAS', reportIdLabel: 'Identificador del informe', reportGeneratedLabel: 'Generado', reportPeriodLabel: 'Periodo observado', reportRecordsLabel: 'Registros incluidos', reportPhotosLabel: 'Fotografías', reportPurposeLabel: 'Motivo de presentación', reportRequestLabel: 'Solicitud o explicación', reportScopeLabel: 'Ámbito', reportMethodTitle: 'Alcance metodológico', reportSeriesTitle: 'Serie de observaciones', reportPhotoTitle: 'Evidencia fotográfica', reportMeasurementTitle: 'Serie de mediciones comparables', reportCoordinatesHidden: 'Coordenadas exactas ocultadas por decisión de quien genera el informe.', reportCautionText: 'Este documento organiza evidencias comunitarias registradas con COSTA VIVA. No constituye por sí solo un peritaje, una certificación técnica, una atribución causal ni una determinación jurídica. Las posiciones proceden del dispositivo y deben leerse junto con la precisión registrada. Las mediciones se presentan con el método declarado por quien realizó la observación.', reportGovernanceText: 'Registrar no significa ceder. La comunidad o persona que produce los registros decide su conservación y su entrega.', reportPhotoLimit: 'El PDF incluye una muestra de hasta 12 fotografías. Los archivos completos pueden conservarse en el ZIP o en la carpeta COSTA VIVA.',
-    methodTapeLabel: 'Cinta métrica', reportVersionLabel: 'COSTA VIVA v0.5.20'
+    methodTapeLabel: 'Cinta métrica', reportVersionLabel: 'COSTA VIVA v0.5.21'
   })
 
   Object.assign(i18n.pt, {
@@ -687,13 +687,29 @@
     reportIncludeCoordinates: 'Incluir coordenadas exatas', reportIncludePhotos: 'Incluir amostra fotográfica', reportSensitiveWarning: 'Se o local for sensível, desmarque as coordenadas exatas. O relatório pode manter o código do ponto sem revelar sua posição.',
     createReportPdf: 'CRIAR RELATÓRIO PDF', downloadReportPdf: 'BAIXAR PDF', saveReportFolder: 'SALVAR NA PASTA COSTA VIVA', reportPreparing: 'Preparando o relatório neste dispositivo.', reportReady: 'Relatório {value} preparado e registrado neste dispositivo.', reportFailed: 'Não foi possível criar o relatório.', reportSavedFolder: 'Relatório salvo na pasta COSTA VIVA.',
     reportHistoryTitle: 'Relatórios registrados neste dispositivo', reportHistoryEmpty: 'Ainda não foi gerado nenhum relatório.', viewEvolution: 'VER EVOLUÇÃO', evolutionTitle: 'Evolução do ponto', reportThisPoint: 'GERAR RELATÓRIO DESTE PONTO', campaigns: 'campanhas', firstObservation: 'Primeira observação', lastObservation: 'Última observação', elapsedTime: 'Período', days: 'dias', before: 'ANTES', now: 'AGORA', photographicComparison: 'Comparação fotográfica', photographicComparisonUnavailable: 'São necessárias fotografias de pelo menos duas datas para mostrar a comparação.', comparableMeasurements: 'Medições comparáveis', comparableMeasurementRule: 'O gráfico usa somente medições com fita, a mesma linha medida e a mesma referência fixa. Não converte fotografias nem estimativas em metros de erosão.', noComparableMeasurements: 'Ainda não existem pelo menos duas medições com fita suficientemente comparáveis para construir um gráfico.', documentedDistance: 'Distância documentada', timeline: 'Linha do tempo', evidenceCount: 'evidências', measurementsCount: 'medições',
-    reportCommunityEvidence: 'RELATÓRIO COMUNITÁRIO DE EVIDÊNCIAS COSTEIRAS', reportIdLabel: 'Identificador do relatório', reportGeneratedLabel: 'Gerado', reportPeriodLabel: 'Período observado', reportRecordsLabel: 'Registros incluídos', reportPhotosLabel: 'Fotografias', reportPurposeLabel: 'Motivo da apresentação', reportRequestLabel: 'Solicitação ou explicação', reportScopeLabel: 'Âmbito', reportMethodTitle: 'Alcance metodológico', reportSeriesTitle: 'Série de observações', reportPhotoTitle: 'Evidência fotográfica', reportMeasurementTitle: 'Série de medições comparáveis', reportCoordinatesHidden: 'Coordenadas exatas ocultadas por decisão de quem gera o relatório.', reportCautionText: 'Este documento organiza evidências comunitárias registradas com COSTA VIVA. Não constitui por si só perícia, certificação técnica, atribuição causal ou determinação jurídica. As posições procedem do dispositivo e devem ser lidas junto com a precisão registrada. As medições são apresentadas com o método declarado por quem realizou a observação.', reportGovernanceText: 'Registrar não significa ceder. A comunidade ou pessoa que produz os registros decide sua conservação e sua entrega.', reportPhotoLimit: 'O PDF inclui uma amostra de até 12 fotografias. Os arquivos completos podem ser conservados no ZIP ou na pasta COSTA VIVA.', methodTapeLabel: 'Fita métrica', reportVersionLabel: 'COSTA VIVA v0.5.20'
+    reportCommunityEvidence: 'RELATÓRIO COMUNITÁRIO DE EVIDÊNCIAS COSTEIRAS', reportIdLabel: 'Identificador do relatório', reportGeneratedLabel: 'Gerado', reportPeriodLabel: 'Período observado', reportRecordsLabel: 'Registros incluídos', reportPhotosLabel: 'Fotografias', reportPurposeLabel: 'Motivo da apresentação', reportRequestLabel: 'Solicitação ou explicação', reportScopeLabel: 'Âmbito', reportMethodTitle: 'Alcance metodológico', reportSeriesTitle: 'Série de observações', reportPhotoTitle: 'Evidência fotográfica', reportMeasurementTitle: 'Série de medições comparáveis', reportCoordinatesHidden: 'Coordenadas exatas ocultadas por decisão de quem gera o relatório.', reportCautionText: 'Este documento organiza evidências comunitárias registradas com COSTA VIVA. Não constitui por si só perícia, certificação técnica, atribuição causal ou determinação jurídica. As posições procedem do dispositivo e devem ser lidas junto com a precisão registrada. As medições são apresentadas com o método declarado por quem realizou a observação.', reportGovernanceText: 'Registrar não significa ceder. A comunidade ou pessoa que produz os registros decide sua conservação e sua entrega.', reportPhotoLimit: 'O PDF inclui uma amostra de até 12 fotografias. Os arquivos completos podem ser conservados no ZIP ou na pasta COSTA VIVA.', methodTapeLabel: 'Fita métrica', reportVersionLabel: 'COSTA VIVA v0.5.21'
   })
 
   // El módulo nuevo se mantiene legible en la interfaz WY sin inventar una traducción no validada.
   // Estas cadenas deben revisarse con hablantes Wayuu y expertos locales antes de sustituirlas.
   Object.assign(i18n.guc, {
-    evidenceReportTitle: 'Informe comunitario de evidencias · WY revisión', evidenceReportIntro: 'Módulo nuevo pendiente de revisión comunitaria en Wayuunaiki.', evidenceReportValueTitle: 'Lo que queda registrado', evidenceReportValueText: 'Periodo, registros, fotografías, mediciones, método y precisión disponible.', generateEvidenceReport: 'GENERAR INFORME', evidenceReportCaution: 'Documento comunitario de evidencias. No es un peritaje.', reportBuilderTitle: 'Crear informe de evidencias', reportBuilderIntro: 'Módulo nuevo pendiente de revisión Wayuunaiki.', reportScope: 'Seguimiento incluido', reportAllRecords: 'Todos los registros', reportPointOption: 'Punto permanente {value}', reportPurpose: 'Motivo de presentación', purposeTechnicalVisit: 'Solicitar visita técnica', purposeRiskEvaluation: 'Solicitar evaluación de riesgo', purposeDocumentChange: 'Documentar cambio costero', purposeCommunityRecord: 'Memoria comunitaria', reportRequestNote: 'Solicitud opcional', reportRequestPlaceholder: 'Texto pendiente de revisión Wayuunaiki', reportIncludeCoordinates: 'Incluir coordenadas exactas', reportIncludePhotos: 'Incluir fotografías', reportSensitiveWarning: 'Si el lugar es sensible, puedes ocultar las coordenadas.', createReportPdf: 'CREAR PDF', downloadReportPdf: 'DESCARGAR PDF', saveReportFolder: 'GUARDAR EN CARPETA COSTA VIVA', reportPreparing: 'Preparando informe.', reportReady: 'Informe {value} preparado.', reportFailed: 'No se pudo crear el informe.', reportSavedFolder: 'Informe guardado.', reportHistoryTitle: 'Informes guardados', reportHistoryEmpty: 'Aún no hay informes.', viewEvolution: 'VER EVOLUCIÓN', evolutionTitle: 'Evolución del punto', reportThisPoint: 'GENERAR INFORME DE ESTE PUNTO', campaigns: 'campañas', firstObservation: 'Primera observación', lastObservation: 'Última observación', elapsedTime: 'Periodo', days: 'días', before: 'ANTES', now: 'AHORA', photographicComparison: 'Comparación fotográfica', photographicComparisonUnavailable: 'Se necesitan fotos de dos fechas.', comparableMeasurements: 'Mediciones comparables', comparableMeasurementRule: 'Solo se comparan mediciones con cinta, misma línea y misma referencia.', noComparableMeasurements: 'No hay todavía mediciones comparables.', documentedDistance: 'Distancia documentada', timeline: 'Línea del tiempo', evidenceCount: 'evidencias', measurementsCount: 'mediciones', reportCommunityEvidence: 'INFORME COMUNITARIO DE EVIDENCIAS COSTERAS', reportIdLabel: 'Identificador', reportGeneratedLabel: 'Generado', reportPeriodLabel: 'Periodo', reportRecordsLabel: 'Registros', reportPhotosLabel: 'Fotografías', reportPurposeLabel: 'Motivo', reportRequestLabel: 'Solicitud', reportScopeLabel: 'Ámbito', reportMethodTitle: 'Alcance metodológico', reportSeriesTitle: 'Serie de observaciones', reportPhotoTitle: 'Evidencia fotográfica', reportMeasurementTitle: 'Mediciones comparables', reportCoordinatesHidden: 'Coordenadas ocultadas.', reportCautionText: 'Documento comunitario. No sustituye un peritaje ni determina causas.', reportGovernanceText: 'Registrar no significa ceder.', reportPhotoLimit: 'El PDF incluye hasta 12 fotografías. Los archivos completos permanecen en el ZIP o carpeta.', methodTapeLabel: 'Cinta métrica', reportVersionLabel: 'COSTA VIVA v0.5.20'
+    evidenceReportTitle: 'Informe comunitario de evidencias · WY revisión', evidenceReportIntro: 'Módulo nuevo pendiente de revisión comunitaria en Wayuunaiki.', evidenceReportValueTitle: 'Lo que queda registrado', evidenceReportValueText: 'Periodo, registros, fotografías, mediciones, método y precisión disponible.', generateEvidenceReport: 'GENERAR INFORME', evidenceReportCaution: 'Documento comunitario de evidencias. No es un peritaje.', reportBuilderTitle: 'Crear informe de evidencias', reportBuilderIntro: 'Módulo nuevo pendiente de revisión Wayuunaiki.', reportScope: 'Seguimiento incluido', reportAllRecords: 'Todos los registros', reportPointOption: 'Punto permanente {value}', reportPurpose: 'Motivo de presentación', purposeTechnicalVisit: 'Solicitar visita técnica', purposeRiskEvaluation: 'Solicitar evaluación de riesgo', purposeDocumentChange: 'Documentar cambio costero', purposeCommunityRecord: 'Memoria comunitaria', reportRequestNote: 'Solicitud opcional', reportRequestPlaceholder: 'Texto pendiente de revisión Wayuunaiki', reportIncludeCoordinates: 'Incluir coordenadas exactas', reportIncludePhotos: 'Incluir fotografías', reportSensitiveWarning: 'Si el lugar es sensible, puedes ocultar las coordenadas.', createReportPdf: 'CREAR PDF', downloadReportPdf: 'DESCARGAR PDF', saveReportFolder: 'GUARDAR EN CARPETA COSTA VIVA', reportPreparing: 'Preparando informe.', reportReady: 'Informe {value} preparado.', reportFailed: 'No se pudo crear el informe.', reportSavedFolder: 'Informe guardado.', reportHistoryTitle: 'Informes guardados', reportHistoryEmpty: 'Aún no hay informes.', viewEvolution: 'VER EVOLUCIÓN', evolutionTitle: 'Evolución del punto', reportThisPoint: 'GENERAR INFORME DE ESTE PUNTO', campaigns: 'campañas', firstObservation: 'Primera observación', lastObservation: 'Última observación', elapsedTime: 'Periodo', days: 'días', before: 'ANTES', now: 'AHORA', photographicComparison: 'Comparación fotográfica', photographicComparisonUnavailable: 'Se necesitan fotos de dos fechas.', comparableMeasurements: 'Mediciones comparables', comparableMeasurementRule: 'Solo se comparan mediciones con cinta, misma línea y misma referencia.', noComparableMeasurements: 'No hay todavía mediciones comparables.', documentedDistance: 'Distancia documentada', timeline: 'Línea del tiempo', evidenceCount: 'evidencias', measurementsCount: 'mediciones', reportCommunityEvidence: 'INFORME COMUNITARIO DE EVIDENCIAS COSTERAS', reportIdLabel: 'Identificador', reportGeneratedLabel: 'Generado', reportPeriodLabel: 'Periodo', reportRecordsLabel: 'Registros', reportPhotosLabel: 'Fotografías', reportPurposeLabel: 'Motivo', reportRequestLabel: 'Solicitud', reportScopeLabel: 'Ámbito', reportMethodTitle: 'Alcance metodológico', reportSeriesTitle: 'Serie de observaciones', reportPhotoTitle: 'Evidencia fotográfica', reportMeasurementTitle: 'Mediciones comparables', reportCoordinatesHidden: 'Coordenadas ocultadas.', reportCautionText: 'Documento comunitario. No sustituye un peritaje ni determina causas.', reportGovernanceText: 'Registrar no significa ceder.', reportPhotoLimit: 'El PDF incluye hasta 12 fotografías. Los archivos completos permanecen en el ZIP o carpeta.', methodTapeLabel: 'Cinta métrica', reportVersionLabel: 'COSTA VIVA v0.5.21'
+  })
+
+
+  // v0.5.21 · estadísticas calculadas localmente.
+  Object.assign(i18n.es, {
+    trackingSummaryTitle: 'Mi seguimiento', trackingSummaryIntro: 'Resumen local del trabajo acumulado en este dispositivo.', trackingRecords: 'Registros', trackingPoints: 'Puntos permanentes', trackingRevisited: 'Puntos revisitados', trackingReports: 'Informes', trackingDays: 'Días de seguimiento documentado', trackingLocalOnly: 'Estas estadísticas se calculan únicamente en este dispositivo. COSTA VIVA no las envía a ningún servidor.',
+    storageTitle: 'Almacenamiento local', storageIntro: 'Comprueba cuánto trabajo conserva COSTA VIVA en este navegador y cuándo hiciste la última copia completa.', storageUsed: 'Uso local aproximado', storageAvailable: 'Margen del navegador', storageMediaPayload: 'Evidencias multimedia', lastFullBackup: 'Última copia preparada', storageAudios: 'Audios', storageProtectionTitle: 'Protección del almacenamiento', storageProtectionChecking: 'Comprobando…', storageProtectionPersistent: 'Persistente solicitado y concedido por el navegador.', storageProtectionStandard: 'Almacenamiento estándar del navegador. Conviene mantener copias periódicas.', storageProtectionUnsupported: 'Este navegador no informa sobre almacenamiento persistente.', requestStorageProtection: 'SOLICITAR PROTECCIÓN', storageProtectionGranted: 'El navegador concedió almacenamiento persistente.', storageProtectionDenied: 'El navegador no concedió almacenamiento persistente. COSTA VIVA seguirá funcionando, pero conviene hacer copias periódicas.', backupNow: 'HACER COPIA ZIP AHORA', refreshStorage: 'ACTUALIZAR', storageEstimateHelp: 'El uso y el margen son estimaciones de la cuota que el navegador asigna a COSTA VIVA. No representan el espacio libre total del teléfono y no incluyen ZIP descargados ni copias guardadas en la carpeta COSTA VIVA.', storageNoRecords: 'Aún no hay registros guardados.', storageBackupMissing: 'Hay registros locales y todavía no consta una copia preparada. Recomendamos crear un ZIP o una copia en la carpeta COSTA VIVA.', storageBackupPending: 'El cuaderno cambió después de la última copia preparada. Conviene actualizarla.', storageBackupCurrent: 'No hay cambios posteriores a la última copia preparada.', storageQuotaHigh: 'COSTA VIVA está utilizando una parte alta de la cuota asignada por el navegador. Haz una copia completa antes de seguir acumulando multimedia.', storageNotAvailable: 'No disponible', storageNever: 'Nunca', backupTypeZip: 'ZIP', backupTypeFolder: 'Carpeta', storageBackupRecorded: 'Copia preparada registrada.', storageRefreshDone: 'Estadísticas actualizadas.'
+  })
+  Object.assign(i18n.pt, {
+    trackingSummaryTitle: 'Meu acompanhamento', trackingSummaryIntro: 'Resumo local do trabalho acumulado neste dispositivo.', trackingRecords: 'Registros', trackingPoints: 'Pontos permanentes', trackingRevisited: 'Pontos revisitados', trackingReports: 'Relatórios', trackingDays: 'Dias de acompanhamento documentado', trackingLocalOnly: 'Estas estatísticas são calculadas somente neste dispositivo. COSTA VIVA não as envia a nenhum servidor.',
+    storageTitle: 'Armazenamento local', storageIntro: 'Confira quanto trabalho COSTA VIVA conserva neste navegador e quando foi feita a última cópia completa.', storageUsed: 'Uso local aproximado', storageAvailable: 'Margem do navegador', storageMediaPayload: 'Evidências multimídia', lastFullBackup: 'Última cópia preparada', storageAudios: 'Áudios', storageProtectionTitle: 'Proteção do armazenamento', storageProtectionChecking: 'Verificando…', storageProtectionPersistent: 'Armazenamento persistente solicitado e concedido pelo navegador.', storageProtectionStandard: 'Armazenamento padrão do navegador. É recomendável manter cópias periódicas.', storageProtectionUnsupported: 'Este navegador não informa sobre armazenamento persistente.', requestStorageProtection: 'SOLICITAR PROTEÇÃO', storageProtectionGranted: 'O navegador concedeu armazenamento persistente.', storageProtectionDenied: 'O navegador não concedeu armazenamento persistente. COSTA VIVA continuará funcionando, mas é recomendável fazer cópias periódicas.', backupNow: 'FAZER CÓPIA ZIP AGORA', refreshStorage: 'ATUALIZAR', storageEstimateHelp: 'O uso e a margem são estimativas da cota que o navegador atribui ao COSTA VIVA. Não representam o espaço livre total do celular e não incluem ZIP baixados nem cópias salvas na pasta COSTA VIVA.', storageNoRecords: 'Ainda não há registros salvos.', storageBackupMissing: 'Há registros locais e ainda não consta uma cópia preparada. Recomendamos criar um ZIP ou uma cópia na pasta COSTA VIVA.', storageBackupPending: 'O caderno mudou depois da última cópia preparada. Convém atualizá-la.', storageBackupCurrent: 'Não há alterações posteriores à última cópia preparada.', storageQuotaHigh: 'COSTA VIVA está usando uma parte alta da cota atribuída pelo navegador. Faça uma cópia completa antes de continuar acumulando multimídia.', storageNotAvailable: 'Não disponível', storageNever: 'Nunca', backupTypeZip: 'ZIP', backupTypeFolder: 'Pasta', storageBackupRecorded: 'Cópia preparada registrada.', storageRefreshDone: 'Estatísticas atualizadas.'
+  })
+  // WY: texto de trabajo legible, sin afirmar una traducción validada. Debe revisarse localmente.
+  Object.assign(i18n.guc, {
+    trackingSummaryTitle: 'Mi seguimiento · WY revisión', trackingSummaryIntro: 'Módulo nuevo pendiente de revisión comunitaria en Wayuunaiki.', trackingRecords: 'Registros', trackingPoints: 'Puntos permanentes', trackingRevisited: 'Puntos revisitados', trackingReports: 'Informes', trackingDays: 'Días de seguimiento', trackingLocalOnly: 'Estas estadísticas se calculan solo en este dispositivo y no se envían a ningún servidor.',
+    storageTitle: 'Almacenamiento local · WY revisión', storageIntro: 'Módulo nuevo pendiente de revisión comunitaria en Wayuunaiki.', storageUsed: 'Uso local aproximado', storageAvailable: 'Margen del navegador', storageMediaPayload: 'Evidencias multimedia', lastFullBackup: 'Última copia preparada', storageAudios: 'Audios', storageProtectionTitle: 'Protección del almacenamiento', storageProtectionChecking: 'Comprobando…', storageProtectionPersistent: 'Almacenamiento persistente concedido.', storageProtectionStandard: 'Almacenamiento estándar. Conviene hacer copias periódicas.', storageProtectionUnsupported: 'No disponible en este navegador.', requestStorageProtection: 'SOLICITAR PROTECCIÓN', storageProtectionGranted: 'Protección concedida por el navegador.', storageProtectionDenied: 'Protección no concedida. Conviene hacer copias periódicas.', backupNow: 'HACER COPIA ZIP AHORA', refreshStorage: 'ACTUALIZAR', storageEstimateHelp: 'Estimación local del navegador. No representa el espacio libre total del teléfono ni incluye copias externas.', storageNoRecords: 'Aún no hay registros.', storageBackupMissing: 'Todavía no consta una copia preparada.', storageBackupPending: 'El cuaderno cambió después de la última copia.', storageBackupCurrent: 'No hay cambios posteriores a la última copia preparada.', storageQuotaHigh: 'La cuota local del navegador está muy utilizada. Haz una copia completa.', storageNotAvailable: 'No disponible', storageNever: 'Nunca', backupTypeZip: 'ZIP', backupTypeFolder: 'Carpeta', storageBackupRecorded: 'Copia preparada registrada.', storageRefreshDone: 'Estadísticas actualizadas.'
   })
 
 
@@ -738,7 +754,9 @@
     preparedReport: null,
     reportPresetPoint: null,
     currentEvolutionPointId: null,
-    evolutionUrls: []
+    evolutionUrls: [],
+    lastFullBackup: null,
+    storageStats: null
   }
 
   const $ = selector => document.querySelector(selector)
@@ -785,6 +803,7 @@
     updateExportFolderUI()
     populateReportScope()
     renderReportHistory()
+    refreshStorageDashboard()
     const tideImportStatus = $('#ticon-import-status')
     if (tideImportStatus) tideImportStatus.textContent = state.tideDatasetReady ? tr('tideImportSuccess', { count: state.tideStations.length }) : tr('tideNoDataset')
   }
@@ -1199,6 +1218,7 @@
     $$('.nav-item').forEach(btn => btn.classList.toggle('active', btn.dataset.target === name))
     if (name === 'map') setTimeout(refreshMap, 50)
     if (name === 'notebook') renderNotebook()
+    if (name === 'export') refreshStorageDashboard()
     window.scrollTo({ top: 0, behavior: 'auto' })
   }
 
@@ -2138,7 +2158,173 @@
     $('#detail-content').innerHTML = ''
   }
 
+  function formatBytes(value) {
+    if (!Number.isFinite(value) || value < 0) return tr('storageNotAvailable')
+    if (value < 1024) return `${Math.round(value)} B`
+    const units = ['KB','MB','GB','TB']
+    let n = value / 1024
+    let idx = 0
+    while (n >= 1024 && idx < units.length - 1) { n /= 1024; idx += 1 }
+    const digits = n >= 100 ? 0 : n >= 10 ? 1 : 2
+    return `${n.toFixed(digits)} ${units[idx]}`
+  }
+
+  function mediaStorageSummary(records = state.records) {
+    const out = { photos: 0, videos: 0, audios: 0, bytes: 0 }
+    records.forEach(record => {
+      ;(record.media || []).forEach(item => {
+        if (item.kind === 'photo') {
+          out.photos += 1
+          if (item.originalBlob instanceof Blob) out.bytes += item.originalBlob.size || 0
+          if (item.documentedBlob instanceof Blob) out.bytes += item.documentedBlob.size || 0
+        } else if (item.kind === 'video') {
+          out.videos += 1
+          if (item.blob instanceof Blob) out.bytes += item.blob.size || 0
+        } else if (item.kind === 'audio') {
+          out.audios += 1
+          if (item.blob instanceof Blob) out.bytes += item.blob.size || 0
+        }
+      })
+    })
+    return out
+  }
+
+  function trackingSummary() {
+    const groups = new Map()
+    const dates = []
+    state.records.forEach(record => {
+      if (record.permanentPointId) {
+        if (!groups.has(record.permanentPointId)) groups.set(record.permanentPointId, [])
+        groups.get(record.permanentPointId).push(record)
+      }
+      const ms = Date.parse(record.createdAt)
+      if (Number.isFinite(ms)) dates.push(ms)
+    })
+    const days = dates.length > 1 ? Math.max(0, Math.ceil((Math.max(...dates) - Math.min(...dates)) / 86400000)) : 0
+    return {
+      records: state.records.length,
+      points: groups.size,
+      revisited: Array.from(groups.values()).filter(items => items.length > 1).length,
+      reports: state.reportHistory.length,
+      days
+    }
+  }
+
+  function renderTrackingSummary() {
+    if (!$('#tracking-records')) return
+    const stats = trackingSummary()
+    $('#tracking-records').textContent = String(stats.records)
+    $('#tracking-points').textContent = String(stats.points)
+    $('#tracking-revisited').textContent = String(stats.revisited)
+    $('#tracking-reports').textContent = String(stats.reports)
+    $('#tracking-days').textContent = String(stats.days)
+  }
+
+  function formatBackupDate(iso) {
+    const date = new Date(iso)
+    if (Number.isNaN(date.getTime())) return tr('storageNotAvailable')
+    try {
+      return new Intl.DateTimeFormat(state.lang === 'pt' ? 'pt-BR' : 'es-ES', { dateStyle: 'short', timeStyle: 'short' }).format(date)
+    } catch (_) {
+      return date.toLocaleString()
+    }
+  }
+
+  function latestRecordTime() {
+    let latest = 0
+    state.records.forEach(record => {
+      const ms = Date.parse(record.createdAt)
+      if (Number.isFinite(ms)) latest = Math.max(latest, ms)
+    })
+    return latest
+  }
+
+  async function refreshStorageDashboard(showConfirmation = false) {
+    if (!$('#storage-used')) return
+    const media = mediaStorageSummary()
+    $('#storage-photo-count').textContent = String(media.photos)
+    $('#storage-video-count').textContent = String(media.videos)
+    $('#storage-audio-count').textContent = String(media.audios)
+    $('#storage-report-count').textContent = String(state.reportHistory.length)
+    $('#storage-media-bytes').textContent = formatBytes(media.bytes)
+
+    let usage = null, quota = null, persisted = null
+    try {
+      if (navigator.storage?.estimate) {
+        const estimate = await navigator.storage.estimate()
+        usage = Number.isFinite(estimate?.usage) ? estimate.usage : null
+        quota = Number.isFinite(estimate?.quota) ? estimate.quota : null
+      }
+    } catch (error) { console.warn('Storage estimate unavailable', error) }
+    try {
+      if (navigator.storage?.persisted) persisted = await navigator.storage.persisted()
+    } catch (error) { console.warn('Persistent storage state unavailable', error) }
+
+    state.storageStats = { usage, quota, persisted, media }
+    $('#storage-used').textContent = usage === null ? tr('storageNotAvailable') : formatBytes(usage)
+    $('#storage-available').textContent = quota === null || usage === null ? tr('storageNotAvailable') : formatBytes(Math.max(0, quota - usage))
+
+    const persistence = $('#storage-persistence-status')
+    const persistenceButton = $('#request-persistent-storage')
+    if (!navigator.storage?.persisted) {
+      persistence.textContent = tr('storageProtectionUnsupported')
+      persistenceButton.disabled = true
+    } else if (persisted) {
+      persistence.textContent = tr('storageProtectionPersistent')
+      persistenceButton.disabled = true
+    } else {
+      persistence.textContent = tr('storageProtectionStandard')
+      persistenceButton.disabled = !navigator.storage?.persist
+    }
+
+    const backup = state.lastFullBackup
+    $('#storage-last-backup').textContent = backup?.at ? `${formatBackupDate(backup.at)} · ${tr(backup.type === 'folder' ? 'backupTypeFolder' : 'backupTypeZip')}` : tr('storageNever')
+
+    const health = $('#storage-health')
+    health.className = 'storage-health neutral'
+    if (!state.records.length) {
+      health.textContent = tr('storageNoRecords')
+    } else if (quota && usage && usage / quota >= 0.80) {
+      health.className = 'storage-health warn'
+      health.textContent = tr('storageQuotaHigh')
+    } else if (!backup?.at) {
+      health.className = 'storage-health warn'
+      health.textContent = tr('storageBackupMissing')
+    } else if (backup.recordCount !== state.records.length || latestRecordTime() > Date.parse(backup.at)) {
+      health.className = 'storage-health warn'
+      health.textContent = tr('storageBackupPending')
+    } else {
+      health.className = 'storage-health ok'
+      health.textContent = tr('storageBackupCurrent')
+    }
+    if (showConfirmation) showToast(tr('storageRefreshDone'))
+  }
+
+  async function requestPersistentStorage() {
+    if (!navigator.storage?.persist || !navigator.storage?.persisted) {
+      showToast(tr('storageProtectionUnsupported'))
+      await refreshStorageDashboard()
+      return
+    }
+    try {
+      const already = await navigator.storage.persisted()
+      const granted = already || await navigator.storage.persist()
+      showToast(granted ? tr('storageProtectionGranted') : tr('storageProtectionDenied'))
+    } catch (error) {
+      console.warn('Persistent storage request failed', error)
+      showToast(tr('storageProtectionDenied'))
+    }
+    await refreshStorageDashboard()
+  }
+
+  async function recordFullBackup(type) {
+    state.lastFullBackup = { at: new Date().toISOString(), type, recordCount: state.records.length, confirmed: type === 'folder' }
+    try { await idbSetMeta('lastFullBackup', state.lastFullBackup) } catch (error) { console.warn('Could not record backup metadata', error) }
+    await refreshStorageDashboard()
+  }
+
   function renderAll() {
+    renderTrackingSummary()
     renderMapList()
     renderNotebook()
     populateReportScope()
@@ -2397,6 +2583,8 @@
     delete clean.pdfBlob
     state.reportHistory = [clean, ...state.reportHistory.filter(item => item.reportId !== clean.reportId)].slice(0,100)
     await idbSetMeta('reportHistory', state.reportHistory)
+    renderTrackingSummary()
+    refreshStorageDashboard()
     renderReportHistory()
   }
 
@@ -2604,7 +2792,7 @@
     $('#report-status').textContent=tr('reportPreparing');$('#report-ready-actions').hidden=true
     try{
       const reportId=await nextReportId(),generatedAt=new Date().toISOString(),pointId=scope.startsWith('point:')?scope.slice(6):null
-      const metadata={reportId,generatedAt,pointId,scope,purpose:$('#report-purpose').value,requestNote:$('#report-request-note').value.trim(),includeCoordinates:$('#report-coordinates').checked,includePhotos:$('#report-photos').checked,recordUuids:records.map(r=>r.uuid),recordCount:records.length,periodStart:records[0].createdAt,periodEnd:records.at(-1).createdAt,appVersion:'0.5.20'}
+      const metadata={reportId,generatedAt,pointId,scope,purpose:$('#report-purpose').value,requestNote:$('#report-request-note').value.trim(),includeCoordinates:$('#report-coordinates').checked,includePhotos:$('#report-photos').checked,recordUuids:records.map(r=>r.uuid),recordCount:records.length,periodStart:records[0].createdAt,periodEnd:records.at(-1).createdAt,appVersion:'0.5.21'}
       const blob=await makeEvidencePdf(records,metadata),filename=`COSTA-VIVA-${reportId}.pdf`
       state.preparedReport={...metadata,blob,filename}
       await saveReportHistory(metadata)
@@ -2787,7 +2975,7 @@ Esta cópia contém os registros e evidências disponíveis neste dispositivo no
       format: 'costa-viva-full-archive',
       formatVersion: 1,
       app: 'COSTA VIVA',
-      appVersion: '0.5.20',
+      appVersion: '0.5.21',
       createdAt,
       recordCount: state.records.length,
       automaticUpload: false,
@@ -2838,7 +3026,10 @@ Esta cópia contém os registros e evidências disponíveis neste dispositivo no
       const blob = await buildZipBlob()
       if (!blob) return null
       const filename = `costa-viva-${new Date().toISOString().slice(0, 10)}.zip`
-      if (download) downloadBlob(blob, filename)
+      if (download) {
+        downloadBlob(blob, filename)
+        await recordFullBackup('zip')
+      }
       showToast(tr('exportReady'))
       return { blob, filename }
     } catch (error) {
@@ -2986,6 +3177,7 @@ Esta cópia contém os registros e evidências disponíveis neste dispositivo no
       await writeEntriesToDirectory(snapshotDir, archive.entries)
       const zipDir = await folder.getDirectoryHandle('ZIP', { create: true })
       await writeBlobToDirectory(zipDir, `${snapshotName}.zip`, zipBlob)
+      await recordFullBackup('folder')
       updateExportFolderUI('folderSaved')
       showToast(tr('folderSaved'))
     } catch (error) {
@@ -3229,7 +3421,7 @@ Esta cópia contém os registros e evidências disponíveis neste dispositivo no
       format: 'costa-viva-zip',
       formatVersion: 2,
       app: 'COSTA VIVA',
-      appVersion: '0.5.20',
+      appVersion: '0.5.21',
       packageId,
       createdAt,
       sourceNotebookId,
@@ -3777,6 +3969,9 @@ Esta cópia contém os registros e evidências disponíveis neste dispositivo no
     $('#report-from-evolution').addEventListener('click', () => { const pointId=state.currentEvolutionPointId; closeEvolution(); if(pointId) openReportBuilder(pointId) })
     $('#choose-costa-folder').addEventListener('click', chooseCostaVivaFolder)
     $('#save-all-folder').addEventListener('click', saveAllToCostaVivaFolder)
+    $('#backup-now').addEventListener('click', () => exportZip(true))
+    $('#refresh-storage').addEventListener('click', () => refreshStorageDashboard(true))
+    $('#request-persistent-storage').addEventListener('click', requestPersistentStorage)
     $('#share-export').addEventListener('click', sharePackage)
     $('#share-modal-close').addEventListener('click', closeShareModal)
     $('#share-modal').addEventListener('click', event => { if (event.target === $('#share-modal')) closeShareModal() })
@@ -3805,6 +4000,9 @@ Esta cópia contém os registros e evidências disponíveis neste dispositivo no
     setLanguage(state.lang)
     try { await loadState() } catch (error) { console.error('Database init failed', error) }
     try { state.reportHistory = (await idbGetMeta('reportHistory')) || []; renderReportHistory() } catch (error) { console.warn('Could not load report history', error) }
+    try { state.lastFullBackup = (await idbGetMeta('lastFullBackup')) || null } catch (error) { console.warn('Could not load backup metadata', error) }
+    renderTrackingSummary()
+    refreshStorageDashboard()
     await loadExportFolderHandle()
     await loadCoastMask()
     await loadTideDatasetState()

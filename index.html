@@ -191,6 +191,24 @@
           <span class="count-pill"><strong id="record-count">0</strong> <span data-i18n="records">registros</span></span>
         </div>
 
+        <section class="local-summary-card card" aria-labelledby="tracking-summary-title">
+          <div class="protocol-heading">
+            <span class="protocol-icon">📊</span>
+            <div>
+              <h3 id="tracking-summary-title" data-i18n="trackingSummaryTitle">Mi seguimiento</h3>
+              <p data-i18n="trackingSummaryIntro">Resumen local del trabajo acumulado en este dispositivo.</p>
+            </div>
+          </div>
+          <div class="local-stats-grid" aria-live="polite">
+            <div class="local-stat"><strong id="tracking-records">0</strong><small data-i18n="trackingRecords">Registros</small></div>
+            <div class="local-stat"><strong id="tracking-points">0</strong><small data-i18n="trackingPoints">Puntos permanentes</small></div>
+            <div class="local-stat"><strong id="tracking-revisited">0</strong><small data-i18n="trackingRevisited">Puntos revisitados</small></div>
+            <div class="local-stat"><strong id="tracking-reports">0</strong><small data-i18n="trackingReports">Informes</small></div>
+            <div class="local-stat wide"><strong id="tracking-days">0</strong><small data-i18n="trackingDays">Días de seguimiento documentado</small></div>
+          </div>
+          <p class="helper" data-i18n="trackingLocalOnly">Estas estadísticas se calculan únicamente en este dispositivo. COSTA VIVA no las envía a ningún servidor.</p>
+        </section>
+
         <div class="filters card">
           <label><span data-i18n="search">Buscar</span><input id="search" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="Código o nota"></label>
           <label><span data-i18n="filterCategory">Tipo</span><select id="filter-category"><option value="all" data-i18n="all">Todos</option></select></label>
@@ -208,6 +226,41 @@
             <p data-i18n="exportIntro">Prepara una copia de los registros para conservarlos o compartirlos.</p>
           </div>
         </div>
+        <section class="storage-card card" aria-labelledby="storage-title">
+          <div class="protocol-heading">
+            <span class="protocol-icon">💾</span>
+            <div>
+              <h3 id="storage-title" data-i18n="storageTitle">Almacenamiento local</h3>
+              <p data-i18n="storageIntro">Comprueba cuánto trabajo conserva COSTA VIVA en este navegador y cuándo hiciste la última copia completa.</p>
+            </div>
+          </div>
+          <div class="storage-main-grid" aria-live="polite">
+            <div class="storage-metric"><span data-i18n="storageUsed">Uso local aproximado</span><strong id="storage-used">—</strong></div>
+            <div class="storage-metric"><span data-i18n="storageAvailable">Margen del navegador</span><strong id="storage-available">—</strong></div>
+            <div class="storage-metric"><span data-i18n="storageMediaPayload">Evidencias multimedia</span><strong id="storage-media-bytes">—</strong></div>
+            <div class="storage-metric"><span data-i18n="lastFullBackup">Última copia preparada</span><strong id="storage-last-backup">—</strong></div>
+          </div>
+          <div class="storage-breakdown">
+            <span>📷 <strong id="storage-photo-count">0</strong> <span data-i18n="photos">Fotos</span></span>
+            <span>🎥 <strong id="storage-video-count">0</strong> <span data-i18n="videos">Vídeos</span></span>
+            <span>🎙️ <strong id="storage-audio-count">0</strong> <span data-i18n="storageAudios">Audios</span></span>
+            <span>📄 <strong id="storage-report-count">0</strong> <span data-i18n="trackingReports">Informes</span></span>
+          </div>
+          <div id="storage-health" class="storage-health neutral" role="status" aria-live="polite"></div>
+          <div class="storage-persistence-row">
+            <div>
+              <strong data-i18n="storageProtectionTitle">Protección del almacenamiento</strong>
+              <span id="storage-persistence-status" data-i18n="storageProtectionChecking">Comprobando…</span>
+            </div>
+            <button id="request-persistent-storage" type="button" class="secondary-btn">🛡️ <span data-i18n="requestStorageProtection">SOLICITAR PROTECCIÓN</span></button>
+          </div>
+          <div class="storage-actions">
+            <button id="backup-now" type="button" class="primary-btn">📦 <span data-i18n="backupNow">HACER COPIA ZIP AHORA</span></button>
+            <button id="refresh-storage" type="button" class="secondary-btn">↻ <span data-i18n="refreshStorage">ACTUALIZAR</span></button>
+          </div>
+          <p class="helper" data-i18n="storageEstimateHelp">El uso y el margen son estimaciones de la cuota que el navegador asigna a COSTA VIVA. No representan el espacio libre total del teléfono y no incluyen ZIP descargados ni copias guardadas en la carpeta COSTA VIVA.</p>
+        </section>
+
         <section class="evidence-report-card card">
           <div class="protocol-heading">
             <span class="protocol-icon">📄</span>
@@ -681,7 +734,7 @@
 
         <div class="project-info-footer">
           <span>© 2026 Carlos Busón Buesa</span>
-          <span>COSTA VIVA · v0.5.20</span>
+          <span>COSTA VIVA · v0.5.21</span>
         </div>
       </div>
     </div>

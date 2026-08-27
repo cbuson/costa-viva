@@ -38,3 +38,8 @@ Añadir la propuesta local y, cuando sea pertinente, la comunidad o zona donde s
 ## Regla de publicación
 
 Hasta concluir la revisión comunitaria, COSTA VIVA debe seguir mostrando que WY es una versión provisional en revisión local.
+
+
+## v0.5.21
+
+Se añadieron las cadenas del panel de almacenamiento local y del resumen de seguimiento. Se mantienen como texto de trabajo claramente pendiente de revisión local para no inventar equivalencias Wayuunaiki no validadas.

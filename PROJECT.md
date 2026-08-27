@@ -151,10 +151,15 @@ La aplicación incorpora una carpeta COSTA VIVA seleccionada o creada mediante p
 La decisión de diseño prioriza formatos universales y control local. ZIP es el formato recomendado para envío. La carpeta completa es una alternativa para respaldo y transferencia cuando el sistema receptor admite directorios.
 
 
-## De registro a evidencia comunicable · v0.5.20
+## De registro a evidencia comunicable · v0.5.21
 
 COSTA VIVA incorpora una ruta directa entre seguimiento comunitario y comunicación externa
 
 **registrar → repetir → ver evolución → generar informe → conservar o entregar**
 
 La función no pretende convertir el teléfono en instrumento pericial. Su aporte es ordenar lo ya documentado por la comunidad en una forma legible, trazable y transportable. El identificador local del informe permite reconocer qué documento fue generado, cuándo y a partir de qué conjunto de registros.
+
+
+## Ver el trabajo acumulado sin centralizarlo · v0.5.21
+
+El piloto incorpora estadísticas locales para que cada persona o comunidad pueda ver el trabajo acumulado sin tener que transmitirlo al proyecto. El dispositivo calcula número de registros, puntos permanentes, puntos revisitados, informes y periodo documentado. Esta información puede comunicarse voluntariamente en procesos de evaluación del piloto, pero COSTA VIVA no la recopila automáticamente.
