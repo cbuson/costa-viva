@@ -212,8 +212,39 @@
           <button id="export-json" type="button" class="export-btn"><strong>JSON</strong><span data-i18n="fullData">Datos completos</span></button>
           <button id="export-csv" type="button" class="export-btn"><strong>CSV</strong><span data-i18n="tableData">Tabla de registros</span></button>
           <button id="export-geojson" type="button" class="export-btn"><strong>GeoJSON</strong><span data-i18n="mapData">Puntos para SIG</span></button>
-          <button id="export-zip" type="button" class="export-btn"><strong>ZIP</strong><span data-i18n="evidencePackage">Datos y evidencias</span></button>
+          <button id="export-zip" type="button" class="export-btn"><strong>ZIP</strong><span data-i18n="evidencePackage">Descargar todo</span></button>
         </div>
+
+        <section class="community-exchange card">
+          <div class="protocol-heading">
+            <span class="protocol-icon">📁</span>
+            <div>
+              <h3 data-i18n="folderBackupTitle">Carpeta COSTA VIVA</h3>
+              <p data-i18n="folderBackupIntro">Puedes crear una carpeta visible en el celular y guardar allí una copia completa de los registros y evidencias.</p>
+            </div>
+          </div>
+          <div class="exchange-actions">
+            <button id="choose-costa-folder" type="button" class="secondary-btn full">📁 <span data-i18n="chooseCostaFolder">CREAR O ELEGIR CARPETA COSTA VIVA</span></button>
+            <button id="save-all-folder" type="button" class="primary-btn full">💾 <span data-i18n="saveAllFolder">GUARDAR TODO EN LA CARPETA</span></button>
+          </div>
+          <p id="folder-export-status" class="helper" data-i18n="folderNotConfigured">Carpeta no configurada.</p>
+          <div class="protocol-note" data-i18n="folderExportNote">COSTA VIVA mantiene el cuaderno en el almacenamiento local del navegador. La carpeta es una copia visible y adicional que puedes abrir con el gestor de archivos.</div>
+        </section>
+
+        <section class="community-exchange card">
+          <div class="protocol-heading">
+            <span class="protocol-icon">📤</span>
+            <div>
+              <h3 data-i18n="exportShareGuideTitle">Cómo conservar y compartir</h3>
+              <p data-i18n="exportShareGuideIntro">La opción más universal para enviar registros es el ZIP. La carpeta completa sirve para conservar, copiar o transferir todo el material.</p>
+            </div>
+          </div>
+          <div class="protocol-body">
+            <p><strong data-i18n="exportShareZipTitle">Para WhatsApp o correo</strong><br><span data-i18n="exportShareZipText">Descarga el ZIP y adjúntalo como documento. Contiene los datos y evidencias seleccionados en un único archivo.</span></p>
+            <p><strong data-i18n="exportShareFolderTitle">Para conservar o copiar todo</strong><br><span data-i18n="exportShareFolderText">Usa la carpeta COSTA VIVA. Si tu gestor de archivos o servicio admite compartir carpetas, puedes enviar la carpeta completa. Si no, utiliza el ZIP.</span></p>
+          </div>
+        </section>
+
         <section class="community-exchange card">
           <div class="protocol-heading">
             <span class="protocol-icon">🤝</span>
@@ -688,8 +719,8 @@
         <button id="prepare-share" type="button" class="primary-btn full">📦 <span data-i18n="prepareAndShare">PREPARAR ZIP</span></button>
         <p id="share-modal-status" class="helper" role="status" aria-live="polite"></p>
         <div id="prepared-share-actions" class="prepared-share-actions" hidden>
-          <button id="native-share-now" type="button" class="primary-btn full">📲 <span data-i18n="nativeShareNow">ABRIR MENÚ PARA COMPARTIR</span></button>
-          <button id="download-prepared-share" type="button" class="secondary-btn full">💾 <span data-i18n="saveFullPackage">GUARDAR ZIP</span></button>
+          <button id="download-prepared-share" type="button" class="primary-btn full">📦 <span data-i18n="saveFullPackage">GUARDAR ZIP</span></button>
+          <button id="save-prepared-folder" type="button" class="secondary-btn full">📁 <span data-i18n="savePreparedFolder">GUARDAR TAMBIÉN EN CARPETA COSTA VIVA</span></button>
         </div>
       </div>
     </div>

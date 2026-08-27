@@ -143,3 +143,9 @@ La interfaz distingue entre preparar el paquete, adjuntar el ZIP y abrir el men�
 ### Compartir en navegadores móviles · 0.5.18
 
 La interfaz prioriza que una pulsación sobre Abrir menú para compartir invoque inmediatamente la hoja nativa del sistema. No se ejecuta una descarga previa que pueda bloquear ese gesto.
+
+### Carpeta visible bajo control del usuario · 0.5.19
+
+La aplicación incorpora una carpeta COSTA VIVA seleccionada o creada mediante permiso explícito de la persona usuaria. No existe acceso silencioso al sistema de archivos. La carpeta contiene copias de exportación y ZIP y complementa el almacenamiento local interno.
+
+La decisión de diseño prioriza formatos universales y control local. ZIP es el formato recomendado para envío. La carpeta completa es una alternativa para respaldo y transferencia cuando el sistema receptor admite directorios.

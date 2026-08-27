@@ -209,3 +209,11 @@ Se elimina la descarga automática previa al Web Share. Esa descarga abría un d
 ## Auditoría de compartir · 0.5.18
 
 Se eliminó el patrón de dos llamadas consecutivas a `navigator.share()` dentro del mismo toque. El diseño anterior podía intentar primero un ZIP y, tras un rechazo, ejecutar un segundo intento de texto. Web Share exige activación transitoria y el primer intento podía consumirla. Ahora se evalúan las cargas con `navigator.canShare()` antes de compartir y se ejecuta una sola llamada. El ZIP completo y el menú nativo quedan desacoplados. Esta revisión prioriza que el usuario pueda abrir el selector del sistema y compartir formatos compatibles sin perder el paquete ZIP completo.
+
+## Auditoría de exportación local · 0.5.19
+
+Se abandona la idea de depender del envío directo de ZIP mediante Web Share como flujo principal. El comportamiento depende del navegador y no es suficientemente uniforme para una herramienta comunitaria.
+
+Se mantiene un ZIP estándar y se añade una carpeta visible bajo permiso explícito mediante File System Access. La interfaz indica que ZIP es la opción más universal para enviar registros y que una carpeta completa solo puede compartirse directamente cuando el gestor de archivos o servicio receptor admite directorios.
+
+La función debe validarse todavía en los teléfonos Android objetivo. Si el navegador no admite File System Access la aplicación no presenta una carpeta ficticia y mantiene la descarga ZIP como alternativa.

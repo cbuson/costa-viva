@@ -311,3 +311,13 @@ Se corrige el flujo móvil de compartir. El botón Abrir menú para compartir ya
 ## Versión 0.5.18 · corrección del menú nativo de compartir
 
 Se corrige el flujo móvil de Web Share. COSTA VIVA ya no intenta compartir primero el ZIP y después abrir un segundo `navigator.share()`. Un primer intento de archivo rechazado puede consumir la activación transitoria del toque y bloquear el segundo intento. La versión 0.5.18 selecciona antes de compartir una única carga compatible mediante `navigator.canShare()` y realiza una sola llamada a `navigator.share()` por toque. Cuando el ZIP no es compartible desde el navegador, el menú puede recibir archivos estándar compatibles del paquete, como CSV, TXT y evidencias multimedia seleccionadas. El ZIP completo permanece disponible mediante Guardar ZIP.
+
+## Versión 0.5.19 · carpeta visible y ZIP como archivo universal
+
+La estrategia de conservación y transferencia se simplifica. COSTA VIVA mantiene IndexedDB como almacenamiento operativo y añade una copia visible elegida por la persona usuaria mediante File System Access cuando el navegador lo permite.
+
+En Exportar se puede crear o elegir una carpeta COSTA VIVA. La aplicación crea copias fechadas dentro de `COSTA VIVA/Exportaciones/` y conserva también el ZIP completo dentro de `COSTA VIVA/ZIP/`.
+
+El ZIP continúa siendo el formato recomendado para enviar por WhatsApp, correo u otras aplicaciones porque concentra datos y evidencias en un único archivo estándar. La carpeta completa queda destinada principalmente a conservación, copia, respaldo y transferencia mediante gestores de archivos o servicios que admitan carpetas.
+
+La carpeta externa no sustituye IndexedDB. Es una copia adicional bajo control de la persona usuaria. COSTA VIVA no obtiene acceso a ninguna carpeta hasta que la persona la selecciona y autoriza expresamente.

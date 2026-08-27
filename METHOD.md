@@ -207,3 +207,11 @@ COSTA VIVA intenta compartir el ZIP estándar directamente. Si el navegador no a
 ## Compartir y guardar · v0.5.18
 
 Compartir y guardar son acciones separadas. COSTA VIVA intenta adjuntar el ZIP solo cuando navigator.canShare confirma que el navegador lo admite. Si no lo admite, abre el menú nativo sin descargar automáticamente. La persona puede guardar el ZIP mediante un botón independiente y adjuntarlo posteriormente como documento.
+
+## Conservación local y exportación · v0.5.19
+
+COSTA VIVA utiliza dos niveles de conservación. IndexedDB mantiene el cuaderno operativo y la carpeta visible COSTA VIVA actúa como copia adicional cuando el navegador admite File System Access y la persona concede permiso.
+
+Cada copia completa crea una exportación fechada con manifiesto, README, JSON, CSV, GeoJSON y evidencias. El mismo contenido se conserva también en un ZIP estándar.
+
+Para transferencia se recomienda el ZIP porque aplicaciones de mensajería y correo no admiten de forma uniforme el envío directo de carpetas. La carpeta completa puede copiarse o transferirse con gestores de archivos o servicios que sí permitan directorios.

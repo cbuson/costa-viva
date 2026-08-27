@@ -345,3 +345,17 @@ Prueba obligatoria en Android Chrome publicado por HTTPS
 8. Probar cancelación del menú. No debe mostrarse como error.
 9. Si falla, registrar el nombre de la excepción mostrado por la interfaz para diagnóstico.
 10. Verificar que Guardar ZIP siga descargando el paquete completo de forma independiente.
+
+## Carpeta COSTA VIVA · 0.5.19
+
+Pruebas pendientes en dispositivo físico
+
+- Chrome Android permite abrir el selector de directorio
+- se puede seleccionar Documentos o Descargas y crear la subcarpeta COSTA VIVA
+- el permiso de escritura se solicita mediante acción explícita
+- una exportación completa crea `Exportaciones/<fecha>/`
+- la carpeta contiene manifiesto, README, JSON, CSV, GeoJSON y evidencias
+- `ZIP/` contiene el mismo conjunto en un archivo ZIP
+- la aplicación sigue funcionando si se deniega el permiso
+- en navegadores sin File System Access se mantiene la descarga ZIP
+- tras recargar la aplicación se intenta recuperar el identificador de carpeta guardado y se vuelve a solicitar permiso cuando sea necesario
