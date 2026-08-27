@@ -323,10 +323,25 @@ Pruebas históricas del flujo anterior, sustituidas por ZIP en 0.5.15.
 - [ ] Cancelar la hoja de compartir no genera mensajes falsos de envío.
 
 
-## Menú nativo de compartir · 0.5.17
+## Menú nativo de compartir · 0.5.18
 
 - Preparar un ZIP y pulsar Abrir menú para compartir en Chrome Android.
 - Confirmar que no aparece un diálogo de descarga antes del menú nativo.
 - Si navigator.canShare acepta application/zip, verificar que el ZIP llega adjunto.
 - Si no acepta ZIP, verificar que se abre igualmente la hoja nativa con texto y URL.
 - Confirmar que Guardar ZIP sigue descargando el paquete de forma independiente.
+
+## Menú nativo de compartir · 0.5.18
+
+Prueba obligatoria en Android Chrome publicado por HTTPS
+
+1. Preparar un ZIP con al menos un registro.
+2. Pulsar ABRIR MENÚ PARA COMPARTIR.
+3. Verificar que no aparezca antes ningún diálogo de descarga.
+4. Verificar que se realiza una sola llamada nativa de compartir por toque.
+5. Confirmar que Android muestra su hoja de compartir con aplicaciones instaladas cuando Web Share está disponible.
+6. Probar registro solo con datos básicos. Debe compartir CSV o TXT cuando el navegador admita archivos de texto.
+7. Probar registro con fotografías. Debe intentar compartir CSV más evidencias compatibles sin intentar primero el ZIP.
+8. Probar cancelación del menú. No debe mostrarse como error.
+9. Si falla, registrar el nombre de la excepción mostrado por la interfaz para diagnóstico.
+10. Verificar que Guardar ZIP siga descargando el paquete completo de forma independiente.
