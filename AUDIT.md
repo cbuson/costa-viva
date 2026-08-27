@@ -217,3 +217,12 @@ Se abandona la idea de depender del envío directo de ZIP mediante Web Share com
 Se mantiene un ZIP estándar y se añade una carpeta visible bajo permiso explícito mediante File System Access. La interfaz indica que ZIP es la opción más universal para enviar registros y que una carpeta completa solo puede compartirse directamente cuando el gestor de archivos o servicio receptor admite directorios.
 
 La función debe validarse todavía en los teléfonos Android objetivo. Si el navegador no admite File System Access la aplicación no presenta una carpeta ficticia y mantiene la descarga ZIP como alternativa.
+
+
+## Auditoría funcional v0.5.20
+
+Se añade una capa de devolución visible del seguimiento a la comunidad mediante dos funciones locales. **Evolución del punto** transforma registros del mismo punto permanente en una secuencia visual sin realizar inferencias causales automáticas. **Informe comunitario de evidencias** produce un PDF local identificable y exportable.
+
+Control metodológico principal. La gráfica cuantitativa no mezcla estimaciones, pasos ni referencias distintas. En esta versión solo grafica mediciones con cinta, misma línea objetivo y misma referencia fija. El PDF incluye un descargo explícito sobre precisión del dispositivo, alcance no pericial y ausencia de determinación causal o jurídica.
+
+Control de soberanía. La generación del informe no requiere servidor. El historial de informes permanece en IndexedDB. El usuario decide si incorpora coordenadas exactas y si guarda el PDF fuera del almacenamiento interno. `Registrar no significa ceder` permanece como regla de gobernanza.

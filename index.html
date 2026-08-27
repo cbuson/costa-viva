@@ -208,6 +208,23 @@
             <p data-i18n="exportIntro">Prepara una copia de los registros para conservarlos o compartirlos.</p>
           </div>
         </div>
+        <section class="evidence-report-card card">
+          <div class="protocol-heading">
+            <span class="protocol-icon">📄</span>
+            <div>
+              <h3 data-i18n="evidenceReportTitle">Informe comunitario de evidencias</h3>
+              <p data-i18n="evidenceReportIntro">Convierte una serie de observaciones en un documento ordenado para mostrar a autoridades, organizaciones o técnicos.</p>
+            </div>
+          </div>
+          <div class="report-value-strip">
+            <strong data-i18n="evidenceReportValueTitle">Lo que queda registrado</strong>
+            <span data-i18n="evidenceReportValueText">Periodo observado, registros, fotografías, mediciones, método, precisión disponible y motivo de presentación.</span>
+          </div>
+          <button id="open-report-builder" type="button" class="primary-btn full">📄 <span data-i18n="generateEvidenceReport">GENERAR INFORME DE EVIDENCIAS</span></button>
+          <p class="helper" data-i18n="evidenceReportCaution">El informe documenta evidencias comunitarias. No constituye por sí solo un peritaje, una certificación técnica ni una determinación de causas.</p>
+          <div id="report-history-mini" class="report-history-mini"></div>
+        </section>
+
         <div class="export-grid">
           <button id="export-json" type="button" class="export-btn"><strong>JSON</strong><span data-i18n="fullData">Datos completos</span></button>
           <button id="export-csv" type="button" class="export-btn"><strong>CSV</strong><span data-i18n="tableData">Tabla de registros</span></button>
@@ -664,7 +681,7 @@
 
         <div class="project-info-footer">
           <span>© 2026 Carlos Busón Buesa</span>
-          <span>COSTA VIVA · v0.5.18</span>
+          <span>COSTA VIVA · v0.5.20</span>
         </div>
       </div>
     </div>
@@ -736,6 +753,52 @@
           <button id="cancel-import" type="button" class="secondary-btn" data-i18n="cancel">Cancelar</button>
         </div>
         <p id="import-status" class="helper" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+
+    <div id="report-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="report-modal-title">
+      <div class="modal-card report-modal-card">
+        <button id="report-modal-close" class="modal-close" type="button" aria-label="Cerrar">✕</button>
+        <h2 id="report-modal-title" data-i18n="reportBuilderTitle">Crear informe de evidencias</h2>
+        <p data-i18n="reportBuilderIntro">Elige qué seguimiento quieres documentar y para qué vas a presentar el informe.</p>
+
+        <label class="field-label"><span data-i18n="reportScope">Seguimiento incluido</span>
+          <select id="report-scope"></select>
+        </label>
+
+        <label class="field-label"><span data-i18n="reportPurpose">Motivo de presentación</span>
+          <select id="report-purpose">
+            <option value="technical_visit" data-i18n="purposeTechnicalVisit">Solicitar visita técnica</option>
+            <option value="risk_evaluation" data-i18n="purposeRiskEvaluation">Solicitar evaluación de riesgo</option>
+            <option value="document_change" data-i18n="purposeDocumentChange">Documentar cambio costero</option>
+            <option value="community_record" data-i18n="purposeCommunityRecord">Registro y memoria comunitaria</option>
+            <option value="other" data-i18n="other">Otro</option>
+          </select>
+        </label>
+
+        <label class="field-label"><span data-i18n="reportRequestNote">Solicitud o explicación opcional</span>
+          <textarea id="report-request-note" rows="4" data-i18n-placeholder="reportRequestPlaceholder" placeholder="Ejemplo: solicitamos una visita para revisar la pérdida observada junto al camino comunitario"></textarea>
+        </label>
+
+        <div class="report-options">
+          <label class="check-label"><input id="report-coordinates" type="checkbox" checked><span data-i18n="reportIncludeCoordinates">Incluir coordenadas exactas</span></label>
+          <label class="check-label"><input id="report-photos" type="checkbox" checked><span data-i18n="reportIncludePhotos">Incluir muestra fotográfica</span></label>
+        </div>
+        <div class="protocol-note" data-i18n="reportSensitiveWarning">Si el lugar es sensible, desmarca las coordenadas exactas. El informe puede conservar el código del punto sin revelar su posición.</div>
+        <button id="prepare-report" type="button" class="primary-btn full">📄 <span data-i18n="createReportPdf">CREAR INFORME PDF</span></button>
+        <p id="report-status" class="helper" role="status" aria-live="polite"></p>
+        <div id="report-ready-actions" class="prepared-share-actions" hidden>
+          <button id="download-report" type="button" class="primary-btn full">⬇️ <span data-i18n="downloadReportPdf">DESCARGAR PDF</span></button>
+          <button id="save-report-folder" type="button" class="secondary-btn full">📁 <span data-i18n="saveReportFolder">GUARDAR EN CARPETA COSTA VIVA</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="evolution-modal" class="modal-backdrop" hidden role="dialog" aria-modal="true" aria-labelledby="evolution-modal-title">
+      <div class="modal-card evolution-modal-card">
+        <button id="evolution-modal-close" class="modal-close" type="button" aria-label="Cerrar">✕</button>
+        <div id="evolution-content"></div>
+        <button id="report-from-evolution" type="button" class="primary-btn full">📄 <span data-i18n="reportThisPoint">GENERAR INFORME DE ESTE PUNTO</span></button>
       </div>
     </div>
 

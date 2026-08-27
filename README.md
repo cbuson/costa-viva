@@ -321,3 +321,14 @@ En Exportar se puede crear o elegir una carpeta COSTA VIVA. La aplicación crea 
 El ZIP continúa siendo el formato recomendado para enviar por WhatsApp, correo u otras aplicaciones porque concentra datos y evidencias en un único archivo estándar. La carpeta completa queda destinada principalmente a conservación, copia, respaldo y transferencia mediante gestores de archivos o servicios que admitan carpetas.
 
 La carpeta externa no sustituye IndexedDB. Es una copia adicional bajo control de la persona usuaria. COSTA VIVA no obtiene acceso a ninguna carpeta hasta que la persona la selecciona y autoriza expresamente.
+
+
+## Versión 0.5.20 · evolución local e informe comunitario de evidencias
+
+Se incorpora una vista **Evolución del punto** para puntos permanentes. La comparación se realiza localmente en el dispositivo y reúne cronología, fotografías de fechas distintas y, cuando existen al menos dos mediciones compatibles, una gráfica de distancia documentada.
+
+La gráfica es deliberadamente conservadora. Solo considera mediciones declaradas con cinta métrica que comparten la misma línea medida y la misma referencia fija. COSTA VIVA no convierte fotografías, pasos o estimaciones en metros de erosión y no atribuye automáticamente causas al cambio observado.
+
+En **Exportar** se añade **Informe comunitario de evidencias**. El usuario selecciona el seguimiento, el motivo de presentación, si desea incluir coordenadas exactas y una muestra fotográfica. El PDF se genera completamente en el dispositivo y puede descargarse o guardarse en `COSTA VIVA/Informes`. Cada informe recibe un identificador `CV-INF-AAAA-NNNNN` y su metadato de generación queda registrado localmente.
+
+El informe declara expresamente que organiza evidencias comunitarias y que no constituye por sí solo peritaje, certificación técnica, atribución causal ni determinación jurídica. El ZIP completo incorpora además `informes/historial-informes.json`.

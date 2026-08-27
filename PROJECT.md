@@ -149,3 +149,12 @@ La interfaz prioriza que una pulsación sobre Abrir menú para compartir invoque
 La aplicación incorpora una carpeta COSTA VIVA seleccionada o creada mediante permiso explícito de la persona usuaria. No existe acceso silencioso al sistema de archivos. La carpeta contiene copias de exportación y ZIP y complementa el almacenamiento local interno.
 
 La decisión de diseño prioriza formatos universales y control local. ZIP es el formato recomendado para envío. La carpeta completa es una alternativa para respaldo y transferencia cuando el sistema receptor admite directorios.
+
+
+## De registro a evidencia comunicable · v0.5.20
+
+COSTA VIVA incorpora una ruta directa entre seguimiento comunitario y comunicación externa
+
+**registrar → repetir → ver evolución → generar informe → conservar o entregar**
+
+La función no pretende convertir el teléfono en instrumento pericial. Su aporte es ordenar lo ya documentado por la comunidad en una forma legible, trazable y transportable. El identificador local del informe permite reconocer qué documento fue generado, cuándo y a partir de qué conjunto de registros.

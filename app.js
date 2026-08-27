@@ -645,6 +645,58 @@
   })
 
 
+  // v0.5.20 · evolución local e informe comunitario de evidencias
+  Object.assign(i18n.es, {
+    evidenceReportTitle: 'Informe comunitario de evidencias',
+    evidenceReportIntro: 'Convierte una serie de observaciones en un documento ordenado para mostrar a autoridades, organizaciones o técnicos.',
+    evidenceReportValueTitle: 'Lo que queda registrado',
+    evidenceReportValueText: 'Periodo observado, registros, fotografías, mediciones, método, precisión disponible y motivo de presentación.',
+    generateEvidenceReport: 'GENERAR INFORME DE EVIDENCIAS',
+    evidenceReportCaution: 'El informe documenta evidencias comunitarias. No constituye por sí solo un peritaje, una certificación técnica ni una determinación de causas.',
+    reportBuilderTitle: 'Crear informe de evidencias',
+    reportBuilderIntro: 'Elige qué seguimiento quieres documentar y para qué vas a presentar el informe.',
+    reportScope: 'Seguimiento incluido', reportAllRecords: 'Todos los registros del cuaderno', reportPointOption: 'Punto permanente {value}',
+    reportPurpose: 'Motivo de presentación', purposeTechnicalVisit: 'Solicitar visita técnica', purposeRiskEvaluation: 'Solicitar evaluación de riesgo', purposeDocumentChange: 'Documentar cambio costero', purposeCommunityRecord: 'Registro y memoria comunitaria',
+    reportRequestNote: 'Solicitud o explicación opcional', reportRequestPlaceholder: 'Ejemplo: solicitamos una visita para revisar el cambio observado junto al camino comunitario',
+    reportIncludeCoordinates: 'Incluir coordenadas exactas', reportIncludePhotos: 'Incluir muestra fotográfica',
+    reportSensitiveWarning: 'Si el lugar es sensible, desmarca las coordenadas exactas. El informe puede conservar el código del punto sin revelar su posición.',
+    createReportPdf: 'CREAR INFORME PDF', downloadReportPdf: 'DESCARGAR PDF', saveReportFolder: 'GUARDAR EN CARPETA COSTA VIVA',
+    reportPreparing: 'Preparando el informe en este dispositivo.', reportReady: 'Informe {value} preparado y registrado en este dispositivo.', reportFailed: 'No se pudo crear el informe.', reportSavedFolder: 'Informe guardado en la carpeta COSTA VIVA.',
+    reportHistoryTitle: 'Informes registrados en este dispositivo', reportHistoryEmpty: 'Aún no se ha generado ningún informe.',
+    viewEvolution: 'VER EVOLUCIÓN', evolutionTitle: 'Evolución del punto', reportThisPoint: 'GENERAR INFORME DE ESTE PUNTO',
+    campaigns: 'campañas', firstObservation: 'Primera observación', lastObservation: 'Última observación', elapsedTime: 'Periodo', days: 'días',
+    before: 'ANTES', now: 'AHORA', photographicComparison: 'Comparación fotográfica', photographicComparisonUnavailable: 'Se necesitan fotografías de al menos dos fechas para mostrar la comparación.',
+    comparableMeasurements: 'Mediciones comparables', comparableMeasurementRule: 'El gráfico solo usa mediciones con cinta, la misma línea medida y la misma referencia fija. No convierte fotografías ni estimaciones en metros de erosión.',
+    noComparableMeasurements: 'Todavía no hay al menos dos mediciones con cinta suficientemente comparables para construir una gráfica.',
+    documentedDistance: 'Distancia documentada', timeline: 'Línea del tiempo', evidenceCount: 'evidencias', measurementsCount: 'mediciones',
+    reportCommunityEvidence: 'INFORME COMUNITARIO DE EVIDENCIAS COSTERAS', reportIdLabel: 'Identificador del informe', reportGeneratedLabel: 'Generado', reportPeriodLabel: 'Periodo observado', reportRecordsLabel: 'Registros incluidos', reportPhotosLabel: 'Fotografías', reportPurposeLabel: 'Motivo de presentación', reportRequestLabel: 'Solicitud o explicación', reportScopeLabel: 'Ámbito', reportMethodTitle: 'Alcance metodológico', reportSeriesTitle: 'Serie de observaciones', reportPhotoTitle: 'Evidencia fotográfica', reportMeasurementTitle: 'Serie de mediciones comparables', reportCoordinatesHidden: 'Coordenadas exactas ocultadas por decisión de quien genera el informe.', reportCautionText: 'Este documento organiza evidencias comunitarias registradas con COSTA VIVA. No constituye por sí solo un peritaje, una certificación técnica, una atribución causal ni una determinación jurídica. Las posiciones proceden del dispositivo y deben leerse junto con la precisión registrada. Las mediciones se presentan con el método declarado por quien realizó la observación.', reportGovernanceText: 'Registrar no significa ceder. La comunidad o persona que produce los registros decide su conservación y su entrega.', reportPhotoLimit: 'El PDF incluye una muestra de hasta 12 fotografías. Los archivos completos pueden conservarse en el ZIP o en la carpeta COSTA VIVA.',
+    methodTapeLabel: 'Cinta métrica', reportVersionLabel: 'COSTA VIVA v0.5.20'
+  })
+
+  Object.assign(i18n.pt, {
+    evidenceReportTitle: 'Relatório comunitário de evidências',
+    evidenceReportIntro: 'Transforma uma série de observações em um documento organizado para apresentar a autoridades, organizações ou técnicos.',
+    evidenceReportValueTitle: 'O que fica registrado',
+    evidenceReportValueText: 'Período observado, registros, fotografias, medições, método, precisão disponível e motivo da apresentação.',
+    generateEvidenceReport: 'GERAR RELATÓRIO DE EVIDÊNCIAS',
+    evidenceReportCaution: 'O relatório documenta evidências comunitárias. Não constitui por si só perícia, certificação técnica ou determinação de causas.',
+    reportBuilderTitle: 'Criar relatório de evidências', reportBuilderIntro: 'Escolha qual acompanhamento deseja documentar e para que o relatório será apresentado.',
+    reportScope: 'Acompanhamento incluído', reportAllRecords: 'Todos os registros do caderno', reportPointOption: 'Ponto permanente {value}',
+    reportPurpose: 'Motivo da apresentação', purposeTechnicalVisit: 'Solicitar visita técnica', purposeRiskEvaluation: 'Solicitar avaliação de risco', purposeDocumentChange: 'Documentar mudança costeira', purposeCommunityRecord: 'Registro e memória comunitária',
+    reportRequestNote: 'Solicitação ou explicação opcional', reportRequestPlaceholder: 'Exemplo: solicitamos uma visita para verificar a mudança observada junto ao caminho comunitário',
+    reportIncludeCoordinates: 'Incluir coordenadas exatas', reportIncludePhotos: 'Incluir amostra fotográfica', reportSensitiveWarning: 'Se o local for sensível, desmarque as coordenadas exatas. O relatório pode manter o código do ponto sem revelar sua posição.',
+    createReportPdf: 'CRIAR RELATÓRIO PDF', downloadReportPdf: 'BAIXAR PDF', saveReportFolder: 'SALVAR NA PASTA COSTA VIVA', reportPreparing: 'Preparando o relatório neste dispositivo.', reportReady: 'Relatório {value} preparado e registrado neste dispositivo.', reportFailed: 'Não foi possível criar o relatório.', reportSavedFolder: 'Relatório salvo na pasta COSTA VIVA.',
+    reportHistoryTitle: 'Relatórios registrados neste dispositivo', reportHistoryEmpty: 'Ainda não foi gerado nenhum relatório.', viewEvolution: 'VER EVOLUÇÃO', evolutionTitle: 'Evolução do ponto', reportThisPoint: 'GERAR RELATÓRIO DESTE PONTO', campaigns: 'campanhas', firstObservation: 'Primeira observação', lastObservation: 'Última observação', elapsedTime: 'Período', days: 'dias', before: 'ANTES', now: 'AGORA', photographicComparison: 'Comparação fotográfica', photographicComparisonUnavailable: 'São necessárias fotografias de pelo menos duas datas para mostrar a comparação.', comparableMeasurements: 'Medições comparáveis', comparableMeasurementRule: 'O gráfico usa somente medições com fita, a mesma linha medida e a mesma referência fixa. Não converte fotografias nem estimativas em metros de erosão.', noComparableMeasurements: 'Ainda não existem pelo menos duas medições com fita suficientemente comparáveis para construir um gráfico.', documentedDistance: 'Distância documentada', timeline: 'Linha do tempo', evidenceCount: 'evidências', measurementsCount: 'medições',
+    reportCommunityEvidence: 'RELATÓRIO COMUNITÁRIO DE EVIDÊNCIAS COSTEIRAS', reportIdLabel: 'Identificador do relatório', reportGeneratedLabel: 'Gerado', reportPeriodLabel: 'Período observado', reportRecordsLabel: 'Registros incluídos', reportPhotosLabel: 'Fotografias', reportPurposeLabel: 'Motivo da apresentação', reportRequestLabel: 'Solicitação ou explicação', reportScopeLabel: 'Âmbito', reportMethodTitle: 'Alcance metodológico', reportSeriesTitle: 'Série de observações', reportPhotoTitle: 'Evidência fotográfica', reportMeasurementTitle: 'Série de medições comparáveis', reportCoordinatesHidden: 'Coordenadas exatas ocultadas por decisão de quem gera o relatório.', reportCautionText: 'Este documento organiza evidências comunitárias registradas com COSTA VIVA. Não constitui por si só perícia, certificação técnica, atribuição causal ou determinação jurídica. As posições procedem do dispositivo e devem ser lidas junto com a precisão registrada. As medições são apresentadas com o método declarado por quem realizou a observação.', reportGovernanceText: 'Registrar não significa ceder. A comunidade ou pessoa que produz os registros decide sua conservação e sua entrega.', reportPhotoLimit: 'O PDF inclui uma amostra de até 12 fotografias. Os arquivos completos podem ser conservados no ZIP ou na pasta COSTA VIVA.', methodTapeLabel: 'Fita métrica', reportVersionLabel: 'COSTA VIVA v0.5.20'
+  })
+
+  // El módulo nuevo se mantiene legible en la interfaz WY sin inventar una traducción no validada.
+  // Estas cadenas deben revisarse con hablantes Wayuu y expertos locales antes de sustituirlas.
+  Object.assign(i18n.guc, {
+    evidenceReportTitle: 'Informe comunitario de evidencias · WY revisión', evidenceReportIntro: 'Módulo nuevo pendiente de revisión comunitaria en Wayuunaiki.', evidenceReportValueTitle: 'Lo que queda registrado', evidenceReportValueText: 'Periodo, registros, fotografías, mediciones, método y precisión disponible.', generateEvidenceReport: 'GENERAR INFORME', evidenceReportCaution: 'Documento comunitario de evidencias. No es un peritaje.', reportBuilderTitle: 'Crear informe de evidencias', reportBuilderIntro: 'Módulo nuevo pendiente de revisión Wayuunaiki.', reportScope: 'Seguimiento incluido', reportAllRecords: 'Todos los registros', reportPointOption: 'Punto permanente {value}', reportPurpose: 'Motivo de presentación', purposeTechnicalVisit: 'Solicitar visita técnica', purposeRiskEvaluation: 'Solicitar evaluación de riesgo', purposeDocumentChange: 'Documentar cambio costero', purposeCommunityRecord: 'Memoria comunitaria', reportRequestNote: 'Solicitud opcional', reportRequestPlaceholder: 'Texto pendiente de revisión Wayuunaiki', reportIncludeCoordinates: 'Incluir coordenadas exactas', reportIncludePhotos: 'Incluir fotografías', reportSensitiveWarning: 'Si el lugar es sensible, puedes ocultar las coordenadas.', createReportPdf: 'CREAR PDF', downloadReportPdf: 'DESCARGAR PDF', saveReportFolder: 'GUARDAR EN CARPETA COSTA VIVA', reportPreparing: 'Preparando informe.', reportReady: 'Informe {value} preparado.', reportFailed: 'No se pudo crear el informe.', reportSavedFolder: 'Informe guardado.', reportHistoryTitle: 'Informes guardados', reportHistoryEmpty: 'Aún no hay informes.', viewEvolution: 'VER EVOLUCIÓN', evolutionTitle: 'Evolución del punto', reportThisPoint: 'GENERAR INFORME DE ESTE PUNTO', campaigns: 'campañas', firstObservation: 'Primera observación', lastObservation: 'Última observación', elapsedTime: 'Periodo', days: 'días', before: 'ANTES', now: 'AHORA', photographicComparison: 'Comparación fotográfica', photographicComparisonUnavailable: 'Se necesitan fotos de dos fechas.', comparableMeasurements: 'Mediciones comparables', comparableMeasurementRule: 'Solo se comparan mediciones con cinta, misma línea y misma referencia.', noComparableMeasurements: 'No hay todavía mediciones comparables.', documentedDistance: 'Distancia documentada', timeline: 'Línea del tiempo', evidenceCount: 'evidencias', measurementsCount: 'mediciones', reportCommunityEvidence: 'INFORME COMUNITARIO DE EVIDENCIAS COSTERAS', reportIdLabel: 'Identificador', reportGeneratedLabel: 'Generado', reportPeriodLabel: 'Periodo', reportRecordsLabel: 'Registros', reportPhotosLabel: 'Fotografías', reportPurposeLabel: 'Motivo', reportRequestLabel: 'Solicitud', reportScopeLabel: 'Ámbito', reportMethodTitle: 'Alcance metodológico', reportSeriesTitle: 'Serie de observaciones', reportPhotoTitle: 'Evidencia fotográfica', reportMeasurementTitle: 'Mediciones comparables', reportCoordinatesHidden: 'Coordenadas ocultadas.', reportCautionText: 'Documento comunitario. No sustituye un peritaje ni determina causas.', reportGovernanceText: 'Registrar no significa ceder.', reportPhotoLimit: 'El PDF incluye hasta 12 fotografías. Los archivos completos permanecen en el ZIP o carpeta.', methodTapeLabel: 'Cinta métrica', reportVersionLabel: 'COSTA VIVA v0.5.20'
+  })
+
+
   const categoryKeys = {
     beach_loss: 'beachLoss', sand_gain: 'sandGain', water_reach: 'waterReach', flood: 'flood', home: 'homeAffected', road: 'roadAffected', vegetation: 'vegetationAffected', no_change: 'noChange', other: 'other'
   }
@@ -681,7 +733,12 @@
     tideDatasetReady: false,
     coastMask: null,
     coastMaskReady: false,
-    tideCoastCheck: null
+    tideCoastCheck: null,
+    reportHistory: [],
+    preparedReport: null,
+    reportPresetPoint: null,
+    currentEvolutionPointId: null,
+    evolutionUrls: []
   }
 
   const $ = selector => document.querySelector(selector)
@@ -709,7 +766,7 @@
     $('#map-zoom-out')?.setAttribute('aria-label', tr('zoomOut'))
     $('.map-legend')?.setAttribute('aria-label', tr('legendAria'))
     $('.bottom-nav')?.setAttribute('aria-label', tr('mainNavigationAria'))
-    ;['#project-info-close','#detail-close','#share-modal-close','#import-modal-close','#install-modal-close'].forEach(selector => $(selector)?.setAttribute('aria-label', tr('close')))
+    ;['#project-info-close','#detail-close','#share-modal-close','#import-modal-close','#install-modal-close','#report-modal-close','#evolution-modal-close'].forEach(selector => $(selector)?.setAttribute('aria-label', tr('close')))
     $$('#lang-es, #lang-pt, #lang-guc').forEach(btn => btn.classList.toggle('active', btn.id === `lang-${lang}`))
     if ($('#wayuu-beta-banner')) $('#wayuu-beta-banner').hidden = lang !== 'guc'
     $$('[data-i18n]').forEach(el => {
@@ -726,6 +783,8 @@
     renderAll()
     updateTideUI()
     updateExportFolderUI()
+    populateReportScope()
+    renderReportHistory()
     const tideImportStatus = $('#ticon-import-status')
     if (tideImportStatus) tideImportStatus.textContent = state.tideDatasetReady ? tr('tideImportSuccess', { count: state.tideStations.length }) : tr('tideNoDataset')
   }
@@ -1610,6 +1669,14 @@
     view.textContent = tr('view')
     view.addEventListener('click', () => openRecordDetail(record))
     actions.appendChild(view)
+    if (record.permanentPointId) {
+      const evolution = document.createElement('button')
+      evolution.type = 'button'
+      evolution.className = 'small-btn'
+      evolution.textContent = tr('viewEvolution')
+      evolution.addEventListener('click', () => openEvolution(record.permanentPointId))
+      actions.appendChild(evolution)
+    }
     if (includeDelete) {
       const del = document.createElement('button')
       del.type = 'button'
@@ -2056,6 +2123,12 @@
           host.appendChild(row)
         })
       }
+      const evolutionButton = document.createElement('button')
+      evolutionButton.type = 'button'
+      evolutionButton.className = 'primary-btn full'
+      evolutionButton.textContent = tr('viewEvolution')
+      evolutionButton.addEventListener('click', () => { closeDetail(); openEvolution(record.permanentPointId) })
+      host.appendChild(evolutionButton)
     }
     $('#detail-modal').hidden = false
   }
@@ -2068,7 +2141,492 @@
   function renderAll() {
     renderMapList()
     renderNotebook()
+    populateReportScope()
+    renderReportHistory()
     if (state.map) renderMapMarkers()
+  }
+
+
+  function localeCode() {
+    return state.lang === 'pt' ? 'pt-BR' : 'es-ES'
+  }
+
+  function permanentRecords(pointId) {
+    return state.records.filter(record => record.permanentPointId === pointId).sort((a, b) => a.createdAt.localeCompare(b.createdAt))
+  }
+
+  function firstPhoto(record) {
+    return (record?.media || []).find(item => item.kind === 'photo' && (item.documentedBlob || item.originalBlob)) || null
+  }
+
+  function photoCount(records) {
+    return records.reduce((sum, record) => sum + (record.media || []).filter(item => item.kind === 'photo' && (item.documentedBlob || item.originalBlob)).length, 0)
+  }
+
+  function measurementMeters(measurement) {
+    if (!measurement || !Number.isFinite(Number(measurement.value))) return null
+    const value = Number(measurement.value)
+    if (measurement.unit === 'cm') return value / 100
+    if (measurement.unit === 'm') return value
+    return null
+  }
+
+  function comparableMeasurementGroup(records) {
+    const groups = new Map()
+    records.forEach(record => {
+      const m = record.measurement
+      const meters = measurementMeters(m)
+      const reference = String(m?.reference || '').trim().toLowerCase().replace(/\s+/g, ' ')
+      if (m?.method !== 'tape' || !m?.target || !reference || !Number.isFinite(meters)) return
+      const key = `${m.method}|${m.target}|${reference}`
+      if (!groups.has(key)) groups.set(key, { key, method: m.method, target: m.target, reference: m.reference.trim(), points: [] })
+      groups.get(key).points.push({ record, valueM: meters, createdAt: record.createdAt })
+    })
+    const candidates = [...groups.values()].map(group => ({ ...group, points: group.points.sort((a, b) => a.createdAt.localeCompare(b.createdAt)) })).filter(group => group.points.length >= 2)
+    candidates.sort((a, b) => b.points.length - a.points.length || a.points[0].createdAt.localeCompare(b.points[0].createdAt))
+    return candidates[0] || null
+  }
+
+  function formatShortDate(iso) {
+    try { return new Date(iso).toLocaleDateString(localeCode(), { day: '2-digit', month: '2-digit', year: '2-digit' }) } catch { return String(iso || '').slice(0, 10) }
+  }
+
+  function formatLongDate(iso) {
+    try { return new Date(iso).toLocaleString(localeCode()) } catch { return String(iso || '') }
+  }
+
+  function elapsedDays(records) {
+    if (records.length < 2) return 0
+    return Math.max(0, Math.round((new Date(records.at(-1).createdAt) - new Date(records[0].createdAt)) / 86400000))
+  }
+
+  function drawEvolutionChart(canvas, group) {
+    if (!canvas || !group?.points?.length) return
+    const cssWidth = Math.max(300, canvas.clientWidth || 620)
+    const cssHeight = 250
+    const dpr = Math.min(2, window.devicePixelRatio || 1)
+    canvas.width = Math.round(cssWidth * dpr)
+    canvas.height = Math.round(cssHeight * dpr)
+    const ctx = canvas.getContext('2d')
+    ctx.scale(dpr, dpr)
+    ctx.clearRect(0, 0, cssWidth, cssHeight)
+    const pad = { l: 54, r: 18, t: 20, b: 46 }
+    const w = cssWidth - pad.l - pad.r
+    const h = cssHeight - pad.t - pad.b
+    const values = group.points.map(point => point.valueM)
+    let min = Math.min(...values), max = Math.max(...values)
+    if (Math.abs(max - min) < 0.05) { min -= 0.1; max += 0.1 }
+    else { const margin = (max - min) * 0.12; min -= margin; max += margin }
+    const times = group.points.map(point => new Date(point.createdAt).getTime())
+    let t0 = Math.min(...times), t1 = Math.max(...times)
+    if (t1 === t0) t1 = t0 + 86400000
+    const x = t => pad.l + (t - t0) / (t1 - t0) * w
+    const y = v => pad.t + (max - v) / (max - min) * h
+    ctx.strokeStyle = '#aeb8c2'; ctx.lineWidth = 1
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, pad.t + h); ctx.lineTo(pad.l + w, pad.t + h); ctx.stroke()
+    ctx.fillStyle = '#565c65'; ctx.font = '12px system-ui, sans-serif'; ctx.textAlign = 'right'; ctx.textBaseline = 'middle'
+    for (let i = 0; i <= 4; i += 1) {
+      const value = min + (max - min) * i / 4
+      const yy = y(value)
+      ctx.strokeStyle = '#e6e8eb'; ctx.beginPath(); ctx.moveTo(pad.l, yy); ctx.lineTo(pad.l + w, yy); ctx.stroke()
+      ctx.fillStyle = '#565c65'; ctx.fillText(`${value.toFixed(2)} m`, pad.l - 7, yy)
+    }
+    ctx.strokeStyle = '#005ea8'; ctx.lineWidth = 3; ctx.beginPath()
+    group.points.forEach((point, index) => { const xx=x(new Date(point.createdAt).getTime()), yy=y(point.valueM); if(index===0) ctx.moveTo(xx,yy); else ctx.lineTo(xx,yy) })
+    ctx.stroke()
+    group.points.forEach(point => { const xx=x(new Date(point.createdAt).getTime()), yy=y(point.valueM); ctx.fillStyle='#162e51'; ctx.beginPath(); ctx.arc(xx,yy,4,0,Math.PI*2); ctx.fill() })
+    ctx.fillStyle = '#565c65'; ctx.font = '11px system-ui, sans-serif'; ctx.textAlign='center'; ctx.textBaseline='top'
+    const labelIndexes = group.points.length <= 5 ? group.points.map((_,i)=>i) : [0, Math.floor((group.points.length-1)/2), group.points.length-1]
+    ;[...new Set(labelIndexes)].forEach(i => { const point=group.points[i]; ctx.fillText(formatShortDate(point.createdAt), x(new Date(point.createdAt).getTime()), pad.t+h+9) })
+  }
+
+  function clearEvolutionUrls() {
+    state.evolutionUrls.forEach(url => URL.revokeObjectURL(url))
+    state.evolutionUrls = []
+  }
+
+  function photoUrl(item) {
+    const blob = item?.documentedBlob || item?.originalBlob
+    if (!blob) return null
+    const url = URL.createObjectURL(blob)
+    state.evolutionUrls.push(url)
+    return url
+  }
+
+  function openEvolution(pointId) {
+    const records = permanentRecords(pointId)
+    if (!records.length) return
+    clearEvolutionUrls()
+    state.currentEvolutionPointId = pointId
+    const host = $('#evolution-content')
+    host.innerHTML = ''
+
+    const head = document.createElement('div')
+    head.className = 'evolution-head'
+    head.innerHTML = `<h2 id="evolution-modal-title">${escapeHtml(tr('evolutionTitle'))}</h2><p>${escapeHtml(pointId)}</p>`
+    host.appendChild(head)
+
+    const stats = document.createElement('div')
+    stats.className = 'evolution-stats'
+    const statsData = [
+      [String(records.length), tr('campaigns')],
+      [formatShortDate(records[0].createdAt), tr('firstObservation')],
+      [formatShortDate(records.at(-1).createdAt), tr('lastObservation')],
+      [`${elapsedDays(records)} ${tr('days')}`, tr('elapsedTime')]
+    ]
+    stats.innerHTML = statsData.map(([value,label]) => `<div class="evolution-stat"><strong>${escapeHtml(value)}</strong><small>${escapeHtml(label)}</small></div>`).join('')
+    host.appendChild(stats)
+
+    const photoRecords = records.filter(record => firstPhoto(record))
+    const photoTitle = document.createElement('h3')
+    photoTitle.textContent = tr('photographicComparison')
+    host.appendChild(photoTitle)
+    if (photoRecords.length >= 2) {
+      const early = photoRecords[0], late = photoRecords.at(-1)
+      const earlyUrl = photoUrl(firstPhoto(early)), lateUrl = photoUrl(firstPhoto(late))
+      const card = document.createElement('div')
+      card.className = 'before-after-card'
+      card.innerHTML = `<div class="before-after-stage"><img src="${escapeHtml(earlyUrl)}" alt="${escapeHtml(tr('before'))}"><div class="after-layer"><img src="${escapeHtml(lateUrl)}" alt="${escapeHtml(tr('now'))}"></div><span class="ba-label after">${escapeHtml(tr('now'))}</span><span class="ba-label before">${escapeHtml(tr('before'))}</span></div><input class="before-after-range" type="range" min="5" max="95" value="50" aria-label="${escapeHtml(tr('photographicComparison'))}"><div class="before-after-dates"><span>${escapeHtml(formatShortDate(early.createdAt))} · ${escapeHtml(early.code)}</span><span>${escapeHtml(formatShortDate(late.createdAt))} · ${escapeHtml(late.code)}</span></div>`
+      const range = card.querySelector('input')
+      const layer = card.querySelector('.after-layer')
+      range.addEventListener('input', () => { layer.style.width = `${range.value}%` })
+      host.appendChild(card)
+    } else {
+      const empty = document.createElement('div'); empty.className='evolution-empty'; empty.textContent=tr('photographicComparisonUnavailable'); host.appendChild(empty)
+    }
+
+    const group = comparableMeasurementGroup(records)
+    const measureTitle = document.createElement('h3'); measureTitle.textContent=tr('comparableMeasurements'); host.appendChild(measureTitle)
+    if (group) {
+      const card = document.createElement('div'); card.className='evolution-chart-card'
+      const targetLabel = tr(measurementTargetKeys[group.target] || 'other')
+      card.innerHTML = `<canvas></canvas><p class="evolution-method-note"><strong>${escapeHtml(tr('methodTapeLabel'))}</strong> · ${escapeHtml(targetLabel)} · ${escapeHtml(group.reference)} · ${group.points.length} ${escapeHtml(tr('measurementsCount'))}</p><p class="evolution-method-note">${escapeHtml(tr('comparableMeasurementRule'))}</p>`
+      host.appendChild(card)
+      requestAnimationFrame(() => drawEvolutionChart(card.querySelector('canvas'), group))
+    } else {
+      const empty = document.createElement('div'); empty.className='evolution-empty'; empty.textContent=tr('noComparableMeasurements'); host.appendChild(empty)
+    }
+
+    const timelineTitle = document.createElement('h3'); timelineTitle.textContent=tr('timeline'); host.appendChild(timelineTitle)
+    const timeline = document.createElement('div'); timeline.className='evolution-timeline'
+    records.forEach(record => {
+      const measurement = record.measurement ? `${record.measurement.value} ${record.measurement.unit} · ${record.measurement.method === 'tape' ? tr('methodTapeLabel') : (record.measurement.method || tr('notAvailable'))}` : tr('notAvailable')
+      const item = document.createElement('div'); item.className='evolution-timeline-item'
+      item.innerHTML = `<time>${escapeHtml(formatShortDate(record.createdAt))}</time><div><strong>${escapeHtml(record.code)} · ${escapeHtml(categoryText(record))}</strong><p>${escapeHtml(record.observationText || tr('noNote'))}</p><small>${escapeHtml(measurement)} · ${(record.media || []).length} ${escapeHtml(tr('evidenceCount'))}</small></div>`
+      timeline.appendChild(item)
+    })
+    host.appendChild(timeline)
+    $('#evolution-modal').hidden = false
+    document.body.style.overflow = 'hidden'
+    $('#evolution-modal-close').focus()
+  }
+
+  function closeEvolution() {
+    $('#evolution-modal').hidden = true
+    document.body.style.overflow = ''
+    clearEvolutionUrls()
+    state.currentEvolutionPointId = null
+  }
+
+  function populateReportScope() {
+    const select = $('#report-scope')
+    if (!select) return
+    const current = select.value
+    select.innerHTML = ''
+    const all = document.createElement('option'); all.value='all'; all.textContent=tr('reportAllRecords'); select.appendChild(all)
+    const roots = state.records.filter(record => record.isPermanentRoot).sort((a,b)=>a.createdAt.localeCompare(b.createdAt))
+    roots.forEach(root => { const option=document.createElement('option'); option.value=`point:${root.code}`; option.textContent=tr('reportPointOption',{value:root.code}); select.appendChild(option) })
+    const preset = state.reportPresetPoint ? `point:${state.reportPresetPoint}` : current
+    if ([...select.options].some(option => option.value === preset)) select.value = preset
+  }
+
+  function reportPurposeLabel(value) {
+    const map = { technical_visit:'purposeTechnicalVisit', risk_evaluation:'purposeRiskEvaluation', document_change:'purposeDocumentChange', community_record:'purposeCommunityRecord', other:'other' }
+    return tr(map[value] || 'other')
+  }
+
+  function reportScopeRecords(scope) {
+    if (scope?.startsWith('point:')) return permanentRecords(scope.slice(6))
+    return [...state.records].sort((a,b)=>a.createdAt.localeCompare(b.createdAt))
+  }
+
+  function openReportBuilder(pointId = null) {
+    if (!requireRecords()) return
+    state.reportPresetPoint = pointId
+    state.preparedReport = null
+    populateReportScope()
+    $('#report-status').textContent = ''
+    $('#report-ready-actions').hidden = true
+    $('#report-modal').hidden = false
+    document.body.style.overflow = 'hidden'
+    $('#report-modal-close').focus()
+  }
+
+  function closeReportBuilder() {
+    $('#report-modal').hidden = true
+    document.body.style.overflow = ''
+    state.reportPresetPoint = null
+  }
+
+  function renderReportHistory() {
+    const host = $('#report-history-mini')
+    if (!host) return
+    host.innerHTML = ''
+    const title = document.createElement('strong'); title.textContent=tr('reportHistoryTitle'); host.appendChild(title)
+    if (!state.reportHistory.length) {
+      const empty=document.createElement('div'); empty.className='report-history-empty'; empty.textContent=tr('reportHistoryEmpty'); host.appendChild(empty); return
+    }
+    state.reportHistory.slice(0,3).forEach(item => {
+      const row=document.createElement('div'); row.className='report-history-item'
+      const scope = item.pointId ? tr('reportPointOption',{value:item.pointId}) : tr('reportAllRecords')
+      row.innerHTML=`<div><strong>${escapeHtml(item.reportId)}</strong><small>${escapeHtml(formatLongDate(item.generatedAt))} · ${escapeHtml(scope)}</small></div><small>${escapeHtml(reportPurposeLabel(item.purpose))}</small>`
+      host.appendChild(row)
+    })
+  }
+
+  async function nextReportId() {
+    const year = new Date().getFullYear()
+    let counter = Number(await idbGetMeta('reportCounter'))
+    if (!Number.isInteger(counter) || counter < 1) counter = 1
+    await idbSetMeta('reportCounter', counter + 1)
+    return `CV-INF-${year}-${String(counter).padStart(5,'0')}`
+  }
+
+  async function saveReportHistory(metadata) {
+    const clean = { ...metadata }
+    delete clean.pdfBlob
+    state.reportHistory = [clean, ...state.reportHistory.filter(item => item.reportId !== clean.reportId)].slice(0,100)
+    await idbSetMeta('reportHistory', state.reportHistory)
+    renderReportHistory()
+  }
+
+  function pdfByteChar(codePoint) {
+    const map = { 0x20ac:128,0x201a:130,0x0192:131,0x201e:132,0x2026:133,0x2020:134,0x2021:135,0x02c6:136,0x2030:137,0x0160:138,0x2039:139,0x0152:140,0x017d:142,0x2018:145,0x2019:146,0x201c:147,0x201d:148,0x2022:149,0x2013:150,0x2014:151,0x02dc:152,0x2122:153,0x0161:154,0x203a:155,0x0153:156,0x017e:158,0x0178:159 }
+    if (codePoint <= 255) return codePoint
+    return map[codePoint] ?? 63
+  }
+
+  function pdfLatinBytes(text) {
+    const chars = []
+    for (const ch of String(text)) chars.push(pdfByteChar(ch.codePointAt(0)))
+    return new Uint8Array(chars)
+  }
+
+  function pdfLiteral(text) {
+    let out=''
+    for (const ch of String(text ?? '')) {
+      const byte=pdfByteChar(ch.codePointAt(0))
+      const c=String.fromCharCode(byte)
+      if (c==='\\' || c==='(' || c===')') out += `\\${c}`
+      else if (byte < 32 && byte !== 9) out += ' '
+      else out += c
+    }
+    return `(${out})`
+  }
+
+  function pdfJoin(parts) {
+    const arrays = parts.map(part => part instanceof Uint8Array ? part : pdfLatinBytes(part))
+    const length = arrays.reduce((sum, part) => sum + part.length, 0)
+    const out = new Uint8Array(length); let offset=0
+    arrays.forEach(part => { out.set(part,offset); offset+=part.length })
+    return out
+  }
+
+  function pdfStream(bytes, extra='') {
+    return pdfJoin([`<< /Length ${bytes.length}${extra ? ` ${extra}` : ''} >>\nstream\n`,bytes,'\nendstream'])
+  }
+
+  function pdfTextCommands(lines) {
+    return lines.map(line => `BT /${line.bold ? 'F2':'F1'} ${line.size || 10} Tf ${line.color || '0.09 0.18 0.32'} rg 1 0 0 1 ${line.x} ${line.y} Tm ${pdfLiteral(line.text)} Tj ET\n`).join('')
+  }
+
+  function wrapPdfText(text, maxChars=78) {
+    const words=String(text || '').replace(/\s+/g,' ').trim().split(' ').filter(Boolean)
+    if (!words.length) return ['']
+    const lines=[]; let line=''
+    words.forEach(word => { const candidate=line ? `${line} ${word}` : word; if(candidate.length>maxChars && line){lines.push(line);line=word}else line=candidate })
+    if(line) lines.push(line)
+    return lines
+  }
+
+  async function imageBlobToJpeg(blob, maxWidth=1280, maxHeight=900) {
+    if (!(blob instanceof Blob)) return null
+    let bitmap=null, objectUrl=null, image=null
+    try {
+      if ('createImageBitmap' in window) bitmap = await createImageBitmap(blob)
+      else {
+        objectUrl=URL.createObjectURL(blob); image=new Image(); image.src=objectUrl
+        await new Promise((resolve,reject)=>{image.onload=resolve;image.onerror=reject})
+      }
+      const source=bitmap || image
+      const sw=source.width || source.naturalWidth, sh=source.height || source.naturalHeight
+      if (!sw || !sh) return null
+      const scale=Math.min(1,maxWidth/sw,maxHeight/sh)
+      const width=Math.max(1,Math.round(sw*scale)), height=Math.max(1,Math.round(sh*scale))
+      const canvas=document.createElement('canvas'); canvas.width=width; canvas.height=height
+      const ctx=canvas.getContext('2d'); ctx.fillStyle='#ffffff'; ctx.fillRect(0,0,width,height); ctx.drawImage(source,0,0,width,height)
+      const jpeg=await new Promise(resolve=>canvas.toBlob(resolve,'image/jpeg',0.82))
+      if (!jpeg) return null
+      return { bytes:new Uint8Array(await jpeg.arrayBuffer()), width, height }
+    } catch(error) { console.warn('Report image conversion failed',error); return null }
+    finally { if(bitmap?.close) bitmap.close(); if(objectUrl) URL.revokeObjectURL(objectUrl) }
+  }
+
+  function collectReportPhotos(records, limit=12) {
+    const out=[]
+    records.forEach(record => {
+      ;(record.media || []).forEach(item => {
+        if (out.length >= limit) return
+        if (item.kind === 'photo' && (item.documentedBlob || item.originalBlob)) out.push({record,item,blob:item.documentedBlob || item.originalBlob})
+      })
+    })
+    return out
+  }
+
+  async function makeEvidencePdf(records, metadata) {
+    const W=595, H=842, margin=46
+    const objects=[null,null,null,null]
+    const pageIds=[]
+    const addObj=value=>{objects.push(value);return objects.length - 1}
+    const fontRegularId=3, fontBoldId=4
+    objects[0]=null
+    objects[1]=pdfLatinBytes('<< /Type /Catalog /Pages 2 0 R >>')
+    objects[2]=null
+    objects[3]=pdfLatinBytes('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>')
+    objects[4]=pdfLatinBytes('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>')
+
+    const addPage = (content, xobjects={}) => {
+      const contentBytes=pdfLatinBytes(content)
+      const contentId=addObj(pdfStream(contentBytes))
+      const xobjEntries=Object.entries(xobjects).map(([name,id])=>`/${name} ${id} 0 R`).join(' ')
+      const resources=`<< /Font << /F1 ${fontRegularId} 0 R /F2 ${fontBoldId} 0 R >>${xobjEntries ? ` /XObject << ${xobjEntries} >>` : ''} >>`
+      const pageId=addObj(pdfLatinBytes(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${W} ${H}] /Resources ${resources} /Contents ${contentId} 0 R >>`))
+      pageIds.push(pageId)
+    }
+
+    const first=records[0], last=records.at(-1)
+    const photos=metadata.includePhotos ? collectReportPhotos(records,12) : []
+    const measurements=records.filter(record=>record.measurement).length
+    const group=comparableMeasurementGroup(records)
+    const scopeText=metadata.pointId ? tr('reportPointOption',{value:metadata.pointId}) : tr('reportAllRecords')
+
+    // Cover / summary
+    let c='0.086 0.18 0.318 rg 0 742 595 100 re f\n'
+    c+=pdfTextCommands([{text:'COSTA VIVA',x:margin,y:800,size:23,bold:true,color:'1 1 1'},{text:tr('reportCommunityEvidence'),x:margin,y:775,size:12,bold:true,color:'1 1 1'}])
+    const summary=[
+      [tr('reportIdLabel'),metadata.reportId],[tr('reportGeneratedLabel'),formatLongDate(metadata.generatedAt)],[tr('reportScopeLabel'),scopeText],[tr('reportPeriodLabel'),`${formatShortDate(first.createdAt)} - ${formatShortDate(last.createdAt)}`],[tr('reportRecordsLabel'),String(records.length)],[tr('reportPhotosLabel'),String(photoCount(records))],[tr('measurementsCount'),String(measurements)],[tr('reportPurposeLabel'),reportPurposeLabel(metadata.purpose)]
+    ]
+    let y=710
+    summary.forEach(([label,value])=>{c+=`0.95 0.96 0.97 rg ${margin} ${y-10} 503 30 re f\n`;c+=pdfTextCommands([{text:label,x:margin+10,y:y+6,size:8,bold:true,color:'0.35 0.38 0.42'},{text:value,x:margin+170,y:y+4,size:10,bold:false,color:'0.09 0.18 0.32'}]);y-=38})
+    if(metadata.requestNote){c+=pdfTextCommands([{text:tr('reportRequestLabel'),x:margin,y:y,size:10,bold:true}]);y-=16;wrapPdfText(metadata.requestNote,82).slice(0,4).forEach(line=>{c+=pdfTextCommands([{text:line,x:margin,y:y,size:9,color:'0.15 0.15 0.15'}]);y-=14});y-=5}
+    c+=`0.99 0.91 0.55 rg ${margin} 82 503 86 re f\n`
+    c+=pdfTextCommands([{text:tr('reportMethodTitle'),x:margin+10,y:146,size:10,bold:true,color:'0.09 0.18 0.32'}])
+    let cautionY=130
+    wrapPdfText(tr('reportCautionText'),86).slice(0,5).forEach(line=>{c+=pdfTextCommands([{text:line,x:margin+10,y:cautionY,size:8,color:'0.12 0.12 0.12'}]);cautionY-=12})
+    c+=pdfTextCommands([{text:tr('reportGovernanceText'),x:margin,y:52,size:8,bold:true,color:'0.09 0.18 0.32'},{text:tr('reportVersionLabel'),x:430,y:52,size:8,color:'0.35 0.38 0.42'}])
+    addPage(c)
+
+    // Series pages
+    const rows=records.map(record=>{
+      const measurement=record.measurement ? `${record.measurement.value} ${record.measurement.unit} · ${record.measurement.method === 'tape' ? tr('methodTapeLabel') : (record.measurement.method || tr('notAvailable'))}` : tr('notAvailable')
+      const location=metadata.includeCoordinates ? recordLocationText(record) : tr('reportCoordinatesHidden')
+      return {date:formatShortDate(record.createdAt),code:record.code,category:categoryText(record),measurement,location,note:record.observationText||tr('noNote')}
+    })
+    for(let start=0;start<rows.length;start+=6){
+      let page=pdfTextCommands([{text:tr('reportSeriesTitle'),x:margin,y:792,size:17,bold:true},{text:`${metadata.reportId} · ${start+1}-${Math.min(start+6,rows.length)} / ${rows.length}`,x:margin,y:772,size:8,color:'0.35 0.38 0.42'}])
+      let yy=738
+      rows.slice(start,start+6).forEach(row=>{
+        page+=`0.96 0.97 0.98 rg ${margin} ${yy-82} 503 94 re f\n`
+        page+=pdfTextCommands([{text:`${row.date} · ${row.code}`,x:margin+10,y:yy,size:10,bold:true},{text:row.category,x:margin+10,y:yy-16,size:9,bold:true,color:'0.0 0.37 0.66'},{text:`${tr('measurementLabel')}: ${row.measurement}`,x:margin+10,y:yy-31,size:8,color:'0.18 0.18 0.18'},{text:`${tr('coordinates')}: ${row.location}`,x:margin+10,y:yy-44,size:8,color:'0.18 0.18 0.18'}])
+        const noteLines=wrapPdfText(row.note,90).slice(0,2);noteLines.forEach((line,i)=>{page+=pdfTextCommands([{text:line,x:margin+10,y:yy-59-i*12,size:8,color:'0.25 0.25 0.25'}])})
+        yy-=110
+      })
+      addPage(page)
+    }
+
+    // Comparable measurement chart page
+    if(group){
+      let page=pdfTextCommands([{text:tr('reportMeasurementTitle'),x:margin,y:792,size:17,bold:true},{text:`${tr('methodTapeLabel')} · ${tr(measurementTargetKeys[group.target]||'other')} · ${group.reference}`,x:margin,y:770,size:9,color:'0.35 0.38 0.42'}])
+      const x0=72,y0=240,w=455,h=430
+      const vals=group.points.map(p=>p.valueM);let min=Math.min(...vals),max=Math.max(...vals);if(Math.abs(max-min)<0.05){min-=.1;max+=.1}else{const m=(max-min)*.12;min-=m;max+=m}
+      const times=group.points.map(p=>new Date(p.createdAt).getTime());let t0=Math.min(...times),t1=Math.max(...times);if(t0===t1)t1=t0+86400000
+      const px=t=>x0+(t-t0)/(t1-t0)*w, py=v=>y0+(v-min)/(max-min)*h
+      page+='0.75 0.78 0.82 RG 1 w '+`${x0} ${y0} m ${x0} ${y0+h} l ${x0+w} ${y0+h} l S\n`
+      for(let i=0;i<=4;i++){const v=min+(max-min)*i/4,yy=py(v);page+=`0.9 0.91 0.92 RG 0.5 w ${x0} ${yy} m ${x0+w} ${yy} l S\n`;page+=pdfTextCommands([{text:`${v.toFixed(2)} m`,x:34,y:yy-2,size:7,color:'0.35 0.38 0.42'}])}
+      page+='0 0.37 0.66 RG 2.5 w '
+      group.points.forEach((p,i)=>{const xx=px(new Date(p.createdAt).getTime()),yy=py(p.valueM);page+=`${i?'':' '}${xx.toFixed(1)} ${yy.toFixed(1)} ${i?'l':'m'} `});page+='S\n'
+      group.points.forEach(p=>{const xx=px(new Date(p.createdAt).getTime()),yy=py(p.valueM);page+=`0.086 0.18 0.318 rg ${xx-2.5} ${yy-2.5} 5 5 re f\n`})
+      const labels=group.points.length<=5?group.points: [group.points[0],group.points[Math.floor((group.points.length-1)/2)],group.points.at(-1)]
+      labels.forEach(p=>{const xx=px(new Date(p.createdAt).getTime());page+=pdfTextCommands([{text:formatShortDate(p.createdAt),x:Math.max(45,Math.min(510,xx-18)),y:y0-18,size:7,color:'0.35 0.38 0.42'}])})
+      let noteY=190;wrapPdfText(tr('comparableMeasurementRule'),88).forEach(line=>{page+=pdfTextCommands([{text:line,x:margin,y:noteY,size:8,color:'0.25 0.25 0.25'}]);noteY-=12})
+      addPage(page)
+    }
+
+    // Photos, one per page for legibility and mobile memory safety
+    if(photos.length){
+      for(let i=0;i<photos.length;i++){
+        const ph=photos[i]
+        const image=await imageBlobToJpeg(ph.blob)
+        if(!image) continue
+        const imageObj=pdfJoin([`<< /Type /XObject /Subtype /Image /Width ${image.width} /Height ${image.height} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${image.bytes.length} >>\nstream\n`,image.bytes,'\nendstream'])
+        const imageId=addObj(imageObj)
+        const maxW=503,maxH=610,scale=Math.min(maxW/image.width,maxH/image.height),iw=image.width*scale,ih=image.height*scale,ix=(W-iw)/2,iy=122+(maxH-ih)/2
+        let page=pdfTextCommands([{text:tr('reportPhotoTitle'),x:margin,y:792,size:17,bold:true},{text:`${ph.record.code} · ${formatLongDate(ph.record.createdAt)} · ${i+1}/${photos.length}`,x:margin,y:770,size:8,color:'0.35 0.38 0.42'}])
+        page+=`q ${iw.toFixed(1)} 0 0 ${ih.toFixed(1)} ${ix.toFixed(1)} ${iy.toFixed(1)} cm /Im1 Do Q\n`
+        page+=pdfTextCommands([{text:categoryText(ph.record),x:margin,y:92,size:9,bold:true,color:'0.0 0.37 0.66'}])
+        const loc=metadata.includeCoordinates?recordLocationText(ph.record):tr('reportCoordinatesHidden');wrapPdfText(loc,88).slice(0,2).forEach((line,j)=>{page+=pdfTextCommands([{text:line,x:margin,y:76-j*11,size:7,color:'0.35 0.38 0.42'}])})
+        addPage(page,{Im1:imageId})
+      }
+      let footer=pdfTextCommands([{text:tr('reportPhotoLimit'),x:margin,y:790,size:10,bold:true}]);let fy=764;wrapPdfText(tr('reportPhotoLimit'),88).forEach(line=>{footer+=pdfTextCommands([{text:line,x:margin,y:fy,size:9,color:'0.2 0.2 0.2'}]);fy-=14});addPage(footer)
+    }
+
+    objects[2]=pdfLatinBytes(`<< /Type /Pages /Count ${pageIds.length} /Kids [${pageIds.map(id=>`${id} 0 R`).join(' ')}] >>`)
+    const header=pdfLatinBytes('%PDF-1.4\n%âãÏÓ\n')
+    const parts=[header];const offsets=[0];let offset=header.length
+    for(let id=1;id<objects.length;id++){
+      const obj=objects[id] || pdfLatinBytes('<<>>')
+      const prefix=pdfLatinBytes(`${id} 0 obj\n`),suffix=pdfLatinBytes('\nendobj\n')
+      offsets[id]=offset;parts.push(prefix,obj,suffix);offset+=prefix.length+obj.length+suffix.length
+    }
+    const xrefOffset=offset
+    let xref=`xref\n0 ${objects.length}\n0000000000 65535 f \n`
+    for(let id=1;id<objects.length;id++)xref+=`${String(offsets[id]).padStart(10,'0')} 00000 n \n`
+    const trailer=`trailer\n<< /Size ${objects.length} /Root 1 0 R >>\nstartxref\n${xrefOffset}\n%%EOF\n`
+    parts.push(pdfLatinBytes(xref),pdfLatinBytes(trailer))
+    return new Blob(parts,{type:'application/pdf'})
+  }
+
+  async function prepareEvidenceReport() {
+    if (!requireRecords()) return
+    const scope=$('#report-scope').value
+    const records=reportScopeRecords(scope)
+    if(!records.length){$('#report-status').textContent=tr('exportEmpty');return}
+    $('#report-status').textContent=tr('reportPreparing');$('#report-ready-actions').hidden=true
+    try{
+      const reportId=await nextReportId(),generatedAt=new Date().toISOString(),pointId=scope.startsWith('point:')?scope.slice(6):null
+      const metadata={reportId,generatedAt,pointId,scope,purpose:$('#report-purpose').value,requestNote:$('#report-request-note').value.trim(),includeCoordinates:$('#report-coordinates').checked,includePhotos:$('#report-photos').checked,recordUuids:records.map(r=>r.uuid),recordCount:records.length,periodStart:records[0].createdAt,periodEnd:records.at(-1).createdAt,appVersion:'0.5.20'}
+      const blob=await makeEvidencePdf(records,metadata),filename=`COSTA-VIVA-${reportId}.pdf`
+      state.preparedReport={...metadata,blob,filename}
+      await saveReportHistory(metadata)
+      $('#report-status').textContent=tr('reportReady',{value:reportId});$('#report-ready-actions').hidden=false
+    }catch(error){console.error('Report generation failed',error);$('#report-status').textContent=tr('reportFailed')}
+  }
+
+  function downloadPreparedReport() {
+    if(!state.preparedReport?.blob)return
+    downloadBlob(state.preparedReport.blob,state.preparedReport.filename)
+  }
+
+  async function savePreparedReportToFolder() {
+    const report=state.preparedReport;if(!report?.blob)return
+    const folder=await ensureCostaVivaFolder();if(!folder)return
+    try{
+      const dir=await folder.getDirectoryHandle('Informes',{create:true})
+      await writeBlobToDirectory(dir,report.filename,report.blob)
+      const metadata={...report};delete metadata.blob
+      await writeBlobToDirectory(dir,report.filename.replace(/\.pdf$/i,'.json'),JSON.stringify(metadata,null,2))
+      $('#report-status').textContent=tr('reportSavedFolder');showToast(tr('reportSavedFolder'))
+    }catch(error){console.error('Report folder save failed',error);$('#report-status').textContent=tr('folderSaveFailed')}
   }
 
   function recordForExport(record) {
@@ -2229,7 +2787,7 @@ Esta cópia contém os registros e evidências disponíveis neste dispositivo no
       format: 'costa-viva-full-archive',
       formatVersion: 1,
       app: 'COSTA VIVA',
-      appVersion: '0.5.19',
+      appVersion: '0.5.20',
       createdAt,
       recordCount: state.records.length,
       automaticUpload: false,
@@ -2240,7 +2798,8 @@ Esta cópia contém os registros e evidências disponíveis neste dispositivo no
       { name: 'LEEME-README.txt', data: fullArchiveReadme(createdAt) },
       { name: 'costa-viva-registros.json', data: exportJSONText() },
       { name: 'costa-viva-registros.csv', data: exportCSVText() },
-      { name: 'costa-viva-puntos.geojson', data: exportGeoJSONText() }
+      { name: 'costa-viva-puntos.geojson', data: exportGeoJSONText() },
+      { name: 'informes/historial-informes.json', data: JSON.stringify(state.reportHistory || [], null, 2) }
     ]
     state.records.forEach(record => {
       ;(record.media || []).forEach((item, idx) => {
@@ -2670,7 +3229,7 @@ Esta cópia contém os registros e evidências disponíveis neste dispositivo no
       format: 'costa-viva-zip',
       formatVersion: 2,
       app: 'COSTA VIVA',
-      appVersion: '0.5.19',
+      appVersion: '0.5.20',
       packageId,
       createdAt,
       sourceNotebookId,
@@ -3168,6 +3727,8 @@ Esta cópia contém os registros e evidências disponíveis neste dispositivo no
       if (event.key === 'Escape' && !$('#install-modal').hidden) closeInstallModal()
       if (event.key === 'Escape' && !$('#share-modal').hidden) closeShareModal()
       if (event.key === 'Escape' && !$('#import-modal').hidden) closeImportModal()
+      if (event.key === 'Escape' && !$('#report-modal').hidden) closeReportBuilder()
+      if (event.key === 'Escape' && !$('#evolution-modal').hidden) closeEvolution()
     })
     $$('.nav-item').forEach(btn => btn.addEventListener('click', () => showScreen(btn.dataset.target)))
     $('#activate-mode').addEventListener('click', activateObservationMode)
@@ -3205,6 +3766,15 @@ Esta cópia contém os registros e evidências disponíveis neste dispositivo no
     $('#export-csv').addEventListener('click', () => exportSimple('csv'))
     $('#export-geojson').addEventListener('click', () => exportSimple('geojson'))
     $('#export-zip').addEventListener('click', () => exportZip(true))
+    $('#open-report-builder').addEventListener('click', () => openReportBuilder())
+    $('#report-modal-close').addEventListener('click', closeReportBuilder)
+    $('#report-modal').addEventListener('click', event => { if (event.target === $('#report-modal')) closeReportBuilder() })
+    $('#prepare-report').addEventListener('click', prepareEvidenceReport)
+    $('#download-report').addEventListener('click', downloadPreparedReport)
+    $('#save-report-folder').addEventListener('click', savePreparedReportToFolder)
+    $('#evolution-modal-close').addEventListener('click', closeEvolution)
+    $('#evolution-modal').addEventListener('click', event => { if (event.target === $('#evolution-modal')) closeEvolution() })
+    $('#report-from-evolution').addEventListener('click', () => { const pointId=state.currentEvolutionPointId; closeEvolution(); if(pointId) openReportBuilder(pointId) })
     $('#choose-costa-folder').addEventListener('click', chooseCostaVivaFolder)
     $('#save-all-folder').addEventListener('click', saveAllToCostaVivaFolder)
     $('#share-export').addEventListener('click', sharePackage)
@@ -3234,6 +3804,7 @@ Esta cópia contém os registros e evidências disponíveis neste dispositivo no
     setupServiceWorker()
     setLanguage(state.lang)
     try { await loadState() } catch (error) { console.error('Database init failed', error) }
+    try { state.reportHistory = (await idbGetMeta('reportHistory')) || []; renderReportHistory() } catch (error) { console.warn('Could not load report history', error) }
     await loadExportFolderHandle()
     await loadCoastMask()
     await loadTideDatasetState()

@@ -359,3 +359,16 @@ Pruebas pendientes en dispositivo físico
 - la aplicación sigue funcionando si se deniega el permiso
 - en navegadores sin File System Access se mantiene la descarga ZIP
 - tras recargar la aplicación se intenta recuperar el identificador de carpeta guardado y se vuelve a solicitar permiso cuando sea necesario
+
+
+## Pruebas v0.5.20 · Evolución e informe
+
+- Crear un punto permanente y al menos dos observaciones vinculadas. Verificar que **VER EVOLUCIÓN** abre la cronología.
+- Añadir fotografías en dos fechas. Verificar el control Antes/Ahora y que no se inventa una comparación métrica.
+- Registrar dos mediciones con cinta, misma línea y misma referencia. Verificar la gráfica. Cambiar referencia o usar Estimación y comprobar que esa medición no se mezcla en la serie comparable.
+- Abrir **Exportar → Generar informe de evidencias**. Probar todos los registros y un punto permanente.
+- Generar PDF con y sin coordenadas. Confirmar que el segundo declara que las coordenadas fueron ocultadas.
+- Generar PDF con fotografías y verificar apertura en Android y escritorio.
+- Confirmar que el identificador del informe queda visible en el historial local.
+- Con carpeta COSTA VIVA conectada, guardar el PDF y su JSON en `Informes`.
+- Exportar ZIP completo y confirmar `informes/historial-informes.json`.

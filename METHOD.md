@@ -215,3 +215,12 @@ COSTA VIVA utiliza dos niveles de conservación. IndexedDB mantiene el cuaderno 
 Cada copia completa crea una exportación fechada con manifiesto, README, JSON, CSV, GeoJSON y evidencias. El mismo contenido se conserva también en un ZIP estándar.
 
 Para transferencia se recomienda el ZIP porque aplicaciones de mensajería y correo no admiten de forma uniforme el envío directo de carpetas. La carpeta completa puede copiarse o transferirse con gestores de archivos o servicios que sí permitan directorios.
+
+
+## Evolución temporal e informes de evidencias · v0.5.20
+
+La evolución temporal se construye únicamente con observaciones vinculadas al mismo punto permanente. La comparación fotográfica sirve como memoria visual y no se transforma automáticamente en una distancia de retroceso o avance.
+
+Una serie cuantitativa se considera comparable en esta versión cuando las mediciones han sido registradas con cinta métrica, sobre la misma línea objetivo y con la misma referencia fija declarada. Las unidades m y cm se normalizan internamente a metros para la gráfica. Pasos y estimaciones pueden conservarse en el registro, pero no entran en la gráfica de mediciones comparables.
+
+El informe comunitario de evidencias es una salida documental. Organiza cronología, observaciones, métodos, precisión disponible, fotografías y una serie comparable cuando existe. Su finalidad es facilitar comunicación y presentación de evidencia documentada. No sustituye peritajes, levantamientos profesionales, atribuciones causales ni decisiones de autoridad.
